@@ -1,0 +1,328 @@
+/* Hoja de estilos */
+
+html {
+  background-color: black;
+  overflow: auto;
+}
+
+body {
+  width: auto;
+  height: auto;
+  color:black;
+  margin: 30px;
+  padding: 10px 10px 10px 10px;
+  border: 9px solid gold;
+  background-image:linear-gradient(teal,lightgreen,#83c9af,white,white);
+  }
+
+.contenedor
+  {
+    width: auto;
+    height: auto;
+    border: 0.1rem solid blue;
+    padding: 0.6rem;
+    background-color: rgb(65, 0, 0);
+    display: grid;
+
+    grid-template-rows:repeat(5,auto);
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    grid-template-areas: 
+      "item1 item2 documento documento"
+      "item3 item4 documento documento"
+      "item5 item6 documento documento"
+      "item7 item8 documento documento"
+      "item9 item10 documento documento" 
+    ;
+    row-gap: 15px;
+    column-gap: 15px;
+    place-content: center;
+  }
+
+.item 
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    background-color: white;
+  }
+
+  .item-1 
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    grid-area: item1;
+  }
+
+  .item-2
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    grid-area: item2;
+  }
+
+  .item-3
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    grid-area: item3;
+  }
+
+  .item-4
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    grid-area: item4;
+  }
+
+  .item-5
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    grid-area: item5;
+  }
+
+  .item-6
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    grid-area: item6;
+  }
+
+  .item-7
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    grid-area: item7;
+  }
+
+  .item-8
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    grid-area: item8;
+  }
+
+  .item-9
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    grid-area: item9;
+  }
+
+
+  .item-10
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    grid-area: item10;
+    height: auto;
+  }
+
+  .item-11
+  {
+    border: 3px solid black;
+    padding: 0.3rem;
+    font-size: 1rem;
+    grid-area: documento;
+    height: auto;
+  }
+
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: azure;
+  text-shadow: 3px 3px 1px black;
+  text-align: center;
+  font-family: monospace;
+  font-size: 50px;
+}
+
+h2
+  {
+    margin: 0;
+    padding: 0 0 0 0;
+    color: white;
+    text-shadow: 3px 3px 1px black;
+    text-align: center;
+    font-family: monospace;
+    font-size: 35px;
+  }
+
+  h3
+  {
+  font-size: 1rem;
+  font-family: monospace;
+  text-align: center;
+  margin:4px;
+  }
+
+
+h4
+  {
+  font-size: 20px;
+  font-family: monospace;
+  }
+  .textoIntroductorio
+    {
+      font-family: monospace;
+      font-size: 17px;
+      background: blue;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+link {
+  color: green;
+}
+
+
+p
+ {
+  font-family: monospace;
+  border-style:none;
+  }
+  .parrafosFormulario
+    {
+      border-style: none;
+      font-family: monospace;
+      font-size: 0.7rem;
+      margin:7px;
+    }
+      #parrafoIntro
+      {
+        font-family: monospace;
+        margin-left: 30%;
+        margin-right: 30%;
+        border-style: dotted;
+        border-width: 3px;
+        background-color: #002400;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color:black;
+        border-color: brown;
+        font-size: 14px;
+      }
+      #contenidoFundamentos
+      {
+        font-family: serif;
+      }
+      .letrachiquita
+      {
+        font-size: 0.5rem;
+      }
+select 
+  {
+      width: 200px;
+  }
+
+#footer {
+  margin-top: auto;
+  margin-left: auto;
+  font-size: medium;
+  font-family: monospace;
+  color:darkorange;
+  opacity:100%;
+  margin-right:3px;
+  display:block;
+  text-align: center;
+}
+
+#imagenConclave
+      {
+        height: 3%;
+        width: 3%;
+      }
+#imagenWhatsapp
+      {
+        height: 3%;
+        width: 3%;
+      }
+
+#section {
+  text-align:center;
+  color: black;
+  font-family: monospace;
+}
+
+#fecha {
+  color:black;
+}
+
+#logo {
+  width: 80px;
+  height: "auto";
+  display: block;
+  margin: auto;
+}
+
+button
+  {
+    color:blue;
+  }
+  .botonesFormulario
+    {
+      background: white;
+      background-color: white;
+      align-self: right;
+    }
+    #botonFecha
+      {
+        color:magenta;
+      }
+    #botonEntidad
+      {
+        color:purple;
+      }
+    #botonNombreUsuario
+      {
+      color:crimson;
+      }
+
+
+      .contenedorBotones
+  {
+    width: auto;
+    height: auto;
+    padding: 0.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px,1fr));
+    place-content: center;
+  }
+
+.itemBoton
+  {
+    padding: 0.3rem;
+    font-size: 1rem;
+    background-color: white;
+  }
+
+
+      #botonReset
+      {
+        background-color: red;
+        color: white;
+      }
+      #botonImprimir
+      {
+        background-color: green;
+        color: white;
+      }
+
+input
+	{
+	 background-color:#FFFFFA;
+   width: auto;
+	}
+
