@@ -1,6 +1,265 @@
+<!DOCTYPE html>
 <html>
-  <head></head>
-  <body>
-    <h1>Hello!</h1>
-  </body>
+<head>
+  <meta charset='utf-8'>
+  <title> gendocu | Generador documental</title>
+  <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+
+<!-- Título -->
+<h1> gendocu
+  <img id="logo" src="imagenes/favicon.ico">
+</h1>
+
+<!-- Introducción -->
+<div>
+<h2> ¿Qué es gendocu?
+</h2>
+<h4 class="textoIntroductorio">
+  <p class="parrafosFormulario" id="parrafoIntro" style="text-align:center;">
+    Es un generador de documentos legales.<br>
+    En línea, rápido y fácil.<br>
+    Cada sección indica los datos a introducir.<br>
+    Usa la tecla "tab" para desplazarte por el formulario.
+  </p>
+</h4>
+</div>
+
+<!--  Acá comienzan los módulos para agregar contenido al documento -->
+
+<!-- Contenedor de contenedores de módulos Petición-->
+<div class="contenedor">
+
+  <!-- Contenedor Género-->
+  <div class="item item-1">
+    <h3>
+    Género
+    </h3>
+    <p class="parrafosFormulario">
+    Selecciona tu género.
+    </p>
+    <form id="selectorGenero">
+    <input type="radio" class="radioGenero" name="genero" id="genero1"></input>
+    <label for="genero1">Mujer</label>
+    <br>
+    <input type="radio" class="radioGenero" name="genero" id="genero2"></input>
+    <label for="genero2">Hombre</label>
+    </form>
+    <input type="button" class="botonesFormulario" id="botonGenero" value="Seleccionar Genero"/>
+  </div>
+  
+  <!-- Contenedor Fecha -->
+  <div class="item item-2">
+    <h3>
+    Fecha
+    </h3>
+    <p class="parrafosFormulario">
+    Fija la fecha de creación del documento dando click en el siguiente botón.
+    </p>
+    <input type="button" class="botonesFormulario" id="botonFecha" value="Fijar Fecha"/>
+  </div>
+
+  <!-- Contenedor Entidades -->
+  <div class="item item-3">
+    <h3>
+    Entidad destinataria
+    </h3>
+    <p class="parrafosFormulario">
+    Escribe en la primera casilla el nombre completo de la entidad a la cual dirigirá el documento, en la segunda casilla escriba el email de la entidad.
+    </p>
+    <input type="text" id="textoInputEntidad" placeholder="Escriba el nombre"/>
+    <br>
+    <input type="button" class="botonesFormulario" id="botonEntidad" value="Ingresar Entidad"/>
+  </div>
+
+  <!-- Contenedor Usuario -->
+  <div class="item item-4">
+    <h3>
+    Nombre suscriptor
+    </h3>
+    <p class="parrafosFormulario">
+    Escribe tu nombre.
+    </p>
+    <input type="text" id="textoInputNombreUsuario" placeholder="Escriba el nombre"/>
+    <br>
+    <input type="button" class="botonesFormulario" id="botonNombreUsuario" value="Ingresar Nombre Completo"/>
+  </div>
+
+  <!-- Contenedor Peticiones -->
+  <div class="item item-5">
+    <h3>
+    Peticiones
+    </h3>
+    <p class="parrafosFormulario">
+    Escribe lo que requieres de las entidades, separando cada petición con un punto. <strong>Ejemplo:</strong> Limpiar la Avenida Siempreviva. Reciclar los residuos de la limpieza.
+    </p>
+    <input type="text" id="textoInputPeticiones" placeholder="Escribe las peticiones"/>
+    <br>
+    <input type="button" class="botonesFormulario" id="botonPeticiones" value="Redactar Peticiones"/>
+  </div>
+
+  <!-- Contenedor Hechos -->
+  <div class="item item-6">
+    <h3>
+    Hechos
+    </h3>
+    <p class="parrafosFormulario">
+    Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.
+    </p>
+    <input type="text" id="textoInputHechos" placeholder="Escribe los hechos"/>
+    <br>
+    <input type="button" class="botonesFormulario" id="botonHechos" value="Redactar Hechos"/>
+  </div>
+
+  <!-- Contenedor Fundamentos -->
+  <div class="item item-7">
+    <h3>
+    Fundamentos
+    </h3>
+    <p class="parrafosFormulario">
+    Los fundamentos son el soporte legal del documento. Selecciona la opción que encaja en tu situación.
+    </p>
+    <div id="Fundamentos">
+    <select id="listaFundamentos">
+      <option> -- Selecciona la temática -- </option>
+      <optgroup label="Peticiones">
+      <option value="peticion_Basica">
+        Derecho a presentar peticiones y recibir respuesta oportuna</option>
+      </optgroup>
+    </select>
+    </div>
+    <input type="button" class="botonesFormulario" id="botonFundamentos" value="Generar Fundamentos"/>
+  </div>
+
+  <!-- Contenedor Pruebas -->
+  <div class="item item-8">
+    <h3>
+    Pruebas
+    </h3>
+    <p class="parrafosFormulario">
+    Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "Fotocopia. Fotografía, etc.."
+    </p>
+    <input type="text" id="textoInputPruebas" placeholder="Mencione las pruebas"/>
+    <br>
+    <input type="button" class="botonesFormulario" id="botonPruebas" value="Ingresar pruebas"/>
+  </div>
+
+  <!-- Contenedor Notificaciones -->
+  <div class="item item-9">
+    <h3>
+    Notificaciones
+    </h3>
+    <p class="parrafosFormulario">
+    Escribe tu email y celular para recibir la eventual respuesta de la entidad.
+    <br>
+    </p>
+    <input type="text" id="textoInputEmail" placeholder="Escriba el email"/>
+    <br>
+    <input type="text" id="textoInputCelular" placeholder="Escriba el número"/>
+    <br>
+    <input type="button" class="botonesFormulario" id="botonNotificaciones" value="Ingresar notificaciones"/>
+  </div>
+
+  <!-- Contenedor Firma -->
+  <div class="item item-10">
+  <h3>
+  Firma.
+  </h3>
+  <p class="parrafosFormulario">
+  Firma el documento ingresando tu NUIP. <strong>Ejemplo:</strong> 0.
+  <br>
+  </p>
+  <input type="text" id="textoInputIdUsuario" placeholder="Escriba el número"/>
+  <br>
+  <input type="button" class="botonesFormulario" id="botonFirma" value="Firmar"/>
+  </div>
+  <div class="item item-11">
+
+  <!-- Acá comienza el documento que se genera. -->
+  
+    <div class="documento" id="esqueletoPeticion">
+      <span id="fecha">Colombia, <span id="fecha1">_____</span></span>
+      <br>
+      Respetados,
+      <br>
+      <span id="entidad" style="white-space:pre-line;font-style:normal;"><strong>
+      Entidad</strong></span>
+      <br>
+      E.S.D.
+      <br>
+      <br>
+      <strong>Referencia:</strong> Derecho de petición<br>
+      <br>
+      Cordial saludo;<br>Yo, <span id="nombreusuario1">______________</span>, ciudadan<span id="spanGenero1">x</span> en ejercicio, presento <strong>Petición</strong> en atención a los siguientes:
+      <br>
+      <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
+      <ol type="1" id="listaHechos">
+        <li id="hecho1">Soy <span id="spanHechoSexo">un ser</span>, nacional colombian<span id="spanGenero2">x</span> por nacimiento.</li>              
+        <li id="hecho2"><span id="spanHechos">Hechos adicionales</span></li>
+      </ol>
+      <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
+      La presente se fundamenta en los siguientes:
+      <br>
+      <span id="espacioFundamentos"></span>
+      <span id="espacioFundamentos2"></span>
+      <br>
+      <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
+      Se aportan las siguientes:<br>
+      <span id="pruebas"></span>
+      <br>
+      <p id="section" style="text-align:center;"><strong>Peticiones.</strong></p>
+      <strong>Primera. </strong> <span id="spanPeticiones"></span>
+      <br>
+      <p id="section" style="text-align:center;"><strong>Notificaciones.</strong></p>
+      <br>
+      Recibiré en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.
+      <br>
+      Atentamente,<br>
+      <span id="imagenFirma"></span>
+      <br>
+      <strong><span id="nombreusuario2">______________</span>
+      <br>
+      CC.<span id="idusuario">_________</span></strong>
+      <br>
+    </div>
+  </div>        
+</div>
+         
+<br>
+
+<!-- Contenedor Botones de acciones sobre el documento -->
+<div class="contenedorBotones">
+  <div class="itemBoton" style="justify-self: right;">
+    <input type="button" id="botonReset" value="Resetear"/>
+  </div>
+  <div class="itemBoton" style="justify-self:left;">
+    <input type="button" id="botonImprimir" value="Imprimir"/>
+  </div>
+</div>
+
+<br>
+
+<!-- Pie de página -->
+<div id="footer">
+  <a href="https://conclave3.wixsite.com/conclave" target="_blank">Un producto Cónclave</a>
+    <br>
+    <img id="imagenConclave" src="imagenes/conclavebg_100px.png" alt="Cónclave logo"/>
+    <br>
+  <a href="https://wa.me/573017673013" target="_blank">Contáctanos en Whatsapp</a>
+    <br>
+    <img id="imagenWhatsapp" src="imagenes/whatsapp_logo.png" alt="Whatsapp logo"/>
+    <br>
+  Hecho con &#x2728;
+</div>
+
+<!-- Scripts -->  
+<script src='scripts/legalxgen.js'></script>
+<script src='scripts/decidendis.js'></script>
+<script src='scripts/jquery-3.6.0.js'></script>
+<script src='scripts/datos.js'></script>
+</body>
 </html>
