@@ -16,23 +16,27 @@
 </h1>
 
 <!-- Introducción -->
-<div>
+
+
 <h2> ¿Qué es gendocu?
 </h2>
-<h4 class="textoIntroductorio">
-  <p class="parrafosFormulario" id="parrafoIntro" style="text-align:center;">
-    Es un generador de documentos legales.<br>
-    En línea, rápido y fácil.<br>
-    Cada sección indica los datos a introducir.<br>
-    Usa la tecla "tab" para desplazarte por el formulario.
+
+<div class="contenedorIntroduccion">
+
+  <p class="parrafosFormulario" id="parrafoIntro">
+    📄 Es un generador de documentos legales.  <br />
+    Crea peticiones, contratos y acciones públicas.<br />
+    📥Recorre las secciones para llenar de contenido el documento.<br />
+    Cada sección te indica la información que debes ingresar.<br />
+    🖱️ Has click en los botones para escribir en el documento.
   </p>
-</h4>
+
 </div>
 
 <!--  Acá comienzan los módulos para agregar contenido al documento -->
 
 <!-- Contenedor de contenedores de módulos Petición-->
-<div class="contenedor">
+<div class="contenedorPeticion">
 
   <!-- Contenedor Género-->
   <div class="item item-1">
@@ -69,7 +73,7 @@
     Entidad destinataria
     </h3>
     <p class="parrafosFormulario">
-    Escribe en la primera casilla el nombre completo de la entidad a la cual dirigirá el documento, en la segunda casilla escriba el email de la entidad.
+      Escribe el nombre completo de la entidad a la cual dirigiras la petición.
     </p>
     <input type="text" id="textoInputEntidad" placeholder="Escriba el nombre"/>
     <br>
@@ -82,11 +86,11 @@
     Nombre suscriptor
     </h3>
     <p class="parrafosFormulario">
-    Escribe tu nombre.
+    Escribe tu nombre completo.
     </p>
     <input type="text" id="textoInputNombreUsuario" placeholder="Escriba el nombre"/>
     <br>
-    <input type="button" class="botonesFormulario" id="botonNombreUsuario" value="Ingresar Nombre Completo"/>
+    <input type="button" class="botonesFormulario" id="botonNombreUsuario" value="Escribir"/>
   </div>
 
   <!-- Contenedor Peticiones -->
@@ -95,7 +99,7 @@
     Peticiones
     </h3>
     <p class="parrafosFormulario">
-    Escribe lo que requieres de las entidades, separando cada petición con un punto. <strong>Ejemplo:</strong> Limpiar la Avenida Siempreviva. Reciclar los residuos de la limpieza.
+    Escribe lo que requieres de la entidad. <strong>Ejemplo:</strong> Limpiar la Avenida Siempreviva. Reciclar los residuos de la limpieza.
     </p>
     <input type="text" id="textoInputPeticiones" placeholder="Escribe las peticiones"/>
     <br>
@@ -253,7 +257,7 @@
     <br>
     <img id="imagenWhatsapp" src="imagenes/whatsapp_logo.png" alt="Whatsapp logo"/>
     <br>
-  Hecho con &#x2728;
+  Version 0.01 - Hecho con &#x2728;
 </div>
 
 <!-- Scripts -->  
