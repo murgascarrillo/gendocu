@@ -1,7 +1,7 @@
-/* Hoja de estilos */
+/* Hoja de estilos - Style Sheet */
 
 html {
-  background-color: black;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,124,0,1) 50%, rgba(0,0,0,1) 100%);
   overflow: auto;
 }
 
@@ -10,18 +10,55 @@ body {
   height: auto;
   color:black;
   margin: 30px;
-  padding: 10px 10px 10px 10px;
-  border: 9px solid gold;
-  background-image:linear-gradient(teal,lightgreen,#83c9af,white,white);
+  padding: 9px 10px 10px 10px;
+  border: 9px solid linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,124,0,1) 50%, rgba(0,0,0,1) 100%);
+  border-radius: 2ex;
+  background-color: white;
+}
+
+/* Encabezados - Headings */
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: black;
+  text-align: center;
+  font-family: monospace;
+  font-size: 50px;
+}
+  
+h2 {
+  margin: 0;
+  padding: 0 0 0 0;
+  color: black;
+  text-align: center;
+  font-family: monospace;
+  font-size: 35px;
+}
+  
+h3 {
+  font-size: 1.2rem;
+  font-family: monospace;
+  text-align: center;
+  margin:4px;
+  min-width: 10px;
+}
+
+/* Contenedores - Containers */
+     
+.contenedorIntroduccion
+  {  display: flex;
+    justify-content: center;
   }
 
-.contenedor
+
+
+.contenedorPeticion
   {
     width: auto;
     height: auto;
-    border: 0.1rem solid blue;
     padding: 0.6rem;
-    background-color: rgb(65, 0, 0);
+    background-color: white;
     display: grid;
 
     grid-template-rows:repeat(5,auto);
@@ -35,20 +72,22 @@ body {
     ;
     row-gap: 15px;
     column-gap: 15px;
-    place-content: center;
   }
 
 .item 
   {
-    border: 3px solid black;
+    border: 5px solid green;
     padding: 0.3rem;
     font-size: 1rem;
     background-color: white;
+    border-radius: 2ex;
+    border-style:groove;
+    min-width: auto;
   }
 
   .item-1 
   {
-    border: 3px solid black;
+
     padding: 0.3rem;
     font-size: 1rem;
     grid-area: item1;
@@ -56,7 +95,7 @@ body {
 
   .item-2
   {
-    border: 3px solid black;
+
     padding: 0.3rem;
     font-size: 1rem;
     grid-area: item2;
@@ -64,7 +103,7 @@ body {
 
   .item-3
   {
-    border: 3px solid black;
+
     padding: 0.3rem;
     font-size: 1rem;
     grid-area: item3;
@@ -72,7 +111,7 @@ body {
 
   .item-4
   {
-    border: 3px solid black;
+
     padding: 0.3rem;
     font-size: 1rem;
     grid-area: item4;
@@ -80,7 +119,7 @@ body {
 
   .item-5
   {
-    border: 3px solid black;
+
     padding: 0.3rem;
     font-size: 1rem;
     grid-area: item5;
@@ -88,7 +127,7 @@ body {
 
   .item-6
   {
-    border: 3px solid black;
+
     padding: 0.3rem;
     font-size: 1rem;
     grid-area: item6;
@@ -96,7 +135,7 @@ body {
 
   .item-7
   {
-    border: 3px solid black;
+
     padding: 0.3rem;
     font-size: 1rem;
     grid-area: item7;
@@ -104,7 +143,7 @@ body {
 
   .item-8
   {
-    border: 3px solid black;
+
     padding: 0.3rem;
     font-size: 1rem;
     grid-area: item8;
@@ -112,7 +151,7 @@ body {
 
   .item-9
   {
-    border: 3px solid black;
+
     padding: 0.3rem;
     font-size: 1rem;
     grid-area: item9;
@@ -121,7 +160,7 @@ body {
 
   .item-10
   {
-    border: 3px solid black;
+
     padding: 0.3rem;
     font-size: 1rem;
     grid-area: item10;
@@ -130,7 +169,7 @@ body {
 
   .item-11
   {
-    border: 3px solid black;
+
     padding: 0.3rem;
     font-size: 1rem;
     grid-area: documento;
@@ -138,49 +177,10 @@ body {
   }
 
 
-h1 {
-  margin: 0;
-  padding: 20px 0;
-  color: azure;
-  text-shadow: 3px 3px 1px black;
-  text-align: center;
-  font-family: monospace;
-  font-size: 50px;
-}
-
-h2
-  {
-    margin: 0;
-    padding: 0 0 0 0;
-    color: white;
-    text-shadow: 3px 3px 1px black;
-    text-align: center;
-    font-family: monospace;
-    font-size: 35px;
-  }
-
-  h3
-  {
-  font-size: 1rem;
-  font-family: monospace;
-  text-align: center;
-  margin:4px;
-  }
-
-
-h4
-  {
-  font-size: 20px;
-  font-family: monospace;
-  }
   .textoIntroductorio
     {
       font-family: monospace;
       font-size: 17px;
-      background: blue;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
 link {
@@ -191,28 +191,31 @@ link {
 p
  {
   font-family: monospace;
-  border-style:none;
+  min-width: 100px;
+  min-height: auto;
   }
   .parrafosFormulario
     {
-      border-style: none;
       font-family: monospace;
-      font-size: 0.7rem;
+      font-size: 0.9rem;
       margin:7px;
     }
       #parrafoIntro
       {
+        text-align: left;
+        padding: 1ex;
         font-family: monospace;
-        margin-left: 30%;
-        margin-right: 30%;
-        border-style: dotted;
-        border-width: 3px;
-        background-color: #002400;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color:black;
-        border-color: brown;
-        font-size: 14px;
+        width: auto;
+        min-width: auto;
+        max-width: 500px;
+        height: auto;
+        border-style: groove;
+        border-width: 4.5px;
+        border-radius: 2ex;
+        border-color: darkgreen;
+        background-color: black;
+        color: white;
+        font-size: 17px;
       }
       #contenidoFundamentos
       {
@@ -232,7 +235,7 @@ select
   margin-left: auto;
   font-size: medium;
   font-family: monospace;
-  color:darkorange;
+  color:black;
   opacity:100%;
   margin-right:3px;
   display:block;
@@ -251,7 +254,6 @@ select
       }
 
 #section {
-  text-align:center;
   color: black;
   font-family: monospace;
 }
@@ -273,23 +275,14 @@ button
   }
   .botonesFormulario
     {
+      margin-top: 1ex;
+      width: fit-content;
       background: white;
       background-color: white;
       align-self: right;
+      border-radius: 2ex;
+      border-color: green;
     }
-    #botonFecha
-      {
-        color:magenta;
-      }
-    #botonEntidad
-      {
-        color:purple;
-      }
-    #botonNombreUsuario
-      {
-      color:crimson;
-      }
-
 
       .contenedorBotones
   {
@@ -313,16 +306,22 @@ button
       {
         background-color: red;
         color: white;
+        border-radius: 2em;
+        border-color: black;
       }
       #botonImprimir
       {
         background-color: green;
         color: white;
+        border-radius: 2em;
+        border-color: black;
       }
 
 input
 	{
 	 background-color:#FFFFFA;
    width: auto;
+   min-width: 50px;
+   max-width: 150px;
 	}
 

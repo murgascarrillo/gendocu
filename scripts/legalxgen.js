@@ -6,7 +6,6 @@ function insertarDatos(id,contenido){
 }
 
 // Funciones por sección.
-
 // Sección - Seleccionar género.
 
 var botonGenero = document.getElementById("botonGenero");
