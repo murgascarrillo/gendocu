@@ -1,21 +1,20 @@
 # gendocu
 
-gendocu is a tool fo generate legal-related documentalia. Petitions, contracts, public actions.
+gendocu is a tool fo generate legal and non-legal related documentalia. Think of petitions, contracts, public actions.
 
-Say _bye, bye!_ to paper-printing documents and say _Hello!_ to your digitally generated documents.
+Say __bye, bye!__ to paper-printing documents and say __Hello!__ to your digitally generated documents.
 
 ## How to use:
 
-1. Go to [gendocu App page](https://carlosmurgas.github.io/gendocu).
-2. Read the instructions.
-3. Fill the form with the required data.
-4. Once filled, use the 'Imprimir' button and then Ctrl + P to save the files into pdf.
-5. And that's it🎉! Now you can send it across your favourite email provider. 
+1. Go to [gendocu App page](https://murgascarrillo.github.io/gendocu).
+2. Read the instructions at the information box.
+3. Fill the form with the required data in each input box.
+4. Once filled, use the 'Imprimir' button to print the generated document in a new tap, then do Ctrl + P to save the files into a pdf file.
+5. And that's it🎉! Now you can send it across your favourite email provider or do whatever with it. 
 
 ## Support me!
 
-I enjoy creating useful things, even more if people save time when using what I create.  
-If you feel I helped you on saving time, please consider sending me a crypto tip:
+If gendocu has been useful to you, please consider sending me a crypto tip:
 
 $XNO: nano_1bxw1qgnddcifsgtyx4e6eahzg8u3z46ngt1zc8jmnmb6h9kfiq7k1qhy4xc  
 $BTC: 15oJRJFXD8HD9AAoVobE2TrpoWtqs1nigV  
