@@ -75,9 +75,9 @@
     <p class="parrafosFormulario">
       Escribe el nombre completo de la entidad a la cual dirigiras la petición.
     </p>
-    <input type="text" id="textoInputEntidad" placeholder="Escriba el nombre"/>
+    <input type="text" id="textoInputEntidad" oninput="escribirEntidad()" placeholder="Escriba el nombre"/>
     <br>
-    <input type="button" class="botonesFormulario" id="botonEntidad" value="Ingresar Entidad"/>
+
   </div>
 
   <!-- Contenedor Usuario -->
@@ -88,9 +88,8 @@
     <p class="parrafosFormulario">
     Escribe tu nombre completo.
     </p>
-    <input type="text" id="textoInputNombreUsuario" placeholder="Escriba el nombre"/>
+    <input type="text" id="textoInputNombreUsuario" oninput="escribirUsuario()" placeholder="Escriba el nombre"/>
     <br>
-    <input type="button" class="botonesFormulario" id="botonNombreUsuario" value="Escribir"/>
   </div>
 
   <!-- Contenedor Peticiones -->
@@ -114,9 +113,8 @@
     <p class="parrafosFormulario">
     Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.
     </p>
-    <input type="text" id="textoInputHechos" placeholder="Escribe los hechos"/>
+    <input type="text" id="textoInputHechos" oninput="escribirHechos()" placeholder="Escribe los hechos"/>
     <br>
-    <input type="button" class="botonesFormulario" id="botonHechos" value="Redactar Hechos"/>
   </div>
 
   <!-- Contenedor Fundamentos -->
@@ -147,9 +145,8 @@
     <p class="parrafosFormulario">
     Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "Fotocopia. Fotografía, etc.."
     </p>
-    <input type="text" id="textoInputPruebas" placeholder="Mencione las pruebas"/>
+    <input type="text" id="textoInputPruebas" oninput="escribirPruebas()" placeholder="Mencione las pruebas"/>
     <br>
-    <input type="button" class="botonesFormulario" id="botonPruebas" value="Ingresar pruebas"/>
   </div>
 
   <!-- Contenedor Notificaciones -->
@@ -161,11 +158,10 @@
     Escribe tu email y celular para recibir la eventual respuesta de la entidad.
     <br>
     </p>
-    <input type="text" id="textoInputEmail" placeholder="Escriba el email"/>
+    <input type="text" id="textoInputEmail" oninput="escribirNotificaciones1()" placeholder="Escriba el email"/>
     <br>
-    <input type="text" id="textoInputCelular" placeholder="Escriba el número"/>
+    <input type="text" id="textoInputCelular" oninput="escribirNotificaciones2()" placeholder="Escriba el número"/>
     <br>
-    <input type="button" class="botonesFormulario" id="botonNotificaciones" value="Ingresar notificaciones"/>
   </div>
 
   <!-- Contenedor Firma -->
@@ -189,16 +185,15 @@
       <span id="fecha">Colombia, <span id="fecha1">_____</span></span>
       <br>
       Respetados,
-      <br>
-      <span id="entidad" style="white-space:pre-line;font-style:normal;"><strong>
-      Entidad</strong></span>
+      <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
+      Entidad</span></strong>
       <br>
       E.S.D.
       <br>
       <br>
       <strong>Referencia:</strong> Derecho de petición<br>
       <br>
-      Cordial saludo;<br>Yo, <span id="nombreusuario1">______________</span>, ciudadan<span id="spanGenero1">x</span> en ejercicio, presento <strong>Petición</strong> en atención a los siguientes:
+      Cordial saludo;<br>Yo, <strong><span id="nombreusuario1">______________</span></strong>, ciudadan<span id="spanGenero1">x</span> en ejercicio, presento <strong>Petición</strong> en atención a los siguientes:
       <br>
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
       <ol type="1" id="listaHechos">

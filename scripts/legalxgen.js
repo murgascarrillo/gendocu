@@ -1,9 +1,5 @@
 // Funciones generales.
 
-// insertarDatos modifica el contenido del documento generado según el input ingresado.
-function insertarDatos(id,contenido){
-  document.getElementById(id).innerHTML = contenido.value;
-}
 
 // Funciones por sección.
 // Sección - Seleccionar género.
@@ -47,25 +43,22 @@ function definirFecha(fechaDocumento)
 
 // Sección - Entidad destinataria.
 
-var botonEntidad = document.getElementById("botonEntidad");
-botonEntidad.addEventListener("click",escribirEntidad);
-function escribirEntidad(inputEntidad)
+function escribirEntidad()
     {
-    inputEntidad = document.getElementById("textoInputEntidad");
-    insertarDatos("entidad",inputEntidad);
-    inputEntidad.value = '';
+      let x = document.getElementById("textoInputEntidad");
+      let y = document.getElementById("entidad"); 
+      y.innerHTML = "<br>"+x.value;
 }
 
 // Sección - Creador del documento.
 
-var botonNombreUsuario = document.getElementById("botonNombreUsuario");
-botonNombreUsuario.addEventListener("click",escribirNombreUsuario);
-function escribirNombreUsuario(inputNombreUsuario)
+function escribirUsuario()
     {
-    inputNombreUsuario = document.getElementById("textoInputNombreUsuario");
-    insertarDatos("nombreusuario1",inputNombreUsuario);
-    insertarDatos("nombreusuario2",inputNombreUsuario);
-    inputNombreUsuario.value = '';
+      let x = document.getElementById("textoInputNombreUsuario");
+      let y = document.getElementById("nombreusuario1");
+      let z = document.getElementById("nombreusuario2"); 
+      y.innerHTML = x.value;
+      z.innerHTML = x.value;
 }
 
 // Sección - Peticiones.
@@ -81,13 +74,11 @@ function escribirPeticiones(inputPeticiones)
 
 // Sección - Hechos.
 
-let botonHechos = document.getElementById("botonHechos");
-botonHechos.addEventListener("click",escribirHechos);
-function escribirHechos(inputHechos)
-      {
-        inputHechos = document.getElementById("textoInputHechos");
-        insertarDatos("spanHechos",inputHechos);
-        inputHechos.value = '';
+function escribirHechos()
+    {
+      let x = document.getElementById("textoInputHechos");
+      let y = document.getElementById("hecho2");
+      y.innerHTML = x.value;
 }
 
 // Sección - Fundamentos.
@@ -107,28 +98,27 @@ function imprimirFundamentos()
 
 // Sección - Pruebas.
 
-let botonPruebas = document.getElementById("botonPruebas");
-botonPruebas.addEventListener("click",escribirPruebas);
-function escribirPruebas(inputPruebas)
+function escribirPruebas()
     {
-      inputPruebas = document.getElementById("textoInputPruebas");
-      insertarDatos("pruebas",inputPruebas);
-      inputPruebas.value = '';
+      let x = document.getElementById("textoInputPruebas");
+      let y = document.getElementById("pruebas");
+      y.innerHTML = x.value;
 }
 
 // Sección - Notificaciones.
 
-let botonNotificaciones = document.getElementById("botonNotificaciones");
-botonNotificaciones.addEventListener("click",escribirNotificaciones);
-function escribirNotificaciones(inputEmail,inputCelular)
-    {
-      inputEmail = document.getElementById("textoInputEmail");
-      inputCelular = document.getElementById("textoInputCelular");
-      insertarDatos("email",inputEmail);
-      insertarDatos("celular",inputCelular);
-      inputEmail.value = '';
-      inputCelular.value = '';
+function escribirNotificaciones1() {
+  let x = document.getElementById("textoInputEmail");
+  let y = document.getElementById("email");
+  y.innerHTML = x.value;
 }
+
+function escribirNotificaciones2() {
+  let x = document.getElementById("textoInputCelular");
+  let y = document.getElementById("celular");
+  y.innerHTML = x.value;
+}
+
 
 // Sección - Firmar documento.
 
