@@ -131,8 +131,8 @@ function firmar(inputIdUsuario, imagen)
     document.getElementById("idusuario").innerHTML = idusuario;
     inputIdUsuario.value = '';
 }
-let cargarFirma = function(event) {
-  var imagen = document.getElementById('output');
+function cargarFirma(event) {
+  let imagen = document.getElementById('output');
   imagen.src = URL.createObjectURL(event.target.files[0]);
 }
 
