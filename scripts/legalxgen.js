@@ -65,10 +65,10 @@ function escribirUsuario()
 
 let botonPeticiones = document.getElementById("botonPeticiones");
 botonPeticiones.addEventListener("click",escribirPeticiones);
-function escribirPeticiones(inputPeticiones)
+let inputPeticiones = document.getElementById("textoInputPeticiones");
+function escribirPeticiones()
       {
-        inputPeticiones = document.getElementById("textoInputPeticiones");
-        insertarDatos("spanPeticiones",inputPeticiones);
+        document.getElementById("spanPeticiones").innerHTML = inputPeticiones.value;
         inputPeticiones.value = '';
 }
 

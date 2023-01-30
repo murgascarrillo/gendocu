@@ -1,6 +1,6 @@
 # gendocu
 
-gendocu is a tool fo generate legal and non-legal related documentalia. Think of petitions, contracts, public actions.
+gendocu is a tool you can use to generate legal related documentalia. Petitions, contracts, public actions.
 
 Say __bye, bye!__ to paper-printing documents and say __Hello!__ to your digitally generated documents.
 
@@ -10,7 +10,7 @@ Say __bye, bye!__ to paper-printing documents and say __Hello!__ to your digital
 2. Read the instructions at the information box.
 3. Fill the form with the required data in each input box.
 4. Once filled, use the 'Imprimir' button to print the generated document in a new tap, then do Ctrl + P to save the files into a pdf file.
-5. And that's it🎉! Now you can send it across your favourite email provider or do whatever with it. 
+5. And that's it🎉! Now you can use your document.
 
 ## Support me!
 
