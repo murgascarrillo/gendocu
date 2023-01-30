@@ -170,11 +170,14 @@
   Firma.
   </h3>
   <p class="parrafosFormulario">
-  Firma el documento ingresando tu NUIP. <strong>Ejemplo:</strong> 0.
-  <br>
+  Firma el documento ingresando tu NUIP. <strong>Ejemplo:</strong> 0.<br>
   </p>
   <input type="text" id="textoInputIdUsuario" placeholder="Escriba el número"/>
   <br>
+  <p class="parrafosFormulario">Adjunta la imagen de tu firma.</p>
+  <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="cargarFirma(event)" style="display:none;" />
+  <p><label for="inputImagenFirma" style="cursor:pointer;">Agrega tu firma</label></p>
+  <br/>
   <input type="button" class="botonesFormulario" id="botonFirma" value="Firmar"/>
   </div>
   <div class="item item-11">
@@ -182,7 +185,7 @@
   <!-- Acá comienza el documento que se genera. -->
   
     <div class="documento" id="esqueletoPeticion">
-      <span id="fecha">Colombia, <span id="fecha1">_____</span></span>
+      <span id="fecha">Colombia,<span id="fecha1">_____</span></span>
       <br>
       Respetados,
       <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
@@ -193,7 +196,7 @@
       <br>
       <strong>Referencia:</strong> Derecho de petición<br>
       <br>
-      Cordial saludo;<br>Yo, <strong><span id="nombreusuario1">______________</span></strong>, ciudadan<span id="spanGenero1">x</span> en ejercicio, presento <strong>Petición</strong> en atención a los siguientes:
+      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, ciudadan<span id="spanGenero1">x</span> en ejercicio, presento <strong>Petición</strong> en atención a los siguientes:
       <br>
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
       <ol type="1" id="listaHechos">
@@ -214,11 +217,10 @@
       <strong>Primera. </strong> <span id="spanPeticiones"></span>
       <br>
       <p id="section" style="text-align:center;"><strong>Notificaciones.</strong></p>
-      <br>
       Recibiré en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.
       <br>
       Atentamente,<br>
-      <span id="imagenFirma"></span>
+      <img id="output" width="200" height="70" />
       <br>
       <strong><span id="nombreusuario2">______________</span>
       <br>

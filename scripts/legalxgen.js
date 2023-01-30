@@ -38,7 +38,7 @@ function definirFecha(fechaDocumento)
     {
       fechaDocumento = new Date();
       fechaFormateada = fechaDocumento.toLocaleDateString();
-      document.getElementById("fecha1").innerHTML = fechaFormateada;
+      document.getElementById("fecha1").innerHTML = " "+fechaFormateada;
 }
 
 // Sección - Entidad destinataria.
@@ -57,7 +57,7 @@ function escribirUsuario()
       let x = document.getElementById("textoInputNombreUsuario");
       let y = document.getElementById("nombreusuario1");
       let z = document.getElementById("nombreusuario2"); 
-      y.innerHTML = x.value;
+      y.innerHTML = " "+x.value;
       z.innerHTML = x.value;
 }
 
@@ -123,22 +123,19 @@ function escribirNotificaciones2() {
 // Sección - Firmar documento.
 
 let botonFirma = document.getElementById("botonFirma");
-botonFirma.addEventListener("click",firmar);
-  function firmar(inputIdUsuario, imagen)
+botonFirma.addEventListener("click",firmar); 
+function firmar(inputIdUsuario, imagen)
   {
-    imagen = document.createElement("img");
     inputIdUsuario = document.getElementById("textoInputIdUsuario");
     let idusuario = inputIdUsuario.value;
-    imagen.id = 'imagenFirma';
-    imagen.src = 'imagenes/firmas/firma_'+idusuario+'.png';
-    imagen.height = 70;
-    imagen.width = 200;
-    imagen.alt = "esto no cargó";
-    let src = document.getElementById("imagenFirma");
-    src.appendChild(imagen);
-    insertarDatos("idusuario",inputIdUsuario);
+    document.getElementById("idusuario").innerHTML = idusuario;
     inputIdUsuario.value = '';
 }
+let cargarFirma = function(event) {
+  var imagen = document.getElementById('output');
+  imagen.src = URL.createObjectURL(event.target.files[0]);
+}
+
 
 // Sección - Imprimir o Resetear documento.
 // Función imprimir
