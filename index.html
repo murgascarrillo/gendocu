@@ -170,15 +170,14 @@
   Firma.
   </h3>
   <p class="parrafosFormulario">
-  Firma el documento ingresando tu NUIP. <strong>Ejemplo:</strong> 0.<br>
+  Ingresa tu número de identificación (cédula de ciudadanía). <strong>Ejemplo:</strong> 0.<br>
   </p>
   <input type="text" id="textoInputIdUsuario" placeholder="Escriba el número"/>
   <br>
   <p class="parrafosFormulario">Adjunta la imagen de tu firma.</p>
-  <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="cargarFirma(event)" style="display:none;" />
-  <p><label for="inputImagenFirma" style="cursor:pointer;">Agrega tu firma</label></p>
+  <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="subirFirma(this, 'espacioFirma')"/>
   <br/>
-  <input type="button" class="botonesFormulario" id="botonFirma" value="Firmar"/>
+  <input type="button" class="botonesFormulario" id="botonFirma" value="Firmar" onchange="subirFirma()">
   </div>
   <div class="item item-11">
 
@@ -212,16 +211,17 @@
       <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
       Se aportan las siguientes:<br>
       <span id="pruebas"></span>
-      <br>
+      <br />
       <p id="section" style="text-align:center;"><strong>Peticiones.</strong></p>
       <strong>Primera. </strong> <span id="spanPeticiones"></span>
-      <br>
+      <br />
       <p id="section" style="text-align:center;"><strong>Notificaciones.</strong></p>
       Recibiré en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.
-      <br>
+      <br />
       Atentamente,<br>
-      <img id="output" width="200" height="70" />
       <br>
+      <img id="espacioFirma" width="200" height="70">
+      <br/>
       <strong><span id="nombreusuario2">______________</span>
       <br>
       CC.<span id="idusuario">_________</span></strong>

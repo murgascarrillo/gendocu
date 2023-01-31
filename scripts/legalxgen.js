@@ -124,6 +124,7 @@ function escribirNotificaciones2() {
 
 let botonFirma = document.getElementById("botonFirma");
 botonFirma.addEventListener("click",firmar); 
+let inputImagenFirma = document.getElementById("inputImagenFirma");
 function firmar(inputIdUsuario, imagen)
   {
     inputIdUsuario = document.getElementById("textoInputIdUsuario");
@@ -131,9 +132,17 @@ function firmar(inputIdUsuario, imagen)
     document.getElementById("idusuario").innerHTML = idusuario;
     inputIdUsuario.value = '';
 }
-function cargarFirma(event) {
-  let imagen = document.getElementById('output');
-  imagen.src = URL.createObjectURL(event.target.files[0]);
+
+function subirFirma(input, target) {
+  let file = input.files[0];
+    let reader = new FileReader();
+
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+        let img = document.getElementById(target);
+        // can also use "this.result"
+        img.src = reader.result;
+}
 }
 
 
