@@ -2,33 +2,7 @@
 
 
 // Funciones por sección.
-// Sección - Seleccionar género.
 
-var botonGenero = document.getElementById("botonGenero");
-var selectorGenero = document.getElementById("selectorGenero");
-botonGenero.addEventListener("click",pulirDocumento);
-function pulirDocumento(radioGenero1,radioGenero2,spanGenero1,spanGenero2,spanHechoSexo)
-  {
-    radioGenero1 = document.getElementById("genero1");
-    radioGenero2 = document.getElementById("genero2");
-    spanGenero1 = document.getElementById("spanGenero1");
-    spanGenero2 = document.getElementById("spanGenero2");
-    spanHechoSexo = document.getElementById("spanHechoSexo");
-    if(radioGenero1.checked == true)
-    {
-      spanGenero1.innerHTML = "a";
-      spanGenero2.innerHTML = "a";
-      spanHechoSexo.innerHTML = "mujer";
-      radioGenero1.checked = false;
-    }
-    if(radioGenero2.checked == true)
-      {
-        spanGenero1.innerHTML = "o";
-        spanGenero2.innerHTML = "o";
-        spanHechoSexo.innerHTML = "hombre";
-        radioGenero2.checked = false;
-      }
-}
 
 // Sección - Fijar fecha.
 
@@ -121,16 +95,11 @@ function escribirNotificaciones2() {
 
 
 // Sección - Firmar documento.
-
-let botonFirma = document.getElementById("botonFirma");
-botonFirma.addEventListener("click",firmar); 
-let inputImagenFirma = document.getElementById("inputImagenFirma");
-function firmar(inputIdUsuario, imagen)
+function escribirIdUsuario()
   {
-    inputIdUsuario = document.getElementById("textoInputIdUsuario");
-    let idusuario = inputIdUsuario.value;
-    document.getElementById("idusuario").innerHTML = idusuario;
-    inputIdUsuario.value = '';
+    let x = document.getElementById("textoInputIdUsuario");
+    let y = document.getElementById("idUsuario");
+    y.innerHTML = x.value; 
 }
 
 function subirFirma(input, target) {
