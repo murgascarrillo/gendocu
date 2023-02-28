@@ -33,7 +33,6 @@
 </div>
 
 <!--  Acá comienzan los módulos para agregar contenido al documento -->
-
 <!-- Contenedor de contenedores de módulos Petición-->
 <div class="contenedorPeticion">
 
@@ -47,31 +46,50 @@
       </p>
       <input type="button" class="botonesFormulario" id="botonFecha" value="Fijar Fecha"/>
   </div>
+
+    <!-- Contenedor Lugar de Creación-->
+    <div class="item item-2">
+      <h3>
+        Lugar de Creación
+        </h3>
+        <p class="parrafosFormulario">
+    
+          <label for="listaPaises">Elige el lugar de creación del documento en la lista. Ejemplo: Colombia.</label>
+        </p>
+        <input list="listaPaises" name="pais" id="inputPais" onchange="elegirPais()"/>
+          <datalist id="listaPaises">
+            <option value="Colombia">
+            <option value="Venezuela">
+            <option value="Italia">
+            <option value="España">
+            <option value="Nigeria">
+          </datalist>
+    </div>
   
   <!-- Contenedor Entidades Destinatarias -->
-  <div class="item item-2">
+  <div class="item item-3">
     <h3>
-      Entidad destinataria
+      Entidad Destinataria
       </h3>
       <p class="parrafosFormulario">
-        Escribe el nombre completo de la entidad a la cual dirigiras la petición.
+        <label for="textoInputEntidad">Escribe el nombre completo de la entidad a la cual dirigiras la petición. Ejemplo: La Secretaría del Movimiento.</label>
       </p>
       <input type="text" id="textoInputEntidad" oninput="escribirEntidad()" placeholder="Escriba el nombre"/>
   </div>
 
   <!-- Contenedor Usuario -->
-  <div class="item item-3">
+  <div class="item item-4">
     <h3>
-      Nombre de quién suscribe
+      Quien Escribe
       </h3>
       <p class="parrafosFormulario">
-      Escribe tu nombre.
+      Escribe tu nombre. Ejemplo: Carlos Murgas.
       </p>
       <input type="text" id="textoInputNombreUsuario" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre"/>
   </div>
 
   <!-- Contenedor Peticiones -->
-  <div class="item item-4">
+  <div class="item item-5">
     <h3>
       Peticiones
       </h3>
@@ -83,7 +101,7 @@
   </div>
 
   <!-- Contenedor Hechos -->
-  <div class="item item-5">
+  <div class="item item-6">
     <h3>
       Hechos
       </h3>
@@ -94,7 +112,7 @@
   </div>
 
   <!-- Contenedor Fundamentos -->
-  <div class="item item-6">
+  <div class="item item-7">
     <h3>
       Fundamentos
       </h3>
@@ -114,7 +132,7 @@
   </div>
 
   <!-- Contenedor Pruebas -->
-  <div class="item item-7">
+  <div class="item item-8">
     <h3>
       Pruebas
       </h3>
@@ -125,7 +143,7 @@
   </div>
 
   <!-- Contenedor Notificaciones -->
-  <div class="item item-8">
+  <div class="item item-9">
     <h3>
       Notificaciones
       </h3>
@@ -139,7 +157,7 @@
   </div>
 
   <!-- Contenedor Firma -->
-  <div class="item item-9">
+  <div class="item item-10">
     <h3>
       Firma.
       </h3>
@@ -152,17 +170,12 @@
       <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="subirFirma(this, 'espacioFirma')"/>
   </div>
 
-  <!-- Contenedor Firma -->
-  <div class="item item-10">
- 
-  </div>
-
   <div class="item item-11">
 
   <!-- Acá comienza el documento que se genera. -->
   
     <div class="documento" id="esqueletoPeticion">
-      <span id="fecha">Colombia,<span id="fecha1">_____</span></span>
+      <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
       <br>
       Respetados,
       <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
@@ -177,7 +190,7 @@
       <br>
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
       <ol type="1" id="listaHechos">
-        <li id="hecho1">Soy nacional de Colombia.</li>              
+        <li id="hecho1">Soy nacional de <span id="lugar2">_______</span>.</li>              
         <li id="hecho2"><span id="spanHechos">Hechos adicionales</span></li>
       </ol>
       <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
@@ -229,7 +242,7 @@
   <a href="https://wa.me/573017673013" class="keychainify-checked"> <img src="imagenes/icon_whatsapp.webp" target="_blank" alt="Icono Whatsapp" width="30"></a>
     <a href="https://github.com/murgascarrillo/gendocu" class="keychainify-checked"> <img src="imagenes/icon_github.webp" alt="Icono Github by 'icon king1' on freeicons.io" width="30"></a>
     <br>
-  Version 0.0.2.1 - Hecho con &#x2728;
+  Version 0.0.2.2 - Hecho con &#x2728;
 </div>
 
 <!-- Scripts -->  

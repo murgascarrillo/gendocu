@@ -15,6 +15,17 @@ function definirFecha(fechaDocumento)
       document.getElementById("fecha1").innerHTML = " "+fechaFormateada;
 }
 
+// Sección Lugar de Creación.
+
+function elegirPais()
+    {
+      let x = document.getElementById("inputPais");
+      let y = document.getElementById("lugar1");
+      let z = document.getElementById("lugar2"); 
+      y.innerHTML = x.value;
+      z.innerHTML = x.value;
+}
+
 // Sección - Entidad destinataria.
 
 function escribirEntidad()
