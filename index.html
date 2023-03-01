@@ -6,6 +6,7 @@
   <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src= "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"> </script>
 </head>
 
 <body>
@@ -174,7 +175,8 @@
   <!-- Acá comienza el documento que se genera. -->
   
     <div class="documento" id="esqueletoPeticion">
-      <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
+      <p>
+        <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
       <br>
       Respetados,
       <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
@@ -187,29 +189,43 @@
       <br>
       Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, persona natural, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:
       <br>
+      </p>
+      
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
-      <ol type="1" id="listaHechos">
-        <li id="hecho1">Soy nacional de <span id="lugar2">_______</span>.</li>              
-        <li id="hecho2"><span id="spanHechos">Hechos adicionales</span></li>
-      </ol>
+      <p>
+        <ol type="1" id="listaHechos">
+          <li id="hecho1">Soy nacional de <span id="lugar2">_______</span>.</li>              
+          <li id="hecho2"><span id="spanHechos">Hechos adicionales.</span></li>
+        </ol>
+      </p>
+      
       <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
-      La presente se fundamenta en los siguientes:
+      <p>
+        La presente se fundamenta en los siguientes:
       <br>
       <span id="espacioFundamentos"></span>
       <span id="espacioFundamentos2"></span>
       <br>
+      </p>
+      
       <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
-      Se aportan las siguientes:<br>
-      <span id="pruebas"></span>
-      <br />
+      <p>
+        Se aportan las siguientes:<br>
+        <span id="pruebas"></span>
+        <br />
+      </p>
+      
       <p id="section" style="text-align:center;"><strong>Peticiones.</strong></p>
-      <strong>Primera. </strong> <span id="spanPeticiones"></span>
-      <br />
+      <p><strong>Primera. </strong> <span id="spanPeticiones"></span>
+        <br />
+      </p>
+      
       <p id="section" style="text-align:center;"><strong>Notificaciones.</strong></p>
-      Recibiré en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.
-      <br />
-      Atentamente,<br>
-      <br>
+      <p>Recibiré en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br /><br />
+        Atentamente,<br>
+      </p>
+      
+      
       <img id="espacioFirma" width="210" height="72">
       <br/>
       <strong><span id="nombreusuario2">______________</span>
@@ -223,12 +239,8 @@
 <br>
 
 <!-- Contenedor Botones de acciones sobre el documento -->
-<div class="contenedorBotones">
-  <div class="itemBoton" style="justify-self: right;">
-    <input type="button" id="botonReset" value="Resetear"/>
-  </div>
-  <div class="itemBoton" style="justify-self:left;">
-    <input type="button" id="botonImprimir" value="Imprimir"/>
+  <div class="itemBoton">
+    <input type="button" id="botonExportar" value="🖨️ Exportar a PDF" onclick="generatePDF()"/>
   </div>
 </div>
 
@@ -241,12 +253,13 @@
   <a href="https://wa.me/573017673013" class="keychainify-checked"> <img src="imagenes/icon_whatsapp.webp" target="_blank" alt="Icono Whatsapp" width="30"></a>
     <a href="https://github.com/murgascarrillo/gendocu" class="keychainify-checked"> <img src="imagenes/icon_github.webp" alt="Icono Github by 'icon king1' on freeicons.io" width="30"></a>
     <br>
-  Version 0.0.2.2 - Hecho con &#x2728;
+  Version 0.0.2.3 - Hecho con &#x2728;
 </div>
 
 <!-- Scripts -->  
 <script src='scripts/legalxgen.js'></script>
 <script src='scripts/decidendis.js'></script>
 <script src='scripts/datos.js'></script>
+
 </body>
 </html>

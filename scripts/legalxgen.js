@@ -127,41 +127,18 @@ function subirFirma(input, target) {
 
 
 // Sección - Imprimir o Resetear documento.
-// Función imprimir
-let botonImprimir = document.getElementById("botonImprimir");
-let botonReset = document.getElementById("botonReset");
-let botonImprimirEstado = 1;
-botonImprimir.addEventListener("click",imprimirDiv);
-botonReset.addEventListener("click",resetDiv);
-function imprimirDiv()
-  {
-      var divContents = document.getElementById("esqueletoPeticion").innerHTML;
-      var a = window.open('height=700, width=500');
-      a.document.write('<html><body>');
-      a.document.write('<img src="imagenes/conclavebg.png" style="height:60;width:60;display:block;margin:auto;"/>');
-      a.document.write(divContents);
-      a.document.write('</body></html>');
-      a.document.close();
-}
-// Función Resetear
-function resetDiv()
-  {
-    if (botonImprimirEstado == 1)
-      {
-        spanGenero1.innerHTML = "";
-        spanGenero2.innerHTML = "";
-        spanHechoSexo.innerHTML = "";
-        document.getElementById("fecha1").innerHTML = "";
-        document.getElementById('entidad').innerHTML = "";
-        document.getElementById('nombreusuario1').innerHTML = "";
-        document.getElementById('nombreusuario2').innerHTML = "";
-        document.getElementById("espacioFundamentos").innerHTML = "";
-        document.getElementById('pruebas').innerHTML = "";
-        document.getElementById('email').innerHTML = "";
-        document.getElementById('celular').innerHTML = "";
-        document.getElementById('idusuario').innerHTML = "";
-        imagen.src = '';
-      }
+// Función Generar PDF. html2pdf by ekoopmans. https://ekoopmans.github.io/html2pdf.js/
+
+function generatePDF(){
+  var element = document.getElementById('esqueletoPeticion');
+  var opt = {
+    margin: 0.5,
+    filename: 'dp_gendocu.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 2 },
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+  html2pdf(element, opt);
 }
 
 // Misceláneos.
