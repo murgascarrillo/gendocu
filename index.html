@@ -56,7 +56,7 @@
       <p class="parrafosFormulario">
       Fija la fecha de creación del documento dando click en el siguiente botón.
       </p>
-      <input type="button" class="botonesFormulario" id="botonFecha" value="Fijar Fecha"/>
+      <input type="button" class="botonesFormulario" id="botonFechaPeticion" value="Fijar Fecha"/>
   </div>
 
     <!-- Contenedor Lugar de Creación-->
@@ -185,7 +185,7 @@
 
   <!-- Acá comienza el documento que se genera. -->
   
-    <div class="documentoGenerado" id="esqueleto">
+    <div class="documentoGenerado" id="esqueletoPeticion">
       <p>
         <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
       <br>
@@ -258,7 +258,7 @@
       <p class="parrafosFormulario">
       Fija la fecha de creación del documento dando click en el siguiente botón.
       </p>
-      <input type="button" class="botonesFormulario" id="botonFecha" value="Fijar Fecha"/>
+      <input type="button" class="botonesFormulario" id="botonFechaContrato" value="Fijar Fecha"/>
   </div>
 
     <!-- Contenedor Lugar de Creación-->
@@ -279,26 +279,26 @@
           </datalist>
     </div>
   
-  <!-- Contenedor Entidades Destinatarias -->
+  <!-- Contenedor Contratante -->
   <div class="item item-3">
     <h3>
-      🏛️<br/>Contratante
+      👩<br/>Contratante
       </h3>
       <p class="parrafosFormulario">
-        <label for="textoInputEntidad">Escribe el nombre completo de la entidad a la cual dirigiras la petición. Ejemplo: La Secretaría del Movimiento.</label>
+        <label for="textoInputContratante">Escribe el nombre completo de la persona que será la parte contratante. <strong>Ejemplo: </strong>Arrendador, Comodante, Vendedor.</label>
       </p>
-      <input type="text" id="textoInputEntidad" oninput="escribirEntidad()" placeholder="Escriba el nombre"/>
+      <input type="text" id="textoInputEContratante" oninput="escribirContratante()" placeholder="Escriba el nombre"/>
   </div>
 
-  <!-- Contenedor Usuario -->
+  <!-- Contenedor Contratista -->
   <div class="item item-4">
     <h3>
-      🙋‍♂️🙋‍♀️<br/>Quien Escribe
+      🧔<br/>Contratista
       </h3>
       <p class="parrafosFormulario">
-      Escribe tu nombre. Ejemplo: Carlos Murgas.
+        <label for="textoInputContratista">Escribe el nombre completo de la persona que será la parte contratista. <strong>Ejemplo: </strong>Arrendatario, Comodatario, Comprador.</label>
       </p>
-      <input type="text" id="textoInputNombreUsuario" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre"/>
+      <input type="text" id="textoInputContratista" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre"/>
   </div>
 
   <!-- Contenedor Peticiones -->
@@ -387,24 +387,19 @@
 
   <!-- Acá comienza el documento que se genera. -->
   
-    <div class="documentoGenerado" id="esqueleto">
+    <div class="documentoGenerado" id="esqueletoContrato">
       <p>
-        <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
+        <h3>Contrato de Arrendamiento</h3>
+    
       <br>
-      Respetados,
-      <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
-      Entidad</span></strong>
+      <strong><span id="contratante" style="white-space:pre-line;font-style:normal;">
+      Contratante</span></strong>
       <br>
-      E.S.D.
-      <br>
-      <br>
-      <strong>Referencia:</strong> Derecho de petición<br>
-      <br>
-      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, persona natural, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:
+           Cordial saludo;<br>Nosotros,<strong><span id="nombreusuario1">______________</span></strong>, domiciliados en Colombia, hemos acordado celebrar el presente <strong>Contrato de Arrendamiento</strong>, que será regido por las siguientes:
       <br>
       </p>
       
-      <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
+      <h4 id="section" style="text-align:center;"><strong>Cláusulas</strong></h4>
       <p>
         <ol type="1" id="listaHechos">
           <li id="hecho1">Soy nacional de <span id="lugar2">_______</span>.</li>              
@@ -412,32 +407,11 @@
         </ol>
       </p>
       
-      <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
-      <p>
-        La presente se fundamenta en los siguientes:
-      <br>
-      <span id="espacioFundamentos"></span>
-      <span id="espacioFundamentos2"></span>
-      <br>
-      </p>
       
-      <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
-      <p>
-        Se aportan las siguientes:<br>
-        <span id="pruebas"></span>
-        <br />
-      </p>
-      
-      <p id="section" style="text-align:center;"><strong>Peticiones.</strong></p>
-      <p><strong>Primera. </strong> <span id="spanPeticiones"></span>
-        <br />
-      </p>
-      
-      <p id="section" style="text-align:center;"><strong>Notificaciones.</strong></p>
-      <p>Recibiré en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br /><br />
-        Atentamente,<br>
-      </p>
-      
+      <p id="section" style="text-align:left;"><strong>Notificaciones. </strong>
+        La parte contratante  recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br />
+        La parte contratista recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. <br /><br/>
+        El presente contrato se firma por las partes estando en <span id="lugar1">_____</span>, siendo la fecha<span id="fecha2"> _____</span><br></p>
       
       <img id="espacioFirma" width="210" height="72">
       <br/>
@@ -454,32 +428,32 @@
 <!-- Contenedor de contenedores de módulos Petición-->
 <div class="contenedorGen" id="contenedorTutela">
 
-  <!-- Contenedor Fecha-->
+  <!-- Contenedor Accionante-->
   <div class="item item-1">
     <h3>
-      🗓️<br/>Accionante
+      🦸‍♂️<br/>Accionante
       </h3>
       <p class="parrafosFormulario">
       Escribe el nombre de la persona cuyos derechos fundamentales están en riesgo o han sido vulnerados. <strong>Ejemplo: </strong>Carlos Murgas.
       </p>
-      <input type="text" id="textoInputNombreUsuario" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre"/>
+      <input type="text" id="textoInputNombreAccionante" maxlength="50" oninput="escribirAccionante()" placeholder="Escriba el nombre"/>
   </div>
 
-    <!-- Contenedor Lugar de Creación-->
+    <!-- Contenedor Nacionalidad -->
     <div class="item item-2">
       <h3>
-        🌎<br/>Lugar de Creación
+        🌎<br/>Nacionalidad
         </h3>
         <p class="parrafosFormulario">
-          <label for="listaPaises">Elige el lugar de creación del documento en la lista. Ejemplo: Colombia.</label>
+          <label for="listaPaises">Elige de la lista la nacionalidad que corresponda a la parte Accionante. Ejemplo: Colombia.</label>
         </p>
-        <input list="listaPaises" name="pais" id="inputPais" onchange="elegirPais()"/>
+        <input list="listaPaises" name="nacionalidad" id="inputNacionalidad" onchange="elegirNacionalidad()"/>
           <datalist id="listaPaises">
-            <option value="Colombia">
-            <option value="Venezuela">
-            <option value="Italia">
-            <option value="España">
-            <option value="Nigeria">
+            <option value="Colombiana">
+            <option value="Venezolana">
+            <option value="Italiana">
+            <option value="Española">
+            <option value="Nigeriana">
           </datalist>
     </div>
   
@@ -589,25 +563,37 @@
 
   <div class="item item-11">
 
-  <!-- Acá comienza el documento que se genera. -->
+  <!-- Acá comienza el documento (Tutela) que se genera. -->
   
-    <div class="documentoGenerado" id="esqueleto">
+    <div class="documentoGenerado" id="esqueletoTutela">
       <p>
-        <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
-      <br>
       Respetados,
       <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
-      Entidad</span></strong>
+      Juzgado</span></strong>
       <br>
       E.S.D.
       <br>
       <br>
-      <strong>Referencia:</strong> Derecho de petición<br>
-      <br>
-      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, persona natural, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:
+      <strong>Referencia:</strong> Acción de Tutela<br>
+      <strong>Accionante:</strong> <span id="nombreAccionante">_____________</span><br />
+      <strong>Accionado(s)</strong> <span id="nombreAccionado">_____________</span><br />
+      <br />
+      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>
+      , persona natural, mayor de edad, presento <strong>Acción de Tutela</strong>
+      , para obtener su despacho orden judicial a mi favor
+      de las siguientes:
       <br>
       </p>
       
+      <p id="section" style="text-align:center;"><strong>Pretensiones.</strong></p>
+      <p><strong>Primera. Tutelar</strong> los derechos fundamentales de 
+        <span id="spanDerechosFunda"></span>de la parte accionante 
+        <span id="nombreAccionante">_________</span><br />
+                 <span id="spanPretensiones"></span>
+        <br />
+      </p>
+
+
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
       <p>
         <ol type="1" id="listaHechos">
@@ -616,9 +602,14 @@
         </ol>
       </p>
       
-      <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
-      <p>
-        La presente se fundamenta en los siguientes:
+      <p id="section" style="text-align:center;"><strong>Fundamentos y Razones de Derecho.</strong></p>
+      <p style="text-align:justify;">
+        La presente se fundamenta en los siguientes: <br />
+        Toda persona tiene derecho a presentar acción de tutela para reclamar ante los jueces, en todo momento y lugar,
+         mediante un procedimiento preferente y sumario, por sí misma o por quien actúe a su nombre, 
+         la protección inmediata de sus derechos constitucionales fundamentales, 
+         cuando quiera que éstos resulten vulnerados o amenazados por la acción o la omisión 
+         de cualquier autoridad pública (Constitución Política de Colombia, art.86).
       <br>
       <span id="espacioFundamentos"></span>
       <span id="espacioFundamentos2"></span>
@@ -627,18 +618,16 @@
       
       <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
       <p>
-        Se aportan las siguientes:<br>
+        Se aportan las siguientes pruebas documentales:<br>
         <span id="pruebas"></span>
         <br />
       </p>
       
-      <p id="section" style="text-align:center;"><strong>Peticiones.</strong></p>
-      <p><strong>Primera. </strong> <span id="spanPeticiones"></span>
-        <br />
-      </p>
+      
       
       <p id="section" style="text-align:center;"><strong>Notificaciones.</strong></p>
-      <p>Recibiré en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br /><br />
+      <p>La parte accionante recibirá en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br />
+        La parte accionada recibirá en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br />
         Atentamente,<br>
       </p>
       

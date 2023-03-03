@@ -35,13 +35,16 @@ function proyectarDocTutela (){
 
 // Sección - Fijar fecha.
 
-var botonFecha = document.getElementById("botonFecha");
-botonFecha.addEventListener("click",definirFecha);
+var botonFechaPeticion = document.getElementById("botonFechaPeticion");
+botonFechaPeticion.addEventListener("click",definirFecha);
+var botonFechaContrato = document.getElementById("botonFechaContrato");
+botonFechaContrato.addEventListener("click",definirFecha);
 function definirFecha(fechaDocumento)
     {
       fechaDocumento = new Date();
       fechaFormateada = fechaDocumento.toLocaleDateString();
       document.getElementById("fecha1").innerHTML = " "+fechaFormateada;
+      document.getElementById("fecha2").innerHTML = " "+fechaFormateada;
 }
 
 // Sección Lugar de Creación.
@@ -158,16 +161,41 @@ function subirFirma(input, target) {
 // Función Generar PDF. html2pdf by ekoopmans. https://ekoopmans.github.io/html2pdf.js/
 
 function generatePDF(){
-  
-  var element = document.getElementById('esqueleto');
+  if (contenedorPeticion.style.display = "none" == true)
+    {
+      var element = document.getElementById('esqueletoTutela');
   var opt = {
     margin: 0.5,
-    filename: 'dp_gendocu.pdf',
+    filename: 'tutela_gendocu.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    jsPDF:        { unit: 'in', format: 'legal', orientation: 'portrait' }
   };
   html2pdf(element, opt);
+    }
+  else if (contenedorContrato.style.display = 'flex' == true)
+    {
+      var element = document.getElementById('esqueletoContrato');
+      var opt = {
+        margin: 0.5,
+        filename: 'contrato_gendocu.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      html2pdf(element, opt);
+    }
+    else {
+      var element = document.getElementById('esqueletoPeticion');
+    var opt = {
+      margin: 0.5,
+      filename: 'dp_gendocu.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf(element, opt);
+    }
 }
 
 // Misceláneos.
