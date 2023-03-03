@@ -4,7 +4,7 @@
   <meta charset='utf-8'>
   <title>gendocu | Generador documental</title>
   <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
   <script src= "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"> </script>
 </head>
@@ -33,9 +33,20 @@
 
 </div>
 
-<!--  Acá comienzan los módulos para agregar contenido al documento -->
+  <p class="parrafosFormulario" id="parrafoSelector" style="text-align: center;font-size: medium;">Selecciona el <strong>tipo de documento </strong> que piensas generar:</p>
+<div class="contenedorSelector">
+
+    <input type="button" class="botonesSelector" value="Petición" id="botonGenPeticion"/><span style="color:white">-</span>
+    <input type="button" class="botonesSelector" value="Contrato" id="botonGenContrato"/><span style="color:white">-</span>
+    <input type="button" class="botonesSelector" value="Acción de Tutela" id="botonGenTutela"/>
+</div>
+
+<!--  Acá comienzan los módulos para agregar contenido al documento según su tipo-->
+
+<!-- Si seleccionas el tipo de documento 'peticion' entonces se visualiza el siguiente módulo:-->
+
 <!-- Contenedor de contenedores de módulos Petición-->
-<div class="contenedorPeticion">
+<div class="contenedorGen" id="contenedorPeticion">
 
   <!-- Contenedor Fecha-->
   <div class="item item-1">
@@ -174,7 +185,7 @@
 
   <!-- Acá comienza el documento que se genera. -->
   
-    <div class="documento" id="esqueletoPeticion">
+    <div class="documentoGenerado" id="esqueleto">
       <p>
         <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
       <br>
@@ -236,6 +247,413 @@
   </div>        
 </div>
          
+<!-- Contenedor de contenedores de módulos Contrato -->
+<div class="contenedorGen" id="contenedorContrato">
+
+  <!-- Contenedor Fecha-->
+  <div class="item item-1">
+    <h3>
+      🗓️<br/>Fecha Celebración
+      </h3>
+      <p class="parrafosFormulario">
+      Fija la fecha de creación del documento dando click en el siguiente botón.
+      </p>
+      <input type="button" class="botonesFormulario" id="botonFecha" value="Fijar Fecha"/>
+  </div>
+
+    <!-- Contenedor Lugar de Creación-->
+    <div class="item item-2">
+      <h3>
+        🌎<br/>Lugar de Creación
+        </h3>
+        <p class="parrafosFormulario">
+          <label for="listaPaises">Elige el lugar de creación del documento en la lista. Ejemplo: Colombia.</label>
+        </p>
+        <input list="listaPaises" name="pais" id="inputPais" onchange="elegirPais()"/>
+          <datalist id="listaPaises">
+            <option value="Colombia">
+            <option value="Venezuela">
+            <option value="Italia">
+            <option value="España">
+            <option value="Nigeria">
+          </datalist>
+    </div>
+  
+  <!-- Contenedor Entidades Destinatarias -->
+  <div class="item item-3">
+    <h3>
+      🏛️<br/>Contratante
+      </h3>
+      <p class="parrafosFormulario">
+        <label for="textoInputEntidad">Escribe el nombre completo de la entidad a la cual dirigiras la petición. Ejemplo: La Secretaría del Movimiento.</label>
+      </p>
+      <input type="text" id="textoInputEntidad" oninput="escribirEntidad()" placeholder="Escriba el nombre"/>
+  </div>
+
+  <!-- Contenedor Usuario -->
+  <div class="item item-4">
+    <h3>
+      🙋‍♂️🙋‍♀️<br/>Quien Escribe
+      </h3>
+      <p class="parrafosFormulario">
+      Escribe tu nombre. Ejemplo: Carlos Murgas.
+      </p>
+      <input type="text" id="textoInputNombreUsuario" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre"/>
+  </div>
+
+  <!-- Contenedor Peticiones -->
+  <div class="item item-5">
+    <h3>
+      📣<br/>Peticiones
+      </h3>
+      <p class="parrafosFormulario">
+      Escribe lo que requieres de la entidad. <strong>Ejemplo:</strong> Limpiar la Avenida Siempreviva. Reciclar los residuos de la limpieza.
+      </p>
+      <input type="text" id="textoInputPeticiones" placeholder="Escribe las peticiones"/>
+      <input type="button" class="botonesFormulario" id="botonPeticiones" value="Redactar Peticiones"/>
+  </div>
+
+  <!-- Contenedor Hechos -->
+  <div class="item item-6">
+    <h3>
+      📝<br/>Hechos
+      </h3>
+      <p class="parrafosFormulario">
+      Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.
+      </p>
+      <input type="text" id="textoInputHechos" oninput="escribirHechos()" placeholder="Escribe los hechos"/>
+  </div>
+
+  <!-- Contenedor Fundamentos -->
+  <div class="item item-7">
+    <h3>
+      📜<br/>Fundamentos
+      </h3>
+      <p class="parrafosFormulario">
+      Los fundamentos son el soporte legal del documento. Selecciona la opción que encaja en tu situación.
+      </p>
+      <div id="Fundamentos">
+      <select id="listaFundamentos">
+        <option> -- Selecciona la temática -- </option>
+        <optgroup label="Peticiones">
+        <option value="peticion_Basica">
+          Derecho a presentar peticiones y recibir respuesta oportuna</option>
+        </optgroup>
+      </select>
+      </div>
+      <input type="button" class="botonesFormulario" id="botonFundamentos" value="Generar Fundamentos"/>
+  </div>
+
+  <!-- Contenedor Pruebas -->
+  <div class="item item-8">
+    <h3>
+      🔎<br/>Pruebas
+      </h3>
+      <p class="parrafosFormulario">
+      Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "Fotocopia. Fotografía, etc.."
+      </p>
+      <input type="text" id="textoInputPruebas" oninput="escribirPruebas()" placeholder="Mencione las pruebas"/>
+  </div>
+
+  <!-- Contenedor Notificaciones -->
+  <div class="item item-9">
+    <h3>
+      📩<br/>Notificaciones
+      </h3>
+      <p class="parrafosFormulario">
+      Escribe tu email y celular para recibir la eventual respuesta de la entidad.
+      <br>
+      </p>
+      <input type="text" id="textoInputEmail" oninput="escribirNotificaciones1()" placeholder="Escriba el email"/>
+      <br>
+      <input type="text" id="textoInputCelular" maxlength="16" oninput="escribirNotificaciones2()" placeholder="Escriba el número"/>
+  </div>
+
+  <!-- Contenedor Firma -->
+  <div class="item item-10">
+    <h3>
+      ✍️<br/>Firma.
+      </h3>
+      <p class="parrafosFormulario">
+      Ingresa tu número de identificación (cédula de ciudadanía). <strong>Ejemplo:</strong> 0.<br>
+      </p>
+      <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba el número"/>
+      <br>
+      <p class="parrafosFormulario">Adjunta la imagen de tu firma.</p>
+      <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="subirFirma(this, 'espacioFirma')"/>
+  </div>
+
+  <div class="item item-11">
+
+  <!-- Acá comienza el documento que se genera. -->
+  
+    <div class="documentoGenerado" id="esqueleto">
+      <p>
+        <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
+      <br>
+      Respetados,
+      <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
+      Entidad</span></strong>
+      <br>
+      E.S.D.
+      <br>
+      <br>
+      <strong>Referencia:</strong> Derecho de petición<br>
+      <br>
+      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, persona natural, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:
+      <br>
+      </p>
+      
+      <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
+      <p>
+        <ol type="1" id="listaHechos">
+          <li id="hecho1">Soy nacional de <span id="lugar2">_______</span>.</li>              
+          <li id="hecho2"><span id="spanHechos">Hechos adicionales.</span></li>
+        </ol>
+      </p>
+      
+      <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
+      <p>
+        La presente se fundamenta en los siguientes:
+      <br>
+      <span id="espacioFundamentos"></span>
+      <span id="espacioFundamentos2"></span>
+      <br>
+      </p>
+      
+      <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
+      <p>
+        Se aportan las siguientes:<br>
+        <span id="pruebas"></span>
+        <br />
+      </p>
+      
+      <p id="section" style="text-align:center;"><strong>Peticiones.</strong></p>
+      <p><strong>Primera. </strong> <span id="spanPeticiones"></span>
+        <br />
+      </p>
+      
+      <p id="section" style="text-align:center;"><strong>Notificaciones.</strong></p>
+      <p>Recibiré en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br /><br />
+        Atentamente,<br>
+      </p>
+      
+      
+      <img id="espacioFirma" width="210" height="72">
+      <br/>
+      <strong><span id="nombreusuario2">______________</span>
+      <br>
+      CC.<span id="idUsuario">_________</span></strong>
+      <br>
+    </div>
+  </div>        
+</div>
+
+<!-- Si seleccionas el tipo de documento 'peticion' entonces se visualiza el siguiente módulo:-->
+
+<!-- Contenedor de contenedores de módulos Petición-->
+<div class="contenedorGen" id="contenedorTutela">
+
+  <!-- Contenedor Fecha-->
+  <div class="item item-1">
+    <h3>
+      🗓️<br/>Accionante
+      </h3>
+      <p class="parrafosFormulario">
+      Escribe el nombre de la persona cuyos derechos fundamentales están en riesgo o han sido vulnerados. <strong>Ejemplo: </strong>Carlos Murgas.
+      </p>
+      <input type="text" id="textoInputNombreUsuario" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre"/>
+  </div>
+
+    <!-- Contenedor Lugar de Creación-->
+    <div class="item item-2">
+      <h3>
+        🌎<br/>Lugar de Creación
+        </h3>
+        <p class="parrafosFormulario">
+          <label for="listaPaises">Elige el lugar de creación del documento en la lista. Ejemplo: Colombia.</label>
+        </p>
+        <input list="listaPaises" name="pais" id="inputPais" onchange="elegirPais()"/>
+          <datalist id="listaPaises">
+            <option value="Colombia">
+            <option value="Venezuela">
+            <option value="Italia">
+            <option value="España">
+            <option value="Nigeria">
+          </datalist>
+    </div>
+  
+  <!-- Contenedor Entidades Destinatarias -->
+  <div class="item item-3">
+    <h3>
+      🏛️<br/>Entidad Destinataria
+      </h3>
+      <p class="parrafosFormulario">
+        <label for="textoInputEntidad">Escribe el nombre completo de la entidad a la cual dirigiras la petición. Ejemplo: La Secretaría del Movimiento.</label>
+      </p>
+      <input type="text" id="textoInputEntidad" oninput="escribirEntidad()" placeholder="Escriba el nombre"/>
+  </div>
+
+  <!-- Contenedor Usuario -->
+  <div class="item item-4">
+    <h3>
+      🙋‍♂️🙋‍♀️<br/>Quien Escribe
+      </h3>
+      <p class="parrafosFormulario">
+      Escribe tu nombre. Ejemplo: Carlos Murgas.
+      </p>
+      <input type="text" id="textoInputNombreUsuario" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre"/>
+  </div>
+
+  <!-- Contenedor Peticiones -->
+  <div class="item item-5">
+    <h3>
+      📣<br/>Peticiones
+      </h3>
+      <p class="parrafosFormulario">
+      Escribe lo que requieres de la entidad. <strong>Ejemplo:</strong> Limpiar la Avenida Siempreviva. Reciclar los residuos de la limpieza.
+      </p>
+      <input type="text" id="textoInputPeticiones" placeholder="Escribe las peticiones"/>
+      <input type="button" class="botonesFormulario" id="botonPeticiones" value="Redactar Peticiones"/>
+  </div>
+
+  <!-- Contenedor Hechos -->
+  <div class="item item-6">
+    <h3>
+      📝<br/>Hechos
+      </h3>
+      <p class="parrafosFormulario">
+      Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.
+      </p>
+      <input type="text" id="textoInputHechos" oninput="escribirHechos()" placeholder="Escribe los hechos"/>
+  </div>
+
+  <!-- Contenedor Fundamentos -->
+  <div class="item item-7">
+    <h3>
+      📜<br/>Fundamentos
+      </h3>
+      <p class="parrafosFormulario">
+      Los fundamentos son el soporte legal del documento. Selecciona la opción que encaja en tu situación.
+      </p>
+      <div id="Fundamentos">
+      <select id="listaFundamentos">
+        <option> -- Selecciona la temática -- </option>
+        <optgroup label="Peticiones">
+        <option value="peticion_Basica">
+          Derecho a presentar peticiones y recibir respuesta oportuna</option>
+        </optgroup>
+      </select>
+      </div>
+      <input type="button" class="botonesFormulario" id="botonFundamentos" value="Generar Fundamentos"/>
+  </div>
+
+  <!-- Contenedor Pruebas -->
+  <div class="item item-8">
+    <h3>
+      🔎<br/>Pruebas
+      </h3>
+      <p class="parrafosFormulario">
+      Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "Fotocopia. Fotografía, etc.."
+      </p>
+      <input type="text" id="textoInputPruebas" oninput="escribirPruebas()" placeholder="Mencione las pruebas"/>
+  </div>
+
+  <!-- Contenedor Notificaciones -->
+  <div class="item item-9">
+    <h3>
+      📩<br/>Notificaciones
+      </h3>
+      <p class="parrafosFormulario">
+      Escribe tu email y celular para recibir la eventual respuesta de la entidad.
+      <br>
+      </p>
+      <input type="text" id="textoInputEmail" oninput="escribirNotificaciones1()" placeholder="Escriba el email"/>
+      <br>
+      <input type="text" id="textoInputCelular" maxlength="16" oninput="escribirNotificaciones2()" placeholder="Escriba el número"/>
+  </div>
+
+  <!-- Contenedor Firma -->
+  <div class="item item-10">
+    <h3>
+      ✍️<br/>Firma.
+      </h3>
+      <p class="parrafosFormulario">
+      Ingresa tu número de identificación (cédula de ciudadanía). <strong>Ejemplo:</strong> 0.<br>
+      </p>
+      <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba el número"/>
+      <br>
+      <p class="parrafosFormulario">Adjunta la imagen de tu firma.</p>
+      <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="subirFirma(this, 'espacioFirma')"/>
+  </div>
+
+  <div class="item item-11">
+
+  <!-- Acá comienza el documento que se genera. -->
+  
+    <div class="documentoGenerado" id="esqueleto">
+      <p>
+        <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
+      <br>
+      Respetados,
+      <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
+      Entidad</span></strong>
+      <br>
+      E.S.D.
+      <br>
+      <br>
+      <strong>Referencia:</strong> Derecho de petición<br>
+      <br>
+      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, persona natural, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:
+      <br>
+      </p>
+      
+      <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
+      <p>
+        <ol type="1" id="listaHechos">
+          <li id="hecho1">Soy nacional de <span id="lugar2">_______</span>.</li>              
+          <li id="hecho2"><span id="spanHechos">Hechos adicionales.</span></li>
+        </ol>
+      </p>
+      
+      <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
+      <p>
+        La presente se fundamenta en los siguientes:
+      <br>
+      <span id="espacioFundamentos"></span>
+      <span id="espacioFundamentos2"></span>
+      <br>
+      </p>
+      
+      <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
+      <p>
+        Se aportan las siguientes:<br>
+        <span id="pruebas"></span>
+        <br />
+      </p>
+      
+      <p id="section" style="text-align:center;"><strong>Peticiones.</strong></p>
+      <p><strong>Primera. </strong> <span id="spanPeticiones"></span>
+        <br />
+      </p>
+      
+      <p id="section" style="text-align:center;"><strong>Notificaciones.</strong></p>
+      <p>Recibiré en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br /><br />
+        Atentamente,<br>
+      </p>
+      
+      
+      <img id="espacioFirma" width="210" height="72">
+      <br/>
+      <strong><span id="nombreusuario2">______________</span>
+      <br>
+      CC.<span id="idUsuario">_________</span></strong>
+      <br>
+    </div>
+  </div>        
+</div>
+
+
 <br>
 
 <!-- Contenedor Botones de acciones sobre el documento -->

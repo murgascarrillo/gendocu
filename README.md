@@ -16,9 +16,10 @@ Say __bye, bye!__ to paper-printing documents and say __Hello!__ to your digital
 
 If gendocu has been useful to you, please consider buying me a coffee:
 
-[BuyMeACoffe](https://buymeacoffee.com/murgascarrillo)
+[BuyMeACoffee](https://buymeacoffee.com/murgascarrillo)
 
-I enjoy crypto donations as well:
+I enjoy __crypto__ donations as well:
+
 $XNO: nano_1bxw1qgnddcifsgtyx4e6eahzg8u3z46ngt1zc8jmnmb6h9kfiq7k1qhy4xc  
 $BTC: 15oJRJFXD8HD9AAoVobE2TrpoWtqs1nigV  
 $ETH: 0x94c732AAe0b82cb594B9C4f61e7a8779003b8773  
@@ -29,7 +30,8 @@ $SOUL: murgas
 
 ## Contact me!
 
-I am open to suggestions and anything at all you would like to share with me. So reach out!
+I am open to suggestions and anything at all you would like to share with me. Reach out!
+
 [My Website](https://murgascarrillo.com)
 
 -------

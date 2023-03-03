@@ -1,8 +1,37 @@
 // Funciones generales.
 
 
-// Funciones por sección.
+// Función de Proyectar borrador de Documento según Tipo
+let contenedorGen = document.getElementsByClassName("botonGen");
+let botonGenPeticion = document.getElementById("botonGenPeticion");
+let contenedorPeticion = document.getElementById("contenedorPeticion");
+botonGenPeticion.addEventListener("click",proyectarDocPeticion);
+let botonGenContrato = document.getElementById("botonGenContrato");
+let contenedorContrato = document.getElementById("contenedorContrato");
+botonGenContrato.addEventListener("click",proyectarDocContrato);
+let botonGenTutela = document.getElementById("botonGenTutela");
+let contenedorTutela = document.getElementById("contenedorTutela");
+botonGenTutela.addEventListener("click",proyectarDocTutela);
 
+function proyectarDocPeticion (){
+    contenedorTutela.style.display = 'none';
+    contenedorContrato.style.display = 'none';
+    contenedorPeticion.style.display = 'flex';
+}
+function proyectarDocContrato (){
+    contenedorPeticion.style.display = 'none';
+    contenedorTutela.style.display = 'none';
+    contenedorContrato.style.display = 'flex';
+}
+function proyectarDocTutela (){
+    contenedorPeticion.style.display = 'none';
+    contenedorContrato.style.display = 'none';
+    contenedorTutela.style.display = 'flex';
+}
+
+// Funciones por Tipo de Documento.
+
+// Tipo Petición.
 
 // Sección - Fijar fecha.
 
@@ -126,11 +155,11 @@ function subirFirma(input, target) {
 }
 
 
-// Sección - Imprimir o Resetear documento.
 // Función Generar PDF. html2pdf by ekoopmans. https://ekoopmans.github.io/html2pdf.js/
 
 function generatePDF(){
-  var element = document.getElementById('esqueletoPeticion');
+  
+  var element = document.getElementById('esqueleto');
   var opt = {
     margin: 0.5,
     filename: 'dp_gendocu.pdf',
