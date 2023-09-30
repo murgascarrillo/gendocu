@@ -301,81 +301,25 @@
       <input type="text" id="textoInputContratista" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre"/>
   </div>
 
-  <!-- Contenedor Peticiones -->
+  <!-- Contenedor Cláusulas -->
   <div class="item item-5">
     <h3>
-      📣<br/>Peticiones
+      📣<br/>Cláusulas
       </h3>
       <p class="parrafosFormulario">
-      Escribe lo que requieres de la entidad. <strong>Ejemplo:</strong> Limpiar la Avenida Siempreviva. Reciclar los residuos de la limpieza.
+      Escribe escribe las obligaciones de cada contratista. <strong>Ejemplo:</strong> Del Arrendatario: Mantener el inmueble arrendado en buenas condiciones.
       </p>
-      <input type="text" id="textoInputPeticiones" placeholder="Escribe las peticiones"/>
-      <input type="button" class="botonesFormulario" id="botonPeticiones" value="Redactar Peticiones"/>
+      <input type="text" id="textoInputPeticiones" placeholder="Escribe las cláusulas"/>
+      <input type="button" class="botonesFormulario" id="botonClausulas" value="Redactar cláusulas"/>
   </div>
 
-  <!-- Contenedor Hechos -->
-  <div class="item item-6">
-    <h3>
-      📝<br/>Hechos
-      </h3>
-      <p class="parrafosFormulario">
-      Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.
-      </p>
-      <input type="text" id="textoInputHechos" oninput="escribirHechos()" placeholder="Escribe los hechos"/>
-  </div>
-
-  <!-- Contenedor Fundamentos -->
-  <div class="item item-7">
-    <h3>
-      📜<br/>Fundamentos
-      </h3>
-      <p class="parrafosFormulario">
-      Los fundamentos son el soporte legal del documento. Selecciona la opción que encaja en tu situación.
-      </p>
-      <div id="Fundamentos">
-      <select id="listaFundamentos">
-        <option> -- Selecciona la temática -- </option>
-        <optgroup label="Peticiones">
-        <option value="peticion_Basica">
-          Derecho a presentar peticiones y recibir respuesta oportuna</option>
-        </optgroup>
-      </select>
-      </div>
-      <input type="button" class="botonesFormulario" id="botonFundamentos" value="Generar Fundamentos"/>
-  </div>
-
-  <!-- Contenedor Pruebas -->
-  <div class="item item-8">
-    <h3>
-      🔎<br/>Pruebas
-      </h3>
-      <p class="parrafosFormulario">
-      Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "Fotocopia. Fotografía, etc.."
-      </p>
-      <input type="text" id="textoInputPruebas" oninput="escribirPruebas()" placeholder="Mencione las pruebas"/>
-  </div>
-
-  <!-- Contenedor Notificaciones -->
-  <div class="item item-9">
-    <h3>
-      📩<br/>Notificaciones
-      </h3>
-      <p class="parrafosFormulario">
-      Escribe tu email y celular para recibir la eventual respuesta de la entidad.
-      <br>
-      </p>
-      <input type="text" id="textoInputEmail" oninput="escribirNotificaciones1()" placeholder="Escriba el email"/>
-      <br>
-      <input type="text" id="textoInputCelular" maxlength="16" oninput="escribirNotificaciones2()" placeholder="Escriba el número"/>
-  </div>
-
-  <!-- Contenedor Firma -->
+  <!-- Contenedor Firmas Contratantes -->
   <div class="item item-10">
     <h3>
-      ✍️<br/>Firma.
+      ✍️<br/>Firmas.
       </h3>
       <p class="parrafosFormulario">
-      Ingresa tu número de identificación (cédula de ciudadanía). <strong>Ejemplo:</strong> 0.<br>
+      Ingresa el número de identificación (cédula de ciudadanía) de las y/o los contratantes. <strong>Ejemplo:</strong> 111454039.<br>
       </p>
       <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba el número"/>
       <br>
@@ -384,7 +328,6 @@
   </div>
 
   <div class="item item-11">
-
   <!-- Acá comienza el documento que se genera. -->
   
     <div class="documentoGenerado" id="esqueletoContrato">
