@@ -14,9 +14,10 @@ let contenedorTutela = document.getElementById("contenedorTutela");
 botonGenTutela.addEventListener("click",proyectarDocTutela);
 
 function proyectarDocPeticion (){
+    contenedorPeticion.style.display = 'flex'; 
     contenedorTutela.style.display = 'none';
     contenedorContrato.style.display = 'none';
-    contenedorPeticion.style.display = 'flex';
+    
 }
 function proyectarDocContrato (){
     contenedorPeticion.style.display = 'none';
@@ -161,41 +162,42 @@ function subirFirma(input, target) {
 // Función Generar PDF. html2pdf by ekoopmans. https://ekoopmans.github.io/html2pdf.js/
 
 function generatePDF(){
-  if (contenedorPeticion.style.display = "none" == true)
-    {
-      var element = document.getElementById('esqueletoTutela');
-  var opt = {
+  if (contenedorPeticion.style.display == 'flex')
+  {
+    var element = document.getElementById('esqueletoPeticion');
+    var opt = {
     margin: 0.5,
-    filename: 'tutela_gendocu.pdf',
+    filename: 'dp_gendocu.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'legal', orientation: 'portrait' }
-  };
-  html2pdf(element, opt);
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
     }
-  else if (contenedorContrato.style.display = 'flex' == true)
-    {
-      var element = document.getElementById('esqueletoContrato');
-      var opt = {
-        margin: 0.5,
-        filename: 'contrato_gendocu.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2 },
-        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-      };
-      html2pdf(element, opt);
-    }
-    else {
-      var element = document.getElementById('esqueletoPeticion');
-    var opt = {
-      margin: 0.5,
-      filename: 'dp_gendocu.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2 },
-      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
     html2pdf(element, opt);
+  }
+  else if(contenedorContrato.style.display == 'flex')
+  {
+    var element = document.getElementById('esqueletoContrato');
+    var opt = {
+    margin: 0.5,
+    filename: 'cto_gendocu.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 2 },
+    jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
     }
+    html2pdf(element, opt);
+  }else(contenedorTutela.style.display == 'flex')
+  {
+    var element = document.getElementById('esqueletoTutela');
+    var opt = {
+    margin: 0.5,
+    filename: 'tut_gendocu.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 2 },
+    jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
+    }
+    html2pdf(element, opt);
+  }
+
 }
 
 // Misceláneos.
