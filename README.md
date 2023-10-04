@@ -1,37 +1,27 @@
 # gendocu
 
-gendocu is a tool you can use to generate legal related documentalia. Petitions, contracts, public actions.
+gendocu is una herramienta que puedes usar para crear documentos con *potenciales* efectos jurídicos. Peticiones, Contracts, Acciones, Mandatos.
 
-Say __bye, bye!__ to paper-printing documents and say __Hello!__ to your digitally generated documents.
+Dile __bye, bye!__ a documentos impresos y ejerce tus derechos diciéndole __Go!__ a documentos digitalmente generados.
 
-## How to use:
+## Uso / How to use:
 
-1. Go to [gendocu App page](https://murgascarrillo.github.io/gendocu).
-2. Read the instructions at the information box.
-3. Fill the form sections with the information required in each.
-4. Once filled, use the 'Exportar a PDF' button to create/save the generated document to a local file in your device.
-5. And that's it🎉! Now you can use your document.
+1. Entra a la liga de la *App*: [gendocu App page](https://murgascarrillo.github.io/gendocu).
+2. Elige el tipo de *Documento* que necesites crear. 
+3. Llena el formulario con la información necesaria según el *tipo* de Documento.
+4. Al completar el documento use el botón de *alistamiento* según la preferencia: - 'Exportar a PDF' para guardar el Documento generado a un dispositivo local del usuario.
+5. **Now.** Usa tu Documento!
 
-## Support me!
-
-If gendocu has been useful to you, please consider buying me a coffee:
-
+   
+## Ayúdame si gustas.
 [BuyMeACoffee](https://buymeacoffee.com/murgascarrillo)
+[criptomoneda XNO] nano_164p9juryz7gku3m5gfq7nr38jp5j9ye6ffxy69635mak57rf8j3gywfj37w.  O la que uses ;)
 
-I enjoy __crypto__ donations as well:
+## Contacto.
 
-$XNO: nano_1bxw1qgnddcifsgtyx4e6eahzg8u3z46ngt1zc8jmnmb6h9kfiq7k1qhy4xc  
-$BTC: 15oJRJFXD8HD9AAoVobE2TrpoWtqs1nigV  
-$ETH: 0x94c732AAe0b82cb594B9C4f61e7a8779003b8773  
-$BAN: ban_3wixbnzinfe6w5kyn8z9ck8tirycscj3he5et5pkurb1sqhs3qj8nxy155fy  
-$VITE: vite_66ce649caedda1adfff4b5c0e7d3da9bde26a288ab4ff1f4e8  
-$NEAR: murgas.near  
-$SOUL: murgas  
+Esta herramienta es de libre sugerencia. Si te surge una pregunta, idea o lo que sea... **¡Reach out!**
 
-## Contact me!
-
-I am open to suggestions and anything at all you would like to share with me. Reach out!
-
-[My Website](https://murgascarrillo.com)
+[Web](https://murgascarrillo.com)
+murgascarrillo aquí y allá.
 
 -------
