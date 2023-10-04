@@ -92,12 +92,45 @@ function escribirPeticiones()
 
 // Sección - Hechos.
 
-function escribirHechos()
-    {
-      let x = document.getElementById("textoInputHechos");
-      let y = document.getElementById("hecho2");
-      y.innerHTML = x.value;
+function escribirHechos(event) {
+  let x = document.getElementById("textoInputHechos");
+  let y = document.getElementById("hn");
+  let inputText = x.value;
+
+  // Check if Enter key (keycode 13) is pressed
+  if (event.keyCode === 13) {
+    // Prevent the default behavior of Enter key (preventing form submission)
+    event.preventDefault();
+
+    // Create a new <li> element with the input value
+    let newLi = document.createElement("li");
+    newLi.textContent = inputText;
+
+    // Insert the new <li> element above the hecho2 element
+    y.parentNode.insertBefore(newLi, y);
+
+    // Clear the input field
+    x.value = '';
+  } else {
+    // Update the hn element with the user's input
+    y.innerHTML = inputText;
+  }
 }
+
+function eliminarLiVacio() {
+  let liElements = document.querySelectorAll("li");
+
+  for (let i = liElements.length - 1; i >= 0; i--) {
+    if (liElements[i].textContent.trim() === '') {
+      liElements[i].remove();
+    }
+  }
+}
+
+// Add event listener to remove empty <li> elements when the user leaves textoInputHechos
+document.getElementById("textoInputHechos").addEventListener("blur", eliminarLiVacio);
+document.getElementById("textoInputHechos").addEventListener("keydown", escribirHechos);
+
 
 // Sección - Fundamentos.
 

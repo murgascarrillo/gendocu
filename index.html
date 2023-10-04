@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
+  <meta charset='utf-8'/>
   <title>gendocu | CREA documentos</title>
-  <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-  <script src= "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"> </script>
+  <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'/>
+  <script src= "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 </head>
 
 <body>
@@ -117,9 +117,10 @@
       📝<br/>Hechos
       </h3>
       <p class="parrafosFormulario">
-      Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.
+      Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.<br/>
+      Agrega nuevos Hechos presionando <strong>Enter↵</strong>.
       </p>
-      <input type="text" id="textoInputHechos" oninput="escribirHechos()" placeholder="Escriba los hechos."/>
+      <input type="text" id="textoInputHechos" oninput="escribirHechos(event)" placeholder="Escriba los hechos."/>
   </div>
 
   <!-- Contenedor Fundamentos -->
@@ -206,7 +207,7 @@
       <p>
         <ol type="1" id="listaHechos">
           <li id="hecho1">Soy nacional de <span id="lugar2">_______</span>.</li>              
-          <li id="hecho2"><span id="spanHechos">Hechos adicionales.</span></li>
+          <li id="hn"><span id="spanHechos">Hechos adicionales.</span></li>
         </ol>
       </p>
       
@@ -597,7 +598,7 @@
   <a class="iconosFooter" href="https://wa.me/573017673013" class="keychainify-checked"> <img src="imagenes/icon_whatsapp.webp" target="_blank" alt="Icono Whatsapp" width="30"></a>
     <a class="iconosFooter" href="https://github.com/murgascarrillo/gendocu" class="keychainify-checked"> <img src="imagenes/icon_github.webp" alt="Icono Github by 'icon king1' on freeicons.io" width="30"></a>
     <br>
-  Version 0.0.2.3.1 - Hecho con &#x2728;
+  Version 0.0.2.3.2 - Hecho con &#x2728;
 </div>
 
 <!-- Scripts -->  
