@@ -6,13 +6,16 @@
 // Modo Nocturno 
 let botonModoNocturno = document.getElementById("botonModoNocturno");
 let entorno = document.body;
+let footer = document.getElementById("footer");
 let modoNocturnoActivo = false;
 
 function toggleModoNocturno() {
   if (modoNocturnoActivo) {
     // Desactivar el modo nocturno
     entorno.style.backgroundColor = '';
-    let titulos = document.querySelectorAll('h1, h2');
+    footer.style.color = 'black';
+    botonModoNocturno.style.backgroundColor = 'black';
+    let titulos = document.querySelectorAll('h1,h2');
     for (let titulo of titulos) {
       titulo.style.color = '';
     }
@@ -20,7 +23,9 @@ function toggleModoNocturno() {
   } else {
     // Activar el modo nocturno
     entorno.style.backgroundColor = 'black';
-    let titulos = document.querySelectorAll('h1, h2');
+    footer.style.color = 'white';
+    botonModoNocturno.style.backgroundColor = 'white';
+    let titulos = document.querySelectorAll('h1,h2');
     for (let titulo of titulos) {
       titulo.style.color = 'white';
     }
