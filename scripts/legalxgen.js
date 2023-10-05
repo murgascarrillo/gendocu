@@ -1,7 +1,38 @@
-// Funciones generales.
+/// Funciones generales.
+
+// Entorno
 
 
-// Función de Proyectar borrador de Documento según Tipo
+// Modo Nocturno 
+let botonModoNocturno = document.getElementById("botonModoNocturno");
+let entorno = document.body;
+let modoNocturnoActivo = false;
+
+function toggleModoNocturno() {
+  if (modoNocturnoActivo) {
+    // Desactivar el modo nocturno
+    entorno.style.backgroundColor = '';
+    let titulos = document.querySelectorAll('h1, h2');
+    for (let titulo of titulos) {
+      titulo.style.color = '';
+    }
+    modoNocturnoActivo = false;
+  } else {
+    // Activar el modo nocturno
+    entorno.style.backgroundColor = 'black';
+    let titulos = document.querySelectorAll('h1, h2');
+    for (let titulo of titulos) {
+      titulo.style.color = 'white';
+    }
+    modoNocturnoActivo = true;
+  }
+}
+
+botonModoNocturno.addEventListener("click", toggleModoNocturno);
+
+
+
+/// Función de Proyectar borrador de Documento según Tipo
 let contenedorGen = document.getElementsByClassName("botonGen");
 let botonGenPeticion = document.getElementById("botonGenPeticion");
 let contenedorPeticion = document.getElementById("contenedorPeticion");
@@ -36,17 +67,24 @@ function proyectarDocTutela (){
 
 // Sección - Fijar fecha.
 
-var botonFechaPeticion = document.getElementById("botonFechaPeticion");
-botonFechaPeticion.addEventListener("click",definirFecha);
-var botonFechaContrato = document.getElementById("botonFechaContrato");
-botonFechaContrato.addEventListener("click",definirFecha);
-function definirFecha(fechaDocumento)
-    {
-      fechaDocumento = new Date();
-      fechaFormateada = fechaDocumento.toLocaleDateString();
-      document.getElementById("fecha1").innerHTML = " "+fechaFormateada;
-      document.getElementById("fecha2").innerHTML = " "+fechaFormateada;
-}
+
+function genPeticion()
+ {
+
+ }
+
+ var botonFechaPeticion = document.getElementById("botonFechaPeticion");
+ botonFechaPeticion.addEventListener("focus",definirFecha);
+ var botonFechaContrato = document.getElementById("botonFechaContrato");
+ botonFechaContrato.addEventListener("click",definirFecha);
+ function definirFecha(fechaDocumento)
+   {
+     fechaDocumento = new Date();
+     fechaFormateada = fechaDocumento.toLocaleDateString();
+     document.getElementById("fecha1").innerHTML = " "+fechaFormateada;
+     document.getElementById("fecha2").innerHTML = " "+fechaFormateada;
+   }
+
 
 // Sección Lugar de Creación.
 
@@ -93,12 +131,12 @@ function escribirPeticiones()
 // Sección - Hechos.
 
 function escribirHechos(event) {
-  let x = document.getElementById("textoInputHechos");
+  let x = document.getElementById("inputTextoHechosPeticion");
   let y = document.getElementById("hn");
   let inputText = x.value;
 
-  // Check if Enter key (keycode 13) is pressed
-  if (event.keyCode === 13) {
+  // Check if Enter key is pressed
+  if (event.key === 'Enter') {
     // Prevent the default behavior of Enter key (preventing form submission)
     event.preventDefault();
 
@@ -106,7 +144,7 @@ function escribirHechos(event) {
     let newLi = document.createElement("li");
     newLi.textContent = inputText;
 
-    // Insert the new <li> element above the hecho2 element
+    // Insert the new <li> element above the hn element
     y.parentNode.insertBefore(newLi, y);
 
     // Clear the input field
@@ -128,8 +166,8 @@ function eliminarLiVacio() {
 }
 
 // Add event listener to remove empty <li> elements when the user leaves textoInputHechos
-document.getElementById("textoInputHechos").addEventListener("blur", eliminarLiVacio);
-document.getElementById("textoInputHechos").addEventListener("keydown", escribirHechos);
+document.getElementById("inputTextoHechosPeticion").addEventListener("blur", eliminarLiVacio);
+document.getElementById("inputTextoHechosPeticion").addEventListener("keydown", escribirHechos);
 
 
 // Sección - Fundamentos.

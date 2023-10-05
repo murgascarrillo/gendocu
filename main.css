@@ -19,6 +19,12 @@ body {
   align-self:center;
 }
 
+/*  Cabecera  */
+header {
+  height: 30px;
+}
+
+
 /* Encabezados - Headings */
 
 h1 {
@@ -80,7 +86,6 @@ ol {
     height: auto;
     padding: 0.6rem;
     margin:10px;
-    background-color: white;
     display: flex; 
     row-gap: 15px;
     column-gap: 15px;
@@ -215,8 +220,20 @@ select
 
 button
   {
-    color:magenta;
+    color:black;
   }
+  #botonModoNocturno
+  {
+    color: black;
+    background-color: black;
+    border-radius:60%;
+    height:30px;
+    width: 30px;
+    border-color: silver;
+    border-width: 1.3px;
+  }
+
+
   .botonesFormulario
     {
       margin-top: 1ex;
