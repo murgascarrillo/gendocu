@@ -122,9 +122,10 @@
       </h3>
       <p class="parrafosFormulario">
       Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.<br/>
-      Agrega nuevos Hechos presionando <strong>Enter↵</strong>.
+      Agrega nuevos Hechos pulsando el botón <strong>+</strong>.
       </p>
-      <input type="text" id="inputTextoHechosPeticion" oninput="escribirHechos(event)" placeholder="Escriba los hechos."/>
+      <input type="text" id="inputTextoHechosPeticion" placeholder="Escriba los hechos."/>
+      <button type="submit" class="botonesFormulario" id="botonAddHechosPeticion">Agregar Hecho</button>
   </div>
 
   <!-- Contenedor Fundamentos -->
@@ -191,9 +192,9 @@
   <!-- Acá comienza el documento [Petición] que se genera. -->
   
     <div class="documentoGenerado" id="esqueletoPeticion">
-      <p>
-        <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
-      <br>
+    <p>
+    <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
+    <br>
       Respetados,
       <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
       Entidad</span></strong>
@@ -203,15 +204,12 @@
       <br>
       <strong>Referencia:</strong> Derecho de petición<br>
       <br>
-      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, persona natural, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:
+      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, persona natural, nacional de <span id="lugar2">_________</span>, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:
       <br>
       </p>
-      
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
       <p>
-        <ol type="1" id="listaHechos">
-          <li id="hecho1">Soy nacional de <span id="lugar2">_______</span>.</li>              
-          <li id="hn"><span id="spanHechos">Hechos adicionales.</span></li>
+        <ol style="list-style-type:upper-1" id="listaHechosPeticion">
         </ol>
       </p>
       
@@ -252,6 +250,8 @@
   </div>        
 </div>
          
+<!-- Tipo Contrato -->
+
 <!-- Contenedor de contenedores de módulos Contrato -->
 <div class="contenedorGen" id="contenedorContrato">
 
@@ -377,9 +377,13 @@
   </div>        
 </div>
 
-<!-- Si seleccionas el tipo de documento 'peticion' entonces se visualiza el siguiente módulo:-->
 
-<!-- Contenedor de contenedores de módulos Petición-->
+<!-- Tipo Tutela-->
+
+<!-- Si seleccionas el tipo de documento 'Tutela' entonces se visualiza el siguiente módulo:-->
+
+
+<!-- Contenedor de contenedores de módulos Tutela-->
 <div class="contenedorGen" id="contenedorTutela">
 
   <!-- Contenedor Accionante-->
@@ -442,7 +446,8 @@
       <p class="parrafosFormulario">
       Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.
       </p>
-      <input type="text" id="inputTextoHechosTutela" oninput="escribirHechos(event)" placeholder="Escribe los hechos"/>
+      <input type="text" id="inputTextoHechosTutela" placeholder="Escribe los hechos"/>
+      <button type="submit" class="botonesFormulario" id="botonAddHechosTutela">Agregar Hechos</button>
   </div>
 
   <!-- Contenedor Fundamentos -->
@@ -522,7 +527,7 @@
       <strong>Accionado(s)</strong> <span id="nombreAccionado">_____________</span><br />
       <br />
       Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>
-      , persona natural, mayor de edad, presento <strong>Acción de Tutela</strong>
+      , persona natural, nacional de <span id="lugar2">__________</span>, mayor de edad, presento <strong>Acción de Tutela</strong>
       , para obtener su despacho orden judicial a mi favor
       de las siguientes:
       <br>
@@ -539,10 +544,8 @@
 
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
       <p>
-        <ol type="1" id="listaHechos">
-          <li id="hecho1">Soy nacional de <span id="lugar2">_______</span>.</li>              
-          <li id="hn"><span id="spanHechos">Hechos adicionales.</span></li>
-        </ol>
+        <ol type="1" id="listaHechosTutela">
+          </ol>
       </p>
       
       <p id="section" style="text-align:center;"><strong>Fundamentos y Razones de Derecho.</strong></p>
@@ -585,14 +588,21 @@
   </div>        
 </div>
 
+<div id="contenedorVacio" style="align-self:flex-end;display:none;"><span>¡Ups! No se ha copiado nada...👻</span></div>
 
 <br>
 
 <!-- Contenedor Botones de acciones sobre el documento -->
-  <div class="itemBoton">
+
+<div class="itemBoton">
+  <input type="button" id="botonCopiar" value="📋 Copiar texto"/>
+</div> 
+
+<div class="itemBoton">
     <input type="button" id="botonExportar" value="🖨️ Exportar a PDF" onclick="generatePDF()"/>
   </div>
-</div>
+
+
 
 <br>
 
@@ -602,7 +612,7 @@
   <a class="iconosFooter" href="https://wa.me/573017673013" class="keychainify-checked"> <img src="imagenes/icon_whatsapp.webp" target="_blank" alt="Icono Whatsapp" width="30"></a>
     <a class="iconosFooter" href="https://github.com/murgascarrillo/gendocu" class="keychainify-checked"> <img src="imagenes/icon_github.webp" alt="Icono Github by 'icon king1' on freeicons.io" width="30"></a>
     <br>
-  Version 0.0.2.3.2 - Hecho con &#x2728;
+  Version 0.0.2.3.2.1 - Hecho con &#x2728;
 </div>
 
 <!-- Scripts -->  

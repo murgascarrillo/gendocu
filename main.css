@@ -307,7 +307,28 @@ button
     justify-content: center;
   }
 
-    
+      #botonCopiar{
+        background-color: black;
+        color: white;
+        width: auto;
+        border-radius: 2em;
+        border-color: green;
+        font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        font-size: medium;
+        cursor: pointer; /* Cambiamos el cursor para indicar que es interactivo */
+        transition: transform 0.3s ease; /* Agregamos una transición suave en la propiedad transform */
+      }
+
+      #botonCopiar:hover {
+        transform: translateY(4px); /* Al hacer hover, el botón se desplazará hacia abajo 5px */
+      }
+      
+      #botonCopiar:active {
+        transform: translateY(0); /* Cuando se presiona el botón, el desplazamiento vuelve a cero */
+      }
+
+
       #botonExportar
       {
         background-color: black;

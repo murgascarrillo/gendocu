@@ -49,21 +49,27 @@ let botonGenTutela = document.getElementById("botonGenTutela");
 let contenedorTutela = document.getElementById("contenedorTutela");
 botonGenTutela.addEventListener("click",proyectarDocTutela);
 
-function proyectarDocPeticion (){
-    contenedorPeticion.style.display = 'flex'; 
-    contenedorTutela.style.display = 'none';
-    contenedorContrato.style.display = 'none';
-    
+let estadoContenedor = 0;  // Para manipulación y alistamiento del Documento.
+
+function proyectarDocPeticion() {
+  estadoContenedor = 1;
+  contenedorPeticion.style.display = 'flex';
+  contenedorTutela.style.display = 'none';
+  contenedorContrato.style.display = 'none';
 }
-function proyectarDocContrato (){
-    contenedorPeticion.style.display = 'none';
-    contenedorTutela.style.display = 'none';
-    contenedorContrato.style.display = 'flex';
+
+function proyectarDocContrato() {
+  estadoContenedor = 2;
+  contenedorPeticion.style.display = 'none';
+  contenedorTutela.style.display = 'none';
+  contenedorContrato.style.display = 'flex';
 }
-function proyectarDocTutela (){
-    contenedorPeticion.style.display = 'none';
-    contenedorContrato.style.display = 'none';
-    contenedorTutela.style.display = 'flex';
+
+function proyectarDocTutela() {
+  estadoContenedor = 3;
+  contenedorPeticion.style.display = 'none';
+  contenedorContrato.style.display = 'none';
+  contenedorTutela.style.display = 'flex';
 }
 
 // Funciones por Tipo de Documento.
@@ -135,29 +141,25 @@ function escribirPeticiones()
 
 // Sección - Hechos.
 
-function escribirHechos(event) {
-  let x = document.getElementById("inputTextoHechosPeticion");
-  let y = document.getElementById("hn");
-  let inputText = x.value;
+let x = document.getElementById("inputTextoHechosPeticion");
+let y = document.getElementById("listaHechosPeticion");
+let inputTextHechos;
 
-  // Check if Enter key is pressed
-  if (event.key === 'Enter') {
-    // Prevent the default behavior of Enter key (preventing form submission)
-    event.preventDefault();
+function escribirHechos() {
+    
+  inputTextHechos = x.value;
+}
+function agregarHechos() {
+ // Create a new <li> element with the input value
+ let newLi = document.createElement("li");
+ newLi.textContent = inputTextHechos;
+ newLi.type = "1";
 
-    // Create a new <li> element with the input value
-    let newLi = document.createElement("li");
-    newLi.textContent = inputText;
+ // Insert the new <li> element above the hn element
+ y.parentNode.insertBefore(newLi, y);
 
-    // Insert the new <li> element above the hn element
-    y.parentNode.insertBefore(newLi, y);
-
-    // Clear the input field
-    x.value = '';
-  } else {
-    // Update the hn element with the user's input
-    y.innerHTML = inputText;
-  }
+ // Clear the input field
+ x.value = '';
 }
 
 function eliminarLiVacio() {
@@ -170,9 +172,14 @@ function eliminarLiVacio() {
   }
 }
 
+
+document.getElementById("inputTextoHechosPeticion").addEventListener("input", escribirHechos);
+
 // Add event listener to remove empty <li> elements when the user leaves textoInputHechos
 document.getElementById("inputTextoHechosPeticion").addEventListener("blur", eliminarLiVacio);
-document.getElementById("inputTextoHechosPeticion").addEventListener("keydown", escribirHechos);
+
+// Add event listener to add a new <li> element when the user clicks the "botonAddHechos" button
+document.getElementById("botonAddHechosPeticion").addEventListener("click", agregarHechos);
 
 
 // Sección - Fundamentos.
@@ -276,6 +283,54 @@ function generatePDF(){
 
 }
 
-// Misceláneos.
+
+// Función para copiar texto al portapapeles
+function copiarAlPortapapeles(idElemento) {
+  // Selecciona el elemento que contiene el texto que deseas copiar
+  let elemento = document.getElementById(idElemento);
+
+  // Crea un elemento de área de texto
+  let textarea = document.createElement("textarea");
+  textarea.value = elemento.textContent;
+
+  // Añade el área de texto al cuerpo del documento
+  document.body.appendChild(textarea);
+
+  // Selecciona el contenido del área de texto
+  textarea.select();
+
+  try {
+    // Utiliza la API del Portapapeles para copiar el texto seleccionado
+    navigator.clipboard.writeText(textarea.value).then(function () {
+      console.log("Texto copiado al portapapeles exitosamente!.");
+    }).catch(function (err) {
+      console.error("¡Ups! No se pudo copiar el texto al portapapeles. Intenta luego.", err);
+    });
+  } finally {
+    // Elimina el área de texto temporal
+    document.body.removeChild(textarea);
+  }
+}
+
+// Agrega un evento de clic al botón con ID 'botonCopiar'
+document.getElementById("botonCopiar").addEventListener("click", function () {
+  let idElemento = "";
+
+  if (estadoContenedor === 1) {
+    idElemento = "esqueletoPeticion";
+  } else if (estadoContenedor === 2) {
+    idElemento = "esqueletoContrato";
+  } else if (estadoContenedor === 3) {
+    idElemento = "esqueletoTutela";
+  } else {
+    idElemento = "contenedorVacio";
+  }
+
+  copiarAlPortapapeles(idElemento);
+});
+
+
+
+// Misceláneos
 
 let logo = document.getElementById("logo");

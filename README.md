@@ -14,14 +14,20 @@ Dile __bye, bye!__ a documentos impresos y ejerce tus derechos diciéndole __Go!
 
    
 ## Ayúdame si gustas.
-[BuyMeACoffee](https://buymeacoffee.com/murgascarrillo)
-[criptomoneda XNO] nano_164p9juryz7gku3m5gfq7nr38jp5j9ye6ffxy69635mak57rf8j3gywfj37w.  O la que uses ;)
+
+[Patreon] (https://www.patreon.com/MurgasCarrillo).
+
+[BuyMeACoffee](https://buymeacoffee.com/murgascarrillo). 
+
+[criptomoneda XNO]: nano_164p9juryz7gku3m5gfq7nr38jp5j9ye6ffxy69635mak57rf8j3gywfj37w.
+
+O la que uses 👍
 
 ## Contacto.
 
 Esta herramienta es de libre sugerencia. Si te surge una pregunta, idea o lo que sea... **¡Reach out!**
 
-[Web](https://murgascarrillo.com)
-murgascarrillo aquí y allá.
+[Web](https://murgascarrillo.com). 
+También me encuentras cómo @murgascarrillo, aquí y allá.
 
 -------
