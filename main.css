@@ -44,7 +44,7 @@ h2 {
   text-align: center;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   font-size: 35px;
-  min-width: auto;
+  min-width: 1px;
 }
   
 h3 {
@@ -141,6 +141,8 @@ ol {
       font-size: 17px;
     }
 
+ 
+
 link {
   color: green;
 }
@@ -185,7 +187,8 @@ p
       }
 select 
   {
-      width: 200px;
+      width: 90%;
+      min-width: 1px;
   }
 
 #footer {
@@ -357,6 +360,15 @@ input
    width: 90%;
    min-width: auto;
 	}
+
+   /* Set the initial height and other styles as needed */
+   #inputTextoHechosPeticion {
+    width: 90%; /* You can adjust the initial width as needed */
+    min-width: 50px; /* Set a minimum width */
+    min-height: 24px; /* Set a minimum height */
+    resize:both; /* Optional: Disable manual resizing by the user */
+    font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
+  }
 
 strong{
   min-width: auto;

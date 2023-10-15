@@ -23,7 +23,7 @@ function toggleModoNocturno() {
   } else {
     // Activar el modo nocturno
     entorno.style.backgroundColor = 'black';
-    footer.style.color = 'white';
+    footer.style.color = 'black';
     botonModoNocturno.style.backgroundColor = 'white';
     let titulos = document.querySelectorAll('h1,h2');
     for (let titulo of titulos) {
@@ -172,7 +172,6 @@ function eliminarLiVacio() {
   }
 }
 
-
 document.getElementById("inputTextoHechosPeticion").addEventListener("input", escribirHechos);
 
 // Add event listener to remove empty <li> elements when the user leaves textoInputHechos
@@ -181,6 +180,33 @@ document.getElementById("inputTextoHechosPeticion").addEventListener("blur", eli
 // Add event listener to add a new <li> element when the user clicks the "botonAddHechos" button
 document.getElementById("botonAddHechosPeticion").addEventListener("click", agregarHechos);
 
+const inputElement = document.getElementById('inputTextoHechosPeticion');
+
+inputElement.addEventListener('input', function () {
+  // Set the minimum height
+  this.style.height = '24px'; // Or your preferred minimum height
+
+  // Adjust the height based on the scrollHeight
+  this.style.height = this.scrollHeight + 'px';
+
+  // Set the minimum width
+  if (this.scrollWidth > 90) { // Adjust the minimum width as needed
+    this.style.width = '90%'; // Or your preferred minimum width
+  } else {
+    this.style.width = this.scrollWidth + 'px';
+  }
+});
+
+  // Función para resetear Hechos en caso de error.
+  function eliminarElementosLi() {
+    let liElements = document.querySelectorAll("li");
+
+    for (let i = liElements.length - 1; i >= 0; i--) {
+      liElements[i].remove();
+    }
+  }
+
+document.getElementById("botonResetHechosPeticion").addEventListener("click", eliminarElementosLi);
 
 // Sección - Fundamentos.
 
@@ -245,7 +271,7 @@ function subirFirma(input, target) {
 // Función Generar PDF. html2pdf by ekoopmans. https://ekoopmans.github.io/html2pdf.js/
 
 function generatePDF(){
-  if (contenedorPeticion.style.display == 'flex')
+  if (contenedorPeticion.style.display === 'flex')
   {
     var element = document.getElementById('esqueletoPeticion');
     var opt = {
@@ -257,7 +283,7 @@ function generatePDF(){
     }
     html2pdf(element, opt);
   }
-  else if(contenedorContrato.style.display == 'flex')
+  else if(contenedorContrato.style.display === 'flex')
   {
     var element = document.getElementById('esqueletoContrato');
     var opt = {
@@ -268,7 +294,7 @@ function generatePDF(){
     jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
     }
     html2pdf(element, opt);
-  }else(contenedorTutela.style.display == 'flex')
+  }else if(contenedorTutela.style.display === 'flex')
   {
     var element = document.getElementById('esqueletoTutela');
     var opt = {
@@ -279,6 +305,9 @@ function generatePDF(){
     jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
     }
     html2pdf(element, opt);
+  }
+  else{
+    alert("¡No hay nada creado para exportar!");
   }
 
 }

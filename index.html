@@ -124,9 +124,12 @@
       Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.<br/>
       Agrega nuevos Hechos pulsando el botón <strong>+</strong>.
       </p>
-      <input type="text" id="inputTextoHechosPeticion" placeholder="Escriba los hechos."/>
-      <button type="submit" class="botonesFormulario" id="botonAddHechosPeticion">Agregar Hecho</button>
-  </div>
+      <textarea id="inputTextoHechosPeticion" placeholder="Escriba los hechos.."></textarea>
+      <button type="submit" class="botonesFormulario" id="botonAddHechosPeticion"><strong>+</strong> Agregar Hecho</button>
+
+      <button class="botonesFormulario" id="botonResetHechosPeticion">🔄Resetear</button>
+
+    </div>
 
   <!-- Contenedor Fundamentos -->
   <div class="item item-7">
@@ -208,10 +211,8 @@
       <br>
       </p>
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
-      <p>
         <ol style="list-style-type:upper-1" id="listaHechosPeticion">
         </ol>
-      </p>
       
       <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
       <p>
@@ -593,7 +594,7 @@
 <br>
 
 <!-- Contenedor Botones de acciones sobre el documento -->
-
+<div id="contenedorBotonesAcciones">
 <div class="itemBoton">
   <input type="button" id="botonCopiar" value="📋 Copiar texto"/>
 </div> 
@@ -601,7 +602,7 @@
 <div class="itemBoton">
     <input type="button" id="botonExportar" value="🖨️ Exportar a PDF" onclick="generatePDF()"/>
   </div>
-
+</div>
 
 
 <br>
