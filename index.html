@@ -24,7 +24,7 @@
 <!-- Introducción -->
 
 
-<h2><strong id="strongCrea"> CREA </strong> documentos en el día a día. Fácil y Rápido.
+<h2><strong id="strongCrea"> CREA </strong> documentos en el día a día.<br/>Fácil y Rápido.
 </h2>
 
 <div class="contenedorIntroduccion">
@@ -69,9 +69,9 @@
         🌎<br/>Lugar de Creación
         </h3>
         <p class="parrafosFormulario">
-          <label for="listaPaises">Escribe el lugar desde donde creas el documento. Ejemplo: Colombia.</label>
+          <label for="listaPaises">Escribe el lugar desde donde creas el documento. <strong>Ejemplo:</strong> Colombia.</label>
         </p>
-        <input list="listaPaises" name="pais" id="inputPais" onchange="elegirPais()" placeholder="Escriba el lugar."/>
+        <input list="listaPaises" name="pais" id="inputPais" onchange="elegirLugarCreacion()" placeholder="Escriba el lugar."/>
           <datalist id="listaPaises">
             <option value="Colombia">
             <option value="Venezuela">
@@ -87,7 +87,7 @@
       🏛️<br/>Destinatario
       </h3>
       <p class="parrafosFormulario">
-        <label for="textoInputEntidad">Escribe el nombre completo de a quien dirigiras la petición. Ejemplo: La Secretaría del Movimiento.</label>
+        <label for="textoInputEntidad">Escribe el nombre completo de a quien dirigiras la petición. <strong>Ejemplo:</strong> Secretaría de Movilidad de Piedecuesta.</label>
       </p>
       <input type="text" id="textoInputEntidad" oninput="escribirEntidad()" placeholder="Escriba el nombre."/>
   </div>
@@ -98,7 +98,7 @@
       🙋‍♂️🙋‍♀️<br/>Solicitante
       </h3>
       <p class="parrafosFormulario">
-      Escribe el nombre de quien presentará la petición. Ejemplo: Carlos Murgas.
+      Escribe el nombre de quien presentará la petición. <strong>Ejemplo:</strong> Carlos Murgas.
       </p>
       <input type="text" id="textoInputNombreUsuario" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre."/>
   </div>
@@ -109,7 +109,7 @@
       📣<br/>Peticiones
       </h3>
       <p class="parrafosFormulario">
-      Escribe lo que requieres de la entidad. <strong>Ejemplo:</strong> Limpiar la Avenida Siempreviva. Reciclar los residuos de la limpieza.
+      Escribe lo que requieres de la entidad. <strong>Ejemplo:</strong> Reparar la vía pública de tu barrio. Reciclar los residuos de la limpieza. Etc.
       </p>
       <input type="text" id="textoInputPeticiones" placeholder="Escriba las peticiones."/>
       <input type="button" class="botonesFormulario" id="botonPeticiones" value="Redactar Peticiones"/>
@@ -137,7 +137,7 @@
       📜<br/>Fundamentos
       </h3>
       <p class="parrafosFormulario">
-      Los fundamentos son el soporte legal del documento. Selecciona la opción que encaja en tu situación.
+      Los fundamentos son el soporte legal del documento. Selecciona la opción que mejor soporta tu situación.
       </p>
       <div id="Fundamentos">
       <select id="listaFundamentos">
@@ -157,7 +157,7 @@
       🔎<br/>Pruebas
       </h3>
       <p class="parrafosFormulario">
-      Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "Fotocopia. Fotografía, etc.."
+      Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "otocopia de escritura pública. Fotografía de la vía pública. Etc.
       </p>
       <input type="text" id="textoInputPruebas" oninput="escribirPruebas()" placeholder="Mencione las pruebas."/>
   </div>
@@ -168,7 +168,7 @@
       📩<br/>Notificaciones
       </h3>
       <p class="parrafosFormulario">
-      Escribe tu email y celular para recibir la eventual respuesta de la entidad.
+      Escribe tu email y celular para recibir la eventual respuesta del destinatario.
       <br>
       </p>
       <input type="text" id="textoInputEmail" oninput="escribirNotificaciones1()" placeholder="Escriba el email."/>
@@ -182,7 +182,7 @@
       ✍️<br/>Firma.
       </h3>
       <p class="parrafosFormulario">
-      Ingresa tu número de identificación (cédula de ciudadanía). <strong>Ejemplo:</strong> 0.<br>
+      Ingresa tu número de identificación (cédula de ciudadanía). <strong>Ejemplo:</strong> 1234567.<br>
       </p>
       <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba el número."/>
       <br>
@@ -196,7 +196,7 @@
   
     <div class="documentoGenerado" id="esqueletoPeticion">
     <p>
-    <span id="lugar1">Lugar</span>,<span id="fecha1"> Fecha</span>
+    <span id="lugar1">Lugar</span>, <span id="fecha1">Fecha</span>
     <br>
       Respetados,
       <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
@@ -211,7 +211,7 @@
       <br>
       </p>
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
-        <ol style="list-style-type:upper-1" id="listaHechosPeticion">
+        <ol style="list-style-type:armenian" id="listaHechosPeticion">
         </ol>
       
       <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
@@ -219,8 +219,6 @@
         La presente se fundamenta en los siguientes:
       <br>
       <span id="espacioFundamentos"></span>
-      <span id="espacioFundamentos2"></span>
-      <br>
       </p>
       
       <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
@@ -262,7 +260,7 @@
       🗓️<br/>Fecha Celebración
       </h3>
       <p class="parrafosFormulario">
-      Fija la fecha de creación del documento dando click en el siguiente botón.
+      Fija la fecha de <span title="Celebración: Momento en que se realiza la postura de voluntades en el documento."><strong>celebración</strong></span> del documento dando click en el siguiente botón.
       </p>
       <input type="button" class="botonesFormulario" id="botonFechaContrato" value="Fijar Fecha"/>
   </div>
@@ -270,12 +268,12 @@
     <!-- Contenedor Lugar de Creación-->
     <div class="item item-2">
       <h3>
-        🌎<br/>Lugar de Creación
+        🌎<br/>Lugar de Celebración
         </h3>
         <p class="parrafosFormulario">
-          <label for="listaPaises">Elige el lugar de creación del documento en la lista. Ejemplo: Colombia.</label>
+          <label for="listaPaises">Elige el lugar de celebración del documento en la lista. Ejemplo: Colombia.</label>
         </p>
-        <input list="listaPaises" name="pais" id="inputPais" onchange="elegirPais()" placeholder="Escriba el lugar."/>
+        <input list="listaPaises" name="pais" id="inputPais" onchange="elegirLugarCreacion()" placeholder="Escriba el lugar."/>
           <datalist id="listaPaises">
             <option value="Colombia">
             <option value="Venezuela">
@@ -285,9 +283,22 @@
           </datalist>
     </div>
   
+      <!-- Contenedor Cláusulas -->
+  <div class="item item-5">
+    <h3>
+      📣<br/>Tipo de Contrato
+      </h3>
+      <p class="parrafosFormulario">
+      Selecciona el tipo de contrato que quieres generar. <strong>Ejemplo:</strong> Arrendamiento. Compraventa. Préstamo.
+      </p>
+      <input type="text" id="textoInputPeticiones" placeholder="Escriba las cláusulas."/>
+      <input type="button" class="botonesFormulario" id="botonClausulas" value="Redactar cláusulas"/>
+  </div>
+
+
   <!-- Contenedor Contratante -->
   <div class="item item-3">
-    <h3>
+    <h3 id="nombreParte1">
       👩<br/>Contratante
       </h3>
       <p class="parrafosFormulario">
@@ -298,7 +309,7 @@
 
   <!-- Contenedor Contratista -->
   <div class="item item-4">
-    <h3>
+    <h3 id="nombreParte2">
       🧔<br/>Contratista
       </h3>
       <p class="parrafosFormulario">
@@ -307,22 +318,12 @@
       <input type="text" id="textoInputContratista" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre."/>
   </div>
 
-  <!-- Contenedor Cláusulas -->
-  <div class="item item-5">
-    <h3>
-      📣<br/>Cláusulas
-      </h3>
-      <p class="parrafosFormulario">
-      Escribe escribe las obligaciones de cada contratista. <strong>Ejemplo:</strong> Del Arrendatario: Mantener el inmueble arrendado en buenas condiciones.
-      </p>
-      <input type="text" id="textoInputPeticiones" placeholder="Escriba las cláusulas."/>
-      <input type="button" class="botonesFormulario" id="botonClausulas" value="Redactar cláusulas"/>
-  </div>
+
 
   <!-- Contenedor Firmas Contratantes -->
   <div class="item item-10">
     <h3>
-      ✍️<br/>Firmas.
+      ✍️<br/>Firmas
       </h3>
       <p class="parrafosFormulario">
       Ingresa el número de identificación (cédula de ciudadanía) de las y/o los contratantes. <strong>Ejemplo:</strong> 111454039.<br>
@@ -338,14 +339,14 @@
   
     <div class="documentoGenerado" id="esqueletoContrato">
       <p>
-        <h3><span id="nombreTipoContrato">Contrato de Arrendamiento</span></h3>
+        <h3><span id="nombreTipoContrato">Contrato de _________</span></h3>
     
       <br>
       
      
       <br>
-           Cordial saludo;<br>Nosotros,<strong><span id="contratante" style="white-space:pre-line;font-style:normal;"> 
-            Contratante</span></strong> y <strong><span id="contratista" style="white-space:pre-line;font-style:normal;">
+           Nosotros,<strong><span id="contratante" style="font-style:normal;"> 
+            Contratante</span></strong> y <strong><span id="contratista" style="font-style:normal;">
               Contratista</span></strong>, domiciliados en Colombia, hemos acordado celebrar el presente
               <strong><span id="nombreTipoContrato">Contrato de Arrendamiento</span></strong>, 
               que será regido por las siguientes:
@@ -362,9 +363,8 @@
       
       
       <p id="section" style="text-align:left;"><strong>Notificaciones. </strong>
-        La parte contratante  recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br />
-        La parte contratista recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. <br /><br/>
-        El presente contrato se firma por las partes estando en <span id="lugar1">_____</span>, siendo la fecha<span id="fecha2"> _____</span>.<br></p>
+        La parte contratante  recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. La parte contratista recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. <br /><br/>
+        El presente contrato se firma por las partes estando en <span id="lugar1">_____</span> y siendo la fecha <span id="fecha2"> _____</span>.<br></p>
       
       <img id="espacioFirma" width="210" height="72">
       <br/>

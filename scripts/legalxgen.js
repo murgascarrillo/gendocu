@@ -92,14 +92,14 @@ function genPeticion()
    {
      fechaDocumento = new Date();
      fechaFormateada = fechaDocumento.toLocaleDateString();
-     document.getElementById("fecha1").innerHTML = " "+fechaFormateada;
-     document.getElementById("fecha2").innerHTML = " "+fechaFormateada;
+     document.getElementById("fecha1").innerHTML = fechaFormateada;
+     document.getElementById("fecha2").innerHTML = fechaFormateada;
    }
 
 
 // Sección Lugar de Creación.
 
-function elegirPais()
+function elegirLugarCreacion()
     {
       let x = document.getElementById("inputPais");
       let y = document.getElementById("lugar1");
