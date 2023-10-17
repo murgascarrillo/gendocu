@@ -15,6 +15,7 @@ function toggleModoNocturno() {
     entorno.style.backgroundColor = '';
     footer.style.color = 'black';
     botonModoNocturno.style.backgroundColor = 'black';
+    botonModoNocturno.innerHTML = '🌛';
     let titulos = document.querySelectorAll('h1,h2');
     for (let titulo of titulos) {
       titulo.style.color = '';
@@ -22,9 +23,12 @@ function toggleModoNocturno() {
     modoNocturnoActivo = false;
   } else {
     // Activar el modo nocturno
-    entorno.style.backgroundColor = 'black';
-    footer.style.color = 'black';
+    entorno.style.backgroundColor = 'rgb(18 29 36)';
+    footer.style.color = 'white';
     botonModoNocturno.style.backgroundColor = 'white';
+    botonModoNocturno.innerHTML = '🌞';
+    let pSelector = document.getElementById('parrafoSelector');
+    pSelector.style.color = 'white';
     let titulos = document.querySelectorAll('h1,h2');
     for (let titulo of titulos) {
       titulo.style.color = 'white';
@@ -78,12 +82,6 @@ function proyectarDocTutela() {
 
 // Sección - Fijar fecha.
 
-
-function genPeticion()
- {
-
- }
-
  var botonFechaPeticion = document.getElementById("botonFechaPeticion");
  botonFechaPeticion.addEventListener("focus",definirFecha);
  var botonFechaContrato = document.getElementById("botonFechaContrato");
@@ -101,13 +99,24 @@ function genPeticion()
 
 function elegirLugarCreacion()
     {
-      let x = document.getElementById("inputPais");
+      if (estadoContenedor === 1){
+        let x = document.getElementById("inputPais");
       let y = document.getElementById("lugar1");
       let z = document.getElementById("lugar2"); 
       y.innerHTML = x.value;
       z.innerHTML = x.value;
-}
-
+      }
+      
+      else if (estadoContenedor === 2){
+        let x = document.getElementById("inputLugarContrato");
+        let y = document.getElementById("lugarContrato");
+        y.innerHTML = x.value;
+      }
+      
+      else{ 
+        console.log("¡Ups! No se pudo elegir lugar de creación..")
+      }
+    }
 // Sección - Entidad destinataria.
 
 function escribirEntidad()

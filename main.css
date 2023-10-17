@@ -1,7 +1,7 @@
 /* Hoja de estilos - Style Sheet */
 
 html {
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,124,0,1) 50%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(13,124,0,1) 60%, rgb(241, 158, 15) 100%);
   overflow: auto;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -11,9 +11,9 @@ body {
   width: auto;
   height: auto;
   color:black;
-  margin: 30px;
-  padding: 7px 7px 7px 7px;
-  border: 6px solid linear-gradient(80deg, rgba(0,0,0,1) 0%, rgba(13,124,0,1) 50%);
+  margin:20px 20px 20px 20px;
+  padding: 15px;
+  border: 6px solid linear-gradient(80deg, rgba(0,0,0,1) 0%, rgba(13,124,0,1) 100%);
   border-radius: 2ex;
   background-color: white;
   align-self:center;
@@ -115,20 +115,19 @@ ol {
 
 .item 
   {
-    border: 5px solid green;
-    padding: 0.5rem;
+    border: 5px solid black;
+    padding: 1rem;
     font-size: 1rem;
-    background-color: white;
+    background-color: rgb(237, 237, 237);
     border-radius: 2ex;
     border-style:groove;
-    min-width: 100px;
     max-width: 200px;
   }
 
   .item-11
   {
 
-    padding: 0.5rem;
+    padding: 1rem;
     font-size: 1rem;
     height: auto;
     max-width: 100%;
@@ -177,6 +176,10 @@ p
         color: white;
         font-size: 17px;
       }
+      #parrafoSelector
+      {
+        font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
+      }
       #contenidoFundamentos
       {
         font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
@@ -196,11 +199,10 @@ select
   margin-left: auto;
   font-size: medium;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
-  opacity:100%;
   margin-right:3px;
   display:block;
   text-align: center;
-  border-radius: 2ex;
+  border-radius: 5ex;
   margin-bottom: 3px;
 }
 
@@ -305,7 +307,6 @@ button
   {
     padding: 0.3rem;
     font-size: 1rem;
-    background-color: white;
     display: flex;
     justify-content: center;
   }
@@ -376,11 +377,11 @@ strong{
 #strongCrea {
   font-weight: bold; /* Establece el grosor de la fuente */
   color: transparent; /* Hace que el texto sea transparente */
-  animation: rotateImages 3s linear infinite; /* Inicia la rotación de las imágenes una vez que la página ha cargado */
+  animation: rotateImages 7s linear infinite; /* Inicia la rotación de las imágenes una vez que la página ha cargado */
 
   /* Define las imágenes de fondo */
-  background-image: url('imagenes/crea_1.webp');
-  background-size: 40%; /* Ajusta el tamaño de las imágenes de fondo */
+  background-image: url('imagenes/crea1.webp');
+  background-size: 69%; /* Ajusta el tamaño de las imágenes de fondo */
   background-clip: text; /* Aplica el fondo solo al área del texto */
   -webkit-background-clip: text; /* Para navegadores basados en Webkit como Chrome y Safari */
   -webkit-text-fill-color: transparent; /* Hace que el color del texto sea transparente en navegadores Webkit */
