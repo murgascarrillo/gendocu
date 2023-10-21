@@ -86,13 +86,16 @@ function proyectarDocTutela() {
  botonFechaPeticion.addEventListener("focus",definirFecha);
  var botonFechaContrato = document.getElementById("botonFechaContrato");
  botonFechaContrato.addEventListener("click",definirFecha);
- function definirFecha(fechaDocumento)
-   {
-     fechaDocumento = new Date();
-     fechaFormateada = fechaDocumento.toLocaleDateString();
-     document.getElementById("fecha1").innerHTML = fechaFormateada;
-     document.getElementById("fecha2").innerHTML = fechaFormateada;
-   }
+ function definirFecha(fechaDocumento) {
+  fechaDocumento = new Date();
+  var meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  var dia = fechaDocumento.getDate();
+  var mes = meses[fechaDocumento.getMonth()];
+  var anio = fechaDocumento.getFullYear();
+  var fechaFormateada = dia + " de " + mes + " de " + anio;
+  document.getElementById("fecha1").innerHTML = fechaFormateada + ".";
+  document.getElementById("fecha2").innerHTML = fechaFormateada;
+}
 
 
 // Sección Lugar de Creación.
@@ -101,18 +104,24 @@ function elegirLugarCreacion()
     {
       if (estadoContenedor === 1){
         let x = document.getElementById("inputPais");
-      let y = document.getElementById("lugar1");
-      let z = document.getElementById("lugar2"); 
+      let y = document.getElementById("nacionalidad"); 
       y.innerHTML = x.value;
-      z.innerHTML = x.value;
       }
       
       else if (estadoContenedor === 2){
         let x = document.getElementById("inputLugarContrato");
         let y = document.getElementById("lugarContrato");
+        let z = document.getElementById("lugarDomicilio");
         y.innerHTML = x.value;
+        z.innerHTML = x.value;
       }
       
+      else if (estadoContenedor === 3){
+        let x = document.getElementById("inputLugarTutela");
+        let y = document.getElementById("lugarJuez");
+        y.innerHTML = x.value;
+      }
+
       else{ 
         console.log("¡Ups! No se pudo elegir lugar de creación..")
       }
@@ -135,6 +144,265 @@ function escribirUsuario()
       let z = document.getElementById("nombreusuario2"); 
       y.innerHTML = " "+x.value;
       z.innerHTML = x.value;
+
+
+}
+
+// Sección Nacionalidad.
+
+const countryNames = [
+  "Afghanistan","Albania","Algeria","American Samoa",
+	"Andorra",	"Angola",	"Anguilla",	"Antarctica",
+	"Antigua and Barbuda",
+	"Argentina",
+"Armenia",	"Aruba",	"Australia",	"Austria",
+	"Azerbaijan",
+"Bahamas (the)",
+	"Bahrain",
+	"Bangladesh",
+	"Barbados",
+	"Belarus","Belgium",
+"Belize",
+	"Benin",
+	"Bermuda",
+"Bhutan",
+	"Bolivia",
+"Bonaire, Sint Eustatius and Saba",
+	"Bosnia and Herzegovina",
+	"Botswana",
+	"Bouvet Island",
+	"Brazil",
+	"British Indian Ocean Territory",
+	"Brunei Darussalam",
+	"Bulgaria",
+	"Burkina Faso",
+	"Burundi",
+	"Cabo Verde",
+	"Cambodia",
+	"Cameroon",
+	"Canada",
+	"Cayman Islands",
+	"Central African Republic",
+	"Chad",
+	"Chile",
+	"China",
+	"Christmas Island",
+	"Cocos",
+	"Colombia",
+	"Comoros (the)",
+	"Congo",
+	"Cook Islands",
+	"Costa Rica",
+	"Croatia",
+	"Cuba",
+	"Curaçao",
+	"Cyprus",
+	"Czechia",
+	"Côte d'Ivoire",
+	"Denmark",
+	"Djibouti",
+	"Dominica",
+	"Dominican Republic",
+	"Ecuador",
+	"Egypt",
+	"El Salvador",
+	"Equatorial Guinea",
+	"Eritrea",
+	"Estonia",
+	"Eswatini",
+	"Ethiopia",
+	"Falkland Islands [Malvinas]",
+	"Faroe Islands",
+	"Fiji",
+	"Finland",
+	"France",
+	"French Guiana",
+	"French Polynesia",
+	"French Southern Territories",
+	"Gabon",
+	"Gambia",
+	"Georgia",
+	"Germany",
+	"Ghana",
+	"Gibraltar",
+	"Greece",
+	"Greenland",
+	"Grenada",
+	"Guadeloupe",
+	"Guam",
+	"Guatemala",
+	"Guernsey",
+	"Guinea",
+	"Guinea-Bissau",
+	"Guyana",
+	"Haiti",
+	"Heard Island and McDonald Islands",
+	"Holy See",
+	"Honduras",
+	"Hong Kong",
+	"Hungary",
+	"Iceland",
+	"India",
+	"Indonesia",
+	"Iran",
+	"Iraq",
+	"Ireland",
+	"Isle of Man",
+	"Israel",
+	"Italy",
+	"Jamaica",
+	"Japan",
+	"Jersey",
+	"Jordan",
+	"Kazakhstan",
+	"Kenya",
+	"Kiribati",
+	"Korea",
+	"República de Korea",
+	"Kuwait",
+	"Kyrgyzstan",
+	"Lao People's Democratic Republic",
+	"Latvia",
+	"Lebanon",
+	"Lesotho",
+	"Liberia",
+	"Libya",
+	"Liechtenstein",
+	"Lithuania",
+	"Luxembourg",
+	"Macao",
+	"Madagascar",
+	"Malawi",
+	"Malaysia",
+	"Maldives",
+	"Mali",
+	"Malta",
+	"Marshall Islands",
+	"Martinique",
+	"Mauritania",
+	"Mauritius",
+	"Mayotte",
+	"Mexico",
+	"Micronesia",
+	"Moldova",
+	"Monaco",
+	"Mongolia",
+	"Montenegro",
+	"Montserrat",
+	"Morocco",
+	"Mozambique",
+	"Myanmar",
+	"Namibia",
+	"Nauru",
+	"Nepal",
+	"Netherlands",
+	"New Caledonia",
+	"New Zealand",
+	"Nicaragua",
+	"Niger",
+	"Nigeria",
+	"Niue",
+	"Norfolk Island",
+	"Northern Mariana Islands",
+	"Norway",
+	"Oman",
+	"Pakistan",
+	"Palau",
+	"Palestina",
+	"Panama",
+	"Papua New Guinea",
+	"Paraguay",
+	"Peru",
+	"Philippines",
+	"Pitcairn",
+	"Poland",
+	"Portugal",
+	"Puerto Rico",
+	"Qatar",
+	"Republic of North Macedonia",
+	"Romania",
+	"Russian Federation",
+	"Rwanda",
+	"Réunion",
+	"Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha",
+	"Saint Kitts and Nevis",
+	"Saint Lucia",
+	"Saint Martin (French part)",
+	"Saint Pierre and Miquelon",
+	"Saint Vincent and the Grenadines",
+	"Samoa",
+	"San Marino",
+	"Sao Tome and Principe",
+	"Saudi Arabia",
+	"Senegal",
+	"Serbia",
+	"Seychelles",
+	"Sierra Leone",
+	"Singapore",
+	"Sint Maarten (Dutch part)",
+	"Slovakia",
+	"Slovenia",
+	"Solomon Islands",
+	"Somalia",
+	"South Africa",
+	"South Georgia and the South Sandwich Islands",
+	"South Sudan",
+	"Spain",
+	"Sri Lanka",
+	"Sudan",
+	"Suriname",
+	"Svalbard and Jan Mayen",
+	"Sweden",
+	"Switzerland",
+	"Syrian Arab Republic",
+	"Taiwan",
+	"Tajikistan",
+	"Tanzania, United Republic of",
+	"Thailand",
+	"Timor-Leste",
+	"Togo",
+	"Tokelau",
+	"Tonga",
+	"Trinidad and Tobago",
+	"Tunisia",
+	"Turkey",
+	"Turkmenistan",
+	"Turks and Caicos Islands",
+	"Tuvalu",
+	"Uganda",
+	"Ukraine",
+	"United Arab Emirates",
+	"United Kingdom of Great Britain and Northern Ireland",
+	"United States Minor Outlying Islands",
+	"United States of America",
+	"Uruguay",
+	"Uzbekistan",
+	"Vanuatu",
+	"Venezuela",
+	"Viet Nam",
+	"Virgin Islands (British)",
+	"Virgin Islands (U.S.)",
+	"Wallis and Futuna",
+	"Western Sahara",
+	"Yemen",
+	"Zambia",
+	"Zimbabwe",
+	"Åland Islands"
+];
+
+const dataList = document.getElementById("listaPaises");
+
+countryNames.forEach(name => {
+  const option = document.createElement("option");
+  option.value = name;
+  dataList.appendChild(option);
+});
+
+
+function elegirNacionalidad (){
+  let x = document.getElementById("inputNacionalidad");
+  let y = document.getElementById("nacionalidad");
+  y.innerHTML = x.value;
 }
 
 // Sección - Peticiones.
@@ -148,43 +416,37 @@ function escribirPeticiones()
         inputPeticiones.value = '';
 }
 
+
 // Sección - Hechos.
 
 let x = document.getElementById("inputTextoHechosPeticion");
-let y = document.getElementById("listaHechosPeticion");
+let yHechos = document.getElementById("listaHechosPeticion");
 let inputTextHechos;
+let numHechos = 1;
 
 function escribirHechos() {
     
   inputTextHechos = x.value;
 }
+let newHecho;
 function agregarHechos() {
- // Create a new <li> element with the input value
- let newLi = document.createElement("li");
- newLi.textContent = inputTextHechos;
- newLi.type = "1";
+ // Create a new <p> element with the input value
 
- // Insert the new <li> element above the hn element
- y.parentNode.insertBefore(newLi, y);
+newHecho = document.createElement("p");
+  newHecho.id = "newHecho";
+ newHecho.style.margin = "1px";
+ newHecho.textContent = numHechos + ". " + inputTextHechos + ".";
+ numHechos = numHechos + 1;
+
+ // Insert the newHecho element above on the list
+ yHechos.parentNode.insertBefore(newHecho, yHechos);
 
  // Clear the input field
  x.value = '';
 }
 
-function eliminarLiVacio() {
-  let liElements = document.querySelectorAll("li");
-
-  for (let i = liElements.length - 1; i >= 0; i--) {
-    if (liElements[i].textContent.trim() === '') {
-      liElements[i].remove();
-    }
-  }
-}
 
 document.getElementById("inputTextoHechosPeticion").addEventListener("input", escribirHechos);
-
-// Add event listener to remove empty <li> elements when the user leaves textoInputHechos
-document.getElementById("inputTextoHechosPeticion").addEventListener("blur", eliminarLiVacio);
 
 // Add event listener to add a new <li> element when the user clicks the "botonAddHechos" button
 document.getElementById("botonAddHechosPeticion").addEventListener("click", agregarHechos);
@@ -207,15 +469,16 @@ inputElement.addEventListener('input', function () {
 });
 
   // Función para resetear Hechos en caso de error.
-  function eliminarElementosLi() {
-    let liElements = document.querySelectorAll("li");
-
-    for (let i = liElements.length - 1; i >= 0; i--) {
-      liElements[i].remove();
-    }
+  let newHechos;
+  function eliminarHechos() {
+    newHechos = document.querySelectorAll("#newHecho");
+    newHechos.forEach((hecho) => {
+      hecho.remove();
+    });
+    numHechos = 1;
   }
 
-document.getElementById("botonResetHechosPeticion").addEventListener("click", eliminarElementosLi);
+document.getElementById("botonResetHechosPeticion").addEventListener("click", eliminarHechos);
 
 // Sección - Fundamentos.
 
@@ -285,6 +548,7 @@ function generatePDF(){
     var element = document.getElementById('esqueletoPeticion');
     var opt = {
     margin: 0.5,
+    padding:0.5,
     filename: 'dp_gendocu.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2 },
@@ -300,7 +564,7 @@ function generatePDF(){
     filename: 'cto_gendocu.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
     }
     html2pdf(element, opt);
   }else if(contenedorTutela.style.display === 'flex')

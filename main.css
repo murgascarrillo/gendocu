@@ -85,12 +85,12 @@ ol {
     width: auto;
     height: auto;
     padding: 0.6rem;
-    margin:10px;
+    margin:5px;
     display: flex; 
-    row-gap: 15px;
-    column-gap: 15px;
-    columns: 2;
-    flex-direction: row;
+    row-gap: 7px;
+    column-gap: 7px;
+    columns: 4;
+    flex-direction:row;
     display: none;
   }
 
@@ -110,18 +110,21 @@ ol {
   {
  
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:center;
   }
 
 .item 
   {
     border: 5px solid black;
-    padding: 1rem;
+    padding: 10px;
+    margin: 5px;
     font-size: 1rem;
     background-color: rgb(237, 237, 237);
     border-radius: 2ex;
     border-style:groove;
-    max-width: 200px;
+    min-width: 19%;
+    max-width: 180px;
+    height: fit-content;
   }
 
   .item-11
@@ -130,7 +133,8 @@ ol {
     padding: 1rem;
     font-size: 1rem;
     height: auto;
-    max-width: 100%;
+    width: auto;
+    max-width: fit-content;
   }
 
 

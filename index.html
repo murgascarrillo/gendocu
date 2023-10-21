@@ -53,7 +53,7 @@
 <div class="contenedorGen" id="contenedorPeticion">
 
   <!-- Contenedor Fecha-->
-  <div class="item item-1">
+  <div class="item">
     <h3>
       🗓️<br/>Fecha
       </h3>
@@ -64,12 +64,12 @@
   </div>
 
     <!-- Contenedor Lugar de Creación-->
-    <div class="item item-2">
+    <div class="item">
       <h3>
-        🌎<br/>Lugar de Creación
+        🌎<br/>Nacionalidad
         </h3>
         <p class="parrafosFormulario">
-          <label for="listaPaises">Escribe el lugar desde donde creas el documento. <strong>Ejemplo:</strong> Colombia.</label>
+          <label for="listaPaises">Selecciona el país de nacionalidad de quien crea el documento. <strong>Ejemplo:</strong> Colombia.</label>
         </p>
         <input list="listaPaises" name="pais" id="inputPais" onchange="elegirLugarCreacion()" placeholder="Escriba el lugar."/>
           <datalist id="listaPaises">
@@ -81,6 +81,8 @@
           </datalist>
     </div>
   
+
+    
   <!-- Contenedor Entidades Destinatarias -->
   <div class="item item-3">
     <h3>
@@ -193,10 +195,9 @@
   <div class="item item-11">
 
   <!-- Acá comienza el documento [Petición] que se genera. -->
-  
     <div class="documentoGenerado" id="esqueletoPeticion">
     <p>
-    <span id="lugar1">Lugar</span>, <span id="fecha1">Fecha</span>
+    <span id="fecha1">Fecha</span>
     <br>
       Respetados,
       <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
@@ -207,16 +208,16 @@
       <br>
       <strong>Referencia:</strong> Derecho de petición<br>
       <br>
-      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, persona natural, nacional de <span id="lugar2">_________</span>, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:
+      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, 
+      persona natural, nacional de <span id="nacionalidad">_________</span>, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:
       <br>
       </p>
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
-        <ol style="list-style-type:armenian" id="listaHechosPeticion">
-        </ol>
+      <div id="listaHechosPeticion"></div>
       
       <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
       <p>
-        La presente se fundamenta en los siguientes:
+        La presente se fundamenta en las siguientes Razones de Derecho:
       <br>
       <span id="espacioFundamentos"></span>
       </p>
@@ -244,12 +245,13 @@
       CC.<span id="idUsuario">_________</span></strong>
       <br>
     </div>
-  </div>        
-</div>
+  </div>
+</div>      
          
 <!-- Tipo Contrato -->
 
 <!-- Contenedor de contenedores de módulos Contrato -->
+
 <div class="contenedorGen" id="contenedorContrato">
 
   <!-- Contenedor Fecha-->
@@ -345,23 +347,20 @@
       <br>
            Nosotros,<strong><span id="contratante" style="font-style:normal;"> 
             Contratante</span></strong> y <strong><span id="contratista" style="font-style:normal;">
-              Contratista</span></strong>, domiciliados en Colombia, hemos acordado celebrar el presente
-              <strong><span id="nombreTipoContrato">Contrato de Arrendamiento</span></strong>, 
+              Contratista</span></strong>, con domicilio en <span id="lugarDomicilio">________</span>, personas naturales con plena capacidad 
+              para contraer y ejecutar obligaciones civiles, hemos acordado celebrar el presente
+              <strong>Contrato de<span id="nombreTipoContrato"> _______________</span></strong>, 
               que será regido por las siguientes:
       <br>
       </p>
       
-      <h4 id="section" style="text-align:center;"><strong>Cláusulas</strong></h4>
-      <p>
-        <ol type="1" id="listaClausulas">
-          <li id="clausula1">Somos personas naturales con plena capacidad para contraer y ejecutar obligaciones civiles.</li>              
-          <li id="hn"><span id="spanClausulas">Clausulas adicionales.</span></li>
-        </ol>
+      <h4 id="section" style="text-align:center;"><strong>Cláusulas:</strong></h4>
+      <p id="espacioClausulas">
       </p>
       
-      
       <p id="section" style="text-align:left;"><strong>Notificaciones. </strong>
-        La parte contratante  recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. La parte contratista recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. <br /><br/>
+        La parte contratante recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. 
+        La parte contratista recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. <br /><br/>
         El presente contrato se firma por las partes estando en <span id="lugarContrato">_____</span> y siendo la fecha <span id="fecha2"> _____</span>.<br></p>
       
       <img id="espacioFirma" width="210" height="72">
@@ -402,18 +401,24 @@
         🌎<br/>Nacionalidad
         </h3>
         <p class="parrafosFormulario">
-          <label for="listaPaises">Elige de la lista la nacionalidad que corresponda a la parte Accionante. Ejemplo: Colombia.</label>
+          <label for="listaPaises">Elige la nacionalidad de la parte Accionante. Ejemplo: Colombia.</label>
         </p>
-        <input list="listaPaises" name="nacionalidad" id="inputNacionalidad" onchange="elegirNacionalidad()"/>
+        <input list="listaPaises" name="nacionalidad" id="inputNacionalidad" onchange="elegirNacionalidad()" placeholder="Elija país"/>
           <datalist id="listaPaises">
-            <option value="Colombiana">
-            <option value="Venezolana">
-            <option value="Italiana">
-            <option value="Española">
-            <option value="Nigeriana">
           </datalist>
+          
     </div>
-  
+  <!-- Contenedor Lugar vulneración -->
+    <div class="item">
+      <h3>
+        🌎<br/>Lugar de vulneración
+        </h3>
+        <p class="parrafosFormulario">
+          <label for="texto">Escribe el lugar en dónde ha ocurrido la vulneración a derechos fundamentales. <strong>Ejemplo:</strong> Sasaima, Cundinamarca, Colombia.</label>
+        </p>
+        <input type="text" id="inputLugarTutela" oninput="elegirLugarCreacion()" placeholder="Escriba el lugar"/>
+    </div>
+
   <!-- Contenedor Entidades Accionadas -->
   <div class="item item-3">
     <h3>
@@ -516,7 +521,7 @@
       <p>
       Respetados,
       <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
-      Juzgado</span></strong>
+      Juez de <span id="lugarJuez">_________</span></span></strong>
       <br>
       E.S.D.
       <br>
@@ -526,10 +531,9 @@
       <strong>Accionado(s)</strong> <span id="nombreAccionado">_____________</span><br />
       <br />
       Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>
-      , persona natural, nacional de <span id="lugar2">__________</span>, mayor de edad, presento <strong>Acción de Tutela</strong>
+      , persona natural, nacional de <span id="nacionalidad">__________</span>, mayor de edad, presento <strong>Acción de Tutela</strong>
       , para obtener su despacho orden judicial a mi favor
       de las siguientes:
-      <br>
       </p>
       
       <p id="section" style="text-align:center;"><strong>Pretensiones.</strong></p>
@@ -537,28 +541,23 @@
         <span id="spanDerechosFunda"></span>de la parte accionante 
         <span id="nombreAccionante">_________</span><br />
                  <span id="spanPretensiones"></span>
-        <br />
       </p>
-
-
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
       <p>
         <ol type="1" id="listaHechosTutela">
           </ol>
       </p>
-      
       <p id="section" style="text-align:center;"><strong>Fundamentos y Razones de Derecho.</strong></p>
       <p style="text-align:justify;">
         La presente se fundamenta en los siguientes: <br />
-        Toda persona tiene derecho a presentar acción de tutela para reclamar ante los jueces, en todo momento y lugar,
+        Toda persona tiene derecho a presentar acción de tutela para reclamar ante los jueces, 
+        en todo momento y lugar,
          mediante un procedimiento preferente y sumario, por sí misma o por quien actúe a su nombre, 
          la protección inmediata de sus derechos constitucionales fundamentales, 
          cuando quiera que éstos resulten vulnerados o amenazados por la acción o la omisión 
          de cualquier autoridad pública (Constitución Política de Colombia, art.86).
-      <br>
-      <span id="espacioFundamentos"></span>
+      <p id="espacioFundamentos"></p>
       <span id="espacioFundamentos2"></span>
-      <br>
       </p>
       
       <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
@@ -568,16 +567,18 @@
         <br />
       </p>
       
-      
+      <p id="section" style="text-align:center;"><strong>Juramento.</strong></p>
+      <p>
+        Manifiesto bajo la gravedad de juramento que no se ha presentado 
+        ninguna otra acción de tutela por los mismos hechos 
+        y derechos en contra de la(s) entidad(es) accionada(s) (Decreto 2591/91, art.37).</p> 
       
       <p id="section" style="text-align:center;"><strong>Notificaciones.</strong></p>
       <p>La parte accionante recibirá en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br />
         La parte accionada recibirá en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br />
-        Atentamente,<br>
+        Atentamente,
       </p>
-      
-      
-      <img id="espacioFirma" width="210" height="72">
+      <img id="espacioFirma" width="210" height="72"/>
       <br/>
       <strong><span id="nombreusuario2">______________</span>
       <br>
@@ -608,7 +609,7 @@
   <a class="iconosFooter" href="https://wa.me/573017673013" class="keychainify-checked"> <img src="imagenes/icon_whatsapp.webp" target="_blank" alt="Icono Whatsapp" width="30"></a>
     <a class="iconosFooter" href="https://github.com/murgascarrillo/gendocu" class="keychainify-checked"> <img src="imagenes/icon_github.webp" alt="Icono Github by 'icon king1' on freeicons.io" width="30"></a>
     <br>
-  Version 0.0.2.3.2.2 - Hecho con &#x2728;
+  Version 0.0.2.3.2.3 - Hecho con &#x2728;
 </div>
 
 <!-- Scripts -->  
