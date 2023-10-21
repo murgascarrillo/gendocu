@@ -14,7 +14,7 @@ function toggleModoNocturno() {
     // Desactivar el modo nocturno
     entorno.style.backgroundColor = '';
     footer.style.color = 'black';
-    botonModoNocturno.style.backgroundColor = 'black';
+    botonModoNocturno.style.backgroundColor = 'rgb(18, 29, 36)';
     botonModoNocturno.innerHTML = '🌛';
     let titulos = document.querySelectorAll('h1,h2');
     for (let titulo of titulos) {
@@ -25,7 +25,7 @@ function toggleModoNocturno() {
     // Activar el modo nocturno
     entorno.style.backgroundColor = 'rgb(18 29 36)';
     footer.style.color = 'white';
-    botonModoNocturno.style.backgroundColor = 'white';
+    botonModoNocturno.style.backgroundColor = "#efefef";
     botonModoNocturno.innerHTML = '🌞';
     let pSelector = document.getElementById('parrafoSelector');
     pSelector.style.color = 'white';
