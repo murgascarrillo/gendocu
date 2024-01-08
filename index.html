@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'/>
-  <title>gendocu | CREA documentos</title>
+  <title>gendocu | Crea documentos</title>
   <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'/>
@@ -24,15 +24,14 @@
 <!-- Introducción -->
 
 
-<h2><strong id="strongCrea"> CREA </strong> documentos en el día a día.<br/>Fácil y Rápido.
+<h2><strong id="strongCrea"> Crea </strong> peticiones, contratos, mandatos y acciones públicas.<br/>Fácil y Rápido.
 </h2>
 
 <div class="contenedorIntroduccion">
 
   <p class="parrafosFormulario" id="parrafoIntro">
-    📄 Genera peticiones, contratos, mandatos, acciones públicas.<br />
-    📥Recorre las secciones llenando de contenido el documento.<br />
-     Cada sección te indica la información que debes ingresar👇<br />
+    📄📥Recorre las secciones llenando de contenido tu documento.<br />
+     Cada sección te indica la información a ingresar👇<br />
   </p>
 
 </div>
@@ -72,41 +71,51 @@
           <label for="listaPaises">Selecciona el país de nacionalidad de quien crea el documento. <strong>Ejemplo:</strong> Colombia.</label>
         </p>
         <input list="listaPaises" name="pais" id="inputPais" onchange="elegirLugarCreacion()" placeholder="Escriba el lugar."/>
-          <datalist id="listaPaises">
-            <option value="Colombia">
-            <option value="Venezuela">
-            <option value="Italia">
-            <option value="España">
-            <option value="Nigeria">
-          </datalist>
+
     </div>
   
-
-    
-  <!-- Contenedor Entidades Destinatarias -->
-  <div class="item item-3">
-    <h3>
-      🏛️<br/>Destinatario
-      </h3>
-      <p class="parrafosFormulario">
-        <label for="textoInputEntidad">Escribe el nombre completo de a quien dirigiras la petición. <strong>Ejemplo:</strong> Secretaría de Movilidad de Piedecuesta.</label>
-      </p>
-      <input type="text" id="textoInputEntidad" oninput="escribirEntidad()" placeholder="Escriba el nombre."/>
-  </div>
-
   <!-- Contenedor Usuario -->
-  <div class="item item-4">
+  <div class="item">
     <h3>
       🙋‍♂️🙋‍♀️<br/>Solicitante
       </h3>
       <p class="parrafosFormulario">
-      Escribe el nombre de quien presentará la petición. <strong>Ejemplo:</strong> Carlos Murgas.
+      Escribe el <strong>Nombre</strong> de quien presentará la petición. <strong>Ejemplo:</strong> Carlos Murgas.
       </p>
-      <input type="text" id="textoInputNombreUsuario" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre."/>
+      <input type="text" id="textoInputNombreUsuario" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba su nombre."/>
+      <p class="parrafosFormulario">
+        Selecciona tu <strong>Tipo</strong> de Documento de Identidad.
+      </p>
+      <p>Ingresa tu <strong>Número</strong> documento. <strong>Ejemplo:</strong>Cédula de ciudadanía. 1234567.<br>
+        </p>
+        <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba número identificación."/>
   </div>
 
+
+    
+  <!-- Contenedor Entidades Destinatarias -->
+  <div class="item">
+    <h3>
+      🏛️<br/>Destinatario
+      </h3>
+      <p class="parrafosFormulario">
+        <label for="inputTextoEntidad">Escribe el nombre completo o razón social de la persona a la que dirigiras la petición.
+          Agrega Entidades pulsando el botón <strong>+</strong>.
+          <strong>Ejemplo:</strong> Secretaría de Movilidad de Piedecuesta. Evil Corp S.A.S. etc.</label>
+      </p>
+
+
+      <textarea id="inputTextoEntidad" placeholder="Escriba el nombre.."></textarea>
+      <button type="submit" class="botonesFormulario" id="botonAddEntidad"><strong>+</strong> Agregar Entidad</button>
+
+      <button class="botonesFormulario" id="botonResetEntidad">🔄Resetear</button>
+
+  </div>
+
+
+
   <!-- Contenedor Peticiones -->
-  <div class="item item-5">
+  <div class="item">
     <h3>
       📣<br/>Peticiones
       </h3>
@@ -118,13 +127,13 @@
   </div>
 
   <!-- Contenedor Hechos -->
-  <div class="item item-6">
+  <div class="item">
     <h3>
       📝<br/>Hechos
       </h3>
       <p class="parrafosFormulario">
       Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.<br/>
-      Agrega nuevos Hechos pulsando el botón <strong>+</strong>.
+      Agrega Hechos pulsando el botón <strong>+</strong>.
       </p>
       <textarea id="inputTextoHechosPeticion" placeholder="Escriba los hechos.."></textarea>
       <button type="submit" class="botonesFormulario" id="botonAddHechosPeticion"><strong>+</strong> Agregar Hecho</button>
@@ -134,7 +143,7 @@
     </div>
 
   <!-- Contenedor Fundamentos -->
-  <div class="item item-7">
+  <div class="item">
     <h3>
       📜<br/>Fundamentos
       </h3>
@@ -154,7 +163,7 @@
   </div>
 
   <!-- Contenedor Pruebas -->
-  <div class="item item-8">
+  <div class="item">
     <h3>
       🔎<br/>Pruebas
       </h3>
@@ -165,7 +174,7 @@
   </div>
 
   <!-- Contenedor Notificaciones -->
-  <div class="item item-9">
+  <div class="item">
     <h3>
       📩<br/>Notificaciones
       </h3>
@@ -173,21 +182,17 @@
       Escribe tu email y celular para recibir la eventual respuesta del destinatario.
       <br>
       </p>
-      <input type="text" id="textoInputEmail" oninput="escribirNotificaciones1()" placeholder="Escriba el email."/>
+      <input type="text" id="textoInputEmail" oninput="escribirNotificaciones1()" placeholder="Escriba su email."/>
       <br>
-      <input type="text" id="textoInputCelular" maxlength="16" oninput="escribirNotificaciones2()" placeholder="Escriba el número."/>
+      <input type="text" id="textoInputCelular" maxlength="16" oninput="escribirNotificaciones2()" placeholder="Escriba # celular."/>
   </div>
 
   <!-- Contenedor Firma -->
-  <div class="item item-10">
+  <div class="item">
     <h3>
       ✍️<br/>Firma.
       </h3>
-      <p class="parrafosFormulario">
-      Ingresa tu número de identificación (cédula de ciudadanía). <strong>Ejemplo:</strong> 1234567.<br>
-      </p>
-      <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba el número."/>
-      <br>
+      
       <p class="parrafosFormulario">Adjunta la imagen de tu firma.</p>
       <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="subirFirma(this, 'espacioFirma')"/>
   </div>
@@ -196,19 +201,17 @@
 
   <!-- Acá comienza el documento [Petición] que se genera. -->
     <div class="documentoGenerado" id="esqueletoPeticion">
-    <p>
-    <span id="fecha1">Fecha</span>
+    <span id="fecha1">Fecha:</span>
     <br>
-      Respetados,
-      <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
-      Entidad</span></strong>
-      <br>
+      Respetados:
+      <strong><div style="margin:0;padding:0;font-style:normal;" id="listaEntidades"></div></strong>
       E.S.D.
       <br>
       <br>
       <strong>Referencia:</strong> Derecho de petición<br>
       <br>
-      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, 
+      <p>
+        Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, 
       persona natural, nacional de <span id="nacionalidad">_________</span>, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:
       <br>
       </p>
@@ -255,7 +258,7 @@
 <div class="contenedorGen" id="contenedorContrato">
 
   <!-- Contenedor Fecha-->
-  <div class="item item-1">
+  <div class="item">
     <h3>
       🗓️<br/>Fecha Celebración
       </h3>
@@ -266,7 +269,7 @@
   </div>
 
     <!-- Contenedor Lugar de Creación-->
-    <div class="item item-2">
+    <div class="item">
       <h3>
         🌎<br/>Lugar de Celebración
         </h3>
@@ -284,7 +287,7 @@
     </div>
   
       <!-- Contenedor Cláusulas -->
-  <div class="item item-5">
+  <div class="item">
     <h3>
       📣<br/>Tipo de Contrato
       </h3>
@@ -297,7 +300,7 @@
 
 
   <!-- Contenedor Contratante -->
-  <div class="item item-3">
+  <div class="item">
     <h3 id="nombreParte1">
       👩<br/>Contratante
       </h3>
@@ -308,7 +311,7 @@
   </div>
 
   <!-- Contenedor Contratista -->
-  <div class="item item-4">
+  <div class="item">
     <h3 id="nombreParte2">
       🧔<br/>Contratista
       </h3>
@@ -321,7 +324,7 @@
 
 
   <!-- Contenedor Firmas Contratantes -->
-  <div class="item item-10">
+  <div class="item">
     <h3>
       ✍️<br/>Firmas
       </h3>
@@ -385,7 +388,7 @@
 <div class="contenedorGen" id="contenedorTutela">
 
   <!-- Contenedor Accionante-->
-  <div class="item item-1">
+  <div class="item">
     <h3>
       🦸‍♂️<br/>Accionante
       </h3>
@@ -396,7 +399,7 @@
   </div>
 
     <!-- Contenedor Nacionalidad -->
-    <div class="item item-2">
+    <div class="item">
       <h3>
         🌎<br/>Nacionalidad
         </h3>
@@ -420,7 +423,7 @@
     </div>
 
   <!-- Contenedor Entidades Accionadas -->
-  <div class="item item-3">
+  <div class="item">
     <h3>
       🏛️<br/>Entidad Accionada
       </h3>
@@ -431,7 +434,7 @@
   </div>
 
   <!-- Contenedor Pretensiones -->
-  <div class="item item-5">
+  <div class="item">
     <h3>
       📣<br/>Pretensiones
       </h3>
@@ -443,7 +446,7 @@
   </div>
 
   <!-- Contenedor Hechos -->
-  <div class="item item-6">
+  <div class="item">
     <h3>
       📝<br/>Hechos
       </h3>
@@ -455,7 +458,7 @@
   </div>
 
   <!-- Contenedor Fundamentos -->
-  <div class="item item-7">
+  <div class="item">
     <h3>
       📜<br/>Fundamentos
       </h3>
@@ -475,7 +478,7 @@
   </div>
 
   <!-- Contenedor Pruebas -->
-  <div class="item item-8">
+  <div class="item">
     <h3>
       🔎<br/>Pruebas
       </h3>
@@ -486,7 +489,7 @@
   </div>
 
   <!-- Contenedor Notificaciones -->
-  <div class="item item-9">
+  <div class="item">
     <h3>
       📩<br/>Notificaciones
       </h3>
@@ -500,7 +503,7 @@
   </div>
 
   <!-- Contenedor Firma -->
-  <div class="item item-10">
+  <div class="item">
     <h3>
       ✍️<br/>Firma.
       </h3>

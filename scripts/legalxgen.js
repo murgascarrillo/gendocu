@@ -55,25 +55,36 @@ botonGenTutela.addEventListener("click",proyectarDocTutela);
 
 let estadoContenedor = 0;  // Para manipulación y alistamiento del Documento.
 
+ // Para manipualción de items generadores.
+let arrayItems = document.getElementsByClassName('item');
+arrayItems = Array.prototype.slice.call(arrayItems);
 function proyectarDocPeticion() {
   estadoContenedor = 1;
   contenedorPeticion.style.display = 'flex';
   contenedorTutela.style.display = 'none';
   contenedorContrato.style.display = 'none';
-}
+  arrayItems.forEach(  function(element){
+    element.style.backgroundColor ='rgb(237, 237, 237)';});
+  }
 
 function proyectarDocContrato() {
   estadoContenedor = 2;
   contenedorPeticion.style.display = 'none';
   contenedorTutela.style.display = 'none';
   contenedorContrato.style.display = 'flex';
-}
+  arrayItems.forEach( function(element){
+    element.style.backgroundColor = 'rgb(200,200,200)'; });
+
+ }
 
 function proyectarDocTutela() {
   estadoContenedor = 3;
   contenedorPeticion.style.display = 'none';
   contenedorContrato.style.display = 'none';
   contenedorTutela.style.display = 'flex';
+  arrayItems.forEach( function(element){
+    element.style.backgroundColor = 'lightgrey'; 
+});
 }
 
 // Funciones por Tipo de Documento.
@@ -126,14 +137,7 @@ function elegirLugarCreacion()
         console.log("¡Ups! No se pudo elegir lugar de creación..")
       }
     }
-// Sección - Entidad destinataria.
 
-function escribirEntidad()
-    {
-      let x = document.getElementById("textoInputEntidad");
-      let y = document.getElementById("entidad"); 
-      y.innerHTML = "<br>"+x.value;
-}
 
 // Sección - Creador del documento.
 
@@ -151,243 +155,7 @@ function escribirUsuario()
 // Sección Nacionalidad.
 
 const countryNames = [
-  "Afghanistan","Albania","Algeria","American Samoa",
-	"Andorra",	"Angola",	"Anguilla",	"Antarctica",
-	"Antigua and Barbuda",
-	"Argentina",
-"Armenia",	"Aruba",	"Australia",	"Austria",
-	"Azerbaijan",
-"Bahamas (the)",
-	"Bahrain",
-	"Bangladesh",
-	"Barbados",
-	"Belarus","Belgium",
-"Belize",
-	"Benin",
-	"Bermuda",
-"Bhutan",
-	"Bolivia",
-"Bonaire, Sint Eustatius and Saba",
-	"Bosnia and Herzegovina",
-	"Botswana",
-	"Bouvet Island",
-	"Brazil",
-	"British Indian Ocean Territory",
-	"Brunei Darussalam",
-	"Bulgaria",
-	"Burkina Faso",
-	"Burundi",
-	"Cabo Verde",
-	"Cambodia",
-	"Cameroon",
-	"Canada",
-	"Cayman Islands",
-	"Central African Republic",
-	"Chad",
-	"Chile",
-	"China",
-	"Christmas Island",
-	"Cocos",
-	"Colombia",
-	"Comoros (the)",
-	"Congo",
-	"Cook Islands",
-	"Costa Rica",
-	"Croatia",
-	"Cuba",
-	"Curaçao",
-	"Cyprus",
-	"Czechia",
-	"Côte d'Ivoire",
-	"Denmark",
-	"Djibouti",
-	"Dominica",
-	"Dominican Republic",
-	"Ecuador",
-	"Egypt",
-	"El Salvador",
-	"Equatorial Guinea",
-	"Eritrea",
-	"Estonia",
-	"Eswatini",
-	"Ethiopia",
-	"Falkland Islands [Malvinas]",
-	"Faroe Islands",
-	"Fiji",
-	"Finland",
-	"France",
-	"French Guiana",
-	"French Polynesia",
-	"French Southern Territories",
-	"Gabon",
-	"Gambia",
-	"Georgia",
-	"Germany",
-	"Ghana",
-	"Gibraltar",
-	"Greece",
-	"Greenland",
-	"Grenada",
-	"Guadeloupe",
-	"Guam",
-	"Guatemala",
-	"Guernsey",
-	"Guinea",
-	"Guinea-Bissau",
-	"Guyana",
-	"Haiti",
-	"Heard Island and McDonald Islands",
-	"Holy See",
-	"Honduras",
-	"Hong Kong",
-	"Hungary",
-	"Iceland",
-	"India",
-	"Indonesia",
-	"Iran",
-	"Iraq",
-	"Ireland",
-	"Isle of Man",
-	"Israel",
-	"Italy",
-	"Jamaica",
-	"Japan",
-	"Jersey",
-	"Jordan",
-	"Kazakhstan",
-	"Kenya",
-	"Kiribati",
-	"Korea",
-	"República de Korea",
-	"Kuwait",
-	"Kyrgyzstan",
-	"Lao People's Democratic Republic",
-	"Latvia",
-	"Lebanon",
-	"Lesotho",
-	"Liberia",
-	"Libya",
-	"Liechtenstein",
-	"Lithuania",
-	"Luxembourg",
-	"Macao",
-	"Madagascar",
-	"Malawi",
-	"Malaysia",
-	"Maldives",
-	"Mali",
-	"Malta",
-	"Marshall Islands",
-	"Martinique",
-	"Mauritania",
-	"Mauritius",
-	"Mayotte",
-	"Mexico",
-	"Micronesia",
-	"Moldova",
-	"Monaco",
-	"Mongolia",
-	"Montenegro",
-	"Montserrat",
-	"Morocco",
-	"Mozambique",
-	"Myanmar",
-	"Namibia",
-	"Nauru",
-	"Nepal",
-	"Netherlands",
-	"New Caledonia",
-	"New Zealand",
-	"Nicaragua",
-	"Niger",
-	"Nigeria",
-	"Niue",
-	"Norfolk Island",
-	"Northern Mariana Islands",
-	"Norway",
-	"Oman",
-	"Pakistan",
-	"Palau",
-	"Palestina",
-	"Panama",
-	"Papua New Guinea",
-	"Paraguay",
-	"Peru",
-	"Philippines",
-	"Pitcairn",
-	"Poland",
-	"Portugal",
-	"Puerto Rico",
-	"Qatar",
-	"Republic of North Macedonia",
-	"Romania",
-	"Russian Federation",
-	"Rwanda",
-	"Réunion",
-	"Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha",
-	"Saint Kitts and Nevis",
-	"Saint Lucia",
-	"Saint Martin (French part)",
-	"Saint Pierre and Miquelon",
-	"Saint Vincent and the Grenadines",
-	"Samoa",
-	"San Marino",
-	"Sao Tome and Principe",
-	"Saudi Arabia",
-	"Senegal",
-	"Serbia",
-	"Seychelles",
-	"Sierra Leone",
-	"Singapore",
-	"Sint Maarten (Dutch part)",
-	"Slovakia",
-	"Slovenia",
-	"Solomon Islands",
-	"Somalia",
-	"South Africa",
-	"South Georgia and the South Sandwich Islands",
-	"South Sudan",
-	"Spain",
-	"Sri Lanka",
-	"Sudan",
-	"Suriname",
-	"Svalbard and Jan Mayen",
-	"Sweden",
-	"Switzerland",
-	"Syrian Arab Republic",
-	"Taiwan",
-	"Tajikistan",
-	"Tanzania, United Republic of",
-	"Thailand",
-	"Timor-Leste",
-	"Togo",
-	"Tokelau",
-	"Tonga",
-	"Trinidad and Tobago",
-	"Tunisia",
-	"Turkey",
-	"Turkmenistan",
-	"Turks and Caicos Islands",
-	"Tuvalu",
-	"Uganda",
-	"Ukraine",
-	"United Arab Emirates",
-	"United Kingdom of Great Britain and Northern Ireland",
-	"United States Minor Outlying Islands",
-	"United States of America",
-	"Uruguay",
-	"Uzbekistan",
-	"Vanuatu",
-	"Venezuela",
-	"Viet Nam",
-	"Virgin Islands (British)",
-	"Virgin Islands (U.S.)",
-	"Wallis and Futuna",
-	"Western Sahara",
-	"Yemen",
-	"Zambia",
-	"Zimbabwe",
-	"Åland Islands"
+"Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba",	"Australia",	"Austria","Azerbaijan","Bahamas (the)","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos","Colombia","Comoros (the)","Congo","Cook Islands","Costa Rica","Croatia","Cuba","Curaçao","Cyprus","Czechia","Côte d'Ivoire","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Falkland Islands [Malvinas]","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea","República de Korea","Kuwait","Kyrgyzstan","Lao People's Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestina","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Republic of North Macedonia","Romania","Russian Federation","Rwanda","Réunion","Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha","Saint Kitts and Nevis","Saint Lucia","Saint Martin (French part)","Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Sweden","Switzerland","Syrian Arab Republic","Taiwan","Tajikistan","Tanzania, United Republic of","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom of Great Britain and Northern Ireland","United States Minor Outlying Islands","United States of America","Uruguay","Uzbekistan","Vanuatu","Venezuela","Viet Nam","Virgin Islands (British)","Virgin Islands (U.S.)","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe","Åland Islands"
 ];
 
 const dataList = document.getElementById("listaPaises");
@@ -404,6 +172,73 @@ function elegirNacionalidad (){
   let y = document.getElementById("nacionalidad");
   y.innerHTML = x.value;
 }
+
+
+// Sección - Entidad destinataria.
+
+let xEntidad = document.getElementById("inputTextoEntidad");
+let yEntidad = document.getElementById("listaEntidades");
+let inputTextEntidad;
+let numEntidad = 0;
+
+function escribirEntidad() {
+    
+  inputTextEntidad = xEntidad.value;
+}
+let newEntidad;
+function agregarEntidad() {
+ // Create a new <p> element with the input value
+
+newEntidad = document.createElement("p");
+  newEntidad.id = "newEntidad";
+  newEntidad.style.margin = "0px";
+  newEntidad.textContent = inputTextEntidad;
+ numEntidad = numEntidad + 1;
+
+ // Insert the newHecho element above on the list
+ yEntidad.parentNode.insertBefore(newEntidad, yEntidad);
+
+ // Clear the input field
+ xEntidad.value = '';
+}
+
+
+document.getElementById("inputTextoEntidad").addEventListener("input", escribirEntidad);
+
+// Add event listener to add a new <li> element when the user clicks the "botonAddHechos" button
+document.getElementById("botonAddEntidad").addEventListener("click", agregarEntidad);
+
+const inputEntidad = document.getElementById('inputTextoEntidad');
+
+inputEntidad.addEventListener('input', function () {
+  // Set the minimum height
+  this.style.height = '24px'; // Or your preferred minimum height
+
+  // Adjust the height based on the scrollHeight
+  this.style.height = this.scrollHeight + 'px';
+
+  // Set the minimum width
+  if (this.scrollWidth > 90) { // Adjust the minimum width as needed
+    this.style.width = '90%'; // Or your preferred minimum width
+  } else {
+    this.style.width = this.scrollWidth + 'px';
+  }
+});
+
+  // Función para resetear Hechos en caso de error.
+  let newEntidades;
+  function eliminarEntidad() {
+    newEntidades = document.querySelectorAll("#newEntidad");
+    newEntidades.forEach((entidad) => {
+      entidad.remove();
+    });
+    numEntidad = 0;
+  }
+
+document.getElementById("botonResetEntidad").addEventListener("click", eliminarEntidad);
+
+
+
 
 // Sección - Peticiones.
 
@@ -528,16 +363,61 @@ function escribirIdUsuario()
 }
 
 function subirFirma(input, target) {
-  let file = input.files[0];
-    let reader = new FileReader();
-
-    reader.readAsDataURL(file);
-    reader.onload = function () {
-        let img = document.getElementById(target);
-        // can also use "this.result"
-        img.src = reader.result;
-}
-}
+	let file = input.files[0];
+	let reader = new FileReader();
+  
+	reader.readAsDataURL(file);
+	reader.onload = function () {
+	  let img = document.getElementById(target);
+	  // can also use "this.result"
+	  img.src = reader.result;
+  
+	  // Ajustar el tamaño de la imagen
+	  img.style.width = "30%";
+	  img.style.height = "auto";
+  
+	  // Manipular la imagen una vez que se haya cargado
+	  img.onload = function () {
+		// Crear un lienzo temporal
+		let canvas = document.createElement('canvas');
+		canvas.width = img.width;
+		canvas.height = img.height;
+		let ctx = canvas.getContext('2d');
+  
+		// Dibujar un fondo blanco en el lienzo
+		ctx.fillStyle = "white";
+		ctx.fillRect(0, 0, canvas.width, canvas.height);
+  
+		// Dibujar la imagen en el lienzo
+		ctx.drawImage(img, 0, 0);
+  
+		// Obtener los píxeles de la imagen
+		let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+		let data = imageData.data;
+  
+		// Procesar los píxeles para eliminar los colores que no estén en el rango entre negro y gris oscuro
+		for (let i = 0; i < data.length; i += 4) {
+		  let r = data[i];
+		  let g = data[i + 1];
+		  let b = data[i + 2];
+  
+		  // Verificar si el color no está en el rango entre negro y gris oscuro
+		  if (r + g + b > 100) {
+			data[i] = 12; // Establecer el componente rojo a 255 (blanco)
+			data[i + 1] = 12; // Establecer el componente verde a 255 (blanco)
+			data[i + 2] = 12; // Establecer el componente azul a 255 (blanco)
+		  }
+		}
+  
+		// Establecer los datos de píxeles modificados en el lienzo
+		ctx.putImageData(imageData, 0, 0);
+  
+		// Establecer la imagen resultante como fuente para el elemento img
+		img.src = canvas.toDataURL('image/jpeg');
+	  };
+	};
+  }
+  
 
 
 // Función Generar PDF. html2pdf by ekoopmans. https://ekoopmans.github.io/html2pdf.js/

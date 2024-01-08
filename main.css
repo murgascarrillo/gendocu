@@ -43,7 +43,7 @@ h2 {
   color: black;
   text-align: center;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
-  font-size: 35px;
+  font-size: 25px;
   min-width: 1px;
 }
   
@@ -115,7 +115,7 @@ ol {
 
 .item 
   {
-    border: 5px solid black;
+    border: 5px solid #fff9f9;
     padding: 10px;
     margin: 5px;
     font-size: 1rem;
@@ -256,8 +256,8 @@ button
       
     }:focus /* Flashing -- As in nxworld's Codepen: https://codepen.io/nxworld/pen/ZYNOBZ */ { 
     opacity: 1;
-    -webkit-animation: flash 1.5s;
-    animation: flash 1.5s;
+    -webkit-animation: flash 1s;
+    animation: flash 1s;
     }
     .botonesSelector
     {
@@ -270,7 +270,7 @@ button
       border-color: green;
       font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
       font-weight: bold;
-      margin: 2px;
+      margin: 5px;
       cursor: pointer; /* Cambiamos el cursor para indicar que es interactivo */
       transition: transform 0.3s ease; /* Agregamos una transición suave en la propiedad transform */
     }
@@ -374,7 +374,13 @@ input
     resize:both; /* Optional: Disable manual resizing by the user */
     font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   }
-
+  #inputTextoEntidad {
+    width: 90%; /* You can adjust the initial width as needed */
+    min-width: 50px; /* Set a minimum width */
+    min-height: 24px; /* Set a minimum height */
+    resize:both; /* Optional: Disable manual resizing by the user */
+    font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
+  }
 strong{
   min-width: auto;
 }
