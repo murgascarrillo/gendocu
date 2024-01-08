@@ -61,18 +61,6 @@
       </p>
       <input type="submit" class="botonesFormulario" id="botonFechaPeticion" value="Fijar Fecha"/>
   </div>
-
-    <!-- Contenedor Lugar de Creación-->
-    <div class="item">
-      <h3>
-        🌎<br/>Nacionalidad
-        </h3>
-        <p class="parrafosFormulario">
-          <label for="listaPaises">Selecciona el país de nacionalidad de quien crea el documento. <strong>Ejemplo:</strong> Colombia.</label>
-        </p>
-        <input list="listaPaises" name="pais" id="inputPais" onchange="elegirLugarCreacion()" placeholder="Escriba el lugar."/>
-
-    </div>
   
   <!-- Contenedor Usuario -->
   <div class="item">
@@ -83,10 +71,18 @@
       Escribe el <strong>Nombre</strong> de quien presentará la petición. <strong>Ejemplo:</strong> Carlos Murgas.
       </p>
       <input type="text" id="textoInputNombreUsuario" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba su nombre."/>
+      
       <p class="parrafosFormulario">
-        Selecciona tu <strong>Tipo</strong> de Documento de Identidad.
+        <label for="inputPais">Selecciona el país de <strong>Nacionalidad</strong> de quien crea el documento. <strong>Ejemplo:</strong> Colombia.</label>
       </p>
-      <p>Ingresa tu <strong>Número</strong> documento. <strong>Ejemplo:</strong>Cédula de ciudadanía. 1234567.<br>
+      <input list="listaPaises" name="pais" id="inputPais" onchange="elegirLugarCreacion()" placeholder="Escriba el lugar."/>
+
+      <p class="parrafosFormulario">
+        <label for="listaTipoDocumento">Escribe el <strong>Tipo</strong> de Documento de Identidad.<strong>Ejemplo:</strong> Tarjeta de identidad.</label> 
+      </p>
+      <input list="listaTipoDocumento" name="tipodocumento" id="listaTipoDocumento" oninput="elegirTipoDocumento()" placeholder="Escribe Tipo de Identificiación."/>
+
+      <p class="parrafosFormulario">Ingresa tu <strong>Número</strong> documento. <strong>Ejemplo:</strong>Cédula de ciudadanía. 1234567.<br>
         </p>
         <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba número identificación."/>
   </div>
@@ -104,7 +100,6 @@
           <strong>Ejemplo:</strong> Secretaría de Movilidad de Piedecuesta. Evil Corp S.A.S. etc.</label>
       </p>
 
-
       <textarea id="inputTextoEntidad" placeholder="Escriba el nombre.."></textarea>
       <button type="submit" class="botonesFormulario" id="botonAddEntidad"><strong>+</strong> Agregar Entidad</button>
 
@@ -121,9 +116,14 @@
       </h3>
       <p class="parrafosFormulario">
       Escribe lo que requieres de la entidad. <strong>Ejemplo:</strong> Reparar la vía pública de tu barrio. Reciclar los residuos de la limpieza. Etc.
-      </p>
-      <input type="text" id="textoInputPeticiones" placeholder="Escriba las peticiones."/>
-      <input type="button" class="botonesFormulario" id="botonPeticiones" value="Redactar Peticiones"/>
+      Agrega Peticiones pulsando el botón <strong>+</strong>.  
+    </p>
+
+      <textarea id="inputTextoPeticion" placeholder="Escriba su petición."></textarea>
+      <button type="submit" class="botonesFormulario" id="botonAddPeticion"><strong>+</strong> Agregar Petición</button>
+
+      <button class="botonesFormulario" id="botonResetPeticiones">🔄Resetear</button>
+
   </div>
 
   <!-- Contenedor Hechos -->
@@ -135,7 +135,7 @@
       Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.<br/>
       Agrega Hechos pulsando el botón <strong>+</strong>.
       </p>
-      <textarea id="inputTextoHechosPeticion" placeholder="Escriba los hechos.."></textarea>
+      <textarea id="inputTextoHechosPeticion" placeholder="Escriba el hecho."></textarea>
       <button type="submit" class="botonesFormulario" id="botonAddHechosPeticion"><strong>+</strong> Agregar Hecho</button>
 
       <button class="botonesFormulario" id="botonResetHechosPeticion">🔄Resetear</button>
@@ -216,7 +216,7 @@
       <br>
       </p>
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
-      <div id="listaHechosPeticion"></div>
+      <div id="listaHechosPeticion">Acá van tus hechos.</div>
       
       <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
       <p>
@@ -233,7 +233,8 @@
       </p>
       
       <p id="section" style="text-align:center;"><strong>Peticiones.</strong></p>
-      <p><strong>Primera. </strong> <span id="spanPeticiones"></span>
+      
+    <div style="margin:0;padding:0;font-style:normal;" id="listaPeticiones">Acá van tus peticiones.</div>
         <br />
       </p>
       
@@ -245,7 +246,7 @@
       <br/>
       <strong><span id="nombreusuario2">______________</span>
       <br>
-      CC.<span id="idUsuario">_________</span></strong>
+      <span id="tipoDocumentoIdentidad">Documento de Identidad</span> #<span id="idUsuario">_________</span></strong>
       <br>
     </div>
   </div>
@@ -274,7 +275,7 @@
         🌎<br/>Lugar de Celebración
         </h3>
         <p class="parrafosFormulario">
-          <label for="listaPaises">Elige el lugar de celebración del documento en la lista. Ejemplo: Colombia.</label>
+          <label for="inputLugarContrato">Elige el lugar de celebración del documento en la lista. Ejemplo: Colombia.</label>
         </p>
         <input list="listaPaises" name="pais" id="inputLugarContrato" onchange="elegirLugarCreacion()" placeholder="Escriba el lugar."/>
           <datalist id="listaPaises">
@@ -307,7 +308,7 @@
       <p class="parrafosFormulario">
         <label for="textoInputContratante">Escribe el nombre completo de la persona que será la parte contratante. <strong>Ejemplo: </strong>Arrendador, Comodante, Vendedor.</label>
       </p>
-      <input type="text" id="textoInputEContratante" oninput="escribirContratante()" placeholder="Escriba el nombre."/>
+      <input type="text" id="textoInputContratante" oninput="escribirContratante()" placeholder="Escriba el nombre."/>
   </div>
 
   <!-- Contenedor Contratista -->
@@ -404,7 +405,7 @@
         🌎<br/>Nacionalidad
         </h3>
         <p class="parrafosFormulario">
-          <label for="listaPaises">Elige la nacionalidad de la parte Accionante. Ejemplo: Colombia.</label>
+          <label for="inputNacionalidad">Elige la nacionalidad de la parte Accionante. Ejemplo: Colombia.</label>
         </p>
         <input list="listaPaises" name="nacionalidad" id="inputNacionalidad" onchange="elegirNacionalidad()" placeholder="Elija país"/>
           <datalist id="listaPaises">
@@ -417,7 +418,7 @@
         🌎<br/>Lugar de vulneración
         </h3>
         <p class="parrafosFormulario">
-          <label for="texto">Escribe el lugar en dónde ha ocurrido la vulneración a derechos fundamentales. <strong>Ejemplo:</strong> Sasaima, Cundinamarca, Colombia.</label>
+          <label for="inputLugarTutela">Escribe el lugar en dónde ha ocurrido la vulneración a derechos fundamentales. <strong>Ejemplo:</strong> Sasaima, Cundinamarca, Colombia.</label>
         </p>
         <input type="text" id="inputLugarTutela" oninput="elegirLugarCreacion()" placeholder="Escriba el lugar"/>
     </div>
@@ -612,13 +613,12 @@
   <a class="iconosFooter" href="https://wa.me/573017673013?text=Hola.%20Vengo%20de%20la%20App%20Gendocu." class="keychainify-checked"> <img src="imagenes/icon_whatsapp.webp" target="_blank" alt="Icono Whatsapp" width="30"></a>
     <a class="iconosFooter" href="https://github.com/murgascarrillo/gendocu" class="keychainify-checked"> <img src="imagenes/icon_github.webp" alt="Icono Github by 'icon king1' on freeicons.io" style="width:30px;background-color: white;border-radius:51%;"></a>
     <br>
-  Version 0.0.2.3.2.3 - Hecho con &#x2728;
+  Version 0.0.2.3.3.3 - Hecho con &#x2728;
 </div>
 
 <!-- Scripts -->  
 <script src='scripts/legalxgen.js'></script>
 <script src='scripts/decidendis.js'></script>
 <script src='scripts/datos.js'></script>
-
 </body>
 </html>

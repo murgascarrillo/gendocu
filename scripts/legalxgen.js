@@ -138,8 +138,7 @@ function elegirLugarCreacion()
       }
     }
 
-
-// Sección - Creador del documento.
+// Sección USUARIO - Creador del documento.
 
 function escribirUsuario()
     {
@@ -152,26 +151,52 @@ function escribirUsuario()
 
 }
 
-// Sección Nacionalidad.
+
+// Sección USUARIO - Sección Nacionalidad.
 
 const countryNames = [
 "Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba",	"Australia",	"Austria","Azerbaijan","Bahamas (the)","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos","Colombia","Comoros (the)","Congo","Cook Islands","Costa Rica","Croatia","Cuba","Curaçao","Cyprus","Czechia","Côte d'Ivoire","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Falkland Islands [Malvinas]","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea","República de Korea","Kuwait","Kyrgyzstan","Lao People's Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestina","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Republic of North Macedonia","Romania","Russian Federation","Rwanda","Réunion","Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha","Saint Kitts and Nevis","Saint Lucia","Saint Martin (French part)","Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Sweden","Switzerland","Syrian Arab Republic","Taiwan","Tajikistan","Tanzania, United Republic of","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom of Great Britain and Northern Ireland","United States Minor Outlying Islands","United States of America","Uruguay","Uzbekistan","Vanuatu","Venezuela","Viet Nam","Virgin Islands (British)","Virgin Islands (U.S.)","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe","Åland Islands"
 ];
 
-const dataList = document.getElementById("listaPaises");
+const dataListPaises = document.getElementById("listaPaises");
 
 countryNames.forEach(name => {
   const option = document.createElement("option");
   option.value = name;
-  dataList.appendChild(option);
+  dataListPaises.appendChild(option);
 });
 
 
 function elegirNacionalidad (){
-  let x = document.getElementById("inputNacionalidad");
-  let y = document.getElementById("nacionalidad");
-  y.innerHTML = x.value;
-}
+	let x = document.getElementById("inputNacionalidad");
+	let y = document.getElementById("nacionalidad");
+	y.innerHTML = x.value;
+  }
+
+
+
+
+// Sección USUARIO - Sección Tipo Documento Identidad
+
+const tiposDocumentoIdentidad = [
+	"Cédula de ciudadanía","Tarjeta de identidad","Permiso Especial de Permanencia","Pasaporte","Salvoconducto"
+  ];
+  
+  const dataListTipoDocumento = document.getElementById("listaTipoDocumento");
+  
+  tiposDocumentoIdentidad.forEach(string => {
+	const optionTD = document.createElement("option");
+	optionTD.value = string;
+	dataListTipoDocumento.appendChild(optionTD);
+  });
+
+  function elegirTipoDocumento (){
+	let x = document.getElementById("listaTipoDocumento");
+	let y = document.getElementById("tipoDocumentoIdentidad");
+	y.innerHTML = x.value;
+  }
+
+
 
 
 // Sección - Entidad destinataria.
@@ -242,6 +267,68 @@ document.getElementById("botonResetEntidad").addEventListener("click", eliminarE
 
 // Sección - Peticiones.
 
+let xPeticion = document.getElementById("inputTextoPeticion");
+let yPeticion = document.getElementById("listaPeticiones");
+let inputTextPeticion;
+let numPeticion = 1;
+
+function escribirPeticion() {
+	yPeticion.innerHTML = "";
+  inputTextPeticion = xPeticion.value;
+}
+let newPeticion;
+function agregarPeticion() {
+ // Create a new <p> element with the input value
+
+newPeticion = document.createElement("p");
+  newPeticion.id = "newPeticion";
+  newPeticion.style.margin = "0px";
+  newPeticion.textContent = numPeticion + ". " + inputTextPeticion + ".";
+ numPeticion = numPeticion + 1;
+
+ // Insert the newPeticion element above on the list
+ yPeticion.parentNode.insertBefore(newPeticion, yPeticion);
+
+ // Clear the input field
+ xPeticion.value = '';
+}
+
+document.getElementById("inputTextoPeticion").addEventListener("input", escribirPeticion);
+
+// Add event listener to add a new <li> element when the user clicks the "botonAddPeticion" button
+document.getElementById("botonAddPeticion").addEventListener("click", agregarPeticion);
+
+const inputPeticion = document.getElementById('inputTextoPeticion');
+
+inputPeticion.addEventListener('input', function () {
+  // Set the minimum height
+  this.style.height = '24px'; // Or your preferred minimum height
+
+  // Adjust the height based on the scrollHeight
+  this.style.height = this.scrollHeight + 'px';
+
+  // Set the minimum width
+  if (this.scrollWidth > 90) { // Adjust the minimum width as needed
+    this.style.width = '90%'; // Or your preferred minimum width
+  } else {
+    this.style.width = this.scrollWidth + 'px';
+  }
+});
+
+  // Función para resetear Hechos en caso de error.
+  let newPeticiones;
+  function eliminarPeticion() {
+    newPeticiones = document.querySelectorAll("#newPeticion");
+    newPeticiones.forEach((peticion) => {
+      peticion.remove();
+    });
+    numPeticion = 0;
+  }
+
+document.getElementById("botonResetPeticiones").addEventListener("click", eliminarPeticion);
+
+// en TUTELA:
+
 let botonPeticiones = document.getElementById("botonPeticiones");
 botonPeticiones.addEventListener("click",escribirPeticiones);
 let inputPeticiones = document.getElementById("textoInputPeticiones");
@@ -260,7 +347,7 @@ let inputTextHechos;
 let numHechos = 1;
 
 function escribirHechos() {
-    
+   yHechos.innerHTML = ""; 
   inputTextHechos = x.value;
 }
 let newHecho;
