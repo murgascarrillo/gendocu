@@ -49,6 +49,9 @@ botonGenPeticion.addEventListener("click",proyectarDocPeticion);
 let botonGenContrato = document.getElementById("botonGenContrato");
 let contenedorContrato = document.getElementById("contenedorContrato");
 botonGenContrato.addEventListener("click",proyectarDocContrato);
+let botonGenMandato = document.getElementById("botonGenMandato");
+let contenedorMandato = document.getElementById("contenedorMandato");
+botonGenMandato.addEventListener("click",proyectarDocMandato);
 let botonGenTutela = document.getElementById("botonGenTutela");
 let contenedorTutela = document.getElementById("contenedorTutela");
 botonGenTutela.addEventListener("click",proyectarDocTutela);
@@ -63,8 +66,9 @@ function proyectarDocPeticion() {
   contenedorPeticion.style.display = 'flex';
   contenedorTutela.style.display = 'none';
   contenedorContrato.style.display = 'none';
+  contenedorMandato.style.display = 'none';
   arrayItems.forEach(  function(element){
-    element.style.backgroundColor ='rgb(237, 237, 237)';});
+    element.style.backgroundColor ='rgb(238,238,238)';});
   }
 
 function proyectarDocContrato() {
@@ -72,18 +76,31 @@ function proyectarDocContrato() {
   contenedorPeticion.style.display = 'none';
   contenedorTutela.style.display = 'none';
   contenedorContrato.style.display = 'flex';
+  contenedorMandato.style.display = 'none';
   arrayItems.forEach( function(element){
-    element.style.backgroundColor = 'rgb(200,200,200)'; });
+    element.style.backgroundColor = 'rgb(221,221,221)'; });
 
  }
 
-function proyectarDocTutela() {
+ function proyectarDocMandato() {
   estadoContenedor = 3;
   contenedorPeticion.style.display = 'none';
   contenedorContrato.style.display = 'none';
+  contenedorMandato.style.display = 'flex';
+  contenedorTutela.style.display = 'none';
+  arrayItems.forEach( function(element){
+    element.style.backgroundColor = 'rgb(204,204,204)'; 
+});
+}
+
+function proyectarDocTutela() {
+  estadoContenedor = 4;
+  contenedorPeticion.style.display = 'none';
+  contenedorContrato.style.display = 'none';
+  contenedorMandato.style.display = 'none';
   contenedorTutela.style.display = 'flex';
   arrayItems.forEach( function(element){
-    element.style.backgroundColor = 'lightgrey'; 
+    element.style.backgroundColor = 'rgb(187,187,187)'; 
 });
 }
 
@@ -97,6 +114,7 @@ function proyectarDocTutela() {
  botonFechaPeticion.addEventListener("focus",definirFecha);
  var botonFechaContrato = document.getElementById("botonFechaContrato");
  botonFechaContrato.addEventListener("click",definirFecha);
+ 
  function definirFecha(fechaDocumento) {
   fechaDocumento = new Date();
   var meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
@@ -128,6 +146,12 @@ function elegirLugarCreacion()
       }
       
       else if (estadoContenedor === 3){
+        let x = document.getElementById("inputLugarMandato");
+        let y = document.getElementById("lugarMandato");
+        y.innerHTML = x.value;
+      }
+
+      else if (estadoContenedor === 4){
         let x = document.getElementById("inputLugarTutela");
         let y = document.getElementById("lugarJuez");
         y.innerHTML = x.value;
@@ -196,8 +220,13 @@ const tiposDocumentoIdentidad = [
 	y.innerHTML = x.value;
   }
 
-
-
+ // Sección USUARIO - Sección ID Usuario
+ function escribirIdUsuario()
+ {
+   let x = document.getElementById("textoInputIdUsuario");
+   let y = document.getElementById("idUsuario");
+   y.innerHTML = x.value; 
+}
 
 // Sección - Entidad destinataria.
 
@@ -261,9 +290,6 @@ inputEntidad.addEventListener('input', function () {
   }
 
 document.getElementById("botonResetEntidad").addEventListener("click", eliminarEntidad);
-
-
-
 
 // Sección - Peticiones.
 
@@ -414,6 +440,12 @@ function imprimirFundamentos()
       document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion;
       filtroFundamentos.value = '';
     }
+
+  if (filtroFundamentos.value == "peticion_HabeasData")
+    {
+      document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Habeas_Data;
+      filtroFundamentos.value = ''; 
+    }
 }
 
 
@@ -442,68 +474,23 @@ function escribirNotificaciones2() {
 
 
 // Sección - Firmar documento.
-function escribirIdUsuario()
-  {
-    let x = document.getElementById("textoInputIdUsuario");
-    let y = document.getElementById("idUsuario");
-    y.innerHTML = x.value; 
-}
 
+
+// Sección - Firmar documento.
 function subirFirma(input, target) {
-	let file = input.files[0];
-	let reader = new FileReader();
-  
-	reader.readAsDataURL(file);
-	reader.onload = function () {
-	  let img = document.getElementById(target);
-	  // can also use "this.result"
-	  img.src = reader.result;
-  
-	  // Ajustar el tamaño de la imagen
-	  img.style.width = "30%";
-	  img.style.height = "auto";
-  
-	  // Manipular la imagen una vez que se haya cargado
-	  img.onload = function () {
-		// Crear un lienzo temporal
-		let canvas = document.createElement('canvas');
-		canvas.width = img.width;
-		canvas.height = img.height;
-		let ctx = canvas.getContext('2d');
-  
-		// Dibujar un fondo blanco en el lienzo
-		ctx.fillStyle = "white";
-		ctx.fillRect(0, 0, canvas.width, canvas.height);
-  
-		// Dibujar la imagen en el lienzo
-		ctx.drawImage(img, 0, 0);
-  
-		// Obtener los píxeles de la imagen
-		let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-		let data = imageData.data;
-  
-		// Procesar los píxeles para eliminar los colores que no estén en el rango entre negro y gris oscuro
-		for (let i = 0; i < data.length; i += 4) {
-		  let r = data[i];
-		  let g = data[i + 1];
-		  let b = data[i + 2];
-  
-		  // Verificar si el color no está en el rango entre negro y gris oscuro
-		  if (r + g + b > 100) {
-			data[i] = 12; // Establecer el componente rojo a 255 (blanco)
-			data[i + 1] = 12; // Establecer el componente verde a 255 (blanco)
-			data[i + 2] = 12; // Establecer el componente azul a 255 (blanco)
-		  }
-		}
-  
-		// Establecer los datos de píxeles modificados en el lienzo
-		ctx.putImageData(imageData, 0, 0);
-  
-		// Establecer la imagen resultante como fuente para el elemento img
-		img.src = canvas.toDataURL('image/jpeg');
-	  };
-	};
-  }
+  let file = input.files[0];
+  let reader = new FileReader();
+
+  reader.readAsDataURL(file);
+  reader.onload = function () {
+    let img = document.getElementById(target);
+    // can also use "this.result"
+    img.src = reader.result;
+    // Ajustar el tamaño de la imagen
+    img.style.width = "40%";
+    img.style.height = "auto";
+  };
+}
   
 
 
@@ -516,7 +503,7 @@ function generatePDF(){
     var opt = {
     margin: 0.5,
     padding:0.5,
-    filename: 'dp_gendocu.pdf',
+    filename: 'peticion_gendocu.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2 },
     jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
@@ -528,18 +515,32 @@ function generatePDF(){
     var element = document.getElementById('esqueletoContrato');
     var opt = {
     margin: 0.5,
-    filename: 'cto_gendocu.pdf',
+    filename: 'contrato_gendocu.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2 },
     jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
     }
     html2pdf(element, opt);
-  }else if(contenedorTutela.style.display === 'flex')
+  }
+  else if(contenedorMandato.style.display === 'flex')
+  {
+    var element = document.getElementById('esqueletoMandato');
+    var opt = {
+    margin: 0.5,
+    filename: 'mandato_gendocu.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 2 },
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    }
+    html2pdf(element, opt);
+  }
+
+  else if(contenedorTutela.style.display === 'flex')
   {
     var element = document.getElementById('esqueletoTutela');
     var opt = {
     margin: 0.5,
-    filename: 'tut_gendocu.pdf',
+    filename: 'tutela_gendocu.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2 },
     jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
@@ -590,8 +591,11 @@ document.getElementById("botonCopiar").addEventListener("click", function () {
   } else if (estadoContenedor === 2) {
     idElemento = "esqueletoContrato";
   } else if (estadoContenedor === 3) {
+    idElemento = "esqueletoMandato";
+  } else if (estadoContenedor === 4) {
     idElemento = "esqueletoTutela";
-  } else {
+  }
+  else {
     idElemento = "contenedorVacio";
   }
 

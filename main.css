@@ -106,6 +106,12 @@ ol {
     justify-content: center;
   }
 
+  #contenedorMandato
+  {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   #contenedorTutela
   {
  
