@@ -795,12 +795,10 @@
         La parte accionada recibirá en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br />
         Atentamente,
       </p>
-      <img id="espacioFirma" width="210" height="72"/>
-      <br/>
+      <img id="espacioFirma" width="210" height="60"/>
       <strong><span id="nombreusuario2">______________</span>
       <br>
       CC.<span id="idUsuario">_________</span></strong>
-      <br>
     </div>
   </div>        
 </div>
@@ -811,14 +809,16 @@
 
 <!-- Contenedor Botones de acciones sobre el documento -->
 <div id="contenedorBotonesAcciones">
-<div class="itemBoton">
-  <input type="button" id="botonCopiar" value="📋 Copiar texto"/>
-</div> 
+<button class="itemBoton" id="botonCopiar">📋 Copiar texto</button>
+<button class="itemBoton" id="botonExportar">🖨️ Exportar a PDF</button>
 
-<div class="itemBoton">
-    <input type="button" id="botonExportar" value="🖨️ Exportar a PDF" onclick="generatePDF()"/>
-  </div>
 </div>
+
+
+
+
+
+
 
 <!-- Pie de página -->
 <div id="footer">
@@ -828,6 +828,21 @@
     <br>
   Version 0.0.2.4.3.3 - Hecho con &#x2728;
 </div>
+
+
+
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close" id="closePopUp"> &times; </span>
+    <p style="text-align:justify;"><strong>¡Ya casi terminas!</strong><br/> <br/> Descarga el documento que has generado realizando el pago de <strong>$5000</strong> pesos colombianos. <br/> <br/> Seleccione su método de pago preferido:</p>
+    <a href="https://biz.payulatam.com/B0f5018A5DE4ACA" target="_blank"><img src="https://ecommerce.payulatam.com/img-secure-2015/boton_pagar_mediano.png"></a>
+    <a><img src="imagenes/boton_pagar_nequi_mediano.webp" id="imagenPrincipal" onclick="mostrarImagenSuperpuesta()"></a>
+
+    <div id="imagenSuperpuesta" onclick="ocultarImagenSuperpuesta()">
+      <img src="imagenes/qr_nequi.webp">
+    </div>
+  </div>
 
 <!-- Scripts -->  
 <script src='scripts/legalxgen.js'></script>

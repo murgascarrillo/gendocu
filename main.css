@@ -313,10 +313,20 @@ button
     place-content: center;
   }
 
+  #contenedorBotonesAcciones
+  {
+    margin-top: auto;
+    margin-left: auto;
+    display: flex;
+    place-content: center;
+  }
+
 .itemBoton
   {
     padding: 0.3rem;
+    margin: 0.3rem;
     font-size: 1rem;
+    
     display: flex;
     justify-content: center;
   }
@@ -417,4 +427,65 @@ strong{
   100% {
     background-position: 100% 0, 200% 0, 300% 0; /* Posiciones finales de las imágenes de fondo */
   }
+}
+
+
+
+
+
+
+/* EXPERIMENTAL*/
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popup-content {
+  background-color: white;
+
+  padding: 15px;
+  border: 6px solid linear-gradient(80deg, rgba(0,0,0,1) 0%, rgba(13,124,0,1) 100%);
+  border-radius: 2ex;
+
+  
+  width: 50%;
+  height: 50%;
+  max-width: 400px;
+  margin: 25% auto;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+
+/*  Imagen QR al click */
+
+#imagenSuperpuesta {
+  position: fixed;
+  top: 120px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Fondo semi-transparente */
+  display: none; /* Oculta la imagen superpuesta inicialmente */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  z-index: 10; /* Asegura que esté sobre el resto del contenido */
+}
+#imagenSuperpuesta img {
+  max-width: 300px; /* Tamaño máximo de 400px */
+  max-height: 300px;
 }

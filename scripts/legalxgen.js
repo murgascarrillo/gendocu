@@ -80,6 +80,7 @@ function proyectarDocContrato() {
   arrayItems.forEach( function(element){
     element.style.backgroundColor = 'rgb(221,221,221)'; });
 
+
  }
 
  function proyectarDocMandato() {
@@ -493,7 +494,6 @@ function subirFirma(input, target) {
 }
   
 
-
 // Función Generar PDF. html2pdf by ekoopmans. https://ekoopmans.github.io/html2pdf.js/
 
 function generatePDF(){
@@ -553,9 +553,9 @@ function generatePDF(){
 
 }
 
-
 // Función para copiar texto al portapapeles
 function copiarAlPortapapeles(idElemento) {
+
   // Selecciona el elemento que contiene el texto que deseas copiar
   let elemento = document.getElementById(idElemento);
 
@@ -581,11 +581,9 @@ function copiarAlPortapapeles(idElemento) {
     document.body.removeChild(textarea);
   }
 }
-
+let idElemento = "";
 // Agrega un evento de clic al botón con ID 'botonCopiar'
 document.getElementById("botonCopiar").addEventListener("click", function () {
-  let idElemento = "";
-
   if (estadoContenedor === 1) {
     idElemento = "esqueletoPeticion";
   } else if (estadoContenedor === 2) {
@@ -599,7 +597,7 @@ document.getElementById("botonCopiar").addEventListener("click", function () {
     idElemento = "contenedorVacio";
   }
 
-  copiarAlPortapapeles(idElemento);
+
 });
 
 
@@ -607,3 +605,92 @@ document.getElementById("botonCopiar").addEventListener("click", function () {
 // Misceláneos
 
 let logo = document.getElementById("logo");
+
+
+
+
+// EXPERIMENTAL
+
+// Chequeos de pago
+
+let pagoRealizado = false;
+let opcionPaga = 0;
+var botonOpcionPaga1 = document.querySelector('.itemBoton#botonCopiar');
+var botonOpcionPaga2 = document.querySelector('.itemBoton#botonExportar');
+
+document.addEventListener('DOMContentLoaded', function() {
+  var botonCopiar = document.getElementById('botonCopiar');
+  botonCopiar.addEventListener('click', function(){
+    opcionPaga = opcionPaga + 1;
+  })
+  var botonExportar = document.getElementById('botonExportar');
+  botonExportar.addEventListener('click', function(){
+    opcionPaga = opcionPaga + 2;
+  })
+
+
+  var popup = document.getElementById('popup');
+  
+  function mostrarPopup() {
+    popup.style.display = 'block';
+  }
+
+  var closePopUp = document.getElementById('closePopUp');
+
+  function cerrarPopup() {
+    popup.style.display = 'none';
+    pagoRealizado = true;
+    opcionPaga = opcionPaga - opcionPaga;
+  }
+
+  // Workflow Opcion Paga 1: Copiar
+  
+  botonOpcionPaga1.addEventListener('click', function() {
+    pagoRealizado = false;
+    if (botonOpcionPaga1.id === "botonCopiar"){
+      mostrarPopup();
+    }
+  });
+
+  
+  // Workflow Opcion Paga 2: Exportar
+
+  botonOpcionPaga2.addEventListener('click', function() {
+    pagoRealizado = false;
+    if (botonOpcionPaga2.id === "botonExportar"){
+      mostrarPopup();
+    }
+  });
+
+
+  // Workflow Cerrar Opciones Pagas
+
+  closePopUp.addEventListener('click', function(){
+    if (opcionPaga === 1){
+      copiarAlPortapapeles(idElemento);
+    }
+    else if (opcionPaga === 2){
+      generatePDF();
+    }
+    else {
+      console.log("¡No ocurrió nada!");
+    };
+    cerrarPopup();
+  });
+
+
+});
+
+
+// QR imagen al click 
+
+
+function mostrarImagenSuperpuesta() {
+  var imagenSuperpuesta = document.getElementById('imagenSuperpuesta');
+  imagenSuperpuesta.style.display = 'block';
+}
+
+function ocultarImagenSuperpuesta() {
+  var imagenSuperpuesta = document.getElementById('imagenSuperpuesta');
+  imagenSuperpuesta.style.display = 'none';
+}
