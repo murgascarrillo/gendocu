@@ -448,16 +448,11 @@ strong{
 
 .popup-content {
   background-color: white;
-
   padding: 15px;
   border: 6px solid linear-gradient(80deg, rgba(0,0,0,1) 0%, rgba(13,124,0,1) 100%);
   border-radius: 2ex;
-
-  
-  width: 50%;
-  height: 50%;
   max-width: 400px;
-  margin: 25% auto;
+  margin: 10% auto;
   text-align: center;
   position: relative;
 }
