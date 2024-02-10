@@ -449,7 +449,6 @@ strong{
 .popup-content {
   background-color: white;
   padding: 15px;
-  border: 6px solid linear-gradient(80deg, rgba(0,0,0,1) 0%, rgba(13,124,0,1) 100%);
   border-radius: 2ex;
   max-width: 400px;
   margin: 10% auto;
@@ -481,6 +480,6 @@ strong{
   z-index: 10; /* Asegura que esté sobre el resto del contenido */
 }
 #imagenSuperpuesta img {
-  max-width: 300px; /* Tamaño máximo de 400px */
+  max-width: 300px; /* Tamaño máximo de 300px */
   max-height: 300px;
 }
