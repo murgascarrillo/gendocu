@@ -172,7 +172,7 @@
       🔎<br/>Pruebas
       </h3>
       <p class="parrafosFormulario">
-      Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "otocopia de escritura pública. Fotografía de la vía pública. Etc.
+      Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "Fotocopia de escritura pública. Fotografía de la vía pública. Etc.
       </p>
       <input type="text" id="textoInputPruebas" oninput="escribirPruebas()" placeholder="Mencione las pruebas."/>
   </div>
@@ -299,18 +299,30 @@
       <p class="parrafosFormulario">
       Selecciona el tipo de contrato que quieres generar. <strong>Ejemplo:</strong> Arrendamiento. Compraventa. Préstamo.
       </p>
-      <input type="text" id="textoInputPeticiones" placeholder="Escriba las cláusulas."/>
-      <input type="button" class="botonesFormulario" id="botonClausulas" value="Redactar cláusulas"/>
+        <div id="Contratos">
+        <select id="listaContratos">
+          <option> - Selecciona el contrato - </option>
+          <optgroup label="Contratos Civiles">
+          <option value="contrato_Arrendamiento_Vivienda_Urbana">
+            Arrendamiento de Vivienda Urbana
+          </option>
+            <option value="contrato_Comodato">
+            Comodato
+            </option>
+          </optgroup>
+        </select>
+        </div>
+        <input type="button" class="botonesFormulario" id="botonContratos" value="Generar Contrato"/>
   </div>
 
 
   <!-- Contenedor Contratante -->
   <div class="item">
     <h3 id="nombreParte1">
-      👩<br/>Contratante
+      👩<br/><span id="contratante_Base">Contratante</span>
       </h3>
       <p class="parrafosFormulario">
-        <label for="textoInputContratante">Escribe el nombre completo de la persona que será la parte contratante. <strong>Ejemplo: </strong>Arrendador, Comodante, Vendedor.</label>
+        <label for="textoInputContratante">Escribe el nombre completo de la persona. <strong>Ejemplo: </strong>Carlos Murgas.</label>
       </p>
       <input type="text" id="textoInputContratante" oninput="escribirContratante()" placeholder="Escriba el nombre."/>
   </div>
@@ -318,10 +330,10 @@
   <!-- Contenedor Contratista -->
   <div class="item">
     <h3 id="nombreParte2">
-      🧔<br/>Contratista
+      🧔<br/><span id="contratista_Base">Contratista</span>
       </h3>
       <p class="parrafosFormulario">
-        <label for="textoInputContratista">Escribe el nombre completo de la persona que será la parte contratista. <strong>Ejemplo: </strong>Arrendatario, Comodatario, Comprador.</label>
+        <label for="textoInputContratista">Escribe el nombre completo de la persona. <strong>Ejemplo: </strong>Lázaro Bautista.</label>
       </p>
       <input type="text" id="textoInputContratista" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre."/>
   </div>
@@ -347,7 +359,7 @@
   
     <div class="documentoGenerado" id="esqueletoContrato">
       <p>
-        <h3><span id="nombreTipoContrato">Contrato de _________</span></h3>
+        <h3>Contrato de <span id="nombreTipoContrato">_________</span>.</h3>
   
       <br>
            Nosotros,<strong><span id="contratante" style="font-style:normal;"> 
@@ -360,21 +372,28 @@
       </p>
       
       <h4 id="section" style="text-align:center;"><strong>Cláusulas:</strong></h4>
-      <p id="espacioClausulas">
+      <p id="clausula_Objeto">
+        <strong>Primera. Objeto del Contrato. </strong><span id="objeto_Contrato"></span>
+      </p>
+      <p id="clausula_Obligaciones">
+        <strong>Segunda. Obligaciones.</strong> Serán las establecidas en la Ley vigente para éste tipo de contratos.
+      </p>
+      <p id="clausula_Penal">
+        <strong>Tercera. Cláusula Penal.</strong> La parte del contrato que incumpla sus obligaciones pagará a la otra a título de perjuicios la suma en dinero de QUINIENTOS MIL PESOS ($500.000) M/L.
       </p>
       
       <p id="section" style="text-align:left;"><strong>Notificaciones. </strong>
         La parte contratante recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. 
         La parte contratista recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. <br /><br/>
-        El presente contrato se firma por las partes estando en <span id="lugarContrato">_____</span> y siendo la fecha <span id="fecha2"> _____</span>.<br></p>
+        El presente contrato se firma por las partes estando en <span id="lugarContrato">_____</span> y siendo la fecha <span id="fechaContrato"> _____</span>.<br></p>
       
       <img id="espacioFirma" width="210" height="72">
       <br/>
       <strong><span id="nombreusuario2">______________</span>
       <br>
-      CC.<span id="idUsuario">_________</span></strong>
+      CC.<span id="id_Contratante">_________</span></strong>
       <br>
-      CC.<span id="idUsuario">_________</span></strong>
+      CC.<span id="id_Contratista">_________</span></strong>
       <br>
     </div>
   </div>        
@@ -826,7 +845,7 @@
   <a class="iconosFooter" href="https://wa.me/573017673013?text=Hola.%20Vengo%20de%20la%20App%20Gendocu." class="keychainify-checked"> <img src="imagenes/icon_whatsapp.webp" target="_blank" alt="Icono Whatsapp" width="30"></a>
     <a class="iconosFooter" href="https://github.com/murgascarrillo/gendocu" class="keychainify-checked"> <img src="imagenes/icon_github.webp" alt="Icono Github by 'icon king1' on freeicons.io" style="width:30px;background-color: white;border-radius:51%;"></a>
     <br>
-  Version 0.0.2.4.3.4 - Hecho con &#x2728;
+  Version 0.0.2.4.3.5 - Hecho con &#x2728;
 </div>
 
 
@@ -836,7 +855,6 @@
   <div class="popup-content">
     <span class="close" id="closePopUp"> &times; </span>
     <p style="text-align:justify;"><strong>¡Ya casi terminas!</strong><br/> <br/> Descarga el documento que has generado realizando el pago de <strong>$5000</strong> pesos colombianos. <br/> <br/> Seleccione su método de pago preferido:</p>
-    <a href="https://biz.payulatam.com/B0f5018A5DE4ACA" target="_blank"><img src="https://ecommerce.payulatam.com/img-secure-2015/boton_pagar_mediano.png"></a>
     <a><img src="imagenes/boton_pagar_nequi_mediano.webp" id="imagenPrincipal" onclick="mostrarImagenSuperpuesta()"></a>
 
     <div id="imagenSuperpuesta" onclick="ocultarImagenSuperpuesta()">
@@ -851,6 +869,7 @@
 <script src='scripts/actio.js'></script>
 <script src='scripts/mandatus.js'></script>
 <script src='scripts/decidendis.js'></script>
+<script src='scripts/clausulae.js'></script>
 <script src='scripts/datos.js'></script>
 </body>
 </html>
