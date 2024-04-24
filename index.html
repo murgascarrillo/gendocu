@@ -26,7 +26,7 @@
 <!-- Introducción -->
 
 
-<h2><strong id="strongCrea"> Crea </strong> peticiones, contratos, mandatos y acciones públicas.<br/>Rápido y Sencillo.
+<h2><strong id="strongCrea"> Crea </strong> peticiones, contratos y acciones públicas.<br/>Rápido y Sencillo.
 </h2>
 
 <div class="contenedorIntroduccion">
@@ -43,8 +43,7 @@
 
     <input type="button" class="botonesSelector" value="Petición" id="botonGenPeticion"/>
     <input type="button" class="botonesSelector" value="Contrato" id="botonGenContrato"/>
-    <input type="button" class="botonesSelector" value="Mandato" id="botonGenMandato"/>
-    <input type="button" class="botonesSelector" value="Acción de Tutela" id="botonGenTutela"/>
+    <input type="button" class="botonesSelector" value="Acción Pública" id="botonGenTutela"/>
 </div>
 
 <!--  Acá comienzan los módulos para agregar contenido al documento según su tipo-->
@@ -160,9 +159,22 @@
         <option value="peticion_Basica">
           Derecho a presentar peticiones y recibir respuesta oportuna</option>
           <option value="peticion_HabeasData">
-            Derecho a conocer, actualizar y rectificar información personal
-          </option>
-        </optgroup>
+            Derecho a conocer, actualizar y rectificar información personal</option>
+            <option value="peticion_Vida">
+              Derecho a la protección de la vida</option>
+              <option value="peticion_Proteccion_Desaparicion_Tortura">
+                Derecho a la protección en contra de la desaparición, tortura o tratos crueles</option>
+                <option value="peticion_Igualdad">
+                  Derecho a la igualdad</option>
+                  <option value="peticion_Personalidad_Juridica">
+                    Derecho a la personalidad jurídica</option>
+                    <option value="peticion_Intimidad_BuenNombre">
+                      Derecho a la intimidad y al buen nombre</option>
+                      <option value="peticion_Libre_Desarrollo_Personalidad">
+                        Derecho al libre desarrollo de la personalidad</option>
+                      
+                    
+          </optgroup>
       </select>
       </div>
       <input type="button" class="botonesFormulario" id="botonFundamentos" value="Generar Fundamentos"/>
@@ -311,6 +323,9 @@
             <option value="contrato_Comodato">
             Comodato
             </option>
+            <option value="contrato_Mandato">
+              Mandato
+              </option>
           </optgroup>
         </select>
         </div>
@@ -401,234 +416,54 @@
   </div>        
 </div>
 
-<!-- Tipo Mandato -->
 
-<!-- Contenedor de contenedores de módulos Mandato-->
-<div class="contenedorGen" id="contenedorMandato">
+<!-- Tipo Acción Pública-->
 
-  <!-- Contenedor Fecha-->
-  <div class="item">
-    <h3>
-      🗓️<br/>Fecha
-      </h3>
-      <p class="parrafosFormulario">
-      Fija la fecha de creación del Mandato dando click en el siguiente botón.
-      </p>
-      <input type="submit" class="botonesFormulario" id="botonFechaMandato" value="Fijar Fecha"/>
-  </div>
-  
- <!-- Contenedor Lugar -->
- <div class="item">
-  <h3>
-    🌏<br/>Lugar
-    </h3>
-  </p>
-  <label for="inputPaisMandato">Selecciona el país en donde se otorga el <strong>Mandato</strong>. <strong>Ejemplo:</strong> Colombia.</label>
-  </p>
-    <input list="listaPaisesMandato" name="pais" id="inputPaisMandato" onchange="elegirLugarCreacionMandato()" placeholder="Escriba el lugar."/>
-</div>
-
-  <!-- Contenedor Mandante -->
-  <div class="item">
-    <h3>
-      🙋‍♂️<br/>Mandante
-      </h3>
-      <p class="parrafosFormulario">
-      Escribe el <strong>Nombre</strong> de quien presentará otorga el Mandato. <strong>Ejemplo:</strong> Carlos Murgas.
-      </p>
-      <input type="text" id="textoInputNombreMandante" maxlength="50" oninput="escribirMandante()" placeholder="Escriba el nombre."/>
-      
-      <p class="parrafosFormulario">
-        <label for="inputPaisNacionalidadMandante">Selecciona el país de <strong>Nacionalidad</strong> del Mandante. <strong>Ejemplo:</strong> Colombia.</label>
-      </p>
-      <input list="listaPaisesMandante" name="pais" id="inputPaisNacionalidadMandante" onchange="elegirNacionalidadMandante()" placeholder="Selecciona nacionalidad."/>
-
-      <p class="parrafosFormulario">
-        <label for="listaTipoDocumentoMandante">Escribe el <strong>Tipo</strong> de Documento de Identidad.<strong>Ejemplo:</strong> Tarjeta de identidad.</label> 
-      </p>
-      <input list="listaTipoDocumentoMandante" name="tipodocumento" id="listaTipoDocumentoMandante" oninput="elegirTipoDocumento()" placeholder="Escribe Tipo de Identificiación."/>
-
-      <p class="parrafosFormulario">Ingresa tu <strong>Número</strong> documento. <strong>Ejemplo:</strong>Cédula de ciudadanía. 1234567.<br>
-        </p>
-        <input type="text" id="textoInputIdMandante" maxlength="20" oninput="escribirIdMandante()" placeholder="Escriba número identificación."/>
-  </div>
+<!-- Si seleccionas el tipo de documento 'Acción Pública' entonces se visualiza el siguiente módulo:-->
 
 
-    
-  <!-- Contenedor Entidades Destinatarias -->
-  <div class="item">
-    <h3>
-      🏛️<br/>Destinatario
-      </h3>
-      <p class="parrafosFormulario">
-        <label for="inputTextoEntidad">Escribe el nombre completo o razón social de la persona a la que dirigiras la petición.
-          Agrega Entidades pulsando el botón <strong>+</strong>.
-          <strong>Ejemplo:</strong> Secretaría de Movilidad de Piedecuesta. Evil Corp S.A.S. etc.</label>
-      </p>
-
-      <textarea id="inputTextoEntidad" placeholder="Escriba el nombre.."></textarea>
-      <button type="submit" class="botonesFormulario" id="botonAddEntidad"><strong>+</strong> Agregar Entidad</button>
-
-      <button class="botonesFormulario" id="botonResetEntidad">🔄Resetear</button>
-
-  </div>
-
-
-
-  <!-- Contenedor Peticiones -->
-  <div class="item">
-    <h3>
-      📣<br/>Peticiones
-      </h3>
-      <p class="parrafosFormulario">
-      Escribe lo que requieres de la entidad. <strong>Ejemplo:</strong> Reparar la vía pública de tu barrio. Reciclar los residuos de la limpieza. Etc.
-      Agrega Peticiones pulsando el botón <strong>+</strong>.  
-    </p>
-
-      <textarea id="inputTextoPeticion" placeholder="Escriba su petición."></textarea>
-      <button type="submit" class="botonesFormulario" id="botonAddPeticion"><strong>+</strong> Agregar Petición</button>
-
-      <button class="botonesFormulario" id="botonResetPeticiones">🔄Resetear</button>
-
-  </div>
-
-  <!-- Contenedor Hechos -->
-  <div class="item">
-    <h3>
-      📝<br/>Hechos
-      </h3>
-      <p class="parrafosFormulario">
-      Escribe los hechos en los que fundamentas tu <span title="Causa: Lo que le motiva a generar el documento."><strong>causa</strong></span>.<br/>
-      Agrega Hechos pulsando el botón <strong>+</strong>.
-      </p>
-      <textarea id="inputTextoHechosPeticion" placeholder="Escriba el hecho."></textarea>
-      <button type="submit" class="botonesFormulario" id="botonAddHechosPeticion"><strong>+</strong> Agregar Hecho</button>
-
-      <button class="botonesFormulario" id="botonResetHechosPeticion">🔄Resetear</button>
-
-    </div>
-
-  <!-- Contenedor Fundamentos -->
-  <div class="item">
-    <h3>
-      📜<br/>Fundamentos
-      </h3>
-      <p class="parrafosFormulario">
-      Los fundamentos son el soporte legal del documento. Selecciona la opción que mejor soporta tu situación.
-      </p>
-      <div id="Fundamentos">
-      <select id="listaFundamentos">
-        <option> -- Selecciona la temática -- </option>
-        <optgroup label="Peticiones">
-        <option value="peticion_Basica">
-          Derecho a presentar peticiones y recibir respuesta oportuna</option>
-          <option value="peticion_HabeasData">
-            Derecho a conocer, actualizar y rectificar información personal
-          </option>
-        </optgroup>
-      </select>
-      </div>
-      <input type="button" class="botonesFormulario" id="botonFundamentos" value="Generar Fundamentos"/>
-  </div>
-
-  <!-- Contenedor Pruebas -->
-  <div class="item">
-    <h3>
-      🔎<br/>Pruebas
-      </h3>
-      <p class="parrafosFormulario">
-      Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "otocopia de escritura pública. Fotografía de la vía pública. Etc.
-      </p>
-      <input type="text" id="textoInputPruebas" oninput="escribirPruebas()" placeholder="Mencione las pruebas."/>
-  </div>
-
-  <!-- Contenedor Notificaciones -->
-  <div class="item">
-    <h3>
-      📩<br/>Notificaciones
-      </h3>
-      <p class="parrafosFormulario">
-      Escribe tu email y celular para recibir la eventual respuesta del destinatario.
-      <br>
-      </p>
-      <input type="text" id="textoInputEmail" oninput="escribirNotificaciones1()" placeholder="Escriba su email."/>
-      <br>
-      <input type="text" id="textoInputCelular" maxlength="16" oninput="escribirNotificaciones2()" placeholder="Escriba # celular."/>
-  </div>
-
-  <!-- Contenedor Firma -->
-  <div class="item">
-    <h3>
-      ✍️<br/>Firma.
-      </h3>
-      
-      <p class="parrafosFormulario">Adjunta la imagen de tu firma.</p>
-      <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="subirFirma(this, 'espacioFirma')"/>
-  </div>
-
-  <div class="item item-11">
-
-  <!-- Acá comienza el documento [Mandato] que se genera. -->
-    <div class="documentoGenerado" id="esqueletoMandato">
-    <br>
-     
-      <h3>Contrato de Mandato</h3>
-      <br>
-      <p>
-      Yo, <strong><span id="nombreMandante1">______________</span></strong>, 
-      persona natural, mayor de edad, en adelante "Mandante", <strong>Otorgo Mandato</strong> a 
-      <strong><span id="nombreMandatario1">_____________</span></strong>,
-      persona natural, mayor de edad, en adelante "Mandatario". El Mandato se regirá por las leyes de <span id="paisMandato1">País</span>.
-      <br/>
-      El <strong>Objeto</strong> del Mandato es <span id="objetoMandato1">Hacer Algo.</span>
-      <br/>
-      La <strong>Duración</strong> del Mandato es indefinida o hasta que se cumpla el Objeto 
-      encomendado o ambas partes de acuerdo dispongan su terminación.
-      </p>
-      <p id="section" style="text-align:left;"><strong>Notificaciones.</strong></p>
-      <p>Mandante recibe notificaciones en el <span id="emailMandante">_________</span> y 
-        en el celular <span id="celularMandante">_______</span>.
-      </p>
-      <p>Mandatario recibe notificaciones en el <span id="emailMandatario">_________</span> y 
-        en el celular <span id="celularMandatario">_______</span>.
-      </p>
-
-    <p>Estando en <span id="paisMandato2">el Lugar</span>, en la fecha <span id="fechaMandato">de Hoy</span>, revisado el contenido de este documento
-       y expresado nuestro consentimiento, suscribimos:</p>
-      <img id="espacioFirmaMandante" width="210" height="72">
-      <br/>
-      <strong><span id="nombreMandante2">______________</span>, Mandante.
-      <br>
-      <span id="tipoDocumentoIdentidadMandante">Documento de Identidad</span> #<span id="idMandante">_________</span> de <span id="nacionalidadMandante">País</span></strong>
-      <br>
-      <img id="espacioFirmaMandatario" width="210" height="72">
-      <br/>
-      <strong><span id="nombreMandatario2">______________</span>, Mandatario.
-      <br>
-      <span id="tipoDocumentoIdentidadMandatario">Documento de Identidad</span> #<span id="idMandatario">_________</span> de <span id="nacionalidadMandatario">País</span></strong>
-      <br>
-    </div>
-  </div>
-</div>      
-         
-
-
-
-<!-- Tipo Tutela-->
-
-<!-- Si seleccionas el tipo de documento 'Tutela' entonces se visualiza el siguiente módulo:-->
-
-
-<!-- Contenedor de contenedores de módulos Tutela-->
+<!-- Contenedor de contenedores de módulos Acción-->
 <div class="contenedorGen" id="contenedorTutela">
+
+
+        <!-- Contenedor Tipo de Acción Pública -->
+        <div class="item">
+          <h3>
+            📣<br/>Tipo de Acción
+            </h3>
+            <p class="parrafosFormulario">
+            Selecciona el tipo de Acción Pública que quieres generar. <strong>Ejemplos:</strong> Tutela, Cumplimiento, Constitucionalidad.
+            </p>
+              <div id="Acciones">
+              <select id="listaAcciones">
+                <option> - Selecciona la acción pública - </option>
+                <optgroup label="Acciones Públicas">
+                <option value="accion_Tutela">
+                  Acción de Tutela
+                </option>
+                  <option value="accion_Cumplimiento">
+                  Acción de Cumplimiento
+                  </option>
+                  <option value="accion_Constitucionalidad">
+                    Acción de Constitucionalidad
+                    </option>
+                </optgroup>
+              </select>
+              </div>
+              <input type="button" class="botonesFormulario" id="botonAcciones" value="Generar Acción Pública"/>
+        </div>
+      
+
+
+
 
   <!-- Contenedor Accionante-->
   <div class="item">
     <h3>
-      🦸‍♂️<br/>Accionante
+      🦸‍♂️<br/><span id="accionante_Base">Accionante</span>
       </h3>
       <p class="parrafosFormulario">
-      Escribe el nombre de la persona cuyos derechos fundamentales están en riesgo o han sido vulnerados. <strong>Ejemplo: </strong>Carlos Murgas.
+      <span>Escribe el nombre de la persona cuyos derechos fundamentales están en riesgo o han sido vulnerados.</span> <strong>Ejemplo: </strong>Carlos Murgas.
       </p>
       <input type="text" id="textoInputNombreAccionante" maxlength="50" oninput="escribirAccionante()" placeholder="Escriba el nombre"/>
   </div>
@@ -660,7 +495,7 @@
   <!-- Contenedor Entidades Accionadas -->
   <div class="item">
     <h3>
-      🏛️<br/>Entidad Accionada
+      🏛️<br/><span id="accionado_Base">Accionado</span>
       </h3>
       <p class="parrafosFormulario">
         <label for="textoInputEntidad">Escribe el nombre completo de la(s) entidad(es) a la(s) cual(es) vincularás a la demanda. Ejemplo: Empresa de Salud del Valle. Datacrédito.</label>
@@ -753,9 +588,9 @@
 
   <div class="item item-11">
 
-  <!-- Acá comienza el documento (Tutela) que se genera. -->
+  <!-- Acá comienza el documento (Acción pública) que se genera. -->
   
-    <div class="documentoGenerado" id="esqueletoTutela">
+    <div class="documentoGenerado" id="esqueletoAccion">
       <p>
       Respetados,
       <strong><span id="entidad" style="white-space:pre-line;font-style:normal;">
@@ -764,14 +599,13 @@
       E.S.D.
       <br>
       <br>
-      <strong>Referencia:</strong> Acción de Tutela<br>
+      <strong>Referencia:</strong> Acción Pública de <span id="nombreTipoAccion">____________</span><br>
       <strong>Accionante:</strong> <span id="nombreAccionante">_____________</span><br />
       <strong>Accionado(s)</strong> <span id="nombreAccionado">_____________</span><br />
       <br />
       Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>
-      , persona natural, nacional de <span id="nacionalidad">__________</span>, mayor de edad, presento <strong>Acción de Tutela</strong>
-      , para obtener su despacho orden judicial a mi favor
-      de las siguientes:
+      , persona natural, nacional de <span id="nacionalidad">__________</span>, mayor de edad, presento <strong>Acción de <span id="nombreTipoAccion">_______</span></strong>
+      , para obtener de su despacho orden judicial a mi favor de las siguientes:
       </p>
       
       <p id="section" style="text-align:center;"><strong>Pretensiones.</strong></p>
@@ -817,9 +651,9 @@
         Atentamente,
       </p>
       <img id="espacioFirma" width="210" height="60"/>
-      <strong><span id="nombreusuario2">______________</span>
+      <strong><span id="nombreusuario2"></span>
       <br>
-      CC.<span id="idUsuario">_________</span></strong>
+      CC.<span id="idUsuario">________</span></strong>
     </div>
   </div>        
 </div>
@@ -856,7 +690,8 @@
 <div id="popup" class="popup">
   <div class="popup-content">
     <span class="close" id="closePopUp"> &times; </span>
-    <p style="text-align:justify;"><strong>¡Ya casi terminas!</strong><br/> <br/> Descarga el documento que has generado realizando el pago de <strong>$5000</strong> pesos colombianos. <br/> <br/> Seleccione su método de pago preferido:</p>
+    <p style="text-align:justify;"><strong>¡Ya casi terminas!</strong><br/> <br/> Obten el documento realizando el pago de <strong>$10.000</strong> pesos colombianos. <br/> <br/> Seleccione su método de pago preferido:</p>
+    <a href="https://mpago.li/2rtB5ao"><img src="imagenes/boton_pagar_mercadopago_mediano.webp"></a>
     <a><img src="imagenes/boton_pagar_nequi_mediano.webp" id="imagenPrincipal" onclick="mostrarImagenSuperpuesta()"></a>
 
     <div id="imagenSuperpuesta" onclick="ocultarImagenSuperpuesta()">
@@ -869,7 +704,6 @@
 <script src='scripts/petitio.js'></script>
 <script src='scripts/contractio.js'></script>
 <script src='scripts/actio.js'></script>
-<script src='scripts/mandatus.js'></script>
 <script src='scripts/decidendis.js'></script>
 <script src='scripts/clausulae.js'></script>
 <script src='scripts/datos.js'></script>

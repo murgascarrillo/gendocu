@@ -341,6 +341,41 @@ function imprimirFundamentos()
      document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Habeas_Data;
      filtroFundamentos.value = ''; 
    }
+
+  if (filtroFundamentos.value == "peticion_Vida")
+  {
+    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Vida;
+    filtroFundamentos.value = ''; 
+  }
+
+  if (filtroFundamentos.value == "peticion_Proteccion_Desaparicion_Tortura")
+  {
+    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Proteccion_Desaparicion_Tortura;
+    filtroFundamentos.value = ''; 
+  }
+
+  if (filtroFundamentos.value == "peticion_Igualdad")
+  {
+    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Igualdad;
+    filtroFundamentos.value = ''; 
+  }
+  if (filtroFundamentos.value == "peticion_Personalidad_Juridica")
+  {
+    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Personalidad_Juridica;
+    filtroFundamentos.value = ''; 
+  }
+  if (filtroFundamentos.value == "peticion_Intimidad_BuenNombre")
+  {
+    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Intimidad_BuenNombre;
+    filtroFundamentos.value = ''; 
+  }
+  if (filtroFundamentos.value == "peticion_Libre_Desarrollo_Personalidad")
+  {
+    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Libre_Desarrollo_Personalidad;
+    filtroFundamentos.value = ''; 
+  }
+  
+  
 }
 
 

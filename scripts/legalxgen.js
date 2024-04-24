@@ -49,9 +49,6 @@ botonGenPeticion.addEventListener("click",proyectarDocPeticion);
 let botonGenContrato = document.getElementById("botonGenContrato");
 let contenedorContrato = document.getElementById("contenedorContrato");
 botonGenContrato.addEventListener("click",proyectarDocContrato);
-let botonGenMandato = document.getElementById("botonGenMandato");
-let contenedorMandato = document.getElementById("contenedorMandato");
-botonGenMandato.addEventListener("click",proyectarDocMandato);
 let botonGenTutela = document.getElementById("botonGenTutela");
 let contenedorTutela = document.getElementById("contenedorTutela");
 botonGenTutela.addEventListener("click",proyectarDocTutela);
@@ -66,7 +63,6 @@ function proyectarDocPeticion() {
   contenedorPeticion.style.display = 'flex';
   contenedorTutela.style.display = 'none';
   contenedorContrato.style.display = 'none';
-  contenedorMandato.style.display = 'none';
   arrayItems.forEach(  function(element){
     element.style.backgroundColor ='rgb(238,238,238)';});
   }
@@ -76,29 +72,15 @@ function proyectarDocContrato() {
   contenedorPeticion.style.display = 'none';
   contenedorTutela.style.display = 'none';
   contenedorContrato.style.display = 'flex';
-  contenedorMandato.style.display = 'none';
   arrayItems.forEach( function(element){
     element.style.backgroundColor = 'rgb(221,221,221)'; });
-
-
  }
 
- function proyectarDocMandato() {
+
+function proyectarDocTutela() {
   estadoContenedor = 3;
   contenedorPeticion.style.display = 'none';
   contenedorContrato.style.display = 'none';
-  contenedorMandato.style.display = 'flex';
-  contenedorTutela.style.display = 'none';
-  arrayItems.forEach( function(element){
-    element.style.backgroundColor = 'rgb(204,204,204)'; 
-});
-}
-
-function proyectarDocTutela() {
-  estadoContenedor = 4;
-  contenedorPeticion.style.display = 'none';
-  contenedorContrato.style.display = 'none';
-  contenedorMandato.style.display = 'none';
   contenedorTutela.style.display = 'flex';
   arrayItems.forEach( function(element){
     element.style.backgroundColor = 'rgb(187,187,187)'; 
@@ -138,25 +120,13 @@ function generatePDF(){
     }
     html2pdf(element, opt);
   }
-  else if(contenedorMandato.style.display === 'flex')
-  {
-    var element = document.getElementById('esqueletoMandato');
-    var opt = {
-    margin: 0.5,
-    filename: 'mandato_gendocu.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-    }
-    html2pdf(element, opt);
-  }
 
   else if(contenedorTutela.style.display === 'flex')
   {
-    var element = document.getElementById('esqueletoTutela');
+    var element = document.getElementById('esqueletoAccion');
     var opt = {
     margin: 0.5,
-    filename: 'tutela_gendocu.pdf',
+    filename: 'accion_publica_gendocu.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2 },
     jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
