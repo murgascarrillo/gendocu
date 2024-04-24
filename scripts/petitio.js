@@ -385,7 +385,11 @@ function imprimirFundamentos()
     document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Libertad_Cultos;
     filtroFundamentos.value = ''; 
   }
-  
+  if (filtroFundamentos.value == "peticion_Libertad_Expresion")
+  {
+    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Libertad_Expresion;
+    filtroFundamentos.value = ''; 
+  }
   
 }
 
