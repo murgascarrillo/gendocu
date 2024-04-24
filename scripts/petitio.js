@@ -335,25 +335,21 @@ function imprimirFundamentos()
      document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion;
      filtroFundamentos.value = '';
    }
-
  if (filtroFundamentos.value == "peticion_HabeasData")
    {
      document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Habeas_Data;
      filtroFundamentos.value = ''; 
    }
-
   if (filtroFundamentos.value == "peticion_Vida")
   {
     document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Vida;
     filtroFundamentos.value = ''; 
   }
-
   if (filtroFundamentos.value == "peticion_Proteccion_Desaparicion_Tortura")
   {
     document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Proteccion_Desaparicion_Tortura;
     filtroFundamentos.value = ''; 
   }
-
   if (filtroFundamentos.value == "peticion_Igualdad")
   {
     document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Igualdad;
@@ -372,6 +368,21 @@ function imprimirFundamentos()
   if (filtroFundamentos.value == "peticion_Libre_Desarrollo_Personalidad")
   {
     document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Libre_Desarrollo_Personalidad;
+    filtroFundamentos.value = ''; 
+  }
+  if (filtroFundamentos.value == "peticion_Proteccion_Esclavitud_Servidumbre_TrataHumana")
+  {
+    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Proteccion_Esclavitud_Servidumbre_TrataHumana;
+    filtroFundamentos.value = ''; 
+  }
+  if (filtroFundamentos.value == "peticion_Libertad_Conciencia")
+  {
+    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Libertad_Conciencia;
+    filtroFundamentos.value = ''; 
+  }
+  if (filtroFundamentos.value == "peticion_Libertad_Cultos")
+  {
+    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Libertad_Cultos;
     filtroFundamentos.value = ''; 
   }
   

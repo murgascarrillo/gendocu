@@ -15,3 +15,9 @@ let fundamentos_Personalidad_Juridica = "Toda persona tiene derecho al reconocim
 let fundamentos_Intimidad_BuenNombre = "Todas las personas tienen derecho a su intimidad personal y familiar y a su buen nombre, y el Estado debe respetarlos y hacerlos respetar (Constitución Política de 1991, artículo 15).<br/>"
 
 let fundamentos_Libre_Desarrollo_Personalidad = "Todas las personas tienen derecho al libre desarrollo de su personalidad sin más limitaciones que las que imponen los derechos de los demás y el orden jurídico (Constitución Política de 1991, artículo 16).<br/>"
+
+let fundamentos_Proteccion_Esclavitud_Servidumbre_TrataHumana = "En Colombia está prohibida la esclavitud, la servidumbre y la trata de seres humanos en todas sus formas (Constitución Política de 1991, artículo 17).<br/>"
+
+let fundamentos_Libertad_Conciencia = "En Colombia se garantiza la libertad de conciencia. Nadie puede ser molestado por razón de sus convicciones o creencias ni compelido a revelarlas ni obligado a actuar contra su conciencia (Constitución Política de 1991, artículo 18).<br/>"
+
+let fundamentos_Libertad_Cultos = "En Colombia se garantiza la libertad de cultos. Toda persona tiene derecho a profesar libremente su religión y a difundirla en forma individual o colectiva (Constitución Política de 1991, artículo 19).<br/>"
