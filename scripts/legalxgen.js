@@ -2,7 +2,6 @@
 
 // Entorno
 
-
 // Modo Nocturno 
 let botonModoNocturno = document.getElementById("botonModoNocturno");
 let entorno = document.body;
@@ -40,7 +39,6 @@ function toggleModoNocturno() {
 botonModoNocturno.addEventListener("click", toggleModoNocturno);
 
 
-
 /// Función de Proyectar borrador de Documento según Tipo
 let contenedorGen = document.getElementsByClassName("botonGen");
 let botonGenPeticion = document.getElementById("botonGenPeticion");
@@ -76,7 +74,6 @@ function proyectarDocContrato() {
     element.style.backgroundColor = 'rgb(221,221,221)'; });
  }
 
-
 function proyectarDocTutela() {
   estadoContenedor = 3;
   contenedorPeticion.style.display = 'none';
@@ -86,11 +83,6 @@ function proyectarDocTutela() {
     element.style.backgroundColor = 'rgb(187,187,187)'; 
 });
 }
-
-// Funciones por Tipo de Documento.
-
-
-  
 
 // Función Generar PDF. html2pdf by ekoopmans. https://ekoopmans.github.io/html2pdf.js/
 
@@ -183,16 +175,11 @@ document.getElementById("botonCopiar").addEventListener("click", function () {
     idElemento = "contenedorVacio";
   }
 
-
 });
-
-
 
 // Misceláneos
 
 let logo = document.getElementById("logo");
-
-
 
 
 // EXPERIMENTAL
@@ -215,9 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 );
 
-
 // QR imagen al click 
-
 
 function mostrarImagenSuperpuesta() {
   var imagenSuperpuesta = document.getElementById('imagenSuperpuesta');
