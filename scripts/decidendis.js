@@ -4,6 +4,8 @@ let fundamentos_Peticion = "Toda persona tiene derecho a presentar peticiones re
 
 let fundamentos_Habeas_Data = "Toda persona tiene derecho a conocer, actualizar y rectificar las informaciones que se hayan recogido sobre ella en bases de datos o archivos (Ley 1581 de 2012, Colombia).<br/>";
 
+let fundamentos_Informacion_Publica = "Toda persona tiene derecho a solicitar y recibir información y/o documentación pública de cualquier entidad (Ley 1714 de 2012, Colombia).</br>";
+
 let fundamentos_Vida = "Toda persona tiene derecho a que su vida sea protegida por el Estado (Constitución Política de 1991, artículo 11).<br/>";
 
 let fundamentos_Proteccion_Desaparicion_Tortura = "Nadie debe ser sometido a desaparición forzada, a torturas ni a tratos o penas crueles, inhumanos o degradantes (Constitución Política de 1991, artículo 12).<br/>";

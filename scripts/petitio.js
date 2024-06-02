@@ -340,6 +340,11 @@ function imprimirFundamentos()
      document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Habeas_Data;
      filtroFundamentos.value = ''; 
    }
+   if (filtroFundamentos.value == "peticion_Informacion_Publica")
+   {
+    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Informacion_Publica;
+     filtroFundamentos.value = ''; 
+   }
   if (filtroFundamentos.value == "peticion_Vida")
   {
     document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Vida;
