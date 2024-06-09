@@ -8,7 +8,7 @@ var botonFechaContrato = document.getElementById("botonFechaContrato");
 botonFechaContrato.addEventListener("click",definirFechaContrato);
 
 function definirFechaContrato(){
-    definirFecha()
+    definirFecha("datePickerContractio");
 };
 
 

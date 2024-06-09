@@ -3,22 +3,9 @@
 // Sección - Fijar fecha.
 
 var botonFechaPeticion = document.getElementById("botonFechaPeticion");
-botonFechaPeticion.addEventListener("focus",definirFechaPeticion);
-
-
-function definirFecha(fechaDocumento) {
-fechaDocumento = new Date();
- var meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
- var dia = fechaDocumento.getDate();
- var mes = meses[fechaDocumento.getMonth()];
- var anio = fechaDocumento.getFullYear();
- var fechaFormateada = dia + " de " + mes + " de " + anio;
- document.getElementById("fecha1").innerHTML = fechaFormateada + ".";
- document.getElementById("fechaContrato").innerHTML = fechaFormateada;
-}
-
+botonFechaPeticion.addEventListener("click",definirFechaPeticion);
 function definirFechaPeticion(){
-    definirFecha();
+    definirFecha("datePickerPetitio");
 }
 
 
@@ -73,27 +60,12 @@ function escribirUsuario()
 
 // Sección USUARIO - Sección Nacionalidad.
 
-const countryNames = [
-"Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba",	"Australia",	"Austria","Azerbaijan","Bahamas (the)","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos","Colombia","Comoros (the)","Congo","Cook Islands","Costa Rica","Croatia","Cuba","Curaçao","Cyprus","Czechia","Côte d'Ivoire","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Falkland Islands [Malvinas]","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea","República de Korea","Kuwait","Kyrgyzstan","Lao People's Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestina","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Republic of North Macedonia","Romania","Russian Federation","Rwanda","Réunion","Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha","Saint Kitts and Nevis","Saint Lucia","Saint Martin (French part)","Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Sweden","Switzerland","Syrian Arab Republic","Taiwan","Tajikistan","Tanzania, United Republic of","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom of Great Britain and Northern Ireland","United States Minor Outlying Islands","United States of America","Uruguay","Uzbekistan","Vanuatu","Venezuela","Viet Nam","Virgin Islands (British)","Virgin Islands (U.S.)","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe","Åland Islands"
-];
-
-const dataListPaises = document.getElementById("listaPaises");
-
-countryNames.forEach(name => {
- const option = document.createElement("option");
- option.value = name;
- dataListPaises.appendChild(option);
-});
-
 
 function elegirNacionalidad (){
    let x = document.getElementById("inputNacionalidad");
    let y = document.getElementById("nacionalidad");
    y.innerHTML = x.value;
  }
-
-
-
 
 // Sección USUARIO - Sección Tipo Documento Identidad
 
@@ -236,7 +208,7 @@ inputPeticion.addEventListener('input', function () {
  }
 });
 
- // Función para resetear Hechos en caso de error.
+ // Función para resetear Peticiones en caso de error.
  let newPeticiones;
  function eliminarPeticion() {
    newPeticiones = document.querySelectorAll("#newPeticion");
@@ -328,75 +300,56 @@ document.getElementById("botonResetHechosPeticion").addEventListener("click", el
 let filtroFundamentos = document.getElementById("listaFundamentos");
 let botonFundamentos = document.getElementById("botonFundamentos");
 botonFundamentos.addEventListener("click",imprimirFundamentos);
-function imprimirFundamentos()
-{
- if (filtroFundamentos.value == "peticion_Basica")
-   {
-     document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion;
-     filtroFundamentos.value = '';
-   }
- if (filtroFundamentos.value == "peticion_HabeasData")
-   {
-     document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Habeas_Data;
-     filtroFundamentos.value = ''; 
-   }
-   if (filtroFundamentos.value == "peticion_Informacion_Publica")
-   {
-    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Informacion_Publica;
-     filtroFundamentos.value = ''; 
-   }
-  if (filtroFundamentos.value == "peticion_Vida")
-  {
-    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Vida;
-    filtroFundamentos.value = ''; 
-  }
-  if (filtroFundamentos.value == "peticion_Proteccion_Desaparicion_Tortura")
-  {
-    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Proteccion_Desaparicion_Tortura;
-    filtroFundamentos.value = ''; 
-  }
-  if (filtroFundamentos.value == "peticion_Igualdad")
-  {
-    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Igualdad;
-    filtroFundamentos.value = ''; 
-  }
-  if (filtroFundamentos.value == "peticion_Personalidad_Juridica")
-  {
-    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Personalidad_Juridica;
-    filtroFundamentos.value = ''; 
-  }
-  if (filtroFundamentos.value == "peticion_Intimidad_BuenNombre")
-  {
-    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Intimidad_BuenNombre;
-    filtroFundamentos.value = ''; 
-  }
-  if (filtroFundamentos.value == "peticion_Libre_Desarrollo_Personalidad")
-  {
-    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Libre_Desarrollo_Personalidad;
-    filtroFundamentos.value = ''; 
-  }
-  if (filtroFundamentos.value == "peticion_Proteccion_Esclavitud_Servidumbre_TrataHumana")
-  {
-    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Proteccion_Esclavitud_Servidumbre_TrataHumana;
-    filtroFundamentos.value = ''; 
-  }
-  if (filtroFundamentos.value == "peticion_Libertad_Conciencia")
-  {
-    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Libertad_Conciencia;
-    filtroFundamentos.value = ''; 
-  }
-  if (filtroFundamentos.value == "peticion_Libertad_Cultos")
-  {
-    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Libertad_Cultos;
-    filtroFundamentos.value = ''; 
-  }
-  if (filtroFundamentos.value == "peticion_Libertad_Expresion")
-  {
-    document.getElementById("espacioFundamentos").innerHTML = fundamentos_Peticion + "<br/>" + fundamentos_Libertad_Expresion;
-    filtroFundamentos.value = ''; 
+function imprimirFundamentos() {
+  let contenido = fundamentos_Peticion;
+  
+  switch (filtroFundamentos.value) {
+      case "peticion_Basica":
+          break;
+      case "peticion_HabeasData":
+          contenido += "<br/>" + fundamentos_Habeas_Data;
+          break;
+      case "peticion_Informacion_Publica":
+          contenido += "<br/>" + fundamentos_Informacion_Publica;
+          break;
+      case "peticion_Vida":
+          contenido += "<br/>" + fundamentos_Vida;
+          break;
+      case "peticion_Proteccion_Desaparicion_Tortura":
+          contenido += "<br/>" + fundamentos_Proteccion_Desaparicion_Tortura;
+          break;
+      case "peticion_Igualdad":
+          contenido += "<br/>" + fundamentos_Igualdad;
+          break;
+      case "peticion_Personalidad_Juridica":
+          contenido += "<br/>" + fundamentos_Personalidad_Juridica;
+          break;
+      case "peticion_Intimidad_BuenNombre":
+          contenido += "<br/>" + fundamentos_Intimidad_BuenNombre;
+          break;
+      case "peticion_Libre_Desarrollo_Personalidad":
+          contenido += "<br/>" + fundamentos_Libre_Desarrollo_Personalidad;
+          break;
+      case "peticion_Proteccion_Esclavitud_Servidumbre_TrataHumana":
+          contenido += "<br/>" + fundamentos_Proteccion_Esclavitud_Servidumbre_TrataHumana;
+          break;
+      case "peticion_Libertad_Conciencia":
+          contenido += "<br/>" + fundamentos_Libertad_Conciencia;
+          break;
+      case "peticion_Libertad_Cultos":
+          contenido += "<br/>" + fundamentos_Libertad_Cultos;
+          break;
+      case "peticion_Libertad_Expresion":
+          contenido += "<br/>" + fundamentos_Libertad_Expresion;
+          break;
+      default:
+          return; // Exit if no valid option is selected
   }
   
+  document.getElementById("espacioFundamentos").innerHTML = contenido;
+  filtroFundamentos.value = '';
 }
+
 
 
 // Sección - Pruebas.

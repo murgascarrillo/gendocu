@@ -63,6 +63,7 @@ function proyectarDocPeticion() {
   contenedorContrato.style.display = 'none';
   arrayItems.forEach(  function(element){
     element.style.backgroundColor ='rgb(238,238,238)';});
+  document.getElementById("datePickerPetitio").focus();
   }
 
 function proyectarDocContrato() {
@@ -72,6 +73,7 @@ function proyectarDocContrato() {
   contenedorContrato.style.display = 'flex';
   arrayItems.forEach( function(element){
     element.style.backgroundColor = 'rgb(221,221,221)'; });
+  document.getElementById("datePickerContractio").focus();
  }
 
 function proyectarDocTutela() {
@@ -80,8 +82,39 @@ function proyectarDocTutela() {
   contenedorContrato.style.display = 'none';
   contenedorTutela.style.display = 'flex';
   arrayItems.forEach( function(element){
-    element.style.backgroundColor = 'rgb(187,187,187)'; 
-});
+    element.style.backgroundColor = 'rgb(187,187,187)'; });
+    document.getElementById("listaAcciones").focus();
+}
+
+
+// Función Fecha
+
+function definirFecha(selectorDeFecha) {
+  const datePicker = document.getElementById(selectorDeFecha);
+  let fechaDocumento;
+
+  if (datePicker.value) {
+      const dateParts = datePicker.value.split("-");
+      const year = parseInt(dateParts[0], 10);
+      const month = parseInt(dateParts[1], 10) - 1;
+      const day = parseInt(dateParts[2], 10);
+      fechaDocumento = new Date(year, month, day);
+  } else {
+      fechaDocumento = new Date();
+  }
+
+  const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  const dia = fechaDocumento.getDate();
+  const mes = meses[fechaDocumento.getMonth()];
+  const anio = fechaDocumento.getFullYear();
+  const fechaFormateada = dia + " de " + mes + " de " + anio;
+
+  if (estadoContenedor === 1) {
+    document.getElementById("fecha1").innerHTML = fechaFormateada + ".";
+  }
+  if (estadoContenedor === 2) {
+    document.getElementById("fechaContrato").innerHTML = fechaFormateada;
+  }
 }
 
 // Función Generar PDF. html2pdf by ekoopmans. https://ekoopmans.github.io/html2pdf.js/
