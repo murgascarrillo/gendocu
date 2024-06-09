@@ -60,7 +60,6 @@ function escribirUsuario()
 
 // Sección USUARIO - Sección Nacionalidad.
 
-
 function elegirNacionalidad (){
    let x = document.getElementById("inputNacionalidad");
    let y = document.getElementById("nacionalidad");
