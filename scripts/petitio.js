@@ -26,14 +26,8 @@ function elegirLugarCreacion()
        y.innerHTML = x.value;
        z.innerHTML = x.value;
      }
-     
-     else if (estadoContenedor === 3){
-       let x = document.getElementById("inputLugarMandato");
-       let y = document.getElementById("lugarMandato");
-       y.innerHTML = x.value;
-     }
 
-     else if (estadoContenedor === 4){
+     else if (estadoContenedor === 3){
        let x = document.getElementById("inputLugarTutela");
        let y = document.getElementById("lugarJuez");
        y.innerHTML = x.value;
@@ -53,10 +47,7 @@ function escribirUsuario()
      let z = document.getElementById("nombreusuario2"); 
      y.innerHTML = " "+x.value;
      z.innerHTML = x.value;
-
-
 }
-
 
 // Sección USUARIO - Sección Nacionalidad.
 
@@ -67,18 +58,6 @@ function elegirNacionalidad (){
  }
 
 // Sección USUARIO - Sección Tipo Documento Identidad
-
-const tiposDocumentoIdentidad = [
-   "Cédula de ciudadanía","Tarjeta de identidad","Permiso Especial de Permanencia","Pasaporte","Salvoconducto"
- ];
- 
- const dataListTipoDocumento = document.getElementById("listaTipoDocumento");
- 
- tiposDocumentoIdentidad.forEach(string => {
-   const optionTD = document.createElement("option");
-   optionTD.value = string;
-   dataListTipoDocumento.appendChild(optionTD);
- });
 
  function elegirTipoDocumento (){
    let x = document.getElementById("listaTipoDocumento");

@@ -82,11 +82,11 @@
       <input list="listaPaises" name="pais" id="inputPais" onchange="elegirLugarCreacion()" placeholder="Escriba el lugar."/>
 
       <p class="parrafosFormulario">
-        <label for="listaTipoDocumento">Escribe el <strong>Tipo</strong> de Documento de Identidad.<strong>Ejemplo:</strong> Tarjeta de identidad.</label> 
+        <label for="listaTipoDocumento">Escribe el <strong>Tipo</strong> de Documento de Identidad. <strong>Ejemplo:</strong> Cédula, Tarjeta de Identidad, Pasaporte, etc.</label> 
       </p>
       <input list="listaTipoDocumento" name="tipodocumento" id="listaTipoDocumento" oninput="elegirTipoDocumento()" placeholder="Escribe Tipo de Identificiación."/>
 
-      <p class="parrafosFormulario">Ingresa tu <strong>Número</strong> documento. <strong>Ejemplo:</strong>Cédula de ciudadanía. 1234567.<br>
+      <p class="parrafosFormulario">Ingresa tu <strong>Número</strong> documento. <strong>Ejemplo:</strong> 1122801234.<br>
         </p>
         <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba número identificación."/>
   </div>
@@ -119,7 +119,7 @@
       📣<br/>Peticiones
       </h3>
       <p class="parrafosFormulario">
-      Escribe lo que requieres de la entidad. <strong>Ejemplo:</strong> Reparar la vía pública de tu barrio. Reciclar los residuos de la limpieza. Etc.
+      Escribe lo que requieres de la entidad. <strong>Ejemplo:</strong> Reparar la vía pública de tu barrio. Reciclar los residuos de la limpieza. etc.<br/>
       Agrega Peticiones pulsando el botón <strong>+</strong>.  
     </p>
 
@@ -230,53 +230,40 @@
 
   <!-- Acá comienza el documento [Petición] que se genera. -->
     <div class="documentoGenerado" id="esqueletoPeticion">
-    <span id="fecha1">Fecha:</span>
-    <br>
-      Respetados:
-      <strong><div style="margin:0;padding:0;font-style:normal;" id="listaEntidades"></div></strong>
-      E.S.D.
-      <br>
-      <br>
-      <strong>Referencia:</strong> Derecho de petición<br>
-      <br>
-      <p>
-        Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, 
-      persona natural, nacional de <span id="nacionalidad">_________</span>, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:
-      <br>
-      </p>
-      <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
-      <div id="listaHechosPeticion">Acá van tus hechos.</div>
-      
-      <p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
-      <p>
-        La presente se fundamenta en las siguientes Razones de Derecho:
-      <br>
-      <span id="espacioFundamentos"></span>
-      </p>
-      
-      <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
-      <p>
-        Se aportan las siguientes:<br>
-        <span id="pruebas"></span>
-        <br />
-      </p>
-      
-      <p id="section" style="text-align:center;"><strong>Peticiones.</strong></p>
-      
-    <div style="margin:0;padding:0;font-style:normal;" id="listaPeticiones">Acá van tus peticiones.</div>
-        <br />
-      </p>
-      
-      <p id="section" style="text-align:center;"><strong>Notificaciones.</strong></p>
-      <p>Recibiré en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br /><br />
-        Atentamente,<br>
-      </p>
-      <img id="espacioFirma" width="210" height="72">
-      <br/>
-      <strong><span id="nombreusuario2">______________</span>
-      <br>
-      <span id="tipoDocumentoIdentidad">Documento de Identidad</span> #<span id="idUsuario">_________</span></strong>
-      <br>
+<span id="fecha1">Fecha:</span>
+<br>
+Respetados:
+<strong><div style="margin:0;padding:0;font-style:normal;" id="listaEntidades"></div></strong>
+E.S.D.
+<br/><br/>
+<strong>Referencia:</strong> Derecho de petición<br>
+<br/>
+<p>Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>, persona natural, nacional de <span id="nacionalidad">_________</span>, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:<br/></p>
+<p id="section" style="text-align:center;">
+<strong>Hechos.</strong></p>
+<div id="listaHechosPeticion">Acá van tus hechos.</div>
+
+<p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
+<p>La presente se fundamenta en las siguientes Razones de Derecho:<br/>
+<span id="espacioFundamentos"></span></p>
+<p id="section" style="text-align:center;">
+<strong>Pruebas.</strong></p>
+<p>Se aportan las siguientes:<br/><span id="pruebas"></span><br/></p>
+<p id="section" style="text-align:center;">
+<strong>Peticiones.</strong></p>
+<div style="margin:0;padding:0;font-style:normal;" id="listaPeticiones">Acá van tus peticiones.</div><br/></p>
+<p id="section" style="text-align:center;">
+<strong>Notificaciones.</strong></p>
+<p>Recibiré en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br /><br />
+
+  Atentamente,<br>
+</p>
+<img id="espacioFirma" width="210" height="72">
+<br/>
+<strong><span id="nombreusuario2">______________</span>
+<br>
+<span id="tipoDocumentoIdentidad">Documento de Identidad</span> #<span id="idUsuario">_________</span></strong>
+<br>
     </div>
   </div>
 </div>      
@@ -299,21 +286,8 @@
       <input type="button" class="botonesFormulario" id="botonFechaContrato" value="Fijar Fecha"/>
   </div>
 
-    <!-- Contenedor Lugar de Creación-->
-    <div class="item">
-      <h3>
-        🌎<br/>Lugar de Celebración
-        </h3>
-        <p class="parrafosFormulario">
-          <label for="inputLugarContrato">Elige el lugar de celebración del documento en la lista. Ejemplo: Colombia.</label>
-        </p>
-        <input list="listaPaises" name="pais" id="inputLugarContrato" onchange="elegirLugarCreacion()" placeholder="Escriba el lugar."/>
-          <datalist id="listaPaises">
-          </datalist>
-    </div>
-  
-      <!-- Contenedor Cláusulas -->
-  <div class="item">
+   <!-- Contenedor Cláusulas -->
+   <div class="item">
     <h3>
       📣<br/>Tipo de Contrato
       </h3>
@@ -330,15 +304,17 @@
             <option value="contrato_Comodato">
             Comodato
             </option>
-            <option value="contrato_Mandato">
-              Mandato
+            <option value="contrato_Compraventa">
+              Compraventa
               </option>
+              <option value="contrato_Donacion">
+                Donación
+                </option>
           </optgroup>
         </select>
         </div>
         <input type="button" class="botonesFormulario" id="botonContratos" value="Generar Contrato"/>
   </div>
-
 
   <!-- Contenedor Contratante -->
   <div class="item">
@@ -346,9 +322,18 @@
       👩<br/><span id="contratante_Base">Contratante</span>
       </h3>
       <p class="parrafosFormulario">
-        <label for="textoInputContratante">Escribe el nombre completo de la persona. <strong>Ejemplo: </strong>Carlos Murgas.</label>
+        <label for="textoInputContratante">Escribe el nombre completo de la parte Contratante. <strong>Ejemplo: </strong>Bartola Vargas.</label>
       </p>
       <input type="text" id="textoInputContratante" oninput="escribirContratante()" placeholder="Escriba el nombre."/>
+      <p class="parrafosFormulario">
+        <label for="inputPais">Selecciona el lugar de <strong>domicilio</strong> de la parte Contratante. <strong>Ejemplo:</strong> Colombia.</label>
+      </p>
+      <input list="listaPaises" name="pais" id="inputDomicilioContratante" onchange="elegirDomicilioContratante()" placeholder="Selecciona el lugar."/>
+      <p class="parrafosFormulario">Ingresa el <strong>Tipo y Número de identificación</strong> de la parte Contratante. <strong>Ejemplo:</strong> Cédula de Ciudadanía Colombiana 1122801234.<br/>
+        </p>
+        <input type="text" id="textoInputIdContratante" maxlength="20" oninput="escribirIdContratante()" placeholder="Escriba tipo y número identificación."/>
+
+
   </div>
 
   <!-- Contenedor Contratista -->
@@ -357,68 +342,60 @@
       🧔<br/><span id="contratista_Base">Contratista</span>
       </h3>
       <p class="parrafosFormulario">
-        <label for="textoInputContratista">Escribe el nombre completo de la persona. <strong>Ejemplo: </strong>Lázaro Bautista.</label>
+        <label for="textoInputContratista">Escribe el nombre completo de la parte Contratista. <strong>Ejemplo: </strong>Lázaro Bautista.</label>
       </p>
-      <input type="text" id="textoInputContratista" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba el nombre."/>
-  </div>
-
-
-
-  <!-- Contenedor Firmas Contratantes -->
-  <div class="item">
-    <h3>
-      ✍️<br/>Firmas
-      </h3>
+      <input type="text" id="textoInputContratista" oninput="escribirContratista()" placeholder="Escriba el nombre."/>
       <p class="parrafosFormulario">
-      Ingresa el número de identificación (cédula de ciudadanía) de las y/o los contratantes. <strong>Ejemplo:</strong> 111454039.<br>
+        <label for="inputPais">Selecciona el lugar de <strong>domicilio</strong> de la parte Contratista. <strong>Ejemplo:</strong> Venezuela.</label>
       </p>
-      <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba el número."/>
-      <br>
-      <p class="parrafosFormulario">Adjunta la imagen de tu firma.</p>
-      <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="subirFirma(this, 'espacioFirma')"/>
+      <input list="listaPaises" name="pais" id="inputDomicilioContratista" onchange="elegirDomicilioContratista()" placeholder="Selecciona el lugar."/>
+      <p class="parrafosFormulario">Ingresa el <strong>Tipo y Número de identificación</strong> de la parte Contratista. <strong>Ejemplo:</strong> Permiso por Protección Temporal 53632.<br/>
+        </p>
+        <input type="text" id="textoInputIdContratista" maxlength="20" oninput="escribirIdContratista()" placeholder="Escriba tipo y número identificación."/>
+
   </div>
 
   <div class="item item-11">
+
+
   <!-- Acá comienza el documento que se genera. -->
   
     <div class="documentoGenerado" id="esqueletoContrato">
       <p>
-        <h3>Contrato de <span id="nombreTipoContrato">_________</span>.</h3>
+<h3>Contrato de <span id="nombreTipoContrato1">_________</span>.</h3>
   
       <br>
-           Nosotros,<strong><span id="contratante" style="font-style:normal;"> 
-            Contratante</span></strong> y <strong><span id="contratista" style="font-style:normal;">
-              Contratista</span></strong>, con domicilio en <span id="lugarDomicilio">________</span>, personas naturales con plena capacidad 
-              para contraer y ejecutar obligaciones civiles, hemos acordado celebrar el presente
-              <strong>Contrato de<span id="nombreTipoContrato"> _______________</span></strong>, 
-              que será regido por las siguientes:
+Entre nosotros, <strong><span id="nombreContratante1" style="font-style:normal;">_______</span></strong>, con domicilio en <span id="domicilioContratante">_______</span> en adelante "Contratante", y <strong><span id="nombreContratista1" style="font-style:normal;">_______</span></strong>, con domicilio en <span id="domicilioContratista">_______</span>, en adelante "Contratista"; personas naturales con plena capacidad para contraer y ejecutar obligaciones civiles, identificadas al pie de éste documento, hemos acordado celebrar el presente <strong>Contrato de<span id="nombreTipoContrato2"> _______________</span></strong>, que será regido por las siguientes:
       <br>
       </p>
       
-      <h4 id="section" style="text-align:center;"><strong>Cláusulas:</strong></h4>
+<h4 id="section" style="text-align:center;"><strong>Cláusulas:</strong></h4>
       <p id="clausula_Objeto">
-        <strong>Primera. Objeto del Contrato. </strong><span id="objeto_Contrato"></span>
+<strong>Primera. Objeto del Contrato. </strong><span id="objeto_Contrato"></span>
       </p>
       <p id="clausula_Obligaciones">
-        <strong>Segunda. Obligaciones.</strong> Serán las establecidas en la Ley vigente para éste tipo de contratos.
+<strong>Segunda. Obligaciones.</strong> Serán las establecidas en la Ley vigente para éste tipo de contratos.
       </p>
       <p id="clausula_Penal">
-        <strong>Tercera. Cláusula Penal.</strong> La parte del contrato que incumpla sus obligaciones pagará a la otra a título de perjuicios la suma en dinero de QUINIENTOS MIL PESOS ($500.000) M/L.
+<strong>Tercera. Cláusula Penal.</strong> La parte del contrato que incumpla sus obligaciones pagará a la otra a título de perjuicios la suma en dinero de QUINIENTOS MIL PESOS ($500.000) M/L.
       </p>
       
-      <p id="section" style="text-align:left;"><strong>Notificaciones. </strong>
-        La parte contratante recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. 
-        La parte contratista recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. <br /><br/>
-        El presente contrato se firma por las partes estando en <span id="lugarContrato">_____</span> y siendo la fecha <span id="fechaContrato"> _____</span>.<br></p>
+<p id="section" style="text-align:left;"><strong>Notificaciones. </strong>
+La parte contratante recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. 
+La parte contratista recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. <br /><br/>
+El presente contrato se firma por las partes estando en Colombia y siendo la fecha <span id="fechaContrato"> _____</span>.</p>
+<br/><br/>
       
-      <img id="espacioFirma" width="210" height="72">
+<strong><span id="nombreContratante2">______________</span>
+<br/>
+<span id="idContratante">_________</span></strong>
+<br/>
+<br/>
+<strong><span id="nombreContratista2">______________</span>
+<br/>
+<span id="idContratista">_________</span>
+</strong>
       <br/>
-      <strong><span id="nombreusuario2">______________</span>
-      <br>
-      CC.<span id="id_Contratante">_________</span></strong>
-      <br>
-      CC.<span id="id_Contratista">_________</span></strong>
-      <br>
     </div>
   </div>        
 </div>
@@ -698,7 +675,7 @@
       data-position="bottom">
       Tip NANO</a>
     
-  Version 0.0.2.4.3.9 - Hecho con &#x2728;
+  Version 0.0.2.4.4.0 - Hecho con &#x2728;
   <a href="https://murgascarrillo.com/">
     <img id="boton-retorno" style="width:50px;height:auto;margin:auto;padding:7px;display: list-item;" src="imagenes/murgascarrillo.webp"/>
 </a>
