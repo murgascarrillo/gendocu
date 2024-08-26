@@ -22,16 +22,37 @@ function formarContrato()
     nombre_Tipo_Contrato1 = document.getElementById("nombreTipoContrato1");
     nombre_Tipo_Contrato2 = document.getElementById("nombreTipoContrato2");
     objeto_Contrato = document.getElementById("objeto_Contrato");
+    obligaciones_Base = document.getElementById("obligaciones_Contratante_Base");
     contratante_Base = document.getElementById("contratante_Base");
     contratista_Base = document.getElementById("contratista_Base");
+
+
+    // Especiales para Arrendamiento de Vivienda Urbana
+    let inmueble = document.getElementById("divInmueble");
+    let paragrafoInmueble = document.getElementById("paragrafoInmueble");
+    let canon = document.getElementById("divCanonArrendamiento");
+    let paragrafoCanon = document.getElementById("paragrafoCanonArrendamiento");
+
  if (filtroContratos.value === "contrato_Arrendamiento_Vivienda_Urbana")
    {
+  
     nombre_Tipo_Contrato1.innerHTML = "Arrendamiento de Vivienda Urbana"; 
     nombre_Tipo_Contrato2.innerHTML = " "+"Arrendamiento de Vivienda Urbana"; 
     objeto_Contrato.innerHTML = objeto_Arrendamiento_Vivienda_Urbana;
+    obligaciones_Base.innerHTML = obligaciones_Arrendador_Vivienda_Urbana + "<br/>" + obligaciones_Arrendatario_Vivienda_Urbana;
     contratante_Base.innerHTML = "Arrendador";
     contratista_Base.innerHTML = "Arrendatario";
+    inmueble.style.display = "block";
+    paragrafoInmueble.style.display = "block";
+    canon.style.display = "block";
+    paragrafoCanon.style.display = "block";
    }
+   else {
+    // Ocultar los elementos si se selecciona un valor diferente
+    inmueble.style.display = "none";
+    paragrafoInmueble.style.display = "none";
+    canon.style.display = "none";
+    paragrafoCanon.style.display = "none";}
 
   if (filtroContratos.value === "contrato_Comodato")
    {
@@ -42,6 +63,26 @@ function formarContrato()
     contratista_Base.innerHTML = "Comodatario";
    }
 }
+
+// OBJETO ARRENDAMIENTO
+
+
+// Inmueble Arrendado
+function describirInmueble()
+{
+  let x = document.getElementById("textoInputInmuebleArrendado");
+  let y = document.getElementById("descripcionInmuebleArrendado");
+  y.innerHTML = x.value;
+}
+
+// Canon Arrendamiento
+function escribirCanon()
+{
+  let x = document.getElementById("textoInputCanon");
+  let y = document.getElementById("canonArrendamiento");
+  y.innerHTML = x.value;
+}
+
 
 // PARTES 
 
@@ -91,5 +132,20 @@ function escribirIdContratista()
 {
   let x = document.getElementById("textoInputIdContratista");
   let y = document.getElementById("idContratista");
+  y.innerHTML = x.value; 
+}
+
+// Sección E-mail de notificaciones.
+function escribirEmailContratante()
+{
+  let x = document.getElementById("textoInputEmailContratante");
+  let y = document.getElementById("emailContratante");
+  y.innerHTML = x.value; 
+}
+
+function escribirEmailContratista()
+{
+  let x = document.getElementById("textoInputEmailContratista");
+  let y = document.getElementById("emailContratista");
   y.innerHTML = x.value; 
 }

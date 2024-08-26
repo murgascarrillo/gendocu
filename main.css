@@ -106,6 +106,26 @@ ol {
     justify-content: center;
   }
 
+#divInmueble
+{
+  display: none;
+}
+
+#divCanonArrendamiento
+{
+  display: none;
+}
+
+#paragrafoInmueble
+{
+  display: none;
+}
+
+#paragrafoCanonArrendamiento
+{
+  display: none;
+}
+
   #contenedorMandato
   {
     flex-wrap: wrap;
@@ -149,8 +169,6 @@ ol {
       font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
       font-size: 17px;
     }
-
- 
 
 link {
   color: green;

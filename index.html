@@ -82,9 +82,9 @@
       <input list="listaPaises" name="pais" id="inputPais" onchange="elegirLugarCreacion()" placeholder="Escriba el lugar."/>
 
       <p class="parrafosFormulario">
-        <label for="listaTipoDocumento">Escribe el <strong>Tipo</strong> de Documento de Identidad. <strong>Ejemplo:</strong> Cédula, Tarjeta de Identidad, Pasaporte, etc.</label> 
+        <label for="listaTipoDocumentoSolicitante">Escribe el <strong>Tipo</strong> de Documento de Identidad. <strong>Ejemplo:</strong> Cédula, Tarjeta de Identidad, Pasaporte, etc.</label> 
       </p>
-      <input list="listaTipoDocumento" name="tipodocumento" id="listaTipoDocumento" oninput="elegirTipoDocumento()" placeholder="Escribe Tipo de Identificiación."/>
+      <input type="text" name="tipodocumento" id="listaTipoDocumentoSolicitante" oninput="elegirTipoDocumento()" placeholder="Escribe Tipo de Identificiación."/>
 
       <p class="parrafosFormulario">Ingresa tu <strong>Número</strong> documento. <strong>Ejemplo:</strong> 1122801234.<br>
         </p>
@@ -155,7 +155,7 @@
       Los fundamentos son el soporte legal del documento. Selecciona la opción que mejor soporta tu situación.
       </p>
       <div id="Fundamentos">
-      <select id="listaFundamentos">
+      <select id="listaFundamentosPeticion">
         <option> -- Selecciona la temática -- </option>
         <optgroup label="Peticiones">
         <option value="peticion_Basica">
@@ -211,9 +211,9 @@
       Escribe tu email y celular para recibir la eventual respuesta del destinatario.
       <br>
       </p>
-      <input type="text" id="textoInputEmail" oninput="escribirNotificaciones1()" placeholder="Escriba su email."/>
+      <input type="text" id="textoInputEmailSolicitante" oninput="escribirNotificaciones1()" placeholder="Escriba su email."/>
       <br>
-      <input type="text" id="textoInputCelular" maxlength="16" oninput="escribirNotificaciones2()" placeholder="Escriba # celular."/>
+      <input type="text" id="textoInputCelularSolicitante" maxlength="16" oninput="escribirNotificaciones2()" placeholder="Escriba # celular."/>
   </div>
 
   <!-- Contenedor Firma -->
@@ -243,12 +243,12 @@ E.S.D.
 <strong>Hechos.</strong></p>
 <div id="listaHechosPeticion">Acá van tus hechos.</div>
 
-<p id="section" style="text-align:center;"><strong>Fundamentos.</strong></p>
-<p>La presente se fundamenta en las siguientes Razones de Derecho:<br/>
+<p id="section" style="text-align:center;"><strong>Fundamentos de Derecho.</strong></p>
+<p>La presente se fundamenta en las siguientes Razones:<br/>
 <span id="espacioFundamentos"></span></p>
 <p id="section" style="text-align:center;">
 <strong>Pruebas.</strong></p>
-<p>Se aportan las siguientes:<br/><span id="pruebas"></span><br/></p>
+<p><strong>Documentales: </strong>Se aportan las siguientes:<br/><span id="pruebas"></span><br/></p>
 <p id="section" style="text-align:center;">
 <strong>Peticiones.</strong></p>
 <div style="margin:0;padding:0;font-style:normal;" id="listaPeticiones">Acá van tus peticiones.</div><br/></p>
@@ -316,6 +316,30 @@ E.S.D.
         <input type="button" class="botonesFormulario" id="botonContratos" value="Generar Contrato"/>
   </div>
 
+<!-- Contenedor Descripción de Inmueble -->
+ 
+<div class="item" id="divInmueble">
+  <h3 id="inmueble1">
+    🏡<br/><span id="inmueble_Base">Inmueble Arrendado</span>
+    </h3>
+    <p class="parrafosFormulario">
+      <label for="textoInputInmueble">Escribe la descripción del inmueble que será arrendado. <strong>Ejemplo: </strong>Lote de Terreno y la Casa en el construida, ubicado en la Calle 20 # 1 - 30 del municipio de Aguascalientes, departamento de Córdoba, República de Colombia.</label>
+    </p>
+    <input type="text" id="textoInputInmuebleArrendado" maxlength="500" oninput="describirInmueble()" placeholder="Escriba la descripción."/>
+</div>
+
+<!-- Contenedor Canon de Arrendamiento -->
+ 
+<div class="item" id="divCanonArrendamiento">
+  <h3 id="canon1">
+    💲<br/><span id="canon_Base">Canon de Arrendamiento</span>
+    </h3>
+    <p class="parrafosFormulario">
+      <label for="textoInputCanon">Escribe el monto del canon de arrendamiento. <strong>Ejemplo: </strong>$550.000 pesos.</label>
+    </p>
+    <input type="text" id="textoInputCanon" maxlength="30" oninput="escribirCanon()" placeholder="Escriba el monto."/>
+</div>
+
   <!-- Contenedor Contratante -->
   <div class="item">
     <h3 id="nombreParte1">
@@ -331,8 +355,10 @@ E.S.D.
       <input list="listaPaises" name="pais" id="inputDomicilioContratante" onchange="elegirDomicilioContratante()" placeholder="Selecciona el lugar."/>
       <p class="parrafosFormulario">Ingresa el <strong>Tipo y Número de identificación</strong> de la parte Contratante. <strong>Ejemplo:</strong> Cédula de Ciudadanía Colombiana 1122801234.<br/>
         </p>
-        <input type="text" id="textoInputIdContratante" maxlength="20" oninput="escribirIdContratante()" placeholder="Escriba tipo y número identificación."/>
-
+        <input type="text" id="textoInputIdContratante" maxlength="50" oninput="escribirIdContratante()" placeholder="Escriba tipo y número identificación."/>
+        <p class="parrafosFormulario">Ingresa el <strong>E-mail</strong> para notificaciones de la parte Contratante. <strong>Ejemplo:</strong> carlosmurgas@yahoo.com.<br/>
+        </p>
+        <input type="text" id="textoInputEmailContratante" maxlength="50" oninput="escribirEmailContratante()" placeholder="Escriba el e-mail."/>
 
   </div>
 
@@ -351,7 +377,10 @@ E.S.D.
       <input list="listaPaises" name="pais" id="inputDomicilioContratista" onchange="elegirDomicilioContratista()" placeholder="Selecciona el lugar."/>
       <p class="parrafosFormulario">Ingresa el <strong>Tipo y Número de identificación</strong> de la parte Contratista. <strong>Ejemplo:</strong> Permiso por Protección Temporal 53632.<br/>
         </p>
-        <input type="text" id="textoInputIdContratista" maxlength="20" oninput="escribirIdContratista()" placeholder="Escriba tipo y número identificación."/>
+        <input type="text" id="textoInputIdContratista" maxlength="50" oninput="escribirIdContratista()" placeholder="Escriba tipo y número identificación."/>
+        <p class="parrafosFormulario">Ingresa el <strong>E-mail</strong> para notificaciones de la parte Contratista. <strong>Ejemplo:</strong> carloscarrillo@yahoo.com.<br/>
+        </p>
+        <input type="text" id="textoInputEmailContratista" maxlength="50" oninput="escribirEmailContratista()" placeholder="Escriba el e-mail."/>
 
   </div>
 
@@ -372,17 +401,19 @@ Entre nosotros, <strong><span id="nombreContratante1" style="font-style:normal;"
 <h4 id="section" style="text-align:center;"><strong>Cláusulas:</strong></h4>
       <p id="clausula_Objeto">
 <strong>Primera. Objeto del Contrato. </strong><span id="objeto_Contrato"></span>
-      </p>
+        </p>
+        <p id="paragrafoInmueble"><strong>Parágrafo 1. Descripción del Inmueble: </strong><span id="descripcionInmuebleArrendado">Descripción</span>.</p>
+        <p id="paragrafoCanonArrendamiento"><strong>Parágrafo 2: Canon de Arrendamiento: </strong><span id="canonArrendamiento">Valor</span> pesos colombianos. Pagaderos de forma mensual.</p>
       <p id="clausula_Obligaciones">
-<strong>Segunda. Obligaciones.</strong> Serán las establecidas en la Ley vigente para éste tipo de contratos.
+<strong>Segunda. Obligaciones.</strong> <p id=obligaciones_Contratante_Base>Serán las establecidas en la Ley vigente para éste tipo de contratos.</p>
       </p>
       <p id="clausula_Penal">
-<strong>Tercera. Cláusula Penal.</strong> La parte del contrato que incumpla sus obligaciones pagará a la otra a título de perjuicios la suma en dinero de QUINIENTOS MIL PESOS ($500.000) M/L.
+<strong>Tercera. Cláusula Penal.</strong> La parte del contrato que incumpla sus obligaciones pagará a la otra a título de perjuicios la suma en dinero de UN MILLÓN DE PESOS ($1.000.000) M/L.
       </p>
       
 <p id="section" style="text-align:left;"><strong>Notificaciones. </strong>
-La parte contratante recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. 
-La parte contratista recibe notificaciones en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>. <br /><br/>
+La parte contratante recibe notificaciones en el email <span id="emailContratante">_________</span>. 
+La parte contratista recibe notificaciones en el email <span id="emailContratista">_________</span>. <br /><br/>
 El presente contrato se firma por las partes estando en Colombia y siendo la fecha <span id="fechaContrato"> _____</span>.</p>
 <br/><br/>
       
@@ -449,8 +480,21 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       <p class="parrafosFormulario">
       <span>Escribe el nombre de la persona cuyos derechos fundamentales están en riesgo o han sido vulnerados.</span> <strong>Ejemplo: </strong>Carlos Murgas.
       </p>
-      <input type="text" id="textoInputNombreAccionante" maxlength="50" oninput="escribirAccionante()" placeholder="Escriba el nombre"/>
-  </div>
+      <input type="text" id="textoInputNombreAccionante" maxlength="50" oninput="escribirNombreAccionante()" placeholder="Escriba el nombre"/>
+        <p class="parrafosFormulario">
+          <label for="listaTipoDocumento">Escribe el <strong>Tipo</strong> de Documento de Identidad. <strong>Ejemplo:</strong> Cédula, Tarjeta de Identidad, Pasaporte, etc.</label> 
+        </p>
+        <input list="listaTipoDocumento" name="tipodocumento" id="listaTipoDocumento" oninput="elegirTipoDocumento()" placeholder="Escribe Tipo de Identificiación."/>
+  
+        <p class="parrafosFormulario">Ingresa tu <strong>Número</strong> documento. <strong>Ejemplo:</strong> 1122801234.<br>
+          </p>
+          <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba número identificación."/>
+   
+  
+  
+  
+  
+    </div>
 
     <!-- Contenedor Nacionalidad -->
     <div class="item">
@@ -561,11 +605,6 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
     <h3>
       ✍️<br/>Firma.
       </h3>
-      <p class="parrafosFormulario">
-      Ingresa tu número de identificación (cédula de ciudadanía). <strong>Ejemplo:</strong> 0.<br>
-      </p>
-      <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba el número"/>
-      <br>
       <p class="parrafosFormulario">Adjunta la imagen de tu firma.</p>
       <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="subirFirma(this, 'espacioFirma')"/>
   </div>
@@ -584,18 +623,14 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       <br>
       <br>
       <strong>Referencia:</strong> Acción Pública de <span id="nombreTipoAccion">____________</span><br>
-      <strong>Accionante:</strong> <span id="nombreAccionante">_____________</span><br />
+      <strong>Accionante: </strong> <span id="nombreAccionante0">_____________</span><br />
       <strong>Accionado(s)</strong> <span id="nombreAccionado">_____________</span><br />
       <br />
-      Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">______________</span></strong>
-      , persona natural, nacional de <span id="nacionalidad">__________</span>, mayor de edad, presento <strong>Acción de <span id="nombreTipoAccion">_______</span></strong>
-      , para obtener de su despacho orden judicial a mi favor de las siguientes:
+      Cordial saludo;<br>Yo, <strong><span id="nombreAccionante1">______________</span></strong>, persona natural, nacional de <span id="nacionalidad">__________</span>, mayor de edad, presento <strong>Acción de <span id="nombreTipoAccion2">_______</span></strong>, para obtener de su despacho orden judicial a mi favor de las siguientes:
       </p>
       
       <p id="section" style="text-align:center;"><strong>Pretensiones.</strong></p>
-      <p><strong>Primera. Tutelar</strong> los derechos fundamentales de 
-        <span id="spanDerechosFunda"></span>de la parte accionante 
-        <span id="nombreAccionante">_________</span><br />
+      <p><strong>Primera. Tutelar</strong> los derechos fundamentales de <span id="spanDerechosFunda"></span>de la parte accionante <strong><span id="nombreAccionante2">_________</span></strong>.<br />
                  <span id="spanPretensiones"></span>
       </p>
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
@@ -634,10 +669,10 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
         La parte accionada recibirá en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br />
         Atentamente,
       </p>
-      <img id="espacioFirma" width="210" height="60"/>
-      <strong><span id="nombreusuario2"></span>
+
+      <strong><span id="nombreAccionante3"></span>
       <br>
-      CC.<span id="idUsuario">________</span></strong>
+      <span id="idUsuario">________</span></strong>
     </div>
   </div>        
 </div>
@@ -676,7 +711,7 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       data-position="bottom">
       Tip NANO</a>
     
-  Version 0.0.2.4.3.10 - Creado por <strong>MurgasCarrillo</strong>, con &#x2728;
+  Version 0.0.2.4.3.11 - Creado por <strong>MurgasCarrillo</strong>, con &#x2728;
   <a href="https://murgascarrillo.com/">
     <img id="boton-retorno" style="width:50px;height:auto;margin:auto;padding:7px;display: list-item;" src="imagenes/murgascarrillo.webp"/>
 </a>

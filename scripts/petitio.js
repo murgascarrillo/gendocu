@@ -60,7 +60,7 @@ function elegirNacionalidad (){
 // Sección USUARIO - Sección Tipo Documento Identidad
 
  function elegirTipoDocumento (){
-   let x = document.getElementById("listaTipoDocumento");
+   let x = document.getElementById("listaTipoDocumentoSolicitante");
    let y = document.getElementById("tipoDocumentoIdentidad");
    y.innerHTML = x.value;
  }
@@ -275,13 +275,13 @@ document.getElementById("botonResetHechosPeticion").addEventListener("click", el
 
 // Sección - Fundamentos.
 
-let filtroFundamentos = document.getElementById("listaFundamentos");
+let filtroFundamentosPeticion = document.getElementById("listaFundamentosPeticion");
 let botonFundamentos = document.getElementById("botonFundamentos");
 botonFundamentos.addEventListener("click",imprimirFundamentos);
 function imprimirFundamentos() {
   let contenido = fundamentos_Peticion;
   
-  switch (filtroFundamentos.value) {
+  switch (filtroFundamentosPeticion.value) {
       case "peticion_Basica":
           break;
       case "peticion_HabeasData":
@@ -325,7 +325,7 @@ function imprimirFundamentos() {
   }
   
   document.getElementById("espacioFundamentos").innerHTML = contenido;
-  filtroFundamentos.value = '';
+  filtroFundamentosPeticion.value = '';
 }
 
 
@@ -342,13 +342,13 @@ function escribirPruebas()
 // Sección - Notificaciones.
 
 function escribirNotificaciones1() {
- let x = document.getElementById("textoInputEmail");
+ let x = document.getElementById("textoInputEmailSolicitante");
  let y = document.getElementById("email");
  y.innerHTML = x.value;
 }
 
 function escribirNotificaciones2() {
- let x = document.getElementById("textoInputCelular");
+ let x = document.getElementById("textoInputCelularSolicitante");
  let y = document.getElementById("celular");
  y.innerHTML = x.value;
 }
