@@ -24,9 +24,11 @@ function formarContrato()
     objeto_Contrato = document.getElementById("objeto_Contrato");
     obligaciones_Base = document.getElementById("obligaciones_Contratante_Base");
     contratante_Base = document.getElementById("contratante_Base");
+    contratante_Base_2 = document.getElementById("contratante_Base_2")
     contratista_Base = document.getElementById("contratista_Base");
+    contratista_Base_2 = document.getElementById("contratista_Base_2");
 
-
+// Arrendamiento de Vivienda Urbana 
     // Especiales para Arrendamiento de Vivienda Urbana
     let inmueble = document.getElementById("divInmueble");
     let paragrafoInmueble = document.getElementById("paragrafoInmueble");
@@ -41,7 +43,9 @@ function formarContrato()
     objeto_Contrato.innerHTML = objeto_Arrendamiento_Vivienda_Urbana;
     obligaciones_Base.innerHTML = obligaciones_Arrendador_Vivienda_Urbana + "<br/>" + obligaciones_Arrendatario_Vivienda_Urbana;
     contratante_Base.innerHTML = "Arrendador";
+    contratante_Base_2.innerHTML = "Arrendador";
     contratista_Base.innerHTML = "Arrendatario";
+    contratista_Base_2.innerHTML = "Arrendatario";
     inmueble.style.display = "block";
     paragrafoInmueble.style.display = "block";
     canon.style.display = "block";
@@ -54,13 +58,31 @@ function formarContrato()
     canon.style.display = "none";
     paragrafoCanon.style.display = "none";}
 
+// Compraventa
+
+if (filtroContratos.value === "contrato_Compraventa")
+  {
+   nombre_Tipo_Contrato1.innerHTML = "Compraventa"; 
+   nombre_Tipo_Contrato2.innerHTML = " "+"Compraventa"; 
+   objeto_Contrato.innerHTML = objeto_Compraventa;
+   contratante_Base.innerHTML = "Vendedor";
+   contratante_Base_2.innerHTML = "Vendedor";
+   contratista_Base.innerHTML = "Comprador";
+   contratista_Base_2.innerHTML = "Comprador";
+  }
+
+
+// Comodato
+
   if (filtroContratos.value === "contrato_Comodato")
    {
     nombre_Tipo_Contrato1.innerHTML = "Comodato"; 
     nombre_Tipo_Contrato2.innerHTML = " "+"Comodato"; 
     objeto_Contrato.innerHTML = objeto_Comodato;
     contratante_Base.innerHTML = "Comodante";
+    contratante_Base_2.innerHTML = "Comodante";
     contratista_Base.innerHTML = "Comodatario";
+    contratista_Base_2.innerHTML = "Comodatario";
    }
 }
 

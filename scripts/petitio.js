@@ -94,20 +94,57 @@ newEntidad = document.createElement("p");
  newEntidad.textContent = inputTextEntidad;
 numEntidad = numEntidad + 1;
 
-// Insert the newHecho element above on the list
+// Insert the newEntidad element above on the list
 yEntidad.parentNode.insertBefore(newEntidad, yEntidad);
 
 // Clear the input field
 xEntidad.value = '';
 }
 
+// Function to update datalist based on input
+function actualizarDatalist() {
+  const valorInput = xEntidad.value.toLowerCase();
+  yEntidad.innerHTML = ''+"<br/>"; // Clear previous options
+
+  datosEntidades.forEach(entidad => {
+    if (entidad.nombre.toLowerCase().includes(valorInput.toLowerCase()) && valorInput) {
+      const option = document.createElement('option');
+  
+      // Caso cuando el NIT está vacío pero el email tiene valor
+      if (entidad.nit === "" && entidad.email !== "") {
+        option.innerHTML = entidad.nombre + " (Email: " + entidad.email + ")";
+      }
+      // Caso cuando el email está vacío pero el NIT tiene valor
+      else if (entidad.email === "" && entidad.nit !== "") {
+        option.innerHTML = entidad.nombre + " (Nit: " + entidad.nit + ")";
+      }
+      // Caso cuando tanto el NIT como el email están vacíos
+      else if (entidad.nit === "" && entidad.email === "") {
+        option.innerHTML = entidad.nombre;
+      }
+      // Caso cuando tanto el NIT como el email tienen valor
+      else {
+        option.innerHTML = entidad.nombre + " (Nit: " + entidad.nit + ", Email: " + entidad.email + ")";
+      }
+  
+      // Agregar la opción generada a yEntidad
+      yEntidad.appendChild(option);
+    }
+  });
+}
+
+document.getElementById("inputTextoEntidad").addEventListener("input", function() {
+  escribirEntidad();
+  actualizarDatalist(); // Update the datalist on input
+});
 
 document.getElementById("inputTextoEntidad").addEventListener("input", escribirEntidad);
 
-// Add event listener to add a new <li> element when the user clicks the "botonAddHechos" button
+
+// Add event listener to add a new <li> element when the user clicks the "botonAddEntidad" button
 document.getElementById("botonAddEntidad").addEventListener("click", agregarEntidad);
 
-const inputEntidad = document.getElementById('inputTextoEntidad');
+let inputEntidad = document.getElementById('inputTextoEntidad');
 
 inputEntidad.addEventListener('input', function () {
  // Set the minimum height
@@ -124,7 +161,7 @@ inputEntidad.addEventListener('input', function () {
  }
 });
 
- // Función para resetear Hechos en caso de error.
+ // Función para resetear Entidades en caso de error.
  let newEntidades;
  function eliminarEntidad() {
    newEntidades = document.querySelectorAll("#newEntidad");

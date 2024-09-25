@@ -19,19 +19,164 @@ listaUsuarios.push(new Usuario("nombre,id"));
 // Entidades
 
 class Entidad {
-  constructor(nombre, nit, email,logo)
+  constructor(nombre, nit, email)
   {
     this.nombre = nombre;
     this.nit = nit;
     this.email = email;
-    this.logo = logo;
   }
 }
 
 // Listado y push Entidades
 
-let listaEntidades = [];
-listaEntidades.push(new Entidad("nombre","nit","email"));
+const datosEntidades = [
+  // Entidades Públicas
+  {
+    nombre: "Alcaldía de Barrancas, La Guajira",
+    nit: "800.099.223-3",
+    email: "contactenos@barrancas-laguajira.gov.co"
+  },
+  {
+    nombre: "Gobernación de La Guajira",
+    nit: "892.115.015-1",
+    email: "contactenos@laguajira.gov.co"
+  },
+  {
+    nombre: "Agencia Nacional de Tierras - ANT",
+    nit: "900.948.953-8",
+    email: "atencionalciudadano@ant.gov.co"
+  },
+  {
+    nombre: "Administradora Colombiana de Pensiones - Colpensiones",
+    nit: "900.336.004-7",
+    email: "contacto@colpensiones.gov.co"
+  },
+  {
+    nombre: "Unidad para la Atención y Reparación Integral a las Víctimas - UARIV",
+    nit: "",
+    email: ""
+  },
+  {
+    nombre: "Migración Colombia",
+    nit: "",
+    email: ""
+  },
+  {
+    nombre: "Ministerio de Vivienda, Ciudad y Territorio",
+    nit: "",
+    email: ""
+  },
+  {
+    nombre: "Ministerio del Interior",
+    nit: "",
+    email: "servicioalciudadano@mininterior.gov.co"
+  },
+  {
+    nombre: "Ministerio de Relaciones Exteriores",
+    nit: "",
+    email: ""
+  },
+  {
+    nombre: "Presidencia de la República de Colombia",
+    nit: "",
+    email: ""
+  },
+  {
+    nombre: "Departamento Nacional de Planeación - DNP",
+    nit: "",
+    email: ""
+  },
+  {
+    nombre: "Departamento Administrativo para la Prosperidad Social - DPS",
+    nit: "900.039.533-8",
+    email: ''
+  },
+  {
+    nombre: "Instituto Geográfico Agustín Codazzi - IGAC",
+    nit: "899.999.004-9",
+    email: "contactenos@igac.gov.co"
+  },
+  {
+    nombre: "Servicio Nacional de Aprendizaje - SENA",
+    nit: "899.999.034-1",
+    email: "contactenos@igac.gov.co"
+  },
+  {
+    nombre: "Fiscalía General de la Nación",
+    nit: "",
+    email: "juridicanotificacionestutela@fiscalia.gov.co"
+  },
+  {
+    nombre: "Secretaría de Tránsito y Transporte de Valledupar",
+    nit: "",
+    email: "atencionusuariotransitovpar@valledupar.gov.co"
+  },
+  {
+    nombre: "Secretaría de Tránsito y Transporte de Curumaní",
+    nit: "",
+    email: "info@transitocurumani.com"
+  },
+  {
+    nombre: "Instituto Municipal de Tránsito y Transporte de Maicao",
+    nit: "",
+    email: "transitomaicao@gmail.com"
+  },
+  {
+    nombre: "Dirección para la Democracia, la Participación Ciudadana y la Acción Comunal del Ministerio del Interior",
+    nit: "830.114.475-6",
+    email: "accioncomunal@mininterior.gov.co"
+  },
+  // Entidades Privadas
+  {
+    nombre: "CIFIN S.A.S.",
+    nit: "900.572.445-1",
+    email: ""
+  },
+  {
+    nombre: "Experian Colombia S.A. - Datacrédito",
+    nit: "900.422.614-8",
+    email: "servicioalciudadano@experian.com"
+  },
+
+  {
+    nombre: "Red Empresarial de Servicios S.A. - SUPERGIROS",
+    nit: "900.084.777-9",
+    email: "servicioalcliente@supergiros.com.co"
+  },
+  {
+    nombre: "EPS SANITAS S.A.S.",
+    nit: "800.251.440-6",
+    email: "notificajudiciales@keralty.com"
+  },
+  {
+    nombre: "NUEVA EPS S.A.",
+    nit: "",
+    email: "secretaria.general@nuevaeps.com.co"
+  },
+  {
+    nombre: "Clinica del Cesar S.A.",
+    nit: "892.300.979-9",
+    email: "gerencia@clinicadelcesar.com"
+  },
+  {
+    nombre: "Caribesol de la Costa S.A.S. E.S.P - AIR-E",
+    nit: "",
+    email: "servicioalcliente@air-e.com"
+  },
+  {
+    nombre: "Carbones del Cerrejón Limited",
+    nit: "860.069.804-2",
+    email: "contactenos@cerrejon.com"
+  },
+  {
+    nombre: "Isa Intercolombia S.A. E.S.P.",
+    nit: "900.667.590-1",
+    email: "contactenos@cerrejon.com"
+  },
+
+
+];
+
 
 
 let listaPaises = document.getElementById("listaPaises");

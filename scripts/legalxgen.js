@@ -86,6 +86,31 @@ function proyectarDocTutela() {
     document.getElementById("listaAcciones").focus();
 }
 
+// Obtener todos los items y el item-11
+const items = document.querySelectorAll('.item input');
+const item11 = document.querySelector('.item-11');
+const item11Contenedor = document.querySelector('.item-11-contenedor');
+const botones = document.querySelectorAll('.botonesFormulario');
+
+// Función que asegura que el item-11 esté siempre visible dentro de su contenedor
+function focusOnItem11() {
+  item11Contenedor.scroll({
+    top: item11.offsetTop, // Posición de item-11 dentro de su contenedor
+    behavior: 'smooth'     // Scroll suave
+  });
+}
+
+// Agregar evento 'input' a cada campo dentro de los items
+items.forEach(input => {
+  input.addEventListener('input', focusOnItem11);
+});
+
+// También aplica para los botones
+botones.forEach(button => {
+  button.addEventListener('click', focusOnItem11);
+});
+
+
 
 // Función Fecha
 
