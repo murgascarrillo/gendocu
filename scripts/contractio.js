@@ -15,8 +15,7 @@ function definirFechaContrato(){
 // Sección - Tipo de Contrato.
 
 let filtroContratos = document.getElementById("listaContratos");
-let botonContratos = document.getElementById("botonContratos");
-botonContratos.addEventListener("click",formarContrato);
+filtroContratos.addEventListener("click",formarContrato);
 function formarContrato()
 {
     nombre_Tipo_Contrato1 = document.getElementById("nombreTipoContrato1");
@@ -24,16 +23,43 @@ function formarContrato()
     objeto_Contrato = document.getElementById("objeto_Contrato");
     obligaciones_Base = document.getElementById("obligaciones_Contratante_Base");
     contratante_Base = document.getElementById("contratante_Base");
-    contratante_Base_2 = document.getElementById("contratante_Base_2")
+    contratante_Base_2 = document.getElementById("contratante_Base_2");
+    contratante_Base_3 = document.getElementById("contratante_Base_3");
+    contratante_Base_4 = document.getElementById("contratante_Base_4");
     contratista_Base = document.getElementById("contratista_Base");
     contratista_Base_2 = document.getElementById("contratista_Base_2");
+    contratista_Base_3 = document.getElementById("contratista_Base_3");
+    contratista_Base_4 = document.getElementById("contratista_Base_4");
 
-// Arrendamiento de Vivienda Urbana 
     // Especiales para Arrendamiento de Vivienda Urbana
     let inmueble = document.getElementById("divInmueble");
     let paragrafoInmueble = document.getElementById("paragrafoInmueble");
     let canon = document.getElementById("divCanonArrendamiento");
     let paragrafoCanon = document.getElementById("paragrafoCanonArrendamiento");
+
+    // Especiales para Compraventa
+    let cosaVendida = document.getElementById("divCosaVendida");
+    let paragrafoCosaVendida = document.getElementById("paragrafoCosaVendida");
+    let precio = document.getElementById("divPrecioCompraventa");
+    let paragrafoPrecioCompraventa = document.getElementById("paragrafoPrecioCompraventa");;
+
+if (filtroContratos.value === "- Selecciona el contrato -")
+{
+  nombre_Tipo_Contrato1.innerHTML = "_____"; 
+  nombre_Tipo_Contrato2.innerHTML = " "+"_____"; 
+  objeto_Contrato.innerHTML = "";
+  obligaciones_Base.innerHTML = "";
+  contratante_Base.innerHTML = "Contratante";
+  contratante_Base_2.innerHTML = "Contratante";
+  contratante_Base_3.innerHTML = "Contratante";
+  contratante_Base_4.innerHTML = "Contratante";
+  contratista_Base.innerHTML = "Contratista";
+  contratista_Base_2.innerHTML = "Contratista";
+  contratista_Base_3.innerHTML = "Contratista";
+  contratista_Base_4.innerHTML = "Contratista";
+}
+
+
 
  if (filtroContratos.value === "contrato_Arrendamiento_Vivienda_Urbana")
    {
@@ -41,11 +67,15 @@ function formarContrato()
     nombre_Tipo_Contrato1.innerHTML = "Arrendamiento de Vivienda Urbana"; 
     nombre_Tipo_Contrato2.innerHTML = " "+"Arrendamiento de Vivienda Urbana"; 
     objeto_Contrato.innerHTML = objeto_Arrendamiento_Vivienda_Urbana;
-    obligaciones_Base.innerHTML = obligaciones_Arrendador_Vivienda_Urbana + "<br/>" + obligaciones_Arrendatario_Vivienda_Urbana;
+    obligaciones_Base.innerHTML = obligaciones_Arrendador_Vivienda_Urbana + " " + obligaciones_Arrendatario_Vivienda_Urbana;
     contratante_Base.innerHTML = "Arrendador";
     contratante_Base_2.innerHTML = "Arrendador";
+    contratante_Base_3.innerHTML = "Arrendador";
+    contratante_Base_4.innerHTML = "Arrendador";
     contratista_Base.innerHTML = "Arrendatario";
     contratista_Base_2.innerHTML = "Arrendatario";
+    contratista_Base_3.innerHTML = "Arrendatario";
+    contratista_Base_4.innerHTML = "Arrendatario";
     inmueble.style.display = "block";
     paragrafoInmueble.style.display = "block";
     canon.style.display = "block";
@@ -65,11 +95,26 @@ if (filtroContratos.value === "contrato_Compraventa")
    nombre_Tipo_Contrato1.innerHTML = "Compraventa"; 
    nombre_Tipo_Contrato2.innerHTML = " "+"Compraventa"; 
    objeto_Contrato.innerHTML = objeto_Compraventa;
+   obligaciones_Base.innerHTML = obligaciones_Vendedor + " " + obligaciones_Comprador;
    contratante_Base.innerHTML = "Vendedor";
    contratante_Base_2.innerHTML = "Vendedor";
+   contratante_Base_3.innerHTML = "Vendedor";
+   contratante_Base_4.innerHTML = "Vendedor";
    contratista_Base.innerHTML = "Comprador";
    contratista_Base_2.innerHTML = "Comprador";
+   contratista_Base_3.innerHTML = "Comprador";
+    contratista_Base_4.innerHTML = "Comprador";
+    cosaVendida.style.display = "block";
+    paragrafoCosaVendida.style.display = "block";
+    precio.style.display = "block";
+    paragrafoPrecioCompraventa.style.display = "block";
   }
+  else {
+    // Ocultar los elementos si se selecciona un valor diferente
+    cosaVendida.style.display = "none";
+    paragrafoCosaVendida.style.display = "none";
+    precio.style.display = "none";
+    paragrafoPrecioCompraventa.style.display = "none";}
 
 
 // Comodato
@@ -79,16 +124,19 @@ if (filtroContratos.value === "contrato_Compraventa")
     nombre_Tipo_Contrato1.innerHTML = "Comodato"; 
     nombre_Tipo_Contrato2.innerHTML = " "+"Comodato"; 
     objeto_Contrato.innerHTML = objeto_Comodato;
+    obligaciones_Base.innerHTML = obligaciones_Comodante + " " + obligaciones_Comodatario;
     contratante_Base.innerHTML = "Comodante";
     contratante_Base_2.innerHTML = "Comodante";
+    contratante_Base_3.innerHTML = "Comodante";
+   contratante_Base_4.innerHTML = "Comodante";
     contratista_Base.innerHTML = "Comodatario";
     contratista_Base_2.innerHTML = "Comodatario";
+    contratista_Base_3.innerHTML = "Comodatario";
+    contratista_Base_4.innerHTML = "Comodatario";    
    }
 }
 
 // OBJETO ARRENDAMIENTO
-
-
 // Inmueble Arrendado
 function describirInmueble()
 {
@@ -96,12 +144,27 @@ function describirInmueble()
   let y = document.getElementById("descripcionInmuebleArrendado");
   y.innerHTML = x.value;
 }
-
 // Canon Arrendamiento
 function escribirCanon()
 {
   let x = document.getElementById("textoInputCanon");
   let y = document.getElementById("canonArrendamiento");
+  y.innerHTML = x.value;
+}
+
+// OBJETO COMPRAVENTA
+// Cosa Vendida 
+function describirCosaVendida()
+{
+  let x = document.getElementById("textoInputCosaVendida");
+  let y = document.getElementById("descripcionCosaVendida");
+  y.innerHTML = x.value;
+}
+// Precio Compraventa
+function escribirPrecioCompraventa()
+{
+  let x = document.getElementById("textoInputPrecio");
+  let y = document.getElementById("precioCompraventa");
   y.innerHTML = x.value;
 }
 

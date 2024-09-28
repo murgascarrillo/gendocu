@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'/>
-  <title>gendocu | Crea documentos</title>
+  <title>gendocu | Genera Documentos</title>
   <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'/>
@@ -26,7 +26,8 @@
 <!-- Introducción -->
 
 
-<h2><strong id="strongCrea"> Crea </strong> peticiones, contratos y acciones públicas.<br/>Rápido y Sencillo.
+<h2><strong id="strongCrea"> Genera: </strong><br/>
+  Peticiones, Contratos y Acciones públicas.<br/>Rápido y Sencillo.
 </h2>
 
 <div class="contenedorIntroduccion">
@@ -237,7 +238,7 @@
 <span id="fecha1">Fecha:</span>
 <br>
 Respetados:
-<strong><datalist style="margin:0;padding:0;font-style:normal;" id="listaEntidades"></datalist></strong>
+<strong><datalist style="font-style:normal;" id="listaEntidades"></datalist></strong>
 E.S.D.
 <br/><br/>
 <strong>Referencia:</strong> Derecho de petición<br>
@@ -306,19 +307,15 @@ E.S.D.
           <option value="contrato_Arrendamiento_Vivienda_Urbana">
             Arrendamiento de Vivienda Urbana
           </option>
-            <option value="contrato_Comodato">
-            Comodato
-            </option>
             <option value="contrato_Compraventa">
               Compraventa
               </option>
-              <option value="contrato_Donacion">
-                Donación
+              <option value="contrato_Comodato">
+                Comodato
                 </option>
           </optgroup>
         </select>
         </div>
-        <input type="button" class="botonesFormulario" id="botonContratos" value="Generar Contrato"/>
   </div>
 
 <!-- Contenedor Descripción de Inmueble -->
@@ -420,10 +417,10 @@ E.S.D.
   
     <div class="documentoGenerado" id="esqueletoContrato">
       <p>
-<h3>Contrato de <span id="nombreTipoContrato1">_________</span>.</h3>
+<h3>Contrato de <span id="nombreTipoContrato1">_____</span>.</h3>
   
       <br>
-Entre nosotros, <strong><span id="nombreContratante1" style="font-style:normal;">_______</span></strong>, con domicilio en <span id="domicilioContratante">_______</span> en adelante "<span id="contratante_Base_2">Contratante</span>", y <strong><span id="nombreContratista1" style="font-style:normal;">_______</span></strong>, con domicilio en <span id="domicilioContratista">_______</span>, en adelante "<span id="contratista_Base_2">Contratista</span>"; personas naturales con plena capacidad para contraer y ejecutar obligaciones civiles, identificadas al pie de éste documento, hemos acordado celebrar el presente <strong>Contrato de<span id="nombreTipoContrato2"> _______________</span></strong>, que será regido por las siguientes:
+Entre nosotros, <strong><span id="nombreContratante1" style="font-style:normal;">_____</span></strong>, con domicilio en <span id="domicilioContratante">_______</span> en adelante "<span id="contratante_Base_2">Contratante</span>", y <strong><span id="nombreContratista1" style="font-style:normal;">_______</span></strong>, con domicilio en <span id="domicilioContratista">_______</span>, en adelante "<span id="contratista_Base_2">Contratista</span>"; personas naturales con plena capacidad para contraer y ejecutar obligaciones civiles, identificadas al pie de éste documento, hemos acordado celebrar el presente <strong>Contrato de<span id="nombreTipoContrato2"> _____</span></strong>, que será regido por las siguientes:
       <br>
       </p>
       
@@ -438,15 +435,15 @@ Entre nosotros, <strong><span id="nombreContratante1" style="font-style:normal;"
         <p id="paragrafoCosaVendida"><strong>Parágrafo 1. Descripción de la Cosa Vendida: </strong><span id="descripcionCosaVendida">Descripción</span>.</p>
         <p id="paragrafoPrecioCompraventa"><strong>Parágrafo 2: Precio: $</strong><span id="precioCompraventa">Valor</span> pesos colombianos. Pagaderos en efectivo.</p>
         <p id="clausula_Obligaciones">
-<strong>Segunda. Obligaciones.</strong> <p id=obligaciones_Contratante_Base>Serán las establecidas en la Ley vigente para éste tipo de contratos.</p>
+<strong>Segunda. Obligaciones.</strong> Son obligaciones específicas de las partes las siguientes: <p id=obligaciones_Contratante_Base></p>
       </p>
       <p id="clausula_Penal">
 <strong>Tercera. Cláusula Penal.</strong> La parte del contrato que incumpla sus obligaciones pagará a la otra a título de perjuicios la suma en dinero de UN MILLÓN DE PESOS ($1.000.000) M/L.
       </p>
       
 <p id="section" style="text-align:left;"><strong>Notificaciones. </strong>
-La parte <span id="contratante_Base_3">contratante</span> recibe notificaciones en el email <span id="emailContratante">_________</span>. 
-La parte <span id="contratista_Base_3">contratista</span> recibe notificaciones en el email <span id="emailContratista">_________</span>. <br /><br/>
+La parte <span id="contratante_Base_3">Contratante</span> recibe notificaciones en el email <span id="emailContratante">_________</span>. 
+La parte <span id="contratista_Base_3">Contratista</span> recibe notificaciones en el email <span id="emailContratista">_________</span>. <br /><br/>
 El presente contrato se firma por las partes estando en Colombia y siendo la fecha <span id="fechaContrato"> _____</span>.</p>
 <br/><br/>
       
@@ -719,7 +716,7 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
 <div id="contenedorBotonesAcciones">
 <button class="itemBoton" id="botonCopiar">📋 Copiar texto</button>
 <button class="itemBoton" id="botonExportar">🖨️ Exportar a PDF</button>
-<button class="itemBoton" id="botonContribuir" onclick='alert("en desarrollo..")'>Contribuir</button>
+<button class="itemBoton" id="botonContribuir" style="display: none;" onclick='alert("en desarrollo..")'>Contribuir</button>
 </div>
 
 <div class="contenedorContribucion" id="contribucionesAlRepo" style="display:none;">
@@ -753,13 +750,11 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       data-position="bottom">
       Tip NANO</a>
     
-  Version 0.0.2.4.3.12 - Creado por <strong>MurgasCarrillo</strong>, con &#x2728;
+  Version 0.0.2.4.3.13 - Creado por <strong>MurgasCarrillo</strong>, con &#x2728;
   <a href="https://murgascarrillo.com/">
     <img id="boton-retorno" style="width:50px;height:auto;margin:auto;padding:7px;display: list-item;" src="imagenes/murgascarrillo.webp"/>
 </a>
 </div>
-
-
 <!-- Scripts -->  
 <script src='scripts/legalxgen.js'></script>
 <script src='scripts/datos.js'></script>

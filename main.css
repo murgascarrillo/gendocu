@@ -1,11 +1,28 @@
 /* Hoja de estilos - Style Sheet */
 
 html {
-  background: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(13,124,0,1) 60%, rgb(241, 158, 15) 100%);
-  overflow: auto;
+  background: linear-gradient(90deg, rgb(41, 114, 136) 20%, rgba(13,124,0,1) 60%, rgb(241, 158, 15) 100%);
+  background-size: 200% 200%; /* Ajusta el tamaño del fondo para crear el movimiento */
+  animation: moveGradient 5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite; /* Controla la velocidad del movimiento */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   margin: 0;
+  overflow: auto;
 }
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }}
 
 body {
   width: auto;
@@ -103,6 +120,7 @@ ol {
     flex-wrap: nowrap; /* Asegura que los elementos no se envuelvan */
     height: auto; /* Altura completa de la pantalla */
     overflow: hidden; /* Evita que los elementos se salgan del contenedor */
+    padding: 0px;
   }
 
   #contenedorContrato
@@ -114,6 +132,7 @@ ol {
     flex-wrap: nowrap; /* Asegura que los elementos no se envuelvan */
     height: auto; /* Altura completa de la pantalla */
     overflow: hidden; /* Evita que los elementos se salgan del contenedor */
+    padding: 0px;
   }
 
 #divInmueble
@@ -171,6 +190,7 @@ ol {
     flex-wrap: nowrap; /* Asegura que los elementos no se envuelvan */
     height: auto; /* Altura completa de la pantalla */
     overflow: hidden; /* Evita que los elementos se salgan del contenedor */
+    padding: 0px;
   }
 
   .items-contenedor {
@@ -218,7 +238,7 @@ ol {
     width: fit-content;
     max-width: 100%;
     max-height: 100%;
-    padding: 6px;
+    padding: 5px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para hacer resaltar el item-11 */
     z-index: 1;

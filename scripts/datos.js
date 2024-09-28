@@ -72,6 +72,11 @@ const datosEntidades = [
     email: "servicioalciudadano@mininterior.gov.co"
   },
   {
+    nombre: "Dirección para la Democracia, la Participación Ciudadana y la Acción Comunal del Ministerio del Interior",
+    nit: "830.114.475-6",
+    email: "accioncomunal@mininterior.gov.co"
+  },
+  {
     nombre: "Ministerio de Relaciones Exteriores",
     nit: "",
     email: ""
@@ -106,6 +111,8 @@ const datosEntidades = [
     nit: "",
     email: "juridicanotificacionestutela@fiscalia.gov.co"
   },
+
+  // Entidades Territoriales
   {
     nombre: "Secretaría de Tránsito y Transporte de Valledupar",
     nit: "",
@@ -122,9 +129,9 @@ const datosEntidades = [
     email: "transitomaicao@gmail.com"
   },
   {
-    nombre: "Dirección para la Democracia, la Participación Ciudadana y la Acción Comunal del Ministerio del Interior",
-    nit: "830.114.475-6",
-    email: "accioncomunal@mininterior.gov.co"
+    nombre: "Policia Metropolitana de Barranquilla",
+    nit: "900.263.078-7",
+    email: "mebar.coseg@policia.gov.co"
   },
   // Entidades Privadas
   {
@@ -152,6 +159,11 @@ const datosEntidades = [
     nombre: "NUEVA EPS S.A.",
     nit: "",
     email: "secretaria.general@nuevaeps.com.co"
+  },
+  {
+    nombre: "DUSAKAWI E.P.S.I",
+    nit: "824.002.362-1",
+    email: "callcenter@dusakawiepsi.com"
   },
   {
     nombre: "Clinica del Cesar S.A.",
