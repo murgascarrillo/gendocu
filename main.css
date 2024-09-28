@@ -1,15 +1,15 @@
 /* Hoja de estilos - Style Sheet */
 
 html {
-  background: linear-gradient(90deg, rgb(41, 114, 136) 20%, rgba(13,124,0,1) 60%, rgb(241, 158, 15) 100%);
+  background: linear-gradient(90deg, rgb(41, 114, 136) 20%, rgba(13,124,0,1) 50%, rgb(241, 158, 15) 70%, rgb(192, 51, 170)100%);
   background-size: 200% 200%; /* Ajusta el tamaño del fondo para crear el movimiento */
-  animation: moveGradient 5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite; /* Controla la velocidad del movimiento */
+  animation: moveGradient 8s both infinite; /* Controla la velocidad del movimiento */
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
-  margin: 0;
+  margin: 0.5px;
   overflow: auto;
 }
 
@@ -30,7 +30,7 @@ body {
   color:black;
   margin:10px 10px 10px 10px;
   padding: 10px;
-  border: 6px solid linear-gradient(80deg, rgba(0,0,0,1) 0%, rgba(13,124,0,1) 100%);
+
   border-radius: 2ex;
   background-color: white;
   align-self:center;
@@ -116,7 +116,8 @@ ol {
     flex-wrap: wrap;
     justify-content: center;
     position: relative; /* Esto asegura que los elementos hijos con position: absolute se mantengan dentro */
-    width: 100%; /* Asegura que el contenedor ocupe todo el espacio necesario */
+    width:100%; /* Asegura que el contenedor ocupe todo el espacio necesario */
+    max-width: fit-content;
     flex-wrap: nowrap; /* Asegura que los elementos no se envuelvan */
     height: auto; /* Altura completa de la pantalla */
     overflow: hidden; /* Evita que los elementos se salgan del contenedor */
@@ -199,7 +200,6 @@ ol {
     flex-wrap: wrap;
     justify-content: center;
     overflow-y: auto; /* Permite el scroll independiente para los items */
-    /* padding: 10px; */
     align-items: stretch;
   }
 
@@ -222,7 +222,6 @@ ol {
   .item-11-contenedor {
     flex: 0 0 50%; /* Ocupa el otro 50% del ancho */
     position: relative; /* Se queda fijo en la parte derecha del contenedor */
-    overflow-y: auto; /* Habilita el scroll independiente para el item-11 */
     height: 100%;
     max-width: 100%;
     max-height: 100%;

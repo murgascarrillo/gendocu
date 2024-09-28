@@ -43,8 +43,7 @@ function formarContrato()
     let precio = document.getElementById("divPrecioCompraventa");
     let paragrafoPrecioCompraventa = document.getElementById("paragrafoPrecioCompraventa");;
 
-if (filtroContratos.value === "- Selecciona el contrato -")
-{
+if (filtroContratos.value === "- Selecciona el contrato -"){
   nombre_Tipo_Contrato1.innerHTML = "_____"; 
   nombre_Tipo_Contrato2.innerHTML = " "+"_____"; 
   objeto_Contrato.innerHTML = "";
@@ -58,12 +57,8 @@ if (filtroContratos.value === "- Selecciona el contrato -")
   contratista_Base_3.innerHTML = "Contratista";
   contratista_Base_4.innerHTML = "Contratista";
 }
-
-
-
- if (filtroContratos.value === "contrato_Arrendamiento_Vivienda_Urbana")
-   {
-  
+// Arrendamiento Vivienda Urbana
+if (filtroContratos.value === "contrato_Arrendamiento_Vivienda_Urbana"){
     nombre_Tipo_Contrato1.innerHTML = "Arrendamiento de Vivienda Urbana"; 
     nombre_Tipo_Contrato2.innerHTML = " "+"Arrendamiento de Vivienda Urbana"; 
     objeto_Contrato.innerHTML = objeto_Arrendamiento_Vivienda_Urbana;
@@ -87,11 +82,8 @@ if (filtroContratos.value === "- Selecciona el contrato -")
     paragrafoInmueble.style.display = "none";
     canon.style.display = "none";
     paragrafoCanon.style.display = "none";}
-
 // Compraventa
-
-if (filtroContratos.value === "contrato_Compraventa")
-  {
+if (filtroContratos.value === "contrato_Compraventa"){
    nombre_Tipo_Contrato1.innerHTML = "Compraventa"; 
    nombre_Tipo_Contrato2.innerHTML = " "+"Compraventa"; 
    objeto_Contrato.innerHTML = objeto_Compraventa;
