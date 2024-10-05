@@ -133,6 +133,14 @@ const datosEntidades = [
     nit: "900.263.078-7",
     email: "mebar.coseg@policia.gov.co"
   },
+
+
+  // Instituciones Educativas
+  {
+    nombre: "Institución Etnoeducativa Monte Alvernia",
+    nit: "",
+    email: "montealvernia1968@yahoo.es"
+  },
   // Entidades Privadas
   {
     nombre: "CIFIN S.A.S.",
@@ -166,6 +174,11 @@ const datosEntidades = [
     email: "callcenter@dusakawiepsi.com"
   },
   {
+    nombre: "SOCIEDAD ADMINISTRADORA DE FONDOS DE PENSIONES Y CESANTIAS PORVENIR S.A.",
+    nit: "800.144.331-3",
+    email: "defensoriaporvenir@legalcrc.com"
+  },
+  {
     nombre: "Clinica del Cesar S.A.",
     nit: "892.300.979-9",
     email: "gerencia@clinicadelcesar.com"
@@ -185,8 +198,11 @@ const datosEntidades = [
     nit: "900.667.590-1",
     email: "contactenos@cerrejon.com"
   },
-
-
+  {
+    nombre: "COMPAÑÍA MUNDIAL DE SEGUROS S.A. - SEGUROS MUNDIAL",
+    nit: "860.037.013-6",
+    email: "mundial@segurosmundial.com.co"
+  },
 ];
 
 

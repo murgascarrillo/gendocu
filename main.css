@@ -195,11 +195,10 @@ ol {
   }
 
   .items-contenedor {
-    flex: 1;
+    flex: 0 50% 0; /* Ocupa el otro 50% del ancho */
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    overflow-y: auto; /* Permite el scroll independiente para los items */
+    justify-content: left;
     align-items: stretch;
   }
 
@@ -214,7 +213,6 @@ ol {
     min-width: 5%;
     max-width: 180px;
     height: fit-content;
-    flex-basis: calc(50% -5px);
     margin: 5px;
   }
 
