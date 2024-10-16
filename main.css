@@ -117,7 +117,6 @@ ol {
     justify-content: center;
     position: relative; /* Esto asegura que los elementos hijos con position: absolute se mantengan dentro */
     width:100%; /* Asegura que el contenedor ocupe todo el espacio necesario */
-    max-width: fit-content;
     flex-wrap: nowrap; /* Asegura que los elementos no se envuelvan */
     height: auto; /* Altura completa de la pantalla */
     overflow: hidden; /* Evita que los elementos se salgan del contenedor */

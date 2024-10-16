@@ -111,8 +111,13 @@ const datosEntidades = [
     nit: "",
     email: "juridicanotificacionestutela@fiscalia.gov.co"
   },
+  {
+    nombre: "Autoridad Nacional de Licencias Ambientales - ANLA",
+    nit: "900.467.239-2",
+    email: "licencias@anla.gov.co"
+  },
 
-  // Entidades Territoriales
+  // Entidades con Presencia Territorial
   {
     nombre: "Secretaría de Tránsito y Transporte de Valledupar",
     nit: "",
@@ -133,7 +138,19 @@ const datosEntidades = [
     nit: "900.263.078-7",
     email: "mebar.coseg@policia.gov.co"
   },
+  {
+    nombre: "Registraduría Municipal de San Juan del Cesar",
+    nit: "",
+    email: "sanjuandelcesar@registraduria.gov.co"
+  },
+  // Registradurías
 
+  // Notarías
+  {
+    nombre: "Notaría Única de Barrancas, La Guajira",
+    nit: "",
+    email: "unicabarrancas@supernotariado.gov.co"
+  },
 
   // Instituciones Educativas
   {
