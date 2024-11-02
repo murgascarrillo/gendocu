@@ -112,12 +112,22 @@ const datosEntidades = [
     email: "juridicanotificacionestutela@fiscalia.gov.co"
   },
   {
+    nombre: "Instituto Nacional Penitenciario y Carcelario – INPEC",
+    nit:"800.215.546-5",
+    email: "notificaciones@inpec.gov.co"
+  },
+  {
     nombre: "Autoridad Nacional de Licencias Ambientales - ANLA",
     nit: "900.467.239-2",
     email: "licencias@anla.gov.co"
   },
 
   // Entidades con Presencia Territorial
+  {
+    nombre: "E.S.E Hospital Nuestra Señora del Carmen de Hatonuevo",
+    nit: "825.000.620-1",
+    email: "hospicarmen12@hotmail.com"
+  },
   {
     nombre: "Secretaría de Tránsito y Transporte de Valledupar",
     nit: "",
@@ -200,10 +210,19 @@ const datosEntidades = [
     nit: "892.300.979-9",
     email: "gerencia@clinicadelcesar.com"
   },
+
+  // Empresas Proveedoras de Energía Eléctrica.
   {
     nombre: "Caribesol de la Costa S.A.S. E.S.P - AIR-E",
     nit: "",
     email: "servicioalcliente@air-e.com"
+  },
+
+  // Empresas Proveedoras de Internet.
+  {
+    nombre: "World Connections S.A.S.",
+    nit: "900.632.211-4",
+    email: "info@worldconnections.com.co"
   },
   {
     nombre: "Carbones del Cerrejón Limited",
