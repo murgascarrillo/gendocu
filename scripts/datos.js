@@ -82,6 +82,11 @@ const datosEntidades = [
     email: ""
   },
   {
+    nombre:"Agencia Nacional Digital - AND",
+    nit:"901.144.049-7",
+    email:"agencianacionaldigital@and.gov.co"
+  },
+  {
     nombre: "Presidencia de la República de Colombia",
     nit: "",
     email: ""
@@ -121,12 +126,17 @@ const datosEntidades = [
     nit: "900.467.239-2",
     email: "licencias@anla.gov.co"
   },
+  {
+nombre:"Patrimonio Autónomo de Remanentes de la Caja Agraria en Liquidación",
+nit:"",
+email:"gravamenescajaagraria@parugp.com.co, parcal@parugp.com.co"
+  },
 
   // Entidades con Presencia Territorial
   {
     nombre: "E.S.E Hospital Nuestra Señora del Carmen de Hatonuevo",
     nit: "825.000.620-1",
-    email: "hospicarmen12@hotmail.com"
+    email: "gerencia@hospicarmenhatonuevo.gov.co"
   },
   {
     nombre: "Secretaría de Tránsito y Transporte de Valledupar",
@@ -210,12 +220,25 @@ const datosEntidades = [
     nit: "892.300.979-9",
     email: "gerencia@clinicadelcesar.com"
   },
+  {
+  nombre:"Adelante Soluciones Financieras - ADDI",
+  nit:"901216.768-4",
+  email:"datos@addi.com"
+  },
 
   // Empresas Proveedoras de Energía Eléctrica.
   {
     nombre: "Caribesol de la Costa S.A.S. E.S.P - AIR-E",
     nit: "",
     email: "servicioalcliente@air-e.com"
+  },
+
+  // Empresas Proveedoras de Acueducto.
+
+  {
+    nombre:"Veolia Aguas de la Guajira S.A.S E.S.P",
+    nit:"901.434.831-0",
+    email:"co.servicioalcliente.guajira@veolia.com"
   },
 
   // Empresas Proveedoras de Internet.
