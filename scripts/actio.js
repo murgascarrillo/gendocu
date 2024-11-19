@@ -61,4 +61,131 @@ function escribirNombreAccionante()
      y2.innerHTML = x.value;
      y3.innerHTML = x.value;
 }
+function elegirNacionalidadAccionante()
+{
+   let x = document.getElementById("inputNacionalidadAccionante");
+   let y = document.getElementById("nacionalidadAccionante");
+   y.innerHTML = x.value;
+}
+function elegirTipoDocumentoAccionante()
+{
+   let x = document.getElementById("listaTipoDocumentoAccionante");
+   let y = document.getElementById("tipoIdAccionante");
+   y.innerHTML = x.value;
+}
+function escribirIdAccionante()
+   {
+     let x = document.getElementById("textoInputIdAccionante");
+     let y0 = document.getElementById("idAccionante");
+     let y1 = document.getElementById("nombreAccionante1");
+     let y2 = document.getElementById("nombreAccionante2");
+     let y3 = document.getElementById("nombreAccionante3");
+     
+     y0.innerHTML = x.value;
+}
 
+function elegirLugarVulneracion (){
+   let x = document.getElementById("inputLugarVulneracionTutela");
+   let y = document.getElementById("lugarJuez");
+   y.innerHTML = x.value;
+ }
+
+ // Sección - Entidad Accionada.
+
+ let xEntidadAccionada = document.getElementById("inputTextoEntidadAccionada");
+ let yEntidadAccionada = document.getElementById("listaEntidadesAccionadas");
+ let inputTextEntidadAccionada;
+ let numEntidadAccionada = 0;
+ 
+ function escribirEntidadAccionada() {
+    
+   inputTextEntidadAccionada = xEntidadAccionada.value;
+ }
+ let newEntidadAccionada;
+ function agregarEntidadAccionada() {
+ // Create a new <p> element with the input value
+ 
+ newEntidadAccionada = document.createElement("p");
+ newEntidadAccionada.id = "newEntidadAccionada";
+ newEntidadAccionada.style.margin = "0px";
+ newEntidadAccionada.textContent = inputTextEntidadAccionada;
+ numEntidadAccionada = numEntidadAccionada + 1;
+ 
+ // Insert the newEntidad element above on the list
+ yEntidadAccionada.parentNode.insertBefore(newEntidadAccionada, yEntidadAccionada);
+ 
+ // Clear the input field
+ xEntidadAccionada.value = '';
+ }
+ 
+ // Function to update datalist based on input
+ function actualizarDatalistAccionadas() {
+   const valorInput = xEntidadAccionada.value.toLowerCase();
+   yEntidadAccionada.innerHTML = ''+"<br/>"; // Clear previous options
+ 
+   datosEntidades.forEach(entidad => {
+     if (entidad.nombre.toLowerCase().includes(valorInput.toLowerCase()) && valorInput) {
+       const option = document.createElement('option');
+   
+       // Caso cuando el NIT está vacío pero el email tiene valor
+       if (entidad.nit === "" && entidad.email !== "") {
+         option.innerHTML = "- " + entidad.nombre + " (Email: " + entidad.email + ")";
+       }
+       // Caso cuando el email está vacío pero el NIT tiene valor
+       else if (entidad.email === "" && entidad.nit !== "") {
+         option.innerHTML = "- "+ entidad.nombre + " (Nit: " + entidad.nit + ")";
+       }
+       // Caso cuando tanto el NIT como el email están vacíos
+       else if (entidad.nit === "" && entidad.email === "") {
+         option.innerHTML = "- "+ entidad.nombre;
+       }
+       // Caso cuando tanto el NIT como el email tienen valor
+       else {
+         option.innerHTML = "- "+ entidad.nombre + " (Nit: " + entidad.nit + ", Email: " + entidad.email + ")";
+       }
+   
+       // Agregar la opción generada a yEntidad
+       yEntidadAccionada.appendChild(option);
+     }
+   });
+ }
+ 
+ document.getElementById("inputTextoEntidadAccionada").addEventListener("input", function() {
+   escribirEntidadAccionada();
+   actualizarDatalistAccionadas(); // Update the datalist on input
+ });
+ 
+ document.getElementById("inputTextoEntidadAccionada").addEventListener("input", escribirEntidadAccionada);
+ 
+ 
+ // Add event listener to add a new <li> element when the user clicks the "botonAddEntidad" button
+ document.getElementById("botonAddEntidadAccionada").addEventListener("click", agregarEntidadAccionada);
+ 
+ let inputEntidadAccionada = document.getElementById('inputTextoEntidadAccionada');
+ 
+ inputEntidadAccionada.addEventListener('input', function () {
+  // Set the minimum height
+  this.style.height = '24px'; // Or your preferred minimum height
+ 
+  // Adjust the height based on the scrollHeight
+  this.style.height = this.scrollHeight + 'px';
+ 
+  // Set the minimum width
+  if (this.scrollWidth > 90) { // Adjust the minimum width as needed
+    this.style.width = '90%'; // Or your preferred minimum width
+  } else {
+    this.style.width = this.scrollWidth + 'px';
+  }
+ });
+ 
+  // Función para resetear Entidades en caso de error.
+  let newEntidadesAccionadas;
+  function eliminarEntidadAccionada() {
+   newEntidadesAccionadas = document.querySelectorAll("#newEntidadAccionada");
+   newEntidadesAccionadas.forEach((entidad) => {
+      entidad.remove();
+    });
+    numEntidadAccionada = 0;
+  }
+ 
+ document.getElementById("botonResetEntidadAccionada").addEventListener("click", eliminarEntidadAccionada);

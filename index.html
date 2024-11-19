@@ -93,7 +93,7 @@
         <label for="inputPais">Selecciona el país de <strong>Nacionalidad</strong> de quien crea el documento. <strong>Ejemplo:</strong> Colombia.</label>
       </p>
       <input list="listaPaises" name="pais" id="inputPais" onchange="elegirLugarCreacion()" placeholder="Escriba el lugar."/>
-
+      <datalist id="listaPaises"></datalist>
       <p class="parrafosFormulario">
         <label for="listaTipoDocumentoSolicitante">Escribe el <strong>Tipo</strong> de Documento de Identidad. <strong>Ejemplo:</strong> Cédula, Tarjeta de Identidad, Pasaporte, etc.</label> 
       </p>
@@ -506,7 +506,7 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
                 </optgroup>
               </select>
               </div>
-              <input type="button" class="botonesFormulario" id="botonAcciones" value="Generar Acción Pública"/>
+              <input type="button" class="botonesFormulario" id="botonAcciones" value="Proyectar"/>
         </div>
 
   <!-- Contenedor Accionante-->
@@ -515,32 +515,21 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       🦸‍♂️<br/><span id="accionante_Base">Accionante</span>
       </h3>
       <p class="parrafosFormulario">
-      <span>Escribe el nombre de la persona cuyos derechos fundamentales están en riesgo o han sido vulnerados.</span> <strong>Ejemplo: </strong>Carlos Murgas.
+      <span>Escribe el nombre de la persona que presenta la acción de tutela (Accionante). </span> <strong>Ejemplo: </strong>Carlos Murgas.
       </p>
       <input type="text" id="textoInputNombreAccionante" maxlength="50" oninput="escribirNombreAccionante()" placeholder="Escriba el nombre"/>
+      <p class="parrafosFormulario">
+        <label for="inputNacionalidad">Elige la <strong>nacionalidad</strong> de la parte Accionante. <strong>Ejemplo:</strong>> Colombia.</label>
+      </p>
+      <input list="listaPaises" name="nacionalidad" id="inputNacionalidadAccionante" onchange="elegirNacionalidadAccionante()" placeholder="Elija país"/>
         <p class="parrafosFormulario">
           <label for="listaTipoDocumento">Escribe el <strong>Tipo</strong> de Documento de Identidad. <strong>Ejemplo:</strong> Cédula, Tarjeta de Identidad, Pasaporte, etc.</label> 
         </p>
-        <input list="listaTipoDocumento" name="tipodocumento" id="listaTipoDocumento" oninput="elegirTipoDocumento()" placeholder="Escribe Tipo de Identificiación."/>
-  
+        <input list="listaTipoDocumentoAccionante" name="tipodocumento" id="listaTipoDocumentoAccionante" oninput="elegirTipoDocumentoAccionante()" placeholder="Escribe Tipo de Identificiación."/>
         <p class="parrafosFormulario">Ingresa tu <strong>Número</strong> documento. <strong>Ejemplo:</strong> 1122801234.<br>
           </p>
-          <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba número identificación."/>
+          <input type="text" id="textoInputIdAccionante" maxlength="20" oninput="escribirIdAccionante()" placeholder="Escriba número identificación."/>
   
-    </div>
-
-    <!-- Contenedor Nacionalidad -->
-    <div class="item">
-      <h3>
-        🌎<br/>Nacionalidad
-        </h3>
-        <p class="parrafosFormulario">
-          <label for="inputNacionalidad">Elige la nacionalidad de la parte Accionante. Ejemplo: Colombia.</label>
-        </p>
-        <input list="listaPaises" name="nacionalidad" id="inputNacionalidad" onchange="elegirNacionalidad()" placeholder="Elija país"/>
-          <datalist id="listaPaises">
-          </datalist>
-          
     </div>
   <!-- Contenedor Lugar vulneración -->
     <div class="item">
@@ -548,9 +537,10 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
         🌎<br/>Lugar de vulneración
         </h3>
         <p class="parrafosFormulario">
-          <label for="inputLugarTutela">Escribe el lugar en dónde ha ocurrido la vulneración a derechos fundamentales. <strong>Ejemplo:</strong> Sasaima, Cundinamarca, Colombia.</label>
+          <label for="inputLugarVulneracionTutela">Escribe el lugar en dónde está ocurriendo la vulneración de derechos fundamentales. <strong>Ejemplo:</strong> Sasaima, Cundinamarca, Colombia.</label>
         </p>
-        <input type="text" id="inputLugarTutela" oninput="elegirLugarCreacion()" placeholder="Escriba el lugar"/>
+        <input list="listaMunicipios" name="lugarVulneracion" id="inputLugarVulneracionTutela" oninput="elegirLugarVulneracion()" placeholder="Escriba el lugar"/>
+        <datalist id="listaMunicipios"></datalist>
     </div>
 
   <!-- Contenedor Entidades Accionadas -->
@@ -559,9 +549,12 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       🏛️<br/><span id="accionado_Base">Accionado</span>
       </h3>
       <p class="parrafosFormulario">
-        <label for="textoInputEntidad">Escribe el nombre completo de la(s) entidad(es) a la(s) cual(es) vincularás a la demanda. Ejemplo: Empresa de Salud del Valle. Datacrédito.</label>
+        <label for="inputTextoEntidadAccionada">Escribe el nombre completo de la(s) entidad(es) a la(s) cual(es) vincularás a la demanda. Ejemplo: Empresa de Salud del Valle. Datacrédito.</label>
       </p>
-      <input type="text" id="textoInputEntidad" oninput="escribirEntidad()" placeholder="Escriba el nombre"/>
+      <input list="listaEntidadesAccionadas" id="inputTextoEntidadAccionada" oninput="escribirEntidadAccionada()" placeholder="Escriba el nombre"/>
+      <button type="submit" class="botonesFormulario" id="botonAddEntidadAccionada"><strong>+</strong> Agregar Entidad</button>
+
+      <button class="botonesFormulario" id="botonResetEntidadAccionada">🔄Resetear</button>
   </div>
 
   <!-- Contenedor Pretensiones -->
@@ -658,13 +651,13 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       <br>
       <strong>Referencia:</strong> Acción Pública de <span id="nombreTipoAccion">____________</span><br>
       <strong>Accionante: </strong> <span id="nombreAccionante0">_____________</span><br />
-      <strong>Accionado(s)</strong> <span id="nombreAccionado">_____________</span><br />
-      <br />
-      Cordial saludo;<br>Yo, <strong><span id="nombreAccionante1">______________</span></strong>, persona natural, nacional de <span id="nacionalidad">__________</span>, mayor de edad, presento <strong>Acción de <span id="nombreTipoAccion2">_______</span></strong>, para obtener de su despacho orden judicial a mi favor de las siguientes:
+      <strong>Accionado(s): </strong><datalist style="font-style:normal;" id="listaEntidadesAccionadas">_____________</datalist><br />
+
+      Cordial saludo;<br>Yo, <strong><span id="nombreAccionante1">______________</span></strong>, persona natural, nacional de <span id="nacionalidadAccionante">__________</span>, mayor de edad, presento <strong>Acción de <span id="nombreTipoAccion2">_______</span></strong>, para obtener de su despacho orden judicial a mi favor de las siguientes:
       </p>
       
       <p id="section" style="text-align:center;"><strong>Pretensiones.</strong></p>
-      <p><strong>Primera. Tutelar</strong> los derechos fundamentales de <span id="spanDerechosFunda"></span>de la parte accionante <strong><span id="nombreAccionante2">_________</span></strong>.<br />
+      <p><strong>Primera. Tutelar</strong> los derechos fundamentales de <span id="spanDerechosFunda">_________</span> de la parte accionante <strong><span id="nombreAccionante2">_________</span></strong>, vulnerados por la parte accionada.
                  <span id="spanPretensiones"></span>
       </p>
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
@@ -706,7 +699,7 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
 
       <strong><span id="nombreAccionante3"></span>
       <br>
-      <span id="idUsuario">________</span></strong>
+      <span id="tipoIdAccionante">Tipo de Documento</span> número <span id="idAccionante">________</span></strong>
     </div>
   </div>   
   </div>     

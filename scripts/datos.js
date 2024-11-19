@@ -127,9 +127,14 @@ const datosEntidades = [
     email: "licencias@anla.gov.co"
   },
   {
-nombre:"Patrimonio Autónomo de Remanentes de la Caja Agraria en Liquidación",
-nit:"",
-email:"gravamenescajaagraria@parugp.com.co, parcal@parugp.com.co"
+    nombre:"Patrimonio Autónomo de Remanentes de la Caja Agraria en Liquidación",
+    nit:"",
+    email:"gravamenescajaagraria@parugp.com.co, parcal@parugp.com.co"
+  },
+  {
+    nombre:"Caja Promotora de Vivienda Militar y Policía - CAJAHONOR",
+    nit:"",
+    email:"notificaciones.judiciales@cajahonor.gov.co"
   },
 
   // Entidades con Presencia Territorial
@@ -179,6 +184,15 @@ email:"gravamenescajaagraria@parugp.com.co, parcal@parugp.com.co"
     email: "montealvernia1968@yahoo.es"
   },
   // Entidades Privadas
+
+  // Entidades Educativas
+  {
+    nombre:"Fundación de Educación Superior San José - USANJOSÉ",
+    nit:"",
+    email:"admisiones@usanjose.edu.co"
+  },
+
+  // Entidades Centrales de Riesgo Financiero
   {
     nombre: "CIFIN S.A.S.",
     nit: "900.572.445-1",
@@ -189,12 +203,23 @@ email:"gravamenescajaagraria@parugp.com.co, parcal@parugp.com.co"
     nit: "900.422.614-8",
     email: "servicioalciudadano@experian.com"
   },
-
+// Entidades Financieras
   {
     nombre: "Red Empresarial de Servicios S.A. - SUPERGIROS",
     nit: "900.084.777-9",
     email: "servicioalcliente@supergiros.com.co"
   },
+  {
+    nombre:"Compañía de Inversiones y Libranzas S.A.S. - PRESTAGENTE",
+    nit:"900.902.511-8",
+    email:"contacto@prestagente.com"
+  },
+  {
+    nombre:"Adelante Soluciones Financieras - ADDI",
+    nit:"901216.768-4",
+    email:"datos@addi.com"
+    },
+// Empresas Promotoras de Salud - EPS
   {
     nombre: "EPS SANITAS S.A.S.",
     nit: "800.251.440-6",
@@ -220,11 +245,7 @@ email:"gravamenescajaagraria@parugp.com.co, parcal@parugp.com.co"
     nit: "892.300.979-9",
     email: "gerencia@clinicadelcesar.com"
   },
-  {
-  nombre:"Adelante Soluciones Financieras - ADDI",
-  nit:"901216.768-4",
-  email:"datos@addi.com"
-  },
+ 
 
   // Empresas Proveedoras de Energía Eléctrica.
   {
@@ -277,4 +298,22 @@ countryNames.forEach(name => {
   option.value = name;
   listaPaises.appendChild(option);
  });
- 
+
+ let listaMunicipios = document.getElementById("listaMunicipios");
+ const nombreMunicipios = [
+            "Barrancas, La Guajira",
+            "Riohacha, La Guajira",
+            "Fonseca, La Guajira",
+            "Hatonuevo, La Guajira",
+            "Medellín, La Guajira",
+            "Bogotá D.C.",
+            "Uribia, La Guajira",
+            "Barranquilla, Atlántico",
+            "Soledad, Atlántico",
+            "Malambo, Atlántico"
+ ];
+ nombreMunicipios.forEach(name => {
+  const option = document.createElement("option");
+  option.value = name;
+  listaMunicipios.appendChild(option);
+ })
