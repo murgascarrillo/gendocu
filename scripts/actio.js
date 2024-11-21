@@ -87,7 +87,7 @@ function escribirIdAccionante()
 function elegirLugarVulneracion (){
    let x = document.getElementById("inputLugarVulneracionTutela");
    let y = document.getElementById("lugarJuez");
-   y.innerHTML = x.value;
+   y.innerHTML = x.value + " (Reparto)";
  }
 
  // Sección - Entidad Accionada.
@@ -189,3 +189,66 @@ function elegirLugarVulneracion (){
   }
  
  document.getElementById("botonResetEntidadAccionada").addEventListener("click", eliminarEntidadAccionada);
+
+
+ // Sección - Pretensiones
+
+let xPretension = document.getElementById("inputTextoPretension");
+let yPretension = document.getElementById("listaPretensiones");
+let inputTextPretension;
+let numPretension = 1;
+
+function escribirPretension() {
+  yPretension.innerHTML = "";
+  inputTextPretension = xPretension.value;
+}
+let newPretension;
+function agregarPretension() {
+// Create a new <p> element with the input value
+
+newPretension = document.createElement("p");
+ newPretension.id = "newPretension";
+ newPretension.style.margin = "0px";
+ newPretension.textContent = numPretension+". " + inputTextPretension + ".";
+ numPretension = numPretension + 1;
+
+// Insert the newPeticion element above on the list
+yPretension.parentNode.insertBefore(newPretension, yPretension);
+
+// Clear the input field
+xPretension.value = '';
+}
+
+document.getElementById("inputTextoPretension").addEventListener("input", escribirPretension);
+
+// Add event listener to add a new <li> element when the user clicks the "botonAddPeticion" button
+document.getElementById("botonAddPretension").addEventListener("click", agregarPretension);
+
+const inputPretension = document.getElementById('inputTextoPretension');
+
+inputPretension.addEventListener('input', function () {
+ // Set the minimum height
+ this.style.height = '24px'; // Or your preferred minimum height
+
+ // Adjust the height based on the scrollHeight
+ this.style.height = this.scrollHeight + 'px';
+
+ // Set the minimum width
+ if (this.scrollWidth > 90) { // Adjust the minimum width as needed
+   this.style.width = '90%'; // Or your preferred minimum width
+ } else {
+   this.style.width = this.scrollWidth + 'px';
+ }
+});
+
+ // Función para resetear Peticiones en caso de error.
+ let newPretensiones;
+ function eliminarPretension() {
+  newPretensiones = document.querySelectorAll("#newPretension");
+  newPretensiones.forEach((pretension) => {
+     pretension.remove();
+   });
+   numPretension = 1;
+ }
+
+document.getElementById("botonResetPretensiones").addEventListener("click", eliminarPretension);

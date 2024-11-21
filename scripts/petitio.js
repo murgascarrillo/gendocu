@@ -230,22 +230,10 @@ inputPeticion.addEventListener('input', function () {
    newPeticiones.forEach((peticion) => {
      peticion.remove();
    });
-   numPeticion = 0;
+   numPeticion = 1;
  }
 
 document.getElementById("botonResetPeticiones").addEventListener("click", eliminarPeticion);
-
-// en TUTELA:
-
-let botonPeticiones = document.getElementById("botonPeticiones");
-botonPeticiones.addEventListener("click",escribirPeticiones);
-let inputPeticiones = document.getElementById("textoInputPeticiones");
-function escribirPeticiones()
-     {
-       document.getElementById("spanPeticiones").innerHTML = inputPeticiones.value;
-       inputPeticiones.value = '';
-}
-
 
 // Sección - Hechos.
 

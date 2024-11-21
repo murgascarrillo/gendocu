@@ -565,8 +565,10 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       <p class="parrafosFormulario">
       Escribe lo que demandas. <strong>Ejemplo:</strong> Suministrar oportunamente medicamentos. Rectificar información personal.
       </p>
-      <input type="text" id="textoInputPeticiones" placeholder="Escribe las peticiones"/>
-      <input type="button" class="botonesFormulario" id="botonPeticiones" value="Redactar Peticiones"/>
+      <textarea id="inputTextoPretension" placeholder="Escriba su pretensión."></textarea>
+      <button type="submit" class="botonesFormulario" id="botonAddPretension"><strong>+</strong> Agregar Pretensión</button>
+
+      <button class="botonesFormulario" id="botonResetPretensiones">🔄Resetear</button>
   </div>
 
   <!-- Contenedor Hechos -->
@@ -657,9 +659,9 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       </p>
       
       <p id="section" style="text-align:center;"><strong>Pretensiones.</strong></p>
-      <p><strong>Primera. Tutelar</strong> los derechos fundamentales de <span id="spanDerechosFunda">_________</span> de la parte accionante <strong><span id="nombreAccionante2">_________</span></strong>, vulnerados por la parte accionada.
-                 <span id="spanPretensiones"></span>
-      </p>
+      <p><strong>Tutelar</strong> los derechos fundamentales de <span id="spanDerechosFunda">_________</span> de la parte accionante <strong><span id="nombreAccionante2">_________</span></strong>, vulnerados por la parte accionada.
+        En consecuencia, sírvase ordenar lo siguiente:
+        <div style="font-style:normal;" id="listaPretensiones">Acá van tus pretensiones.</div></p>
       <p id="section" style="text-align:center;"><strong>Hechos.</strong></p>
       <p>
         <ol type="1" id="listaHechosTutela">

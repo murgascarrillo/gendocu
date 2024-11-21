@@ -7,7 +7,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color:white;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   margin: 0.5px;
   overflow: auto;
@@ -32,7 +32,7 @@ body {
   padding: 10px;
 
   border-radius: 2ex;
-  background-color: white;
+  background-color: rgb(18, 29, 36);
   align-self:center;
 }
 
