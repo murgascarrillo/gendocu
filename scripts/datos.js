@@ -268,6 +268,12 @@ const datosEntidades = [
     nit: "900.632.211-4",
     email: "info@worldconnections.com.co"
   },
+  // Empresas de Telecomunicaciones | Telefonía Móvil
+  {
+    nombre:"Comunicación Celular S.A. Comcel S.A. - CLARO",
+    nit:"800.153.993-7",
+    email:"notificacionesclaro@claro.com.co"
+  },
   {
     nombre: "Carbones del Cerrejón Limited",
     nit: "860.069.804-2",
@@ -278,6 +284,7 @@ const datosEntidades = [
     nit: "900.667.590-1",
     email: "contactenos@cerrejon.com"
   },
+  // Empresas Aseguradoras
   {
     nombre: "COMPAÑÍA MUNDIAL DE SEGUROS S.A. - SEGUROS MUNDIAL",
     nit: "860.037.013-6",
