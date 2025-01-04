@@ -7,7 +7,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:white;
+  color:black;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   margin: 0.5px;
   overflow: auto;
@@ -30,9 +30,8 @@ body {
   color:black;
   margin:10px 10px 10px 10px;
   padding: 10px;
-
   border-radius: 2ex;
-  background-color: rgb(18, 29, 36);
+  background-color: rgb(44, 53, 59);
   align-self:center;
 }
 
@@ -47,7 +46,7 @@ header {
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: black;
+  color: whitesmoke;
   text-align: center;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   font-size: 50px;
@@ -57,7 +56,7 @@ h1 {
 h2 {
   margin: 0;
   padding: 0 0 0 0;
-  color: black;
+  color: rgb(255, 255, 255);
   text-align: center;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   font-size: 25px;
@@ -266,18 +265,17 @@ p
     }
       #parrafoIntro
       {
-        text-align: left;
+        text-align: center;
         padding: 1ex;
         font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
         width: auto;
-        
         max-width: 500px;
         height: auto;
         border-style: groove;
         border-width: 4.5px;
         border-radius: 2ex;
-        border-color: darkgreen;
-        background-color: black;
+        border-color: rgb(59, 105, 59);
+        background-color: #4c720b;
         color: white;
         font-size: 17px;
       }
@@ -362,13 +360,13 @@ button
     }
     .botonesSelector
     {
-      background-color: black;
+      background-color: #588210;
       color: white;
       width: 160px;
       font-size:medium;
       border-radius: 1.5em;
       padding: 0.3rem;
-      border-color: green;
+      border-color: rgb(50, 97, 50);
       font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
       font-weight: bold;
       margin: 5px;
@@ -376,7 +374,7 @@ button
       transition: transform 0.3s ease; /* Agregamos una transición suave en la propiedad transform */
     }
     .botonesSelector:hover{
-      color: rgb(28, 165, 12);
+      color:#211618;
       transform: translateY(4px); /* Al hacer hover, el botón se desplazará hacia abajo 5px */
     }
     .botonesSelector:active {
@@ -427,7 +425,7 @@ button
   }
 
       #botonCopiar{
-        background-color: black;
+        background-color: #0E46B5;
         color: white;
         width: auto;
         border-radius: 2em;
@@ -450,7 +448,7 @@ button
 
       #botonExportar
       {
-        background-color: black;
+        background-color: #B5282F;
         color: white;
         width: auto;
         border-radius: 2em;
@@ -527,10 +525,10 @@ strong{
 #strongCrea {
   font-weight: bold; /* Establece el grosor de la fuente */
   color: transparent; /* Hace que el texto sea transparente */
-  animation: rotateImages 7s linear infinite; /* Inicia la rotación de las imágenes una vez que la página ha cargado */
+  animation: rotateImages 100s linear infinite; /* Inicia la rotación de las imágenes una vez que la página ha cargado */
 
   /* Define las imágenes de fondo */
-  background-image: url('imagenes/crea1.webp');
+  background-image: url('imagenes/yellowNebula.webp');
   background-size: 69%; /* Ajusta el tamaño de las imágenes de fondo */
   background-clip: text; /* Aplica el fondo solo al área del texto */
   -webkit-background-clip: text; /* Para navegadores basados en Webkit como Chrome y Safari */

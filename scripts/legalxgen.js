@@ -138,7 +138,8 @@ function definirFecha(selectorDeFecha) {
     document.getElementById("fecha1").innerHTML = fechaFormateada + ".";
   }
   if (estadoContenedor === 2) {
-    document.getElementById("fechaContrato").innerHTML = fechaFormateada;
+    document.getElementById("fechaContrato1").innerHTML = fechaFormateada;
+    document.getElementById("fechaContrato2").innerHTML = fechaFormateada;
   }
 }
 

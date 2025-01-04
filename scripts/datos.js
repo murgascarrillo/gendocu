@@ -31,16 +31,24 @@ class Entidad {
 
 const datosEntidades = [
   // Entidades Públicas
+
+  // Entidades Territoriales
+
+  // Alcaldías
   {
     nombre: "Alcaldía de Barrancas, La Guajira",
     nit: "800.099.223-3",
     email: "contactenos@barrancas-laguajira.gov.co"
   },
+
+  // Gobernaciones
   {
     nombre: "Gobernación de La Guajira",
     nit: "892.115.015-1",
     email: "contactenos@laguajira.gov.co"
   },
+
+  // Entidades Nacionales
   {
     nombre: "Agencia Nacional de Tierras - ANT",
     nit: "900.948.953-8",
@@ -49,12 +57,13 @@ const datosEntidades = [
   {
     nombre: "Administradora Colombiana de Pensiones - Colpensiones",
     nit: "900.336.004-7",
-    email: "contacto@colpensiones.gov.co"
+    email: "contacto@colpensiones.gov.co",
+    email_judicial: "notificacionesjudiciales@colpensiones.gov.co"
   },
   {
     nombre: "Unidad para la Atención y Reparación Integral a las Víctimas - UARIV",
     nit: "",
-    email: ""
+    email: "servicioalciudadano@unidadvictimas.gov.co"
   },
   {
     nombre: "Migración Colombia",
@@ -80,6 +89,26 @@ const datosEntidades = [
     nombre: "Ministerio de Relaciones Exteriores",
     nit: "",
     email: ""
+  },
+  {
+    nombre: "Ministerio de Educación",
+    nit:"",
+    email:""
+  },
+  {
+    nombre:"Ministerio de Agricultura y Desarrollo Rural",
+    nit:"899.999.028-5",
+    email:"atencionalciudadano@minagricultura.gov.co"
+  },
+  {
+    nombre:"Ministerio del Trabajo",
+    nit:"",
+    email:"notificacionesjudiciales@mintrabajo.gov.co"
+  },
+  {
+    nombre:"Instituto de Crédito Educativo y Estudios Técnicos en el Exterior - ICETEX",
+    nit:"899.999.035-7",
+    email:""
   },
   {
     nombre:"Agencia Nacional Digital - AND",
@@ -135,6 +164,21 @@ const datosEntidades = [
     nombre:"Caja Promotora de Vivienda Militar y Policía - CAJAHONOR",
     nit:"",
     email:"notificaciones.judiciales@cajahonor.gov.co"
+  },
+  {
+    nombre:"Procuraduría General de la Nación",
+    nit:"",
+    email:"procesosjudiciales@procuraduria.gov.co"
+  },
+  {
+    nombre:"Superintendencia Nacional de Salud",
+    nit:"",
+    email:"snsnotificacionesjudiciales@supersalud.gov.co"
+  },
+  {
+    nombre:"Consejo Superior de la Judicatura",
+    nit:"",
+    email:"info@cendoj.ramajudicial.gov.co"
   },
 
   // Entidades con Presencia Territorial
@@ -227,7 +271,7 @@ const datosEntidades = [
   },
   {
     nombre: "NUEVA EPS S.A.",
-    nit: "",
+    nit: "900.156.264-2",
     email: "secretaria.general@nuevaeps.com.co"
   },
   {
@@ -280,6 +324,11 @@ const datosEntidades = [
     email: "contactenos@cerrejon.com"
   },
   {
+    nombre: "Sodexo S.A.S.",
+    nit: "800.230.447-7",
+    email: "claudia.diaz@sodexo.com"
+  },
+  {
     nombre: "Isa Intercolombia S.A. E.S.P.",
     nit: "900.667.590-1",
     email: "contactenos@cerrejon.com"
@@ -290,6 +339,11 @@ const datosEntidades = [
     nit: "860.037.013-6",
     email: "mundial@segurosmundial.com.co"
   },
+  {
+    nombre:"Compañía de Seguros Bolívar S.A.",
+    nit:"860.002.503-2",
+    email:"servicioalcliente@segurosbolivar.com"
+  }
 ];
 
 
