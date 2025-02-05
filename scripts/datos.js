@@ -164,7 +164,7 @@ email: "contactenos@igac.gov.co"
 {
 nombre: "Fiscalía General de la Nación",
 nit: "",
-email: "juridicanotificacionestutela@fiscalia.gov.co"
+email: "ges.documentalpqrs@fiscalia.gov.co, juridicanotificacionestutela@fiscalia.gov.co"
 },
 {
 nombre: "Instituto Nacional Penitenciario y Carcelario – INPEC",
@@ -3734,62 +3734,62 @@ email: "docebarranquilla@supernotariado.gov.co"
 {
 nombre: "Notaría Única de Baranoa",
 nit: "",
-email: "Notaría Única debaranoa@supernotariado.gov.co"
+email: "unicabaranoa@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Campo de la Cruz ",
 nit: "",
-email: "Notaría Única decampodelacruz@supernotariado.gov.co"
+email: "unicacampodelacruz@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Galapa",
 nit: "",
-email: "Notaría Única degalapa@supernotariado.gov.co"
+email: "unicagalapa@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Juan de Acosta",
 nit: "",
-email: "Notaría Única dejuandeacosta@supernotariado.gov.co"
+email: "unicajuandeacosta@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Luruaco",
 nit: "",
-email: "Notaría Única deluruaco@supernotariado.gov.co"
+email: "unicaluruaco@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Malambo",
 nit: "",
-email: "Notaría Única demalambo@supernotariado.gov.co"
+email: "unicamalambo@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Manati",
 nit: "",
-email: "Notaría Única demanati@supernotariado.gov.co"
+email: "unicamanati@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Ponedera",
 nit: "",
-email: "Notaría Única deponedera@supernotariado.gov.co"
+email: "unicaponedera@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Puerto Colombia ",
 nit: "",
-email: "Notaría Única depuertocolombia@supernotariado.gov.co"
+email: "unicapuertocolombia@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Repelon",
 nit: "",
-email: "Notaría Única derepelon@supernotariado.gov.co"
+email: "unicarepelon@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Sabanalarga",
 nit: "",
-email: "Notaría Única desabanalarga@supernotariado.gov.co"
+email: "unicasabanalarga@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Santo Tomas ",
 nit: "",
-email: "Notaría Única desantotomas@supernotariado.gov.co"
+email: "unicasantotomas@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Primera de Soledad",
@@ -3839,127 +3839,127 @@ email: "septimacartagena@supernotariado.gov.co"
 {
 nombre: "Notaría Única de Achi",
 nit: "",
-email: "Notaría Única deachi@supernotariado.gov.co"
+email: "unicaachi@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Arjona",
 nit: "",
-email: "Notaría Única dearjona@supernotariado.gov.co"
+email: "unicaarjona@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Barranco de Loba",
 nit: "",
-email: "Notaría Única debarrancodeloba@supernotariado.gov.co"
+email: "unicabarrancodeloba@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Calamar",
 nit: "",
-email: "Notaría Única decalamar@supernotariado.gov.co"
+email: "unicacalamar@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Cordoba",
 nit: "",
-email: "Notaría Única decordoba@supernotariado.gov.co"
+email: "unicacordoba@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Carmen de Bolivar",
 nit: "",
-email: "Notaría Única decarmendebolivar@supernotariado.gov.co"
+email: "unicacarmendebolivar@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de El Guamo Bolivar",
 nit: "",
-email: "Notaría Única deelguamobolivar@supernotariado.gov.co"
+email: "unicaelguamobolivar@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Magangue",
 nit: "",
-email: "Notaría Única demagangue@supernotariado.gov.co"
+email: "unicamagangue@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Mahates",
 nit: "",
-email: "Notaría Única demahates@supernotariado.gov.co"
+email: "unicamahates@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Maria La Baja",
 nit: "",
-email: "Notaría Única demarialabaja@supernotariado.gov.co"
+email: "unicamarialabaja@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Mompos",
 nit: "",
-email: "Notaría Única demompos@supernotariado.gov.co"
+email: "unicamompos@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Morales Bolvar ",
 nit: "",
-email: "Notaría Única demoralesbolvar@supernotariado.gov.co"
+email: "unicamoralesbolvar@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Pinillos",
 nit: "",
-email: "Notaría Única depinillos@supernotariado.gov.co"
+email: "unicapinillos@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Rio Viejo ",
 nit: "",
-email: "Notaría Única derioviejo@supernotariado.gov.co"
+email: "unicarioviejo@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Estanislao ",
 nit: "",
-email: "Notaría Única desanestanislao@supernotariado.gov.co"
+email: "unicasanestanislao@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Jacinto ",
 nit: "",
-email: "Notaría Única desanjacinto@supernotariado.gov.co"
+email: "unicasanjacinto@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Juan Nepomuceno",
 nit: "",
-email: "Notaría Única desanjuannepomuceno@supernotariado.gov.co"
+email: "unicasanjuannepomuceno@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Martin de Loba ",
 nit: "",
-email: "Notaría Única desanmartindeloba@supernotariado.gov.co"
+email: "unicasanmartindeloba@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Pablo Bolivar",
 nit: "",
-email: "Notaría Única desanpablobolivar@supernotariado.gov.co"
+email: "unicasanpablobolivar@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Santa Catalina ",
 nit: "",
-email: "Notaría Única desantacatalina@supernotariado.gov.co"
+email: "unicasantacatalina@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Santa Rosa del Sur ",
 nit: "",
-email: "Notaría Única desantarosadelsur@supernotariado.gov.co"
+email: "unicasantarosadelsur@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Simiti",
 nit: "",
-email: "Notaría Única desimiti@supernotariado.gov.co"
+email: "unicasimiti@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Talaigua Nuevo ",
 nit: "",
-email: "Notaría Única detalaiguanuevo@supernotariado.gov.co"
+email: "unicatalaiguanuevo@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Turbaco",
 nit: "",
-email: "Notaría Única deturbaco@supernotariado.gov.co"
+email: "unicaturbaco@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Zambrano",
 nit: "",
-email: "Notaría Única dezambrano@supernotariado.gov.co"
+email: "unicazambrano@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Primera de Valledupar",
@@ -3979,107 +3979,107 @@ email: "terceravalledupar@supernotariado.gov.co"
 {
 nombre: "Notaría Única de Aguachica",
 nit: "",
-email: "Notaría Única deaguachica@supernotariado.gov.co"
+email: "unicaaguachica@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Codazzi",
 nit: "",
-email: "Notaría Única decodazzi@supernotariado.gov.co"
+email: "unicacodazzi@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Astrea",
 nit: "",
-email: "Notaría Única deastrea@supernotariado.gov.co"
+email: "unicaastrea@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Becerril",
 nit: "",
-email: "Notaría Única debecerril@supernotariado.gov.co"
+email: "unicabecerril@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Bosconia",
 nit: "",
-email: "Notaría Única debosconia@supernotariado.gov.co"
+email: "unicabosconia@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Chimichagua",
 nit: "",
-email: "Notaría Única dechimichagua@supernotariado.gov.co"
+email: "unicachimichagua@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Chiriguana",
 nit: "",
-email: "Notaría Única dechiriguana@supernotariado.gov.co"
+email: "unicachiriguana@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Curumani",
 nit: "",
-email: "Notaría Única decurumani@supernotariado.gov.co"
+email: "unicacurumani@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de El Copey ",
 nit: "",
-email: "Notaría Única deelcopey@supernotariado.gov.co"
+email: "unicaelcopey@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de El Paso ",
 nit: "",
-email: "Notaría Única deelpaso@supernotariado.gov.co"
+email: "unicaelpaso@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Gamarra",
 nit: "",
-email: "Notaría Única degamarra@supernotariado.gov.co"
+email: "unicagamarra@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Gonzalez",
 nit: "",
-email: "Notaría Única degonzalez@supernotariado.gov.co"
+email: "unicagonzalez@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de La Gloria ",
 nit: "",
-email: "Notaría Única delagloria@supernotariado.gov.co"
+email: "unicalagloria@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de La Jagua de Ibirico ",
 nit: "",
-email: "Notaría Única delajaguadeibirico@supernotariado.gov.co"
+email: "unicalajaguadeibirico@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Pailitas",
 nit: "",
-email: "Notaría Única depailitas@supernotariado.gov.co"
+email: "unicapailitas@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Pueblo Bello ",
 nit: "",
-email: "Notaría Única depueblobello@supernotariado.gov.co"
+email: "unicapueblobello@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Rio de Oro",
 nit: "",
-email: "Notaría Única deriodeoro@supernotariado.gov.co"
+email: "unicariodeoro@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de La Paz Robles",
 nit: "",
-email: "Notaría Única delapazrobles@supernotariado.gov.co"
+email: "unicalapazrobles@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Alberto ",
 nit: "",
-email: "Notaría Única desanalberto@supernotariado.gov.co"
+email: "unicasanalberto@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Diego ",
 nit: "",
-email: "Notaría Única desandiego@supernotariado.gov.co"
+email: "unicasandiego@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Tamalameque",
 nit: "",
-email: "Notaría Única detamalameque@supernotariado.gov.co"
+email: "unicatamalameque@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Primera de Monteria",
@@ -4099,102 +4099,102 @@ email: "terceramonteria@supernotariado.gov.co"
 {
 nombre: "Notaría Única de Ayapel",
 nit: "",
-email: "Notaría Única deayapel@supernotariado.gov.co"
+email: "unicaayapel@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Buenavista",
 nit: "",
-email: "Notaría Única debuenavista@supernotariado.gov.co"
+email: "unicabuenavista@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Cerete",
 nit: "",
-email: "Notaría Única decerete@supernotariado.gov.co"
+email: "unicacerete@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Chinu",
 nit: "",
-email: "Notaría Única dechinu@supernotariado.gov.co"
+email: "unicachinu@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Cienaga de Oro",
 nit: "",
-email: "Notaría Única decienagadeoro@supernotariado.gov.co"
+email: "unicacienagadeoro@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Lorica",
 nit: "",
-email: "Notaría Única delorica@supernotariado.gov.co"
+email: "unicalorica@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Montelibano",
 nit: "",
-email: "Notaría Única demontelibano@supernotariado.gov.co"
+email: "unicamontelibano@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Planeta Rica ",
 nit: "",
-email: "Notaría Única deplanetarica@supernotariado.gov.co"
+email: "unicaplanetarica@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Pueblo Nuevo ",
 nit: "",
-email: "Notaría Única depueblonuevo@supernotariado.gov.co"
+email: "unicapueblonuevo@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Puerto Libertador ",
 nit: "",
-email: "Notaría Única depuertolibertador@supernotariado.gov.co"
+email: "unicapuertolibertador@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Purisima",
 nit: "",
-email: "Notaría Única depurisima@supernotariado.gov.co"
+email: "unicapurisima@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Sahagun",
 nit: "",
-email: "Notaría Única desahagun@supernotariado.gov.co"
+email: "unicasahagun@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Andres de Sotavento ",
 nit: "",
-email: "Notaría Única desanandresdesotavento@supernotariado.gov.co"
+email: "unicasanandresdesotavento@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Antero ",
 nit: "",
-email: "Notaría Única desanantero@supernotariado.gov.co"
+email: "unicasanantero@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Bernardo del Viento",
 nit: "",
-email: "Notaría Única desanbernardodelviento@supernotariado.gov.co"
+email: "unicasanbernardodelviento@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Carlos ",
 nit: "",
-email: "Notaría Única desancarlos@supernotariado.gov.co"
+email: "unicasancarlos@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Jose de Ure ",
 nit: "",
-email: "Notaría Única desanjosedeure@supernotariado.gov.co"
+email: "unicasanjosedeure@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Pelayo ",
 nit: "",
-email: "Notaría Única desanpelayo@supernotariado.gov.co"
+email: "unicasanpelayo@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Tierralta",
 nit: "",
-email: "Notaría Única detierralta@supernotariado.gov.co"
+email: "unicatierralta@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Valencia",
 nit: "",
-email: "Notaría Única devalencia@supernotariado.gov.co"
+email: "unicavalencia@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Primera de Riohacha",
@@ -4209,32 +4209,32 @@ email: "segundariohacha@supernotariado.gov.co"
 {
 nombre: "Notaría Única de Barrancas",
 nit: "",
-email: "Notaría Única debarrancas@supernotariado.gov.co"
+email: "unicabarrancas@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Fonseca",
 nit: "",
-email: "Notaría Única defonseca@supernotariado.gov.co"
+email: "unicafonseca@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Maicao",
 nit: "",
-email: "Notaría Única demaicao@supernotariado.gov.co"
+email: "unicamaicao@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Juan del Cesar ",
 nit: "",
-email: "Notaría Única desanjuandelcesar@supernotariado.gov.co"
+email: "unicasanjuandelcesar@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Uribia",
 nit: "",
-email: "Notaría Única deuribia@supernotariado.gov.co"
+email: "unicauribia@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Villanueva Guajira ",
 nit: "",
-email: "Notaría Única devillanuevaguajira@supernotariado.gov.co"
+email: "unicavillanuevaguajira@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Primera de Santa Marta ",
@@ -4259,112 +4259,112 @@ email: "cuartasantamarta@supernotariado.gov.co"
 {
 nombre: "Notaría Única de Algarrobo",
 nit: "",
-email: "Notaría Única dealgarrobo@supernotariado.gov.co"
+email: "unicaalgarrobo@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Aracataca",
 nit: "",
-email: "Notaría Única dearacataca@supernotariado.gov.co"
+email: "unicaaracataca@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Ariguani",
 nit: "",
-email: "Notaría Única deariguani@supernotariado.gov.co"
+email: "unicaariguani@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Cerro de San Antonio ",
 nit: "",
-email: "Notaría Única decerrodesanantonio@supernotariado.gov.co"
+email: "unicacerrodesanantonio@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Chivolo",
 nit: "",
-email: "Notaría Única dechivolo@supernotariado.gov.co"
+email: "unicachivolo@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Cienaga",
 nit: "",
-email: "Notaría Única decienaga@supernotariado.gov.co"
+email: "unicacienaga@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de El Banco ",
 nit: "",
-email: "Notaría Única deelbanco@supernotariado.gov.co"
+email: "unicaelbanco@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de El Piñon Magdalena",
 nit: "",
-email: "Notaría Única deelpinonmagdalena@supernotariado.gov.co"
+email: "unicaelpinonmagdalena@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Fundacion",
 nit: "",
-email: "Notaría Única defundacion@supernotariado.gov.co"
+email: "unicafundacion@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Guamal",
 nit: "",
-email: "Notaría Única deguamal@supernotariado.gov.co"
+email: "unicaguamal@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Pedraza",
 nit: "",
-email: "Notaría Única depedraza@supernotariado.gov.co"
+email: "unicapedraza@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Pivijay",
 nit: "",
-email: "Notaría Única depivijay@supernotariado.gov.co"
+email: "unicapivijay@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Plato",
 nit: "",
-email: "Notaría Única deplato@supernotariado.gov.co"
+email: "unicaplato@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Remolino",
 nit: "",
-email: "Notaría Única deremolino@supernotariado.gov.co"
+email: "unicaremolino@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Sabanas de San Angel ",
 nit: "",
-email: "Notaría Única desabanasdesanangel@supernotariado.gov.co"
+email: "unicasabanasdesanangel@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Salamina Magdalena ",
 nit: "",
-email: "Notaría Única desalaminamagdalena@supernotariado.gov.co"
+email: "unicasalaminamagdalena@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Sebastian de Buenavista ",
 nit: "",
-email: "Notaría Única desansebastiandebuenavista@supernotariado.gov.co"
+email: "unicasansebastiandebuenavista@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Zenon ",
 nit: "",
-email: "Notaría Única desanzenon@supernotariado.gov.co"
+email: "unicasanzenon@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Santa Ana ",
 nit: "",
-email: "Notaría Única desantaana@supernotariado.gov.co"
+email: "unicasantaana@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Sitio Nuevo ",
 nit: "",
-email: "Notaría Única desitionuevo@supernotariado.gov.co"
+email: "unicasitionuevo@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Tenerife",
 nit: "",
-email: "Notaría Única detenerife@supernotariado.gov.co"
+email: "unicatenerife@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Zona Bananera ",
 nit: "",
-email: "Notaría Única dezonabananera@supernotariado.gov.co"
+email: "unicazonabananera@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Primera de Sincelejo",
@@ -4384,102 +4384,102 @@ email: "tercerasincelejo@supernotariado.gov.co"
 {
 nombre: "Notaría Única de Caimito",
 nit: "",
-email: "Notaría Única decaimito@supernotariado.gov.co"
+email: "unicacaimito@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Coloso",
 nit: "",
-email: "Notaría Única decoloso@supernotariado.gov.co"
+email: "unicacoloso@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Corozal",
 nit: "",
-email: "Notaría Única decorozal@supernotariado.gov.co"
+email: "unicacorozal@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Galeras",
 nit: "",
-email: "Notaría Única degaleras@supernotariado.gov.co"
+email: "unicagaleras@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Guaranda",
 nit: "",
-email: "Notaría Única deguaranda@supernotariado.gov.co"
+email: "unicaguaranda@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Los Palmitos ",
 nit: "",
-email: "Notaría Única delospalmitos@supernotariado.gov.co"
+email: "unicalospalmitos@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Majagual",
 nit: "",
-email: "Notaría Única demajagual@supernotariado.gov.co"
+email: "unicamajagual@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Ovejas",
 nit: "",
-email: "Notaría Única deovejas@supernotariado.gov.co"
+email: "unicaovejas@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Palmito",
 nit: "",
-email: "Notaría Única depalmito@supernotariado.gov.co"
+email: "unicapalmito@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Sampues",
 nit: "",
-email: "Notaría Única desampues@supernotariado.gov.co"
+email: "unicasampues@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Benito Abad",
 nit: "",
-email: "Notaría Única desanbenitoabad@supernotariado.gov.co"
+email: "unicasanbenitoabad@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Marcos ",
 nit: "",
-email: "Notaría Única desanmarcos@supernotariado.gov.co"
+email: "unicasanmarcos@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Onofre ",
 nit: "",
-email: "Notaría Única desanonofre@supernotariado.gov.co"
+email: "unicasanonofre@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Pedro ",
 nit: "",
-email: "Notaría Única desanpedro@supernotariado.gov.co"
+email: "unicasanpedro@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Since",
 nit: "",
-email: "Notaría Única desince@supernotariado.gov.co"
+email: "unicasince@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Sucre",
 nit: "",
-email: "Notaría Única desucre@supernotariado.gov.co"
+email: "unicasucre@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Tolu",
 nit: "",
-email: "Notaría Única detolu@supernotariado.gov.co"
+email: "unicatolu@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Tolu Viejo",
 nit: "",
-email: "Notaría Única detoluviejo@supernotariado.gov.co"
+email: "unicatoluviejo@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Andres Islas",
 nit: "",
-email: "Notaría Única desanandresislas@supernotariado.gov.co"
+email: "unicasanandresislas@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Providencia",
 nit: "",
-email: "Notaría Única deprovidencia@supernotariado.gov.co"
+email: "unicaprovidencia@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Primera de Florencia ",
@@ -4494,32 +4494,32 @@ email: "segundaflorencia@supernotariado.gov.co"
 {
 nombre: "Notaría Única de Belen de los Andaquies",
 nit: "",
-email: "Notaría Única debelendelosandaquies@supernotariado.gov.co"
+email: "unicabelendelosandaquies@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Cartagena del Chaira ",
 nit: "",
-email: "Notaría Única decartagenadelchaira@supernotariado.gov.co"
+email: "unicacartagenadelchaira@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de El Doncello",
 nit: "",
-email: "Notaría Única deeldoncello@supernotariado.gov.co"
+email: "unicaeldoncello@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de La Montañita",
 nit: "",
-email: "Notaría Única delamontanita@supernotariado.gov.co"
+email: "unicalamontanita@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Puerto Rico Caqueta ",
 nit: "",
-email: "Notaría Única depuertoricocaqueta@supernotariado.gov.co"
+email: "unicapuertoricocaqueta@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Vicente del Caguan",
 nit: "",
-email: "Notaría Única desanvicentedelcaguan@supernotariado.gov.co"
+email: "unicasanvicentedelcaguan@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Primera de Villavicencio ",
@@ -4544,87 +4544,87 @@ email: "cuartavillavicencio@supernotariado.gov.co"
 {
 nombre: "Notaría Única de Acacias ",
 nit: "",
-email: "Notaría Única deacacias@supernotariado.gov.co"
+email: "unicaacacias@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Granada Meta",
 nit: "",
-email: "Notaría Única degranadameta@supernotariado.gov.co"
+email: "unicagranadameta@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de La Macarena",
 nit: "",
-email: "Notaría Única delamacarena@supernotariado.gov.co"
+email: "unicalamacarena@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Uribe Uribe",
 nit: "",
-email: "Notaría Única deuribeuribe@supernotariado.gov.co"
+email: "unicauribeuribe@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Puerto Gaitan",
 nit: "",
-email: "Notaría Única depuertogaitan@supernotariado.gov.co"
+email: "unicapuertogaitan@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Puerto Lopez",
 nit: "",
-email: "Notaría Única depuertolopez@supernotariado.gov.co"
+email: "unicapuertolopez@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Puerto Rico Rico ",
 nit: "",
-email: "Notaría Única depuertoricorico@supernotariado.gov.co"
+email: "unicapuertoricorico@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Juan de Arama",
 nit: "",
-email: "Notaría Única desanjuandearama@supernotariado.gov.co"
+email: "unicasanjuandearama@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Martin",
 nit: "",
-email: "Notaría Única desanmartin@supernotariado.gov.co"
+email: "unicasanmartin@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Vistahermosa ",
 nit: "",
-email: "Notaría Única devistahermosa@supernotariado.gov.co"
+email: "unicavistahermosa@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Arauca ",
 nit: "",
-email: "Notaría Única dearauca@supernotariado.gov.co"
+email: "unicaarauca@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Arauquita ",
 nit: "",
-email: "Notaría Única dearauquita@supernotariado.gov.co"
+email: "unicaarauquita@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Cravo Norte",
 nit: "",
-email: "Notaría Única decravonorte@supernotariado.gov.co"
+email: "unicacravonorte@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Fortul ",
 nit: "",
-email: "Notaría Única defortul@supernotariado.gov.co"
+email: "unicafortul@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Puerto Rondon",
 nit: "",
-email: "Notaría Única depuertorondon@supernotariado.gov.co"
+email: "unicapuertorondon@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Saravena ",
 nit: "",
-email: "Notaría Única desaravena@supernotariado.gov.co"
+email: "unicasaravena@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Tame ",
 nit: "",
-email: "Notaría Única detame@supernotariado.gov.co"
+email: "unicatame@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Primera de Yopal ",
@@ -4639,72 +4639,72 @@ email: "segundayopal@supernotariado.gov.co"
 {
 nombre: "Notaría Única de Aguazul ",
 nit: "",
-email: "Notaría Única deaguazul@supernotariado.gov.co"
+email: "unicaaguazul@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Hato Corozal",
 nit: "",
-email: "Notaría Única dehatocorozal@supernotariado.gov.co"
+email: "unicahatocorozal@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Monterrey ",
 nit: "",
-email: "Notaría Única demonterrey@supernotariado.gov.co"
+email: "unicamonterrey@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Nunchia ",
 nit: "",
-email: "Notaría Única denunchia@supernotariado.gov.co"
+email: "unicanunchia@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Orocue ",
 nit: "",
-email: "Notaría Única deorocue@supernotariado.gov.co"
+email: "unicaorocue@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Paz de Ariporo ",
 nit: "",
-email: "Notaría Única depazdeariporo@supernotariado.gov.co"
+email: "unicapazdeariporo@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Tauramena ",
 nit: "",
-email: "Notaría Única detauramena@supernotariado.gov.co"
+email: "unicatauramena@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Villanueva Casanare",
 nit: "",
-email: "Notaría Única devillanuevacasanare@supernotariado.gov.co"
+email: "unicavillanuevacasanare@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Mocoa ",
 nit: "",
-email: "Notaría Única democoa@supernotariado.gov.co"
+email: "unicamocoa@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Orito ",
 nit: "",
-email: "Notaría Única deorito@supernotariado.gov.co"
+email: "unicaorito@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Puerto Asis",
 nit: "",
-email: "Notaría Única depuertoasis@supernotariado.gov.co"
+email: "unicapuertoasis@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Puerto Leguizamo",
 nit: "",
-email: "Notaría Única depuertoleguizamo@supernotariado.gov.co"
+email: "unicapuertoleguizamo@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de San Miguel",
 nit: "",
-email: "Notaría Única desanmiguel@supernotariado.gov.co"
+email: "unicasanmiguel@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Santiago ",
 nit: "",
-email: "Notaría Única desantiago@supernotariado.gov.co"
+email: "unicasantiago@supernotariado.gov.co"
 },
 {
 nombre: "Notaría Única de Valle del Guamez ",
@@ -4755,6 +4755,17 @@ email: "unicasantarosalia@supernotariado.gov.co"
 nombre: "Notaría Única de Cumaribo ",
 nit: "",
 email: "unicacumaribo@supernotariado.gov.co"
+},
+// Oficinas de Registro de Instrumentos Públicos - ORIP
+{
+    nombre:"Oficina de Registro de Instrumentos Públicos de Riohacha, La Guajira",
+    nit:"",
+    email:"ofiregisriohacha@supernotariado.gov.co"
+},
+{
+    nombre:"Oficina de Registro de Instrumentos Públicos de San Juan del Cesar, La Guajira",
+    nit:"",
+    email:"ofiregissanjuandelcesar@supernotariado.gov.co"
 },
 // Instituciones Educativas
 {
@@ -4862,11 +4873,23 @@ nombre: "World Connections S.A.S.",
 nit: "900.632.211-4",
 email: "info@worldconnections.com.co"
 },
-// Empresas de TelecomNotaría Única deciones | Telefonía Móvil
+// Empresas Proveedoras de Gas Domiciliario.
+{
+    nombre:"Gases de La Guajira S.A. E.S.P.",
+    nit:"892.115.036-6",
+    email:"gasguajira@gasguajira.com"
+},
+// Empresas de Telecomunicaciones | Telefonía Móvil
 {
 nombre:"ComNotaría Única deción Celular S.A. Comcel S.A. - CLARO",
 nit:"800.153.993-7",
 email:"notificacionesclaro@claro.com.co"
+},
+// Otro Tipo de Empresas.
+{
+nombre:"Su Personal Ya S.A.S.",
+nit:"901.203.439-1",
+email:"coordinadorgeneral@supersonalya.com.co"
 },
 {
 nombre: "Carbones del Cerrejón Limited",

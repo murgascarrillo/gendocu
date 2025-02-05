@@ -1,4 +1,4 @@
-# Gendocu en Python.
+# gendocu en Python.
 
 # Con este script generas Contratos típicos colombianos a partir de entradas (input) del usuario.
 
@@ -8,11 +8,13 @@ from datetime import datetime
 
 
 
+# Declaramos variables nativas. ¿cómo hacer esto automático?
+
 fecha = datetime.now()
 
 nombre_arrendatario = 'Carlos Murgas'
 id_arrendatario = '12345'
-domicilio_arrendatario = 'Barrancosa, La Guajirita'
+domicilio_arrendatario = 'Barrancosa, La Guaja'
 email_arrendatario = 'email@dominio.com'
 
 nombre_arrendador = 'Kesa Bor'

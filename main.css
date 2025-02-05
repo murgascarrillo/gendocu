@@ -31,7 +31,7 @@ body {
   margin:10px 10px 10px 10px;
   padding: 10px;
   border-radius: 2ex;
-  background-color: rgb(44, 53, 59);
+  background-color: rgb(250, 249, 255);
   align-self:center;
 }
 
@@ -46,7 +46,7 @@ header {
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: whitesmoke;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   font-size: 50px;
@@ -56,7 +56,7 @@ h1 {
 h2 {
   margin: 0;
   padding: 0 0 0 0;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-align: center;
   font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   font-size: 25px;
@@ -218,7 +218,6 @@ ol {
   .item-11-contenedor {
     flex: 0 0 50%; /* Ocupa el otro 50% del ancho */
     position: relative; /* Se queda fijo en la parte derecha del contenedor */
-    height: 100%;
     max-width: 100%;
     max-height: 100%;
     width: 100%;
@@ -229,7 +228,6 @@ ol {
 
     flex: 0 0 50%; /* Ocupa exactamente el 50% del ancho */
     position: relative; /* Se queda fijo en la parte derecha del contenedor */
-    height: 100%; /* Abarca la altura completa del viewport */
     width: fit-content;
     max-width: 100%;
     max-height: 100%;
@@ -262,6 +260,7 @@ p
       font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
       font-size: 0.9rem;
       margin:7px;
+      color: black;
     }
       #parrafoIntro
       {
@@ -276,12 +275,23 @@ p
         border-radius: 2ex;
         border-color: rgb(59, 105, 59);
         background-color: #4c720b;
-        color: white;
+        color: rgb(0, 0, 0);
         font-size: 17px;
       }
       #parrafoSelector
       {
         font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
+        color:black;
+        text-align: center;
+        font-size: medium;
+      }
+      #call-to-action
+      {
+        color:black;
+      }
+      #version-marca
+      {
+        color: black;
       }
       #contenidoFundamentos
       {
@@ -361,7 +371,7 @@ button
     .botonesSelector
     {
       background-color: #588210;
-      color: white;
+      color: rgb(0, 0, 0);
       width: 160px;
       font-size:medium;
       border-radius: 1.5em;
@@ -426,7 +436,7 @@ button
 
       #botonCopiar{
         background-color: #0E46B5;
-        color: white;
+        color: rgb(0, 0, 0);
         width: auto;
         border-radius: 2em;
         border-color: green;
@@ -449,7 +459,7 @@ button
       #botonExportar
       {
         background-color: #B5282F;
-        color: white;
+        color: rgb(0, 0, 0);
         width: auto;
         border-radius: 2em;
         border-color: green;
@@ -471,7 +481,7 @@ button
       #botonContribuir
       {
         background-color: black;
-        color: white;
+        color: rgb(0, 0, 0);
         width: auto;
         border-radius: 2em;
         border-color: green;

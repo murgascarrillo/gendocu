@@ -14,15 +14,12 @@
   <meta name="twitter:creator" content="@murgascarrillo" />
   <meta name="twitter:image" content="https://github.com/murgascarrillo/gendocu/blob/main/imagenes/hero.webp" />
   <meta name="twitter:image:alt" content="Imagen para Twitter Cards de gendocu." />
-  <meta property="og:description" content="Página web de gendocu, Herramienta en código libre para generar documentos jurídicos. ¡Entra y úsalo!"/>
+  <meta property="og:description" content="Página web de gendocu, Herramienta en código libre para generar documentos jurídicos. Usalo en el diario!"/>
   <meta property="og:image" content="https://github.com/murgascarrillo/gendocu/blob/main/imagenes/hero.webp"/>
   <meta name="robots" content="index,follow,archive,translate,imageindex"/>
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'/>
   <script src= "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1722760400999130"
-     crossorigin="anonymous"></script>
 </head>
-
 <body>
 <header>
   <button type="button" id="botonModoNocturno">
@@ -30,39 +27,29 @@
   </button>
 </header>
 <!-- Título -->
-
 <h1 name="textoEntorno"> <img id="logo" src="imagenes/hero.webp" style="box-shadow: 1.3px 1.3px 1.3px 0px #717479; border-radius: 50%;"/>
   gendocu
 </h1>
-
 <!-- Introducción -->
-
-
 <h2><strong id="strongCrea"><strong>Gen</strong>era:</strong><br/>
   Peticiones, Contratos y Acciones públicas.<br/>Rápido y Sencillo.
 </h2>
-
 <div class="contenedorIntroduccion">
   <p class="parrafosFormulario" id="parrafoIntro">
     📥<strong>Llena</strong> de <strong>Contenido</strong> tu <strong>Documento</strong>📄<br />
-    Las secciones indican la <strong>Información</strong> que puedes <strong>ingresar</strong>
+    Cada <strong>Módulo</strong> indica la <strong>Información</strong> que has de <strong>Ingresar</strong>
     <br/><span style="display:block; margin: auto;text-align: center;">👇</span>
   </p>
-
 </div>
-
-  <p class="parrafosFormulario" id="parrafoSelector" style="text-align: center;font-size: medium;color: whitesmoke;">Selecciona el <strong>tipo de documento </strong> que necesitas:</p>
+<p class="parrafosFormulario" id="parrafoSelector">Selecciona el <strong>tipo de documento </strong> a generar:</p>
 <div class="contenedorSelector">
-
     <input type="button" class="botonesSelector" value="Petición" id="botonGenPeticion"/>
     <input type="button" class="botonesSelector" value="Contrato" id="botonGenContrato"/>
     <input type="button" class="botonesSelector" value="Acción Pública" id="botonGenTutela"/>
+    <input type="button" class="botonesSelector" value="Poder" id="botonGenPoder"/>
 </div>
-
 <!--  Acá comienzan los módulos para agregar contenido al documento según su tipo-->
-
 <!-- Si seleccionas el tipo de documento 'peticion' entonces se visualiza el siguiente módulo:-->
-
 <!-- Contenedor de contenedores de módulos Petición-->
 <div class="contenedorGen" id="contenedorPeticion">
   <div class="items-contenedor">
@@ -78,7 +65,6 @@
       <input type="date" id="datePickerPetitio">
       <input type="submit" class="botonesFormulario" id="botonFechaPeticion" value="Fijar Fecha"/>
   </div>
-  
   <!-- Contenedor Usuario -->
   <div class="item">
     <h3>
@@ -88,7 +74,6 @@
       Escribe el <strong>Nombre</strong> de quien presentará la petición. <strong>Ejemplo:</strong> Carlos Murgas.
       </p>
       <input type="text" id="textoInputNombreUsuario" maxlength="50" oninput="escribirUsuario()" placeholder="Escriba su nombre."/>
-      
       <p class="parrafosFormulario">
         <label for="inputPais">Selecciona el país de <strong>Nacionalidad</strong> de quien crea el documento. <strong>Ejemplo:</strong> Colombia.</label>
       </p>
@@ -97,15 +82,12 @@
       <p class="parrafosFormulario">
         <label for="listaTipoDocumentoSolicitante">Escribe el <strong>Tipo</strong> de Documento de Identidad. <strong>Ejemplo:</strong> Cédula, Tarjeta de Identidad, Pasaporte, etc.</label> 
       </p>
-      <input type="text" name="tipodocumento" id="listaTipoDocumentoSolicitante" oninput="elegirTipoDocumento()" placeholder="Escribe Tipo de Identificiación."/>
+      <input type="text" name="tipodocumento" id="listaTipoDocumentoSolicitante" oninput="elegirTipoDocumento()" placeholder="Escribe Tipo de Identificación."/>
 
       <p class="parrafosFormulario">Ingresa tu <strong>Número</strong> documento. <strong>Ejemplo:</strong> 1122801234.<br>
         </p>
         <input type="text" id="textoInputIdUsuario" maxlength="20" oninput="escribirIdUsuario()" placeholder="Escriba número identificación."/>
   </div>
-
-
-    
   <!-- Contenedor Entidades Destinatarias -->
   <div class="item">
     <h3>
@@ -116,18 +98,10 @@
           Agrega Entidades pulsando el botón <strong>+</strong>.
           <strong>Ejemplo:</strong> Secretaría de Movilidad de Piedecuesta. Evil Corp S.A.S. etc.</label>
       </p>
-
-   
   <input list="listaEntidades" id="inputTextoEntidad" placeholder="Escriba el nombre..">
-
       <button type="submit" class="botonesFormulario" id="botonAddEntidad"><strong>+</strong> Agregar Entidad</button>
-
       <button class="botonesFormulario" id="botonResetEntidad">🔄Resetear</button>
-
   </div>
-
-
-
   <!-- Contenedor Peticiones -->
   <div class="item">
     <h3>
@@ -137,14 +111,10 @@
       Escribe lo que requieres de la entidad. <strong>Ejemplo:</strong> Reparar la vía pública de tu barrio. Reciclar los residuos de la limpieza. etc.<br/>
       Agrega Peticiones pulsando el botón <strong>+</strong>.  
     </p>
-
       <textarea id="inputTextoPeticion" placeholder="Escriba su petición."></textarea>
       <button type="submit" class="botonesFormulario" id="botonAddPeticion"><strong>+</strong> Agregar Petición</button>
-
       <button class="botonesFormulario" id="botonResetPeticiones">🔄Resetear</button>
-
   </div>
-
   <!-- Contenedor Hechos -->
   <div class="item">
     <h3>
@@ -156,11 +126,8 @@
       </p>
       <textarea id="inputTextoHechosPeticion" placeholder="Escriba el hecho."></textarea>
       <button type="submit" class="botonesFormulario" id="botonAddHechosPeticion"><strong>+</strong> Agregar Hecho</button>
-
       <button class="botonesFormulario" id="botonResetHechosPeticion">🔄Resetear</button>
-
     </div>
-
   <!-- Contenedor Fundamentos -->
   <div class="item">
     <h3>
@@ -204,7 +171,6 @@
       </div>
       <input type="button" class="botonesFormulario" id="botonFundamentos" value="Generar Fundamentos"/>
   </div>
-
   <!-- Contenedor Pruebas -->
   <div class="item">
     <h3>
@@ -215,7 +181,6 @@
       </p>
       <input type="text" id="textoInputPruebas" oninput="escribirPruebas()" placeholder="Mencione las pruebas."/>
   </div>
-
   <!-- Contenedor Notificaciones -->
   <div class="item">
     <h3>
@@ -229,24 +194,20 @@
       <br>
       <input type="text" id="textoInputCelularSolicitante" maxlength="16" oninput="escribirNotificaciones2()" placeholder="Escriba # celular."/>
   </div>
-
   <!-- Contenedor Firma -->
   <div class="item">
     <h3>
       ✍️<br/>Firma.
       </h3>
-      
       <p class="parrafosFormulario">Adjunta la imagen de tu firma.</p>
       <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="subirFirma(this, 'espacioFirma')"/>
   </div>
 </div>
-
 <div class="item-11-contenedor">
   <div class="item item-11">
-
   <!-- Acá comienza el documento [Petición] que se genera. -->
     <div class="documentoGenerado" id="esqueletoPeticion">
-<span id="fecha1">Fecha:</span>
+<span>Fecha: </span><span id="fecha1"></span>
 <br>
 Respetados:
 <strong><datalist style="font-style:normal;" id="listaEntidades"></datalist></strong>
@@ -277,12 +238,10 @@ E.S.D.
     </div>
   </div>
 </div>
-</div>      
-         
+</div>        
 <!-- Tipo Contrato -->
-
+<!-- Si seleccionas el tipo de documento 'contrato' entonces se visualiza el siguiente módulo:-->
 <!-- Contenedor de contenedores de módulos Contrato -->
-
 <div class="contenedorGen" id="contenedorContrato">
   <div class="items-contenedor">
   <!-- Contenedor Fecha-->
@@ -296,7 +255,6 @@ E.S.D.
       <input type="date" id="datePickerContractio">
       <input type="button" class="botonesFormulario" id="botonFechaContrato" value="Fijar Fecha"/>
   </div>
-
    <!-- Contenedor Cláusulas -->
    <div class="item">
     <h3>
@@ -322,9 +280,7 @@ E.S.D.
         </select>
         </div>
   </div>
-
 <!-- Contenedor Descripción de Inmueble -->
- 
 <div class="item" id="divInmueble">
   <h3 id="inmueble1">
     🏡<br/><span id="inmueble_Base">Inmueble Arrendado</span>
@@ -334,9 +290,7 @@ E.S.D.
     </p>
     <input type="text" id="textoInputInmuebleArrendado" maxlength="500" oninput="describirInmueble()" placeholder="Escriba la descripción."/>
 </div>
-
 <!-- Contenedor Canon de Arrendamiento -->
- 
 <div class="item" id="divCanonArrendamiento">
   <h3 id="canon1">
     💲<br/><span id="canon_Base">Canon de Arrendamiento</span>
@@ -346,9 +300,7 @@ E.S.D.
     </p>
     <input type="text" id="textoInputCanon" maxlength="30" oninput="escribirCanon()" placeholder="Escriba el monto."/>
 </div>
-
 <!-- Contenedor Cosa Vendida -->
- 
 <div class="item" id="divCosaVendida">
   <h3 id="cosa1">
     📺<br/><span id="cosaVendida_Base">Cosa Vendida</span>
@@ -358,9 +310,7 @@ E.S.D.
     </p>
     <input type="text" id="textoInputCosaVendida" maxlength="500" oninput="describirCosaVendida()" placeholder="Escriba la descripción."/>
 </div>
-
 <!-- Contenedor Precio de la Compraventa -->
- 
 <div class="item" id="divPrecioCompraventa">
   <h3 id="precio1">
     💲<br/><span id="precio_Base">Precio de la Compraventa</span>
@@ -370,7 +320,6 @@ E.S.D.
     </p>
     <input type="text" id="textoInputPrecio" maxlength="30" oninput="escribirPrecioCompraventa()" placeholder="Escriba el monto."/>
 </div>
-
   <!-- Contenedor Contratante -->
   <div class="item">
     <h3 id="nombreParte1">
@@ -390,9 +339,7 @@ E.S.D.
         <p class="parrafosFormulario">Ingresa el <strong>E-mail</strong> para notificaciones. <strong>Ejemplo:</strong> maria@yahoo.com.<br/>
         </p>
         <input type="text" id="textoInputEmailContratante" maxlength="50" oninput="escribirEmailContratante()" placeholder="Escriba el e-mail."/>
-
   </div>
-
   <!-- Contenedor Contratista -->
   <div class="item">
     <h3 id="nombreParte2">
@@ -411,21 +358,17 @@ E.S.D.
         <input type="text" id="textoInputIdContratista" maxlength="50" oninput="escribirIdContratista()" placeholder="Escriba tipo y número identificación."/>
         <p class="parrafosFormulario">Ingresa el <strong>E-mail</strong> para notificaciones. <strong>Ejemplo:</strong> carlos@yahoo.com.</p>
         <input type="text" id="textoInputEmailContratista" maxlength="50" oninput="escribirEmailContratista()" placeholder="Escriba el e-mail."/>
-
   </div>
   </div>
-
   <div class="item-11-contenedor">
   <div class="item item-11">
-  <!-- Acá comienza el documento que se genera. -->
-  
+  <!-- Acá comienza el documento [CONTRATO] que se genera. -->
     <div class="documentoGenerado" id="esqueletoContrato">
       <p>
 <h3>Contrato de <span id="nombreTipoContrato1">_____</span>.</h3>
-<br>Siendo el día <span id="fechaContrato1"> _____</span>, entre nosotros, <strong><span id="nombreContratante1" style="font-style:normal;">_____</span></strong>, con domicilio en <span id="domicilioContratante">_______</span> en adelante "<span id="contratante_Base_2">Contratante</span>", y <strong><span id="nombreContratista1" style="font-style:normal;">_______</span></strong>, con domicilio en <span id="domicilioContratista">_______</span>, en adelante "<span id="contratista_Base_2">Contratista</span>"; personas naturales con plena capacidad para contraer y ejecutar obligaciones civiles, identificadas al pie de éste documento, hemos acordado celebrar el presente <strong>Contrato de<span id="nombreTipoContrato2"> _____</span></strong>, que será regido por las siguientes:
-      <br>
+<br/>Siendo el día <span id="fechaContrato1"> _____</span>, entre nosotros, <strong><span id="nombreContratante1" style="font-style:normal;">_____</span></strong>, con domicilio en <span id="domicilioContratante">_______</span> en adelante "<span id="contratante_Base_2">Contratante</span>", y <strong><span id="nombreContratista1" style="font-style:normal;">_______</span></strong>, con domicilio en <span id="domicilioContratista">_______</span>, en adelante "<span id="contratista_Base_2">Contratista</span>"; personas naturales con plena capacidad para contraer y ejecutar obligaciones civiles, identificadas al pie de éste documento, hemos acordado celebrar el presente <strong>Contrato de<span id="nombreTipoContrato2"> _____</span></strong>, que será regido por las siguientes:
+      <br/>
       </p>
-      
 <h4 id="section" style="text-align:center;"><strong>Cláusulas:</strong></h4>
       <p id="clausula_Objeto">
 <strong>Primera. Objeto del Contrato. </strong><span id="objeto_Contrato"></span>
@@ -441,14 +384,12 @@ E.S.D.
       </p>
       <p id="clausula_Penal">
 <strong>Tercera. Cláusula Penal.</strong> La parte del contrato que incumpla sus obligaciones pagará a la otra a título de perjuicios la suma en dinero de UN MILLÓN DE PESOS ($1.000.000) M/L.
-      </p>
-      
+      </p> 
 <p id="section" style="text-align:left;"><strong>Notificaciones. </strong>
 La parte <span id="contratante_Base_3">Contratante</span> recibe notificaciones en el email <span id="emailContratante">_________</span>. 
 La parte <span id="contratista_Base_3">Contratista</span> recibe notificaciones en el email <span id="emailContratista">_________</span>. <br /><br/>
 El presente contrato se firma por las partes estando en Colombia y siendo la fecha <span id="fechaContrato2"> _____</span>.</p>
 <br/><br/>
-      
 <strong><span id="nombreContratante2">______________</span>
 <br/>
 <span id="idContratante">_________</span>
@@ -456,7 +397,6 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
 <span id="contratante_Base_4">Contratante</span>
 </strong>
 <br/>
-
 <br/>
 <strong><span id="nombreContratista2">______________</span>
 <br/>
@@ -469,16 +409,10 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
   </div>   
   </div>     
 </div>
-
-
 <!-- Tipo Acción Pública-->
-
 <!-- Si seleccionas el tipo de documento 'Acción Pública' entonces se visualiza el siguiente módulo:-->
-
-
 <!-- Contenedor de contenedores de módulos Acción-->
 <div class="contenedorGen" id="contenedorTutela">
-
   <div class="items-contenedor">
         <!-- Contenedor Tipo de Acción Pública -->
         <div class="item">
@@ -506,7 +440,6 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
               </div>
               <input type="button" class="botonesFormulario" id="botonAcciones" value="Proyectar"/>
         </div>
-
   <!-- Contenedor Accionante-->
   <div class="item">
     <h3>
@@ -527,7 +460,6 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
         <p class="parrafosFormulario">Ingresa tu <strong>Número</strong> documento. <strong>Ejemplo:</strong> 1122801234.<br>
           </p>
           <input type="text" id="textoInputIdAccionante" maxlength="20" oninput="escribirIdAccionante()" placeholder="Escriba número identificación."/>
-  
     </div>
   <!-- Contenedor Lugar vulneración -->
     <div class="item">
@@ -540,7 +472,6 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
         <input list="listaMunicipios" name="lugarVulneracion" id="inputLugarVulneracionTutela" oninput="elegirLugarVulneracion()" placeholder="Escriba el lugar"/>
         <datalist id="listaMunicipios"></datalist>
     </div>
-
   <!-- Contenedor Entidades Accionadas -->
   <div class="item">
     <h3>
@@ -551,10 +482,8 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       </p>
       <input list="listaEntidadesAccionadas" id="inputTextoEntidadAccionada" oninput="escribirEntidadAccionada()" placeholder="Escriba el nombre"/>
       <button type="submit" class="botonesFormulario" id="botonAddEntidadAccionada"><strong>+</strong> Agregar Entidad</button>
-
       <button class="botonesFormulario" id="botonResetEntidadAccionada">🔄Resetear</button>
   </div>
-
   <!-- Contenedor Pretensiones -->
   <div class="item">
     <h3>
@@ -568,7 +497,6 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
 
       <button class="botonesFormulario" id="botonResetPretensiones">🔄Resetear</button>
   </div>
-
   <!-- Contenedor Hechos -->
   <div class="item">
     <h3>
@@ -580,7 +508,6 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       <input type="text" id="inputTextoHechosTutela" placeholder="Escribe los hechos"/>
       <button type="submit" class="botonesFormulario" id="botonAddHechosTutela">Agregar Hechos</button>
   </div>
-
   <!-- Contenedor Fundamentos -->
   <div class="item">
     <h3>
@@ -600,7 +527,6 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       </div>
       <input type="button" class="botonesFormulario" id="botonFundamentos" value="Generar Fundamentos"/>
   </div>
-
   <!-- Contenedor Pruebas -->
   <div class="item">
     <h3>
@@ -611,7 +537,6 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       </p>
       <input type="text" id="textoInputPruebas" oninput="escribirPruebas()" placeholder="Mencione las pruebas"/>
   </div>
-
   <!-- Contenedor Notificaciones -->
   <div class="item">
     <h3>
@@ -625,7 +550,6 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       <br>
       <input type="text" id="textoInputCelular" maxlength="16" oninput="escribirNotificaciones2()" placeholder="Escriba el número"/>
   </div>
-
   <!-- Contenedor Firma -->
   <div class="item">
     <h3>
@@ -635,11 +559,9 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       <input type="file" id="inputImagenFirma" name="imagenFirma" accept="image/*" onchange="subirFirma(this, 'espacioFirma')"/>
   </div>
   </div>
-
   <div class="item-11-contenedor">
   <div class="item item-11">
   <!-- Acá comienza el documento (Acción pública) que se genera. -->
-  
     <div class="documentoGenerado" id="esqueletoAccion">
       <p>
       Respetados,
@@ -652,10 +574,8 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       <strong>Referencia:</strong> Acción Pública de <span id="nombreTipoAccion">____________</span><br>
       <strong>Accionante: </strong> <span id="nombreAccionante0">_____________</span><br />
       <strong>Accionado(s): </strong><datalist style="font-style:normal;" id="listaEntidadesAccionadas">_____________</datalist><br />
-
       Cordial saludo;<br>Yo, <strong><span id="nombreAccionante1">______________</span></strong>, persona natural, nacional de <span id="nacionalidadAccionante">__________</span>, mayor de edad, presento <strong>Acción de <span id="nombreTipoAccion2">_______</span></strong>, para obtener de su despacho orden judicial a mi favor de las siguientes:
       </p>
-      
       <p id="section" style="text-align:center;"><strong>Pretensiones.</strong></p>
       <p><strong>Tutelar</strong> los derechos fundamentales de <span id="spanDerechosFunda">_________</span> de la parte accionante <strong><span id="nombreAccionante2">_________</span></strong>, vulnerados por la parte accionada.
         En consecuencia, sírvase ordenar lo siguiente:
@@ -677,26 +597,22 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       <p id="espacioFundamentos"></p>
       <span id="espacioFundamentos2"></span>
       </p>
-      
       <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
       <p>
         Se aportan las siguientes pruebas documentales:<br>
         <span id="pruebas"></span>
         <br />
       </p>
-      
       <p id="section" style="text-align:center;"><strong>Juramento.</strong></p>
       <p>
         Manifiesto bajo la gravedad de juramento que no se ha presentado 
         ninguna otra acción de tutela por los mismos hechos 
         y derechos en contra de la(s) entidad(es) accionada(s) (Decreto 2591/91, art.37).</p> 
-      
       <p id="section" style="text-align:center;"><strong>Notificaciones.</strong></p>
       <p>La parte accionante recibirá en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br />
         La parte accionada recibirá en el email <span id="email">_________</span> y en el celular <span id="celular">_______</span>.<br />
         Atentamente,
       </p>
-
       <strong><span id="nombreAccionante3"></span>
       <br>
       <span id="tipoIdAccionante">Tipo de Documento</span> número <span id="idAccionante">________</span></strong>
@@ -704,18 +620,118 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
   </div>   
   </div>     
 </div>
-
+<!-- Tipo Poder-->
+<!-- Si seleccionas el tipo de documento 'Poder' entonces se visualiza el siguiente módulo:-->
+<!-- Contenedor de contenedores de módulos Poder-->
+<div class="contenedorGen" id="contenedorPoder">
+  <div class="items-contenedor">
+  <!-- Contenedor Usuario -->
+  <div class="item">
+    <h3>
+      🙋‍♀️<br/>Poderdante
+      </h3>
+      <p class="parrafosFormulario">
+      Escribe el <strong>Nombre</strong> de quien otorga el mandato. <strong>Ejemplo:</strong> Carlos Murgas.
+      </p>
+      <input type="text" id="textoInputNombrePoderdante" maxlength="50" oninput="escribirPoderdante()" placeholder="Escriba su nombre."/>
+      
+      <p class="parrafosFormulario">
+        <label for="inputPais">Selecciona el país de <strong>Nacionalidad</strong> de quien crea el documento. <strong>Ejemplo:</strong> Colombia.</label>
+      </p>
+      <input list="listaPaises" name="pais" id="inputPaisPoderdante" onchange="elegirLugarNacionalidadPoderdante()" placeholder="Escriba el lugar."/>
+      <datalist id="listaPaises"></datalist>
+      <p class="parrafosFormulario">
+        <label for="listaTipoDocumentoPoderdante">Escribe el <strong>Tipo</strong> de Documento de Identidad. <strong>Ejemplo:</strong> Cédula, Tarjeta de Identidad, Pasaporte, etc.</label> 
+      </p>
+      <input type="text" name="tipodocumento" id="listaTipoDocumentoPoderdante" oninput="elegirTipoDocumentoPoderdante()" placeholder="Escribe Tipo de Identificiación."/>
+      <p class="parrafosFormulario">Ingresa el <strong>Número</strong> documento. <strong>Ejemplo:</strong> 1122801234.<br>
+        </p>
+        <input type="text" id="textoInputIdPoderdante" maxlength="20" oninput="escribirIdPoderdante()" placeholder="Escriba número identificación."/>
+  </div>
+  <!-- Contenedor Apoderado -->
+  <div class="item">
+    <h3>
+      🙋‍♂️🙋<br/>Apoderado
+      </h3>
+      <p class="parrafosFormulario">
+      Escribe el <strong>Nombre</strong> de quien realizará el mandato. <strong>Ejemplo:</strong> María García.
+      </p>
+      <input type="text" id="textoInputNombreApoderado" maxlength="50" oninput="escribirApoderado()" placeholder="Escriba su nombre."/>
+      <p class="parrafosFormulario">
+        <label for="inputPais">Selecciona el país de <strong>Nacionalidad</strong> del apoderado. <strong>Ejemplo:</strong> Colombia.</label>
+      </p>
+      <input list="listaPaises" name="pais" id="inputPaisApoderado" onchange="elegirLugarNacionalidadApoderado()" placeholder="Escriba el lugar."/>
+      <datalist id="listaPaises"></datalist>
+      <p class="parrafosFormulario">
+        <label for="listaTipoDocumentoApoderado">Escribe el <strong>Tipo</strong> de Documento de Identidad. <strong>Ejemplo:</strong> Cédula, Tarjeta de Identidad, Pasaporte, etc.</label> 
+      </p>
+      <input type="text" name="tipodocumento" id="listaTipoDocumentoApoderado" oninput="elegirTipoDocumentoApoderado()" placeholder="Escribe Tipo de Identificación."/>
+      <p class="parrafosFormulario">Ingresa el <strong>Número</strong> documento. <strong>Ejemplo:</strong> 1122801234.<br>
+        </p>
+        <input type="text" id="textoInputIdApoderado" maxlength="20" oninput="escribirIdApoderado()" placeholder="Escriba número identificación."/>
+  </div>
+  <!-- Contenedor Entidades Destinatarias -->
+  <div class="item">
+    <h3>
+      🏛️<br/>Destinatario
+      </h3>
+      <p class="parrafosFormulario">
+        <label for="inputTextoEntidadDestino">Escribe el nombre completo o razón social de ante quien se ejercerá el mandato. Deje esta casilla en blanco si quieres que para 'A quien pueda interesarle'.
+          <strong>Ejemplo:</strong> Secretaría de Movilidad de Albuquerque. ECOMODA S.A.S., etc.</label>
+      </p>
+  <input type="text" id="inputTextoEntidadDestino" oninput="escribirEntidadDestinoPoder()" placeholder="Escriba el nombre.."/>
+  </div>
+  <!-- Contenedor Mandato -->
+  <div class="item">
+    <h3>
+      📣<br/>Mandato
+      </h3>
+      <p class="parrafosFormulario">
+        <label for="inputTextoMandato">Escribe el objeto del Mandato, es decir, lo que podrá hacer tu Apoderado.
+       <strong>Ejemplo:</strong> Gestionar el traspaso de un vehículo, Firmar documentos, Recibir bienes, etc.</label> 
+    </p>
+      <input type="text" id="inputTextoMandato" oninput="escribirMandato()" placeholder="Escriba el mandato."/>
+  </div>
+<div class="item-11-contenedor">
+  <div class="item item-11">
+      <!-- Acá comienza el documento [Poder] que se genera. -->
+      <div class="documentoGenerado" id="esqueletoPoder">
+Colombia, <span id="fechaPoder">2025</span>.<br/>
+Respetados(as),
+<br/><strong><span style="font-style:normal;" id="listaEntidadesDestinoPoder">A quien pueda interesarle</span></strong><br/>
+E.S.D.
+<br/>
+<strong>Referencia:</strong> Poder Especial<br/>
+<p>Yo,<strong><span id="nombrepoderdante1"> PODERDANTE</span></strong>, persona natural, nacional de <span id="nacionalidadPoderdante">_____</span>, mayor de edad, por medio de este documento otorgo <strong>PODER ESPECIAL</strong> amplio y suficiente a <strong><span id="nombreapoderado1"> APODERADO(A)</span></strong>, persona natural, nacional de <span id="nacionalidadApoderado">_____</span>, mayor de edad, para que en mi nombre y representación pueda realizar lo siguiente: <span id="objetoMandato">Acá va el Mandato.</span></p>
+<p>Mi apoderada(o) queda también facultado(a) para todas aquellas diligencias que guarden relación o se encaminen al cumplimiento del mandato.</p> 
+<p>Sírvanse reconocerle personería jurídica a mi apoderado(a) respecto del presente mandato.</p> 
+<p>
+Atentamente,<br/>
+El (La) Poderdante,<br/>
+<br/>  <br/><br/>
+<strong><span id="nombrepoderdante2">_____</span><br/>
+<span id="tipoDocumentoIdentidadPoderdante">Documento de Identidad</span> #<span id="idPoderdante">_____</span></strong>
+</strong></p>
+<p>
+El (La) Apoderado (a),<br/>
+<strong>ACEPTO.</strong>
+<br/><br/><br/>
+<strong><span id="nombreapoderado2">_____</span><br/>
+<span id="tipoDocumentoIdentidadApoderado">Documento de Identidad</span> #<span id="idApoderado">_____</span></strong>
+</p>
+</div>
+</div>
+</div>            
+</div>
+</div>
 <div id="contenedorVacio" style="align-self:flex-end;display:none;"><span>¡Ups! No se ha copiado nada...👻</span></div>
-
-<br>
-
+<br/>
 <!-- Contenedor Botones de acciones sobre el documento -->
 <div id="contenedorBotonesAcciones">
-<button class="itemBoton" id="botonCopiar">📋 Copiar texto</button>
-<button class="itemBoton" id="botonExportar">🖨️ Exportar a PDF</button>
+<button class="itemBoton" id="botonCopiar"> 📋 Copiar Texto </button>
+<button class="itemBoton" id="botonExportar"> 🖨️ Exportar PDF </button>
 <button class="itemBoton" id="botonContribuir" style="display: none;" onclick='alert("en desarrollo..")'>Contribuir</button>
 </div>
-
 <div class="contenedorContribucion" id="contribucionesAlRepo" style="display:none;">
 <p>Contribuye a gendocu agregando <strong>Entidades destinatarias</strong> y has más fácil a otros usuarios peticionarlas. <br/>
   En las barras de texto escribe: 1. Razón social (nombre), 2. Nit, 3. Email de notificaciones.
@@ -724,11 +740,10 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
 <input type="text" id="textoInputNITContribucion" placeholder="Escriba el NIT"/>
 <input type="text" id="textoInputEmailContribucion" placeholder="Escriba el email"/>
 </div>
-
 <!-- Pie de página -->
 <div id="footer">
     <br>
-    <p style="color: whitesmoke;">👇Apoya👇</p>
+    <p id="call-to-action">¿Cómo te gusta ayudar?</p>
   <a class="iconosFooter" href="https://wa.me/573017673013?text=Hola.%20Vengo%20de%20la%20App%20Gendocu." class="keychainify-checked"> <img src="imagenes/icon_whatsapp.webp" target="_blank" alt="Icono Whatsapp" width="30"></a>
     <a class="iconosFooter" href="https://github.com/murgascarrillo/gendocu" class="keychainify-checked"> <img src="imagenes/icon_github.webp" alt="Icono Github" style="width:30px;background-color: white;border-radius:51%;"></a>
     <a class="iconosFooter" href="https://www.patreon.com/MurgasCarrillo" class="keychainify-checked"> <img src="imagenes/icon_patreon.webp" alt="Icono Patreon" style="width:30px;background-color: white;border-radius:51%;"></a>
@@ -738,7 +753,6 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       </div>
     </a>
       <a class="iconosFooter" href="https://mpago.li/2rtB5ao" class="keychainify-checked"> <img src="imagenes/icon_mercadopago.webp" alt="Icono MercadoPago" style="width:30px;"></a>
-    
       <a style="background-color: azure; background: azure;color: aliceblue;" class="iconosFooter"
       data-title="Tip @Carlos" 
       data-amount="0.133" 
@@ -746,8 +760,7 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       data-button="Open Natrium" 
       data-position="bottom">      
       Dona XNO</a>
-    
- <p style="color: whitesmoke;">Version 0.0.2.4.3.14.2 - Hecho por <strong>MurgasCarrillo</strong> con &#x2728;</p> 
+ <p id="version-marca">Version 0.0.2.4.4.14.3 - mas en: <strong >murgascarrillo.com</strong> con &#x2728;</p> 
   <a href="https://murgascarrillo.com/" style="position: relative; box-shadow: 3px 6px 5px 0px whitesmoke;">
     <img id="boton-retorno" style="width:50px;height:auto;margin:auto;padding:7px;display: list-item; box-shadow: 1.3px 1.3px 1.3px 0px #717479; border-radius: 50%;" src="imagenes/murgascarrillo.webp"/>
 </a>
@@ -758,6 +771,7 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
 <script src='scripts/petitio.js'></script>
 <script src='scripts/contractio.js'></script>
 <script src='scripts/actio.js'></script>
+<script src='scripts/poderio.js'></script>
 <script src='scripts/decidendis.js'></script>
 <script src='scripts/clausulae.js'></script>
 <script src="https://pay.nano.to/latest.js"></script>

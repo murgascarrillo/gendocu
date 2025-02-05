@@ -2,6 +2,8 @@
 
 // Entorno
 
+// Cargue de contenido
+
 // Modo Nocturno 
 let botonModoNocturno = document.getElementById("botonModoNocturno");
 let entorno = document.body;
@@ -15,6 +17,12 @@ function toggleModoNocturno() {
     footer.style.color = 'black';
     botonModoNocturno.style.backgroundColor = 'rgb(18, 29, 36)';
     botonModoNocturno.innerHTML = '🌛';
+    let pSelector = document.getElementById('parrafoSelector');
+    pSelector.style.color = 'black';
+    let textopSelector = document.getElementById('call-to-action');
+    textopSelector.style.color = 'black';
+    let versionmarca = document.getElementById('version-marca');
+    versionmarca.style.color = 'black';
     let titulos = document.querySelectorAll('h1,h2');
     for (let titulo of titulos) {
       titulo.style.color = '';
@@ -28,6 +36,10 @@ function toggleModoNocturno() {
     botonModoNocturno.innerHTML = '🌞';
     let pSelector = document.getElementById('parrafoSelector');
     pSelector.style.color = 'white';
+    let textopSelector = document.getElementById('call-to-action');
+    textopSelector.style.color = 'white';
+    let versionmarca = document.getElementById('version-marca');
+    versionmarca.style.color = 'white';
     let titulos = document.querySelectorAll('h1,h2');
     for (let titulo of titulos) {
       titulo.style.color = 'white';
@@ -50,6 +62,9 @@ botonGenContrato.addEventListener("click",proyectarDocContrato);
 let botonGenTutela = document.getElementById("botonGenTutela");
 let contenedorTutela = document.getElementById("contenedorTutela");
 botonGenTutela.addEventListener("click",proyectarDocTutela);
+let botonGenPoder = document.getElementById("botonGenPoder");
+let contenedorPoder = document.getElementById("contenedorPoder");
+botonGenPoder.addEventListener("click",proyectarDocPoder);
 
 let estadoContenedor = 0;  // Para manipulación y alistamiento del Documento.
 
@@ -61,6 +76,7 @@ function proyectarDocPeticion() {
   contenedorPeticion.style.display = 'flex';
   contenedorTutela.style.display = 'none';
   contenedorContrato.style.display = 'none';
+  contenedorPoder.style.display = 'none';
   arrayItems.forEach(  function(element){
     element.style.backgroundColor ='rgb(238,238,238)';});
   document.getElementById("datePickerPetitio").focus();
@@ -70,6 +86,7 @@ function proyectarDocContrato() {
   estadoContenedor = 2;
   contenedorPeticion.style.display = 'none';
   contenedorTutela.style.display = 'none';
+  contenedorPoder.style.display = 'none';
   contenedorContrato.style.display = 'flex';
   arrayItems.forEach( function(element){
     element.style.backgroundColor = 'rgb(221,221,221)'; });
@@ -80,10 +97,21 @@ function proyectarDocTutela() {
   estadoContenedor = 3;
   contenedorPeticion.style.display = 'none';
   contenedorContrato.style.display = 'none';
+  contenedorPoder.style.display = 'none';
   contenedorTutela.style.display = 'flex';
   arrayItems.forEach( function(element){
     element.style.backgroundColor = 'rgb(187,187,187)'; });
     document.getElementById("listaAcciones").focus();
+}
+
+function proyectarDocPoder() {
+  estadoContenedor = 4;
+  contenedorPeticion.style.display = 'none';
+  contenedorContrato.style.display = 'none';
+  contenedorTutela.style.display = 'none';
+  contenedorPoder.style.display = 'flex';
+  arrayItems.forEach( function(element){
+    element.style.backgroundColor = 'rgba(187, 187, 187, 0.47)'; });
 }
 
 // Obtener todos los items y el item-11
@@ -133,7 +161,6 @@ function definirFecha(selectorDeFecha) {
   const mes = meses[fechaDocumento.getMonth()];
   const anio = fechaDocumento.getFullYear();
   const fechaFormateada = dia + " de " + mes + " de " + anio;
-
   if (estadoContenedor === 1) {
     document.getElementById("fecha1").innerHTML = fechaFormateada + ".";
   }
@@ -171,7 +198,6 @@ function generatePDF(){
     }
     html2pdf(element, opt);
   }
-
   else if(contenedorTutela.style.display === 'flex')
   {
     var element = document.getElementById('esqueletoAccion');
@@ -184,6 +210,18 @@ function generatePDF(){
     }
     html2pdf(element, opt);
   }
+  else if(contenedorPoder.style.display === 'flex')
+    {
+      var element = document.getElementById('esqueletoPoder');
+      var opt = {
+      margin: 0.5,
+      filename: 'poder_gendocu.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      }
+      html2pdf(element, opt);
+    }
   else{
     alert("¡No hay nada creado para exportar!");
   }
@@ -226,10 +264,10 @@ document.getElementById("botonCopiar").addEventListener("click", function () {
   } else if (estadoContenedor === 2) {
     idElemento = "esqueletoContrato";
   } else if (estadoContenedor === 3) {
-    idElemento = "esqueletoMandato";
+    idElemento = "esqueletoAccion";
   } else if (estadoContenedor === 4) {
-    idElemento = "esqueletoTutela";
-  }
+    idElemento = "esqueletoPoder";
+  } 
   else {
     idElemento = "contenedorVacio";
   }
