@@ -159,7 +159,7 @@ email: "contactenos@igac.gov.co"
 {
 nombre: "Servicio Nacional de Aprendizaje - SENA",
 nit: "899.999.034-1",
-email: "contactenos@igac.gov.co"
+email: "servicioalciudadano@sena.edu.co"
 },
 {
 nombre: "Fiscalía General de la Nación",
@@ -208,6 +208,8 @@ nombre: "E.S.E Hospital Nuestra Señora del Carmen de Hatonuevo",
 nit: "825.000.620-1",
 email: "gerencia@hospicarmenhatonuevo.gov.co"
 },
+
+// Sector Tránsito
 {
 nombre: "Secretaría de Tránsito y Transporte de Valledupar",
 nit: "",
@@ -222,6 +224,11 @@ email: "info@transitocurumani.com"
 nombre: "Instituto Municipal de Tránsito y Transporte de Maicao",
 nit: "",
 email: "transitomaicao@gmail.com"
+},
+{
+nombre:"Instituto de Tránsito y Transporte de Riohacha",
+nit:"",
+email:"info@instram.gov.co"
 },
 {
 nombre: "Policia Metropolitana de Barranquilla",
@@ -4884,6 +4891,11 @@ email: "info@worldconnections.com.co"
 nombre:"ComNotaría Única deción Celular S.A. Comcel S.A. - CLARO",
 nit:"800.153.993-7",
 email:"notificacionesclaro@claro.com.co"
+},
+{
+    nombre: "EMPRESA DE TELECOMUNICACIONES DE BOGOTÁ S.A. E.S.P - ETB",
+    nit:"899.999.115-8",
+    email:"quejas_call_digitex@etb.com.co"
 },
 // Otro Tipo de Empresas.
 {
