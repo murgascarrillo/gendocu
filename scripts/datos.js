@@ -31,7 +31,7 @@ this.email = email;
 
 const datosEntidades = [
 // Entidades Públicas
-
+// Rama Ejecutiva del Poder Público
 // Entidades Territoriales
 
 // Alcaldías
@@ -63,7 +63,6 @@ email: "contactenos@laguajira.gov.co, notificacionesjudiciales@laguajira.gov.co"
     nit: "892.115.015-1",
     email: "transitodepartamental@laguajira.gov.co"
 },
-
 // Entidades Nacionales
 {
 nombre: "Agencia Nacional de Tierras - ANT",
@@ -75,6 +74,10 @@ nombre: "Administradora Colombiana de Pensiones - Colpensiones",
 nit: "900.336.004-7",
 email: "contacto@colpensiones.gov.co",
 email_judicial: "notificacionesjudiciales@colpensiones.gov.co"
+},
+{nombre:"Unidad de Pensiones y Parafiscales - UGPP",
+    nit:"",
+    email:"contactenos@ugpp.gov.co"
 },
 {
 nombre: "Unidad para la Atención y Reparación Integral a las Víctimas - UARIV",
@@ -162,11 +165,6 @@ nit: "899.999.034-1",
 email: "servicioalciudadano@sena.edu.co"
 },
 {
-nombre: "Fiscalía General de la Nación",
-nit: "",
-email: "ges.documentalpqrs@fiscalia.gov.co, juridicanotificacionestutela@fiscalia.gov.co"
-},
-{
 nombre: "Instituto Nacional Penitenciario y Carcelario – INPEC",
 nit:"800.215.546-5",
 email: "notificaciones@inpec.gov.co"
@@ -177,6 +175,11 @@ nit: "900.467.239-2",
 email: "licencias@anla.gov.co"
 },
 {
+    nombre:"Superintendencia Nacional de Salud",
+    nit:"",
+    email:"snsnotificacionesjudiciales@supersalud.gov.co"
+    },
+{
 nombre:"Patrimonio Autónomo de Remanentes de la Caja Agraria en Liquidación",
 nit:"",
 email:"gravamenescajaagraria@parugp.com.co, parcal@parugp.com.co"
@@ -186,62 +189,96 @@ nombre:"Caja Promotora de Vivienda Militar y Policía - CAJAHONOR",
 nit:"",
 email:"notificaciones.judiciales@cajahonor.gov.co"
 },
+
+
 {
-nombre:"Procuraduría General de la Nación",
-nit:"",
-email:"procesosjudiciales@procuraduria.gov.co"
-},
+    nombre:"Procuraduría General de la Nación",
+    nit:"",
+    email:"procesosjudiciales@procuraduria.gov.co"
+    },
+
+// Entidades con Presencia Territorial
 {
-nombre:"Superintendencia Nacional de Salud",
-nit:"",
-email:"snsnotificacionesjudiciales@supersalud.gov.co"
-},
+    nombre: "E.S.E Hospital Nuestra Señora del Carmen de Hatonuevo",
+    nit: "825.000.620-1",
+    email: "gerencia@hospicarmenhatonuevo.gov.co"
+    },
+    
+    // Sector Tránsito
+    {
+    nombre: "Secretaría de Tránsito y Transporte de Valledupar",
+    nit: "",
+    email: "atencionusuariotransitovpar@valledupar.gov.co"
+    },
+    {
+    nombre: "Secretaría de Tránsito y Transporte de Curumaní",
+    nit: "",
+    email: "info@transitocurumani.com"
+    },
+    {
+    nombre: "Instituto Municipal de Tránsito y Transporte de Maicao",
+    nit: "",
+    email: "transitomaicao@gmail.com"
+    },
+    {
+    nombre:"Instituto de Tránsito y Transporte de Riohacha",
+    nit:"",
+    email:"info@instram.gov.co"
+    },
+    {
+    nombre: "Policia Metropolitana de Barranquilla",
+    nit: "900.263.078-7",
+    email: "mebar.coseg@policia.gov.co"
+    },
+   
+// Rama Judicial del Poder Público
+{
+    nombre: "Fiscalía General de la Nación",
+    nit: "",
+    email: "ges.documentalpqrs@fiscalia.gov.co, juridicanotificacionestutela@fiscalia.gov.co"
+    },
 {
 nombre:"Consejo Superior de la Judicatura",
 nit:"",
 email:"info@cendoj.ramajudicial.gov.co"
 },
-
-// Entidades con Presencia Territorial
+// Juzgados
 {
-nombre: "E.S.E Hospital Nuestra Señora del Carmen de Hatonuevo",
-nit: "825.000.620-1",
-email: "gerencia@hospicarmenhatonuevo.gov.co"
-},
-
-// Sector Tránsito
-{
-nombre: "Secretaría de Tránsito y Transporte de Valledupar",
-nit: "",
-email: "atencionusuariotransitovpar@valledupar.gov.co"
+    nombre:"Despacho 001 Sala Penal Tribunal Superior Distrito Judicial de Riohacha, La Guajira",
+    nit:"",
+    email:"des01sptsrioha@cendoj.ramajudicial.gov.co"
 },
 {
-nombre: "Secretaría de Tránsito y Transporte de Curumaní",
-nit: "",
-email: "info@transitocurumani.com"
-},
-{
-nombre: "Instituto Municipal de Tránsito y Transporte de Maicao",
-nit: "",
-email: "transitomaicao@gmail.com"
-},
-{
-nombre:"Instituto de Tránsito y Transporte de Riohacha",
+nombre:"Juzgado Primero Civil Del Circuito San Juan Del Cesar, La Guajira",
 nit:"",
-email:"info@instram.gov.co"
+email:"j01ctoclsjuan@cendoj.ramajudicial.gov.co"
 },
 {
-nombre: "Policia Metropolitana de Barranquilla",
-nit: "900.263.078-7",
-email: "mebar.coseg@policia.gov.co"
+nombre:"Juzgado Promiscuo Municipal de Barrancas, La Guajira",
+nit:"",
+email:"jprmpalbarrancas@cendoj.ramajudicial.gov.co"
 },
 {
-nombre: "Registraduría Municipal de San Juan del Cesar",
-nit: "",
-email: "sanjuandelcesar@registraduria.gov.co"
+    nombre:"Juzgado Promiscuo Municipal de Hatonuevo, La Guajira",
+    nit:"",
+    email:"jprmpalhatonuevo@cendoj.ramajudicial.gov.co"
+    },
+    {nombre:"Juzgado Sexto Penal Municipal con Funciones de Conocimiento de Riohacha",
+        nit:"",
+        email:"j06pmpalrioha@cendoj.ramajudicial.gov.co"
+    },
+{
+    nombre:"Juzgado Sexto Civil del Circuito de Barranquilla",
+    nit:"",
+    email:"ccto06ba@cendoj.ramajudicial.gov.co"
 },
-// Registradurías
 
+// Registradurías
+{
+    nombre: "Registraduría Municipal de San Juan del Cesar",
+    nit: "",
+    email: "sanjuandelcesar@registraduria.gov.co"
+    },
 // Notarías
 {
 nombre: "Notaría Única de Barrancas, La Guajira",
