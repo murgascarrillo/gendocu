@@ -38,24 +38,45 @@ const datosEntidades = [
 {
 nombre: "Alcaldía de Barrancas, La Guajira",
 nit: "800.099.223-3",
-email: "contactenos@barrancas-laguajira.gov.co, notificacionjudicial@barrancas-laguajira.gov.co"
+email: "contactenos@barrancas-laguajira.gov.co",
+email_judicial:"notificacionjudicial@barrancas-laguajira.gov.co"
 },
 {
     nombre:"Alcaldía de Distracción, La Guajira",
     nit:"825.000.166-7",
-    email:"alcaldia@distraccion-laguajira.gov.co, notificacionjudicial@distraccion-laguajira.gov.co"
+    email:"alcaldia@distraccion-laguajira.gov.co",
+    email_judicial:"notificacionjudicial@distraccion-laguajira.gov.co"
 },
 {
     nombre:"Alcaldía de Fonseca, La Guajira",
     nit:"892.170.008-3",
-    email:"alcaldia@fonseca-laguajira.gov.co, notificacionjudicial@fonseca-guajira.gov.co"
+    email:"alcaldia@fonseca-laguajira.gov.co",
+    email_judicial:"notificacionjudicial@fonseca-guajira.gov.co"
 },
-
+{
+    nombre:"Alcaldía de San Juan del Cesar, La Guajira",
+    nit:"892.115.179-0",
+    email:"alcaldia@sanjuandelcesar-laguajira.gov.co",
+    email_judicial:"juridica@sanjuandelcesar-laguajira.gov.co"
+},
+{
+    nombre:"Alcaldía de Villanueva, La Guajira",
+    nit:"892.115.198-0",
+    email:"contactenos@villanueva-guajira.gov.co",
+    email_judicial:"secretariageneral@villanueva-guajira.gov.co"
+},
+{
+    nombre:"Alcaldía de La Jagua del Pilar, La Guajira",
+    nit:"825.000.676-1",
+    email:"contactenos@lajaguadelpilar-laguajira.gov.co",
+    email_judicial:"notificacionjudicial@lajaguadelpilar-laguajira.gov.co"
+},
 // Gobernaciones y sus Dependencias
 {
 nombre: "Gobernación de La Guajira",
 nit: "892.115.015-1",
-email: "contactenos@laguajira.gov.co, notificacionesjudiciales@laguajira.gov.co"
+email: "contactenos@laguajira.gov.co",
+email_judicial:"notificacionesjudiciales@laguajira.gov.co"
 },
 
 {
@@ -82,7 +103,8 @@ email_judicial: "notificacionesjudiciales@colpensiones.gov.co"
 {
 nombre: "Unidad para la Atención y Reparación Integral a las Víctimas - UARIV",
 nit: "900.490.473-6",
-email: "servicioalciudadano@unidadvictimas.gov.co, notificaciones.juridicauariv@unidadvictimas.gov.co"
+email: "servicioalciudadano@unidadvictimas.gov.co",
+email_judicial:"notificaciones.juridicauariv@unidadvictimas.gov.co"
 },
 {
 nombre: "Migración Colombia",
@@ -115,9 +137,20 @@ nit: "",
 email: ""
 },
 {
+    nombre:"Consulado de Colombia en Orlando",
+    nit:"",
+    email:"corlando@cancilleria.gov.co"
+},
+{
 nombre: "Ministerio de Educación",
 nit:"",
 email:""
+},
+{
+    nombre:"Ministerio de Salud y Protección Social",
+    nit:"",
+    email:"correo@minsalud.gov.co",
+    email_judicial:"notificacionesjudiciales@minsalud.gov.co"
 },
 {
 nombre:"Ministerio de Agricultura y Desarrollo Rural",
@@ -182,19 +215,23 @@ email: "licencias@anla.gov.co"
 {
 nombre:"Patrimonio Autónomo de Remanentes de la Caja Agraria en Liquidación",
 nit:"",
-email:"gravamenescajaagraria@parugp.com.co, parcal@parugp.com.co"
+email:"gravamenescajaagraria@parugp.com.co",
+email_judicial:"parcal@parugp.com.co"
 },
 {
 nombre:"Caja Promotora de Vivienda Militar y Policía - CAJAHONOR",
 nit:"",
 email:"notificaciones.judiciales@cajahonor.gov.co"
 },
-
-
 {
     nombre:"Procuraduría General de la Nación",
     nit:"",
     email:"procesosjudiciales@procuraduria.gov.co"
+    },
+    {
+        nombre:"Contraloría General de la Nación",
+        nit:"",
+        email:"cgr@contraloria.gov.co"
     },
 
 // Entidades con Presencia Territorial
@@ -235,13 +272,14 @@ email:"notificaciones.judiciales@cajahonor.gov.co"
 {
     nombre: "Fiscalía General de la Nación",
     nit: "",
-    email: "ges.documentalpqrs@fiscalia.gov.co, juridicanotificacionestutela@fiscalia.gov.co"
+    email: "ges.documentalpqrs@fiscalia.gov.co",
+    email_judicial:"juridicanotificacionestutela@fiscalia.gov.co"
     },
-{
-nombre:"Consejo Superior de la Judicatura",
-nit:"",
-email:"info@cendoj.ramajudicial.gov.co"
-},
+    {
+    nombre:"Consejo Superior de la Judicatura",
+    nit:"",
+    email:"info@cendoj.ramajudicial.gov.co"
+    },
 // Juzgados
 {
     nombre:"Despacho 001 Sala Penal Tribunal Superior Distrito Judicial de Riohacha, La Guajira",
@@ -262,6 +300,11 @@ email:"jprmpalbarrancas@cendoj.ramajudicial.gov.co"
     nombre:"Juzgado Promiscuo Municipal de Hatonuevo, La Guajira",
     nit:"",
     email:"jprmpalhatonuevo@cendoj.ramajudicial.gov.co"
+    },
+    {
+nombre:"Juzgado Cuarto Penal Municipal con Función de Control de Garantías de Riohacha",
+nit:"",
+email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
     },
     {nombre:"Juzgado Sexto Penal Municipal con Funciones de Conocimiento de Riohacha",
         nit:"",
@@ -4832,6 +4875,19 @@ nombre:"Universidad del Norte",
 nit:"",
 email:""
 },
+// Fuerzas Armadas y Seguridad Pública
+// Policía
+{
+  nombre:"Comandante del Departamento de Policía de La Guajira",
+  nit:"",
+  email:"degua.coman@policia.gov.co"  
+},
+{
+    nombre:"Estación de Policía de Barrancas, La Guajira",
+    nit:"",
+    email:"degua.ebarrancas@policia.gov.co"
+},
+
 // Entidades Privadas
 
 // Entidades Educativas
@@ -4868,6 +4924,17 @@ nombre:"Adelante Soluciones Financieras - ADDI",
 nit:"901216.768-4",
 email:"datos@addi.com"
 },
+// Empresas de Cobranza
+{
+nombre:"Aval Titulos S.A.S.",
+nit:"900.181.152-1",
+email:"pqrs@avaltitulos.com.co"
+},
+{
+nombre:"Cooperativa Multiactiva por un mejor mañana para los niños Huérfanos de la fuerza publica -SURGIR PARA EL FUTURO- En Liquidación",
+nit:"900.244.836-2",
+email:"informacion@surgirparaelfuturo.com"
+},
 // Empresas Promotoras de Salud - EPS
 {
 nombre: "EPS SANITAS S.A.S.",
@@ -4889,12 +4956,22 @@ nombre: "SOCIEDAD ADMINISTRADORA DE FONDOS DE PENSIONES Y CESANTIAS PORVENIR S.A
 nit: "800.144.331-3",
 email: "defensoriaporvenir@legalcrc.com"
 },
+// Instituciones Prestadoras de Servicios de Salud
 {
 nombre: "Clinica del Cesar S.A.",
 nit: "892.300.979-9",
 email: "gerencia@clinicadelcesar.com"
 },
- 
+{
+nombre:"SYD Colombia S.A",
+nit:"",
+email:"servicliente1@syd.com.co"
+},
+{
+    nombre:"IPS Cuidamos Salud S.A.S.",
+    nit:"900.302.805-3",
+    email:"cuidamossalud@hotmail.com"
+},
 
 // Empresas Proveedoras de Energía Eléctrica.
 {
@@ -4965,6 +5042,11 @@ email: "mundial@segurosmundial.com.co"
 nombre:"Compañía de Seguros Bolívar S.A.",
 nit:"860.002.503-2",
 email:"servicioalcliente@segurosbolivar.com"
+},
+{
+nombre: "La Previsora S.A. Compañía de Seguros - PREVISORA SEGUROS",
+nit:"860.002.400-2",
+email:"contactenos@previsora.gov.co"
 }
 ];
 
