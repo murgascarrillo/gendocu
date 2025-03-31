@@ -71,6 +71,11 @@ email_judicial:"notificacionjudicial@barrancas-laguajira.gov.co"
     email:"contactenos@lajaguadelpilar-laguajira.gov.co",
     email_judicial:"notificacionjudicial@lajaguadelpilar-laguajira.gov.co"
 },
+{
+    nombre:"Alcaldía de Hatonuevo, La Guajira",
+    nit:"800.255.101-2",
+    email:"contactenos@hatonuevo-laguajira.gov.co"
+},
 // Gobernaciones y sus Dependencias
 {
 nombre: "Gobernación de La Guajira",
@@ -239,6 +244,11 @@ email:"notificaciones.judiciales@cajahonor.gov.co"
     nombre: "E.S.E Hospital Nuestra Señora del Carmen de Hatonuevo",
     nit: "825.000.620-1",
     email: "gerencia@hospicarmenhatonuevo.gov.co"
+    },
+    {
+nombre:"Secretaria de Subcientífica de la ESE Hospital San Rafael Nivel II de San Juan del Cesar",
+nit:"",
+email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     },
     
     // Sector Tránsito
@@ -5031,6 +5041,11 @@ email: "claudia.diaz@sodexo.com"
 nombre: "Isa Intercolombia S.A. E.S.P.",
 nit: "900.667.590-1",
 email: "contactenos@cerrejon.com"
+},
+{
+    nombre:"GIDALTI INGENIEROS S.A.S",
+    nit:"901.243.820-4",
+    email:"gidaltiingenieros@gmail.com"
 },
 // Empresas Aseguradoras
 {
