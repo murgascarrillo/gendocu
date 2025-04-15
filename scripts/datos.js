@@ -36,45 +36,55 @@ const datosEntidades = [
 
 // Alcaldías
 {
-nombre: "Alcaldía de Barrancas, La Guajira",
+nombre: "Alcaldía de Municipal Barrancas, La Guajira",
 nit: "800.099.223-3",
 email: "contactenos@barrancas-laguajira.gov.co",
 email_judicial:"notificacionjudicial@barrancas-laguajira.gov.co"
 },
 {
-    nombre:"Alcaldía de Distracción, La Guajira",
+    nombre:"Alcaldía Municipal de Distracción, La Guajira",
     nit:"825.000.166-7",
     email:"alcaldia@distraccion-laguajira.gov.co",
     email_judicial:"notificacionjudicial@distraccion-laguajira.gov.co"
 },
 {
-    nombre:"Alcaldía de Fonseca, La Guajira",
+    nombre:"Alcaldía Municipal de Fonseca, La Guajira",
     nit:"892.170.008-3",
     email:"alcaldia@fonseca-laguajira.gov.co",
     email_judicial:"notificacionjudicial@fonseca-guajira.gov.co"
 },
 {
-    nombre:"Alcaldía de San Juan del Cesar, La Guajira",
+    nombre:"Alcaldía Municipal de San Juan del Cesar, La Guajira",
     nit:"892.115.179-0",
     email:"alcaldia@sanjuandelcesar-laguajira.gov.co",
     email_judicial:"juridica@sanjuandelcesar-laguajira.gov.co"
 },
 {
-    nombre:"Alcaldía de Villanueva, La Guajira",
+    nombre:"Alcaldía Municipal de Villanueva, La Guajira",
     nit:"892.115.198-0",
     email:"contactenos@villanueva-guajira.gov.co",
     email_judicial:"secretariageneral@villanueva-guajira.gov.co"
 },
 {
-    nombre:"Alcaldía de La Jagua del Pilar, La Guajira",
+    nombre:"Alcaldía Municipal de La Jagua del Pilar, La Guajira",
     nit:"825.000.676-1",
     email:"contactenos@lajaguadelpilar-laguajira.gov.co",
     email_judicial:"notificacionjudicial@lajaguadelpilar-laguajira.gov.co"
 },
 {
-    nombre:"Alcaldía de Hatonuevo, La Guajira",
+    nombre:"Alcaldía Municipal de Hatonuevo, La Guajira",
     nit:"800.255.101-2",
     email:"contactenos@hatonuevo-laguajira.gov.co"
+},
+{
+nombre:"Alcaldía Municipal de Uribia, La Guajira",
+nit:"892.115.155-4",
+email:"contactenos@uribia-laguajira.gov.co"
+},
+{
+    nombre:"Alcaldía Municipal de Manaure, La Guajira",
+    nit:"892.115.024-8",
+    email:"contactenos@manaure-laguajira.gov.co"
 },
 // Gobernaciones y sus Dependencias
 {
@@ -212,6 +222,14 @@ nombre: "Autoridad Nacional de Licencias Ambientales - ANLA",
 nit: "900.467.239-2",
 email: "licencias@anla.gov.co"
 },
+// Superintendencia de Notariado y Registro
+{
+    nombre:"Superintendencia de Notariado y Registro",
+    nit:"",
+    email:"correspondencia@supernotariado.gov.co",
+    email_judicial:"notificaciones.juridica@supernotariado.gov.co"
+}
+,
 {
     nombre:"Superintendencia Nacional de Salud",
     nit:"",
@@ -228,6 +246,16 @@ nombre:"Caja Promotora de Vivienda Militar y Policía - CAJAHONOR",
 nit:"",
 email:"notificaciones.judiciales@cajahonor.gov.co"
 },
+// Fondos
+{
+    nombre: "Fondo Nacional de Vivienda - FNA",
+    nit:"830.121.208-5",
+    email:"contactenos@fna.gov.co",
+    email_judicial:"notificacionesjudiciales@fna.gov.co"
+},
+
+
+// Entidades de Control
 {
     nombre:"Procuraduría General de la Nación",
     nit:"",
@@ -331,6 +359,12 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
     nombre: "Registraduría Municipal de San Juan del Cesar",
     nit: "",
     email: "sanjuandelcesar@registraduria.gov.co"
+    },
+    {
+        nombre:"Registraduría Municipal de Barrancas",
+        nit:"",
+        email:"barrancaslaguajira@registraduria.gov.co"
+
     },
 // Notarías
 {
@@ -4879,7 +4913,7 @@ email: "montealvernia1968@yahoo.es"
     nombre:"Universidad Libre de Colombia",
     nit:"",
     email:""
-},
+}, 
 {
 nombre:"Universidad del Norte",
 nit:"",
