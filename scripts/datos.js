@@ -147,6 +147,9 @@ nit:"",
 email:"servicioalciudadano@mininterior.gov.co"
 },
 {
+    nombre:"Dirección de la Autoridad Nacional de Consulta Previa del Ministerio del Interior"
+},
+{
 nombre: "Ministerio de Relaciones Exteriores",
 nit: "",
 email: ""
@@ -353,7 +356,11 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
     nit:"",
     email:"ccto06ba@cendoj.ramajudicial.gov.co"
 },
-
+{
+    nombre:"Corte Constitucional de Colombia",
+    nit:"",
+    email:"secretaria4@corteconstitucional.gov.co"
+},
 // Registradurías
 {
     nombre: "Registraduría Municipal de San Juan del Cesar",
