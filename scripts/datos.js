@@ -269,6 +269,11 @@ email:"notificaciones.judiciales@cajahonor.gov.co"
         nit:"",
         email:"cgr@contraloria.gov.co"
     },
+    {
+        nombre:"Defensoría del Pueblo",
+        nit:"",
+        email:"atencionciudadano@defensoria.gov.co"
+    },
 
 // Entidades con Presencia Territorial
 {
