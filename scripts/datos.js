@@ -31,6 +31,25 @@ this.email = email;
 
 const datosEntidades = [
 // Entidades Públicas
+
+// Rama Legislativa del Poder Público
+{
+nombre:"Senado de la República de Colombia",
+nit:"",
+email:"atencionciudadanacongreso@senado.gov.co",
+email_judicial:"judiciales@senado.gov.co"
+},
+{
+    nombre:"Comisión Tercera Constitucional Permanente del Senado de la República de Colombia",
+    nit:"",
+    email:"comision.tercera@senado.gov.co",
+},
+{
+    nombre:"Cámara de Representantes de la República de Colombia",
+    nit:"",
+    email:"atencionciudadanacongreso@senado.gov.co",
+    email_judicial:"notificacionesjudiciales@camara.gov.co"
+},
 // Rama Ejecutiva del Poder Público
 // Entidades Territoriales
 
@@ -122,6 +141,12 @@ email: "servicioalciudadano@unidadvictimas.gov.co",
 email_judicial:"notificaciones.juridicauariv@unidadvictimas.gov.co"
 },
 {
+    nombre:"Unidad Administrativa Especial de Gestión de Restitución de Tierras Despojadas - UAEGRTD",
+    nit:"",
+    email:"atencionalciudadano@urt.gov.co",
+    email_judicial:"notificacionesjudiciales@urt.gov.co"
+},
+{
 nombre: "Migración Colombia",
 nit: "",
 email: ""
@@ -129,25 +154,37 @@ email: ""
 {
 nombre: "Ministerio de Vivienda, Ciudad y Territorio de Colombia",
 nit: "",
-email: ""
+email: "correspondencia@minvivienda.gov.co",
+email_judicial:"notificacionesjudici@minvivienda.gov.co"
+},
+{
+    nombre:"Fondo Nacional de Vivienda - FONVIVIENDA",
+    nit:"",
+    email:"notificacionesfonviv@minvivienda.gov.co"
 },
 {
 nombre: "Ministerio del Interior",
-nit: "",
-email: "servicioalciudadano@mininterior.gov.co"
+nit: "830.114.475-6",
+email: "servicioalciudadano@mininterior.gov.co",
+email_judicial:"notificacionesjudiciales@mininterior.gov.co",
 },
 {
 nombre: "Dirección para la Democracia, la Participación Ciudadana y la Acción Comunal del Ministerio del Interior",
 nit: "830.114.475-6",
-email: "accioncomunal@mininterior.gov.co"
+email: "accioncomunal@mininterior.gov.co",
+email_judicial:"notificacionesjudiciales@mininterior.gov.co",
 },
 {
 nombre:"Dirección de Asuntos para Comunidades Negras, Afrocolombianas, Raizales y Palenqueras del Ministerio del Interior",
-nit:"",
-email:"servicioalciudadano@mininterior.gov.co"
+nit:"830.114.475-6",
+email:"servicioalciudadano@mininterior.gov.co",
+email_judicial:"notificacionesjudiciales@mininterior.gov.co",
 },
 {
-    nombre:"Dirección de la Autoridad Nacional de Consulta Previa del Ministerio del Interior"
+    nombre:"Dirección de la Autoridad Nacional de Consulta Previa del Ministerio del Interior",
+    nit:"830.114.475-6",
+    email:"",
+    email_judicial:"notificacionesjudiciales@mininterior.gov.co",
 },
 {
 nombre: "Ministerio de Relaciones Exteriores",
@@ -225,14 +262,25 @@ nombre: "Autoridad Nacional de Licencias Ambientales - ANLA",
 nit: "900.467.239-2",
 email: "licencias@anla.gov.co"
 },
-// Superintendencia de Notariado y Registro
+// Superintendencias
 {
     nombre:"Superintendencia de Notariado y Registro",
     nit:"",
     email:"correspondencia@supernotariado.gov.co",
     email_judicial:"notificaciones.juridica@supernotariado.gov.co"
 }
-,
+,{
+    nombre:"Superintendencia de Industria y Comercio",
+    nit:"",
+    email:"contactenos@sic.gov.co",
+    email_judicial:"notificacionesjud@sic.gov.co"
+},
+{
+    nombre:"Superintendencia Financiera de Colombia",
+    nit:"",
+    email:"super@superfinanciera.gov.co",
+    email_judicial:"notificaciones_ingreso@superfinanciera.gov.co"
+},
 {
     nombre:"Superintendencia Nacional de Salud",
     nit:"",
@@ -251,7 +299,7 @@ email:"notificaciones.judiciales@cajahonor.gov.co"
 },
 // Fondos
 {
-    nombre: "Fondo Nacional de Vivienda - FNA",
+    nombre: "Fondo Nacional del Ahorro - FNA",
     nit:"830.121.208-5",
     email:"contactenos@fna.gov.co",
     email_judicial:"notificacionesjudiciales@fna.gov.co"
@@ -322,6 +370,11 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     email_judicial:"juridicanotificacionestutela@fiscalia.gov.co"
     },
     {
+        nombre:"Fiscalía 01 Seccional de Fonseca, La Guajira",
+        nit:"",
+        email:"fis1secfonseca@fiscalia.gov.co"
+    },
+    {
     nombre:"Consejo Superior de la Judicatura",
     nit:"",
     email:"info@cendoj.ramajudicial.gov.co"
@@ -337,6 +390,15 @@ nombre:"Juzgado Primero Civil Del Circuito San Juan Del Cesar, La Guajira",
 nit:"",
 email:"j01ctoclsjuan@cendoj.ramajudicial.gov.co"
 },
+{nombre:"Juzgado Segundo Penal del Circuito de San Juan del Cesar, La Guajira",
+    nit:"",
+    email:"j02pccsjuan@cendoj.ramajudicial.gov.co"
+},
+{
+    nombre:"Juzgado Laboral 001 del Circuito de San Juan del Cesar, La Guajira",
+    nit:"",
+    email:"jlctosjuan@cendoj.ramajudicial.gov.co",
+},
 {
 nombre:"Juzgado Promiscuo Municipal de Barrancas, La Guajira",
 nit:"",
@@ -346,6 +408,11 @@ email:"jprmpalbarrancas@cendoj.ramajudicial.gov.co"
     nombre:"Juzgado Promiscuo Municipal de Hatonuevo, La Guajira",
     nit:"",
     email:"jprmpalhatonuevo@cendoj.ramajudicial.gov.co"
+    },
+    {
+        nombre:"Juzgado Primero Promiscuo Municipal de San Juan del Cesar, La Guajira",
+        nit:"",
+        email:"j01prmpalsjuan@cendoj.ramajudicial.gov.co"
     },
     {
 nombre:"Juzgado Cuarto Penal Municipal con Función de Control de Garantías de Riohacha",
@@ -377,6 +444,12 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         nit:"",
         email:"barrancaslaguajira@registraduria.gov.co"
 
+    },
+    {
+        nombre: "Registraduría Nacional del Estado Civil",
+        nit: "",
+        email: "despachoregistrador@registraduria.gov.co",
+        email_judicial:"notificacionjudicial@registraduria.gov.co"
     },
 // Notarías
 {
@@ -5006,6 +5079,11 @@ email: "secretaria.general@nuevaeps.com.co"
 nombre: "DUSAKAWI E.P.S.I",
 nit: "824.002.362-1",
 email: "callcenter@dusakawiepsi.com"
+},
+{
+nombre:"POSITIVA COMPAÑÍA DE SEGUROS S.A - ARL POSITIVA",
+nit:"860.011.153-6",
+email:"servicioalcliente@positiva.gov.co"
 },
 {
 nombre: "SOCIEDAD ADMINISTRADORA DE FONDOS DE PENSIONES Y CESANTIAS PORVENIR S.A.",

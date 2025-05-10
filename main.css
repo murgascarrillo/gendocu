@@ -538,7 +538,7 @@ strong{
   animation: rotateImages 100s linear infinite; /* Inicia la rotación de las imágenes una vez que la página ha cargado */
 
   /* Define las imágenes de fondo */
-  background-image: url('imagenes/yellowNebula.webp');
+  background-image: url('imagenes/greenNebula.webp');
   background-size: 69%; /* Ajusta el tamaño de las imágenes de fondo */
   background-clip: text; /* Aplica el fondo solo al área del texto */
   -webkit-background-clip: text; /* Para navegadores basados en Webkit como Chrome y Safari */
