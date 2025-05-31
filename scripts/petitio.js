@@ -361,7 +361,7 @@ function escribirPruebas()
    {
      let x = document.getElementById("textoInputPruebas");
      let y = document.getElementById("pruebas");
-     y.innerHTML = x.value;
+     y.innerText = x.value;
 }
 
 // Sección - Notificaciones.

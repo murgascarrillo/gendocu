@@ -379,7 +379,12 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     nit:"",
     email:"info@cendoj.ramajudicial.gov.co"
     },
-// Juzgados
+// Juzgados & Tribunales
+{
+nombre:"Secretaria Tribunal Superior del Distrito Judicial de Riohacha, Sala Civil Familia y Laboral",
+nit:"",
+email:"stsscflrioha@cendoj.ramajudicial.gov.co"
+},
 {
     nombre:"Despacho 001 Sala Penal Tribunal Superior Distrito Judicial de Riohacha, La Guajira",
     nit:"",
@@ -423,11 +428,25 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         nit:"",
         email:"j06pmpalrioha@cendoj.ramajudicial.gov.co"
     },
+
+    //  Juzgados del Atlántico
+    {
+        nombre:"Juzgado Tercero Penal Municipal con Función de Control de Garantías de Barranquilla",
+        nit:"",
+        email:"j03pmgba@cendoj.ramajudicial.gov.co"
+    },
 {
     nombre:"Juzgado Sexto Civil del Circuito de Barranquilla",
     nit:"",
     email:"ccto06ba@cendoj.ramajudicial.gov.co"
 },
+{
+    nombre:"Juzgado Décimo de Pequeñas Causas y Competencias Múltiples de Barranquilla",
+    nit:"",
+    email:"j10prpcbquilla@cendoj.ramajudicial.gov.co"
+},
+
+// Altas Cortes Judiciales de Colombia
 {
     nombre:"Corte Constitucional de Colombia",
     nit:"",
@@ -5053,6 +5072,11 @@ nombre:"Adelante Soluciones Financieras - ADDI",
 nit:"901216.768-4",
 email:"datos@addi.com"
 },
+{
+nombre:"SERVICIOS FINANCIEROS S.A - SERFINANSA COMPAÑIA DE FINANCIAMIENTO",
+nit:"860.043.186-6",
+email:""
+},
 // Empresas de Cobranza
 {
 nombre:"Aval Titulos S.A.S.",
@@ -5107,6 +5131,8 @@ email:"servicliente1@syd.com.co"
     email:"cuidamossalud@hotmail.com"
 },
 
+// Empresas Prestadoras de Servicios Públicos - E.S.P.
+
 // Empresas Proveedoras de Energía Eléctrica.
 {
 nombre: "Caribesol de la Costa S.A.S. E.S.P - AIR-E",
@@ -5114,14 +5140,18 @@ nit: "901.380.930-2",
 email: "servicioalcliente@air-e.com"
 },
 
-// Empresas Proveedoras de Acueducto.
+// Empresas Proveedoras de Acueducto y Alcantarillado.
 
 {
 nombre:"Veolia Aguas de la Guajira S.A.S E.S.P",
 nit:"901.434.831-0",
 email:"co.servicioalcliente.guajira@veolia.com"
 },
-
+{
+  nombre:"Acueductos y Alcantarillados Sostenibles S.A. E.S.P.",
+  nit:"811.008.426-2,",
+  email:"aassa@aassa.com.co",  
+},
 // Empresas Proveedoras de Internet.
 {
 nombre: "World Connections S.A.S.",
@@ -5136,9 +5166,10 @@ email: "info@worldconnections.com.co"
 },
 // Empresas de Telecomunicaciones | Telefonía Móvil
 {
-nombre:"ComNotaría Única deción Celular S.A. Comcel S.A. - CLARO",
+nombre:"Comunicación Celular S.A. Comcel S.A. - CLARO",
 nit:"800.153.993-7",
-email:"notificacionesclaro@claro.com.co"
+email:"notificacionesclaro@claro.com.co",
+direccion:"CR 68 A 24 B 10, Bogotá D.C.",
 },
 {
     nombre: "EMPRESA DE TELECOMUNICACIONES DE BOGOTÁ S.A. E.S.P - ETB",
