@@ -54,6 +54,7 @@ email_judicial:"judiciales@senado.gov.co"
 // Entidades Territoriales
 
 // Alcaldías
+// Alcaldía de La Guajira
 {
 nombre: "Alcaldía de Municipal Barrancas, La Guajira",
 nit: "800.099.223-3",
@@ -67,10 +68,22 @@ email_judicial:"notificacionjudicial@barrancas-laguajira.gov.co"
     email_judicial:"notificacionjudicial@distraccion-laguajira.gov.co"
 },
 {
+    nombre:"Alcaldía Municipal de El Molino, La Guajira",
+    nit:"800.092.788-0",
+    email:"alcaldia@elmolino-laguajira.gov.co",
+    email_judicial:"notificaciones@elmolino-laguajira.gov.co"
+},
+{
     nombre:"Alcaldía Municipal de Fonseca, La Guajira",
     nit:"892.170.008-3",
-    email:"alcaldia@fonseca-laguajira.gov.co",
+    email:"alcaldia@fonseca-guajira.gov.co",
     email_judicial:"notificacionjudicial@fonseca-guajira.gov.co"
+},
+{
+    nombre:"Alcaldía Municipal de Albania, La Guajira",
+    nit:"825.001.629-1",
+    email:"contactenos@albania-laguajira.gov.co",
+    email_judicial:"notificacionjudicial@albania-laguajira.gov.co"
 },
 {
     nombre:"Alcaldía Municipal de San Juan del Cesar, La Guajira",
@@ -104,6 +117,12 @@ email:"contactenos@uribia-laguajira.gov.co"
     nombre:"Alcaldía Municipal de Manaure, La Guajira",
     nit:"892.115.024-8",
     email:"contactenos@manaure-laguajira.gov.co"
+},
+// Alcaldías de Cáqueta
+{
+    nombre:"Alcaldía Municipal de Puerto Rico, Cáqueta",
+    nit:"",
+    email:"contactenos@puertorico-caqueta.gov.co"
 },
 // Gobernaciones y sus Dependencias
 {
@@ -380,6 +399,8 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     email:"info@cendoj.ramajudicial.gov.co"
     },
 // Juzgados & Tribunales
+
+// Juzgados de La Guajira
 {
 nombre:"Secretaria Tribunal Superior del Distrito Judicial de Riohacha, Sala Civil Familia y Laboral",
 nit:"",
@@ -435,6 +456,8 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         nit:"",
         email:"j03pmgba@cendoj.ramajudicial.gov.co"
     },
+
+    
 {
     nombre:"Juzgado Sexto Civil del Circuito de Barranquilla",
     nit:"",
@@ -445,6 +468,16 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
     nit:"",
     email:"j10prpcbquilla@cendoj.ramajudicial.gov.co"
 },
+ {
+        nombre:"Juzgado Promiscuo Municipal de Puerto Colombia",
+        nit:"",
+        email:"j01prmpalpcolombia@cendoj.ramajudicial.gov.co"
+    },
+    {
+        nombre:"Juzgado 02 Promiscuo Municipal de Puerto Rico, Cáqueta",
+        nit:"",
+        email:"j02prmpalprico@cendoj.ramajudicial.gov.co"
+    },
 
 // Altas Cortes Judiciales de Colombia
 {
@@ -5055,6 +5088,27 @@ email: ""
 nombre: "Experian Colombia S.A. - Datacrédito",
 nit: "900.422.614-8",
 email: "servicioalciudadano@experian.com"
+},
+//Entidades Bancarias (Dinero & Títulos Valores)
+{
+nombre: "Banco Davivienda S.A.",
+nit: "",
+email: "clientes@pichincha.com.co"
+},
+{
+    nombre:"Banco Pichincha S.A.",
+    nit:"",
+    email:""
+},
+{
+    nombre:"Deposito Centralizado De Valores De Colombia Deceval S.A.",
+    nit:"800.182.091",
+    email:"servicioalcliente@deceval.com.co"
+},
+{
+nombre:"Bolsa de Valores de Colombia S.A.",
+nit:"",
+email:"servicioalcliente@bvc.com.co"
 },
 // Entidades Financieras
 {
