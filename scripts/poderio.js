@@ -74,21 +74,21 @@ function mostrarOcultarCamposAbogado() {
       const radioSi = document.getElementById('esAbogado');
       const radioNo = document.getElementById('noesAbogado');
       const parrafo = document.getElementById('parrafoAbogado');
-      const input = document.getElementById('textoInputIdAbogado');
       const parrafoTP = document.getElementById('parrafoTPAbogado');
-      const tpenFirma = document.getElementById('tpEnFirma')
+      const inputTP = document.getElementById('textoInputTPAbogado');
+      const tpenFirma = document.getElementById('tpEnFirma');
 
       function actualizarDisplay() {
         if (radioSi.checked) {
           parrafo.style.display = 'inline';
-          input.style.display = 'inline';
-           parrafoTP.style.display = 'inline';
-            tpenFirma.style.display = 'inline';
+          parrafoTP.style.display = 'inline';
+          inputTP.style.display = 'inline';
+           tpenFirma.style.display = 'inline';
         } else if (radioNo.checked) {
           parrafo.style.display = 'none';
-          input.style.display = 'none';
           parrafoTP.style.display = 'none';
-            tpenFirma.style.display = 'none';
+          inputTP.style.display = 'none';
+          tpenFirma.style.display = 'none';
         }
       }
       // Agregamos listeners

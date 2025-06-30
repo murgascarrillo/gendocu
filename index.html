@@ -675,10 +675,11 @@ Escribe el <strong>Nombre</strong> de quien realizará el mandato. <strong>Ejemp
 </p>
 <input type="text" id="textoInputIdApoderado" maxlength="20" oninput="escribirIdApoderado()" placeholder="Escriba número identificación."/>
 <p class="parrafosFormulario" id="parrafoPreguntaAbogado">¿Es abogada/o?</p>
-<label for="esAbogado">Sí</label>
-<input type="radio" id="esAbogado" name="calidadAbogado">
 <label for="noesAbogado">No</label>
-<input type="radio" id="noesAbogado" name="calidadAbogado">
+<input type="radio" id="noesAbogado" name="calidadAbogado" checked/>
+<label for="esAbogado">Sí</label>
+<input type="radio" id="esAbogado" name="calidadAbogado"/>
+
 <p class="parrafosFormulario" id="parrafoAbogado">Ingresa el <b>Número</b> de Tarjeta profesional de Abogado <strong>Ejemplo:</strong> 123456.<br>
         </p>
       <input type="text" id="textoInputTPAbogado" maxlength="20" oninput="escribirTPAbogado()" placeholder="Escriba número de tarjeta profesional."/>
