@@ -43,6 +43,7 @@ function escribirApoderado()
      y.innerHTML = " "+x.value;
      z.innerHTML = x.value;
 }
+
 // Sección APODERADO - Lugar de Nacionalidad.
 function elegirLugarNacionalidadApoderado()
    {
@@ -68,6 +69,48 @@ function escribirIdApoderado()
   let y = document.getElementById("idApoderado");
   y.innerHTML = x.value; 
 }
+
+function mostrarOcultarCamposAbogado() {
+      const radioSi = document.getElementById('esAbogado');
+      const radioNo = document.getElementById('noesAbogado');
+      const parrafo = document.getElementById('parrafoAbogado');
+      const input = document.getElementById('textoInputIdAbogado');
+      const parrafoTP = document.getElementById('parrafoTPAbogado');
+      const tpenFirma = document.getElementById('tpEnFirma')
+
+      function actualizarDisplay() {
+        if (radioSi.checked) {
+          parrafo.style.display = 'inline';
+          input.style.display = 'inline';
+           parrafoTP.style.display = 'inline';
+            tpenFirma.style.display = 'inline';
+        } else if (radioNo.checked) {
+          parrafo.style.display = 'none';
+          input.style.display = 'none';
+          parrafoTP.style.display = 'none';
+            tpenFirma.style.display = 'none';
+        }
+      }
+      // Agregamos listeners
+      radioSi.addEventListener('change', actualizarDisplay);
+      radioNo.addEventListener('change', actualizarDisplay);
+
+      // Verifica si ya está seleccionado al cargar
+      actualizarDisplay();
+    }
+
+    document.addEventListener('DOMContentLoaded', mostrarOcultarCamposAbogado);
+
+function escribirTPAbogado()
+{
+  let x = document.getElementById("textoInputTPAbogado");
+  let y = document.getElementById("tprofesional1");
+  let z = document.getElementById("tprofesional2");
+  y.innerHTML = x.value; 
+  z.innerHTML = x.value; 
+}
+
+
 // Sección - Entidad destinataria.
 let xEntidadDestino = document.getElementById("inputTextoEntidadDestino");
 let yEntidadDestino = document.getElementById("listaEntidadesDestinoPoder");

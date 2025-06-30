@@ -297,10 +297,19 @@ p
       {
         font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
       }
+
+  #parrafoAbogado,
+    #textoInputIdAbogado {
+      display: none;
+    }
+
       .letrachiquita
       {
         font-size: 0.5rem;
       }
+
+
+
 select 
   {
       width: 90%;
@@ -513,8 +522,15 @@ input
     min-width: 50px; /* Set a minimum width */
     min-height: 24px; /* Set a minimum height */
     resize:both; /* Optional: Disable manual resizing by the user */
+    font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;}
+
+    #inputTextoPruebasPeticion {
+    width: 90%; /* You can adjust the initial width as needed */
+    min-width: 50px; /* Set a minimum width */
+    min-height: 24px; /* Set a minimum height */
+    resize:both; /* Optional: Disable manual resizing by the user */
     font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
-  }
+    }
   #inputTextoEntidad {
     width: 90%; /* You can adjust the initial width as needed */
     min-width: 50px; /* Set a minimum width */

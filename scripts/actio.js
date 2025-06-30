@@ -252,3 +252,30 @@ inputPretension.addEventListener('input', function () {
  }
 
 document.getElementById("botonResetPretensiones").addEventListener("click", eliminarPretension);
+
+
+// Sección - Pruebas
+
+const inputPruebasTutela = document.getElementById('inputTextoPruebasTutela');
+
+function escribirPruebasTutela()
+   {
+     let x = document.getElementById("inputTextoPruebasTutela");
+     let y = document.getElementById("pruebasTutela");
+     y.innerText = x.value;
+}
+inputPruebasTutela.addEventListener('input',escribirPruebasTutela);
+
+inputPruebasTutela.addEventListener('input', function () {
+ // Set the minimum height
+ this.style.height = '24px'; // Or your preferred minimum height
+
+ // Adjust the height based on the scrollHeight
+ this.style.height = this.scrollHeight + 'px';
+
+ // Set the minimum width
+ if (this.scrollWidth > 90) { // Adjust the minimum width as needed
+   this.style.width = '90%'; // Or your preferred minimum width
+ } else {
+   this.style.width = this.scrollWidth + 'px';}
+});

@@ -179,7 +179,7 @@
       <p class="parrafosFormulario">
       Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "Fotocopia de escritura pública. Fotografía de la vía pública. Etc.
       </p>
-      <input type="text" id="textoInputPruebas" oninput="escribirPruebas()" placeholder="Mencione las pruebas."/>
+      <textarea id="inputTextoPruebasPeticion" placeholder="Mencione las pruebas."></textarea>
   </div>
   <!-- Contenedor Notificaciones -->
   <div class="item">
@@ -190,9 +190,12 @@
       Escribe tu email y celular para recibir la eventual respuesta del destinatario.
       <br>
       </p>
-      <input type="text" id="textoInputEmailSolicitante" oninput="escribirNotificaciones1()" placeholder="Escriba su email."/>
+      <form>
+        <input type="email" id="textoInputEmailSolicitante" oninput="escribirNotificaciones1()" placeholder="Escriba su email."/>
       <br>
       <input type="text" id="textoInputCelularSolicitante" maxlength="16" oninput="escribirNotificaciones2()" placeholder="Escriba # celular."/>
+      </form>
+      
   </div>
   <!-- Contenedor Firma -->
   <div class="item">
@@ -205,38 +208,40 @@
 </div>
 <div class="item-11-contenedor">
   <div class="item item-11">
-  <!-- Acá comienza el documento [Petición] que se genera. -->
-    <div class="documentoGenerado" id="esqueletoPeticion">
-<span>Fecha: </span><span id="fecha1"></span>
-<br>
-Respetados:
+<!-- Acá comienza el documento [Petición] que se genera. -->
+<div class="documentoGenerado" id="esqueletoPeticion">
+<p>Fecha: <span id="fecha1"></span></p>
+<p>Respetada/os:</p>
 <strong><datalist style="font-style:normal;" id="listaEntidades"></datalist></strong>
 E.S.D.
 <br/>
-<strong>Referencia:</strong> Derecho de petición<br/>
-<p>Cordial saludo;<br>Yo,<strong><span id="nombreusuario1">_____</span></strong>, persona natural, nacional de <span id="nacionalidad">_____</span>, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:<br/></p>
-<p id="section" style="text-align:center;">
-<strong>Hechos.</strong></p>
+<p><strong>Referencia:</strong> <span id="refDocumento">Derecho de petición</span></p>
+
+<p>Cordial saludo;</p>
+
+<p>Yo,<strong><span id="nombreusuario1">_____</span></strong>, persona natural, nacional de <span id="nacionalidad">_____</span>, mayor de edad, presento <strong>Petición</strong> en atención a los siguientes:<br/></p>
+
+<p id="section" style="text-align:center;"><b>Hechos.</b></p>
 <div id="listaHechosPeticion">Acá van tus hechos.</div>
+
 <p id="section" style="text-align:center;"><strong>Fundamentos de Derecho.</strong></p>
 <p>La presente se fundamenta en las siguientes Razones: <span id="espacioFundamentos"></span></p>
-<p id="section" style="text-align:center;">
+<p id="section" style="text-align:center;"><br/>
 <strong>Pruebas.</strong></p>
 <p><strong>Documentales: </strong>Se aportan las siguientes: <span id="pruebas"></span></p>
+
 <p id="section" style="text-align:center;"><strong>Peticiones.</strong></p>
 <div style="font-style:normal;" id="listaPeticiones">Acá van tus peticiones.</div></p>
 <p id="section" style="text-align:center;">
 <strong>Notificaciones.</strong></p>
-<p>Recibiré en el email <span id="email">_____</span> y en el celular <span id="celular">_____</span>.<br />
-  Atentamente,<br>
-</p>
+<p>Recibiré en el email <span id="email">_____</span> y en el celular <span id="celular">_____</span>.</p>
+
+<p>Atentamente,</p>
 <img id="espacioFirma" width="150" height="72">
-<br/>
-<strong><span id="nombreusuario2">_____</span>
-<br>
-<span id="tipoDocumentoIdentidad">Documento de Identidad</span> #<span id="idUsuario">_____</span></strong>
-    </div>
-  </div>
+<p><strong><span id="nombreusuario2">__________</span><br/>
+<span id="tipoDocumentoIdentidad">Documento de Identidad</span> #<span id="idUsuario">_____</span></strong></p>
+</div>
+</div>
 </div>
 </div>        
 <!-- Tipo Contrato -->
@@ -535,7 +540,7 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       <p class="parrafosFormulario">
       Relaciona las pruebas que adjuntará al documento, separando los elementos con puntos. <strong>Ejemplo:</strong> "Fotocopia. Fotografía, etc.."
       </p>
-      <input type="text" id="textoInputPruebas" oninput="escribirPruebas()" placeholder="Mencione las pruebas"/>
+       <textarea id="inputTextoPruebasTutela" placeholder="Mencione las pruebas de su demanda."></textarea>
   </div>
   <!-- Contenedor Notificaciones -->
   <div class="item">
@@ -600,7 +605,7 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
       <p id="section" style="text-align:center;"><strong>Pruebas.</strong></p>
       <p>
         Se aportan las siguientes pruebas documentales:<br>
-        <span id="pruebas"></span>
+        <span id="pruebasTutela"></span>
         <br />
       </p>
       <p id="section" style="text-align:center;"><strong>Juramento.</strong></p>
@@ -650,25 +655,34 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
   </div>
   <!-- Contenedor Apoderado -->
   <div class="item">
-    <h3>
-      🙋‍♂️🙋<br/>Apoderado
-      </h3>
-      <p class="parrafosFormulario">
-      Escribe el <strong>Nombre</strong> de quien realizará el mandato. <strong>Ejemplo:</strong> María García.
-      </p>
-      <input type="text" id="textoInputNombreApoderado" maxlength="50" oninput="escribirApoderado()" placeholder="Escriba su nombre."/>
-      <p class="parrafosFormulario">
-        <label for="inputPais">Selecciona el país de <strong>Nacionalidad</strong> del apoderado. <strong>Ejemplo:</strong> Colombia.</label>
-      </p>
-      <input list="listaPaises" name="pais" id="inputPaisApoderado" onchange="elegirLugarNacionalidadApoderado()" placeholder="Escriba el lugar."/>
-      <datalist id="listaPaises"></datalist>
-      <p class="parrafosFormulario">
-        <label for="listaTipoDocumentoApoderado">Escribe el <strong>Tipo</strong> de Documento de Identidad. <strong>Ejemplo:</strong> Cédula, Tarjeta de Identidad, Pasaporte, etc.</label> 
-      </p>
-      <input type="text" name="tipodocumento" id="listaTipoDocumentoApoderado" oninput="elegirTipoDocumentoApoderado()" placeholder="Escribe Tipo de Identificación."/>
-      <p class="parrafosFormulario">Ingresa el <strong>Número</strong> documento. <strong>Ejemplo:</strong> 1122801234.<br>
+<h3>
+🙋‍♂️🙋<br/>Apoderado
+</h3>
+<p class="parrafosFormulario">
+Escribe el <strong>Nombre</strong> de quien realizará el mandato. <strong>Ejemplo:</strong> María García.
+</p>
+<input type="text" id="textoInputNombreApoderado" maxlength="50" oninput="escribirApoderado()" placeholder="Escriba su nombre."/>
+<p class="parrafosFormulario">
+<label for="inputPais">Selecciona el país de <strong>Nacionalidad</strong> del apoderado. <strong>Ejemplo:</strong> Colombia.</label>
+</p>
+<input list="listaPaises" name="pais" id="inputPaisApoderado" onchange="elegirLugarNacionalidadApoderado()" placeholder="Escriba el lugar."/>
+<datalist id="listaPaises"></datalist>
+<p class="parrafosFormulario">
+<label for="listaTipoDocumentoApoderado">Escribe el <strong>Tipo</strong> de Documento de Identidad. <strong>Ejemplo:</strong> Cédula, Tarjeta de Identidad, Pasaporte, etc.</label> 
+</p>
+<input type="text" name="tipodocumento" id="listaTipoDocumentoApoderado" oninput="elegirTipoDocumentoApoderado()" placeholder="Escribe Tipo de Identificación."/>
+<p class="parrafosFormulario">Ingresa el <strong>Número</strong> documento. <strong>Ejemplo:</strong> 1122801234.<br>
+</p>
+<input type="text" id="textoInputIdApoderado" maxlength="20" oninput="escribirIdApoderado()" placeholder="Escriba número identificación."/>
+<p class="parrafosFormulario" id="parrafoPreguntaAbogado">¿Es abogada/o?</p>
+<label for="esAbogado">Sí</label>
+<input type="radio" id="esAbogado" name="calidadAbogado">
+<label for="noesAbogado">No</label>
+<input type="radio" id="noesAbogado" name="calidadAbogado">
+<p class="parrafosFormulario" id="parrafoAbogado">Ingresa el <b>Número</b> de Tarjeta profesional de Abogado <strong>Ejemplo:</strong> 123456.<br>
         </p>
-        <input type="text" id="textoInputIdApoderado" maxlength="20" oninput="escribirIdApoderado()" placeholder="Escriba número identificación."/>
+      <input type="text" id="textoInputTPAbogado" maxlength="20" oninput="escribirTPAbogado()" placeholder="Escriba número de tarjeta profesional."/>
+
   </div>
   <!-- Contenedor Entidades Destinatarias -->
   <div class="item">
@@ -696,17 +710,23 @@ El presente contrato se firma por las partes estando en Colombia y siendo la fec
   <div class="item item-11">
       <!-- Acá comienza el documento [Poder] que se genera. -->
       <div class="documentoGenerado" id="esqueletoPoder">
-Colombia, <span id="fechaPoder">2025</span>.<br/>
-Respetados(as),
-<br/><strong><span style="font-style:normal;" id="listaEntidadesDestinoPoder">A quien pueda interesarle</span></strong><br/>
+<p>Colombia, <span id="fechaPoder">2025</span>.</p>
+
+<p>Respetados(as),
+  <br/>
+<strong><span style="font-style:normal;" id="listaEntidadesDestinoPoder">A quien pueda interesarle</span></strong><br/>
 E.S.D.
-<br/>
-<strong>Referencia:</strong> Poder Especial<br/>
-<p>Yo,<strong><span id="nombrepoderdante1"> PODERDANTE</span></strong>, persona natural, nacional de <span id="nacionalidadPoderdante">_____</span>, mayor de edad, por medio de este documento otorgo <strong>PODER ESPECIAL</strong> amplio y suficiente a <strong><span id="nombreapoderado1"> APODERADO(A)</span></strong>, persona natural, nacional de <span id="nacionalidadApoderado">_____</span>, mayor de edad, para que en mi nombre y representación pueda realizar lo siguiente: <span id="objetoMandato">Acá va el Mandato.</span></p>
+</p>
+
+<p><strong>Referencia:</strong> Poder Especial<br/></p>
+
+<p>Yo,<strong><span id="nombrepoderdante1"> PODERDANTE</span></strong>, persona natural, nacional de <span id="nacionalidadPoderdante">_____</span>, mayor de edad, por medio de este documento otorgo <strong>PODER ESPECIAL</strong> amplio y suficiente a <strong><span id="nombreapoderado1"> APODERADO(A)</span></strong>, persona natural, nacional de <span id="nacionalidadApoderado">_____</span>, mayor de edad<span id="parrafoTPAbogado">, portador/a de la Tarjeta Profesional de Abogado número <span id="tprofesional1">______</span> del Consejo Superior de la Judicatura</span>, para que en mi nombre y representación pueda realizar lo siguiente: <span id="objetoMandato">Acá va el Mandato.</span></p>
+
 <p>Mi apoderada(o) queda también facultado(a) para recibir, ser notificado en mi nombre, notificar, entregar, transigir, corregir, pagar, conciliar, desistir, sustituir, reasumir, autorizar, aclarar, presentar recursos de impugnación ordinarios y extraordinarios, modificar, firmar documentos privados, convenir, solicitar información y documentos incluso aquellos reservados para que solo los pueda conocer el titular de la información y/o requieran una autorización expresa del titular la cual se entiende otorgada plenamente, y para todas aquellas diligencias que guarden relación o se encaminen al cumplimiento del mandato.</p> 
 <p>Sírvanse reconocerle personería jurídica a mi apoderado(a) respecto del presente mandato.</p> 
 <p>
 Atentamente,<br/>
+
 El (La) Poderdante,<br/>
 <br/>  <br/><br/>
 <strong><span id="nombrepoderdante2">_____</span><br/>
@@ -717,7 +737,8 @@ El (La) Apoderado (a),<br/>
 <strong>ACEPTO.</strong>
 <br/><br/><br/>
 <strong><span id="nombreapoderado2">_____</span><br/>
-<span id="tipoDocumentoIdentidadApoderado">Documento de Identidad</span> #<span id="idApoderado">_____</span></strong>
+<span id="tipoDocumentoIdentidadApoderado">Documento de Identidad</span> #<span id="idApoderado">_____</span><br/>
+<span id="tpEnFirma">Tarjeta Profesional #<span id="tprofesional2">_____</span> del C.S. de la J.</strong></span></p>
 </p>
 </div>
 </div>
@@ -743,7 +764,7 @@ El (La) Apoderado (a),<br/>
 <!-- Pie de página -->
 <div id="footer">
     <br>
-    <p id="call-to-action">¿Cómo te gusta ayudar?</p>
+    <p id="call-to-action">Ayúdanos a seguir generando soluciones.</p>
   <a class="iconosFooter" href="https://wa.me/573017673013?text=Hola.%20Vengo%20de%20la%20App%20Gendocu." class="keychainify-checked"> <img src="imagenes/icon_whatsapp.webp" target="_blank" alt="Icono Whatsapp" width="30"></a>
     <a class="iconosFooter" href="https://github.com/murgascarrillo/gendocu" class="keychainify-checked"> <img src="imagenes/icon_github.webp" alt="Icono Github" style="width:30px;background-color: white;border-radius:51%;"></a>
     <a class="iconosFooter" href="https://www.patreon.com/MurgasCarrillo" class="keychainify-checked"> <img src="imagenes/icon_patreon.webp" alt="Icono Patreon" style="width:30px;background-color: white;border-radius:51%;"></a>
@@ -760,7 +781,7 @@ El (La) Apoderado (a),<br/>
       data-button="Open Natrium" 
       data-position="bottom">      
       Dona XNO</a></div> 
- <p id="version-marca">Version 0.0.2.4.4.14.3 - mas en: <strong >murgascarrillo.com</strong> con &#x2728;</p> 
+ <p id="version-marca">Version 0.0.2.4.4.14.4 - mas en: <strong >murgascarrillo.com</strong> con &#x2728;</p> 
   <a href="https://murgascarrillo.com/" style="position: relative; box-shadow: 3px 6px 5px 0px whitesmoke;">
     <img id="boton-retorno" style="width:50px;height:auto;margin:auto;padding:7px;display: list-item; box-shadow: 1.3px 1.3px 1.3px 0px #717479; border-radius: 50%;" src="imagenes/murgascarrillo.webp"/>
 </a>
@@ -776,5 +797,6 @@ El (La) Apoderado (a),<br/>
 <script src='scripts/clausulae.js'></script>
 <!-- script src='scripts/visuals.js'></script> -->
 <script src="https://pay.nano.to/latest.js"></script>
+
 </body>
 </html>

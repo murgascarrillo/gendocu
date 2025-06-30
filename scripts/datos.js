@@ -132,11 +132,6 @@ email: "contactenos@laguajira.gov.co",
 email_judicial:"notificacionesjudiciales@laguajira.gov.co"
 },
 
-{
-    nombre: "Departamento Administrativo de Tránsito y Transporte Departamental de La Guajira",
-    nit: "892.115.015-1",
-    email: "transitodepartamental@laguajira.gov.co"
-},
 // Entidades Nacionales
 {
 nombre: "Agencia Nacional de Tierras - ANT",
@@ -343,6 +338,8 @@ email:"notificaciones.judiciales@cajahonor.gov.co"
     },
 
 // Entidades con Presencia Territorial
+
+// Sector Salud
 {
     nombre: "E.S.E Hospital Nuestra Señora del Carmen de Hatonuevo",
     nit: "825.000.620-1",
@@ -355,6 +352,11 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     },
     
     // Sector Tránsito
+    {
+    nombre: "Departamento Administrativo de Tránsito y Transporte Departamental de La Guajira",
+    nit: "892.115.015-1",
+    email: "transitodepartamental@laguajira.gov.co"
+},
     {
     nombre: "Secretaría de Tránsito y Transporte de Valledupar",
     nit: "",
@@ -370,15 +372,27 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     nit: "",
     email: "transitomaicao@gmail.com"
     },
+      {
+    nombre: "Instituto de Tránsito y Transporte de Fonseca",
+    nit: "900.581.405-6",
+    email: "ot.fonseca@instrafon.gov.co."
+    },
     {
     nombre:"Instituto de Tránsito y Transporte de Riohacha",
     nit:"",
     email:"info@instram.gov.co"
     },
+
+    // Sector Policía
     {
     nombre: "Policia Metropolitana de Barranquilla",
     nit: "900.263.078-7",
     email: "mebar.coseg@policia.gov.co"
+    },
+    {
+        nombre:"Inspección Central de Policía de Hatonuevo, La Guajira",
+        nit:"",
+        email:"inspeccion@hatonuevo-laguajira.gov.co"
     },
    
 // Rama Judicial del Poder Público
@@ -412,6 +426,11 @@ email:"stsscflrioha@cendoj.ramajudicial.gov.co"
     email:"des01sptsrioha@cendoj.ramajudicial.gov.co"
 },
 {
+    nombre:"Juzgado 05 Penal Municipal de Control de Garantías de Riohacha, La Guajira",
+    nit:"",
+    email:"j05pmpalrioha@cendoj.ramajudicial.gov.co"
+},
+{
 nombre:"Juzgado Primero Civil Del Circuito San Juan Del Cesar, La Guajira",
 nit:"",
 email:"j01ctoclsjuan@cendoj.ramajudicial.gov.co"
@@ -419,6 +438,11 @@ email:"j01ctoclsjuan@cendoj.ramajudicial.gov.co"
 {nombre:"Juzgado Segundo Penal del Circuito de San Juan del Cesar, La Guajira",
     nit:"",
     email:"j02pccsjuan@cendoj.ramajudicial.gov.co"
+},
+{
+    nombre:"Juzgado 01 Promiscuo de Familia del Circuito de San Juan del Cesar, La Guajira",
+    nit:"",
+    email:"jprfctosjuan@cendoj.ramajudicial.gov.co"
 },
 {
     nombre:"Juzgado Laboral 001 del Circuito de San Juan del Cesar, La Guajira",
@@ -456,8 +480,6 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         nit:"",
         email:"j03pmgba@cendoj.ramajudicial.gov.co"
     },
-
-    
 {
     nombre:"Juzgado Sexto Civil del Circuito de Barranquilla",
     nit:"",
@@ -469,16 +491,41 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
     email:"j10prpcbquilla@cendoj.ramajudicial.gov.co"
 },
  {
-        nombre:"Juzgado Promiscuo Municipal de Puerto Colombia",
+        nombre:"Juzgado 01 Promiscuo Municipal de Puerto Colombia",
         nit:"",
         email:"j01prmpalpcolombia@cendoj.ramajudicial.gov.co"
     },
     {
-        nombre:"Juzgado 02 Promiscuo Municipal de Puerto Rico, Cáqueta",
+        nombre:"Juzgado 02 Promiscuo Municipal de Puerto Colombia",
+        nit:"",
+        email:"j02prmpalpuertocolombia@cendoj.ramajudicial.gov.co"
+    },
+    {
+        nombre:"Juzgado 03 Promiscuo Municipal de Puerto Colombia",
+        nit:"",
+        email:"j03prmpalpuertocolombia@cendoj.ramajudicial.gov.co"
+    },
+     {
+        nombre:"Juzgado 01 Promiscuo del Circuito de Puerto Colombia",
+        nit:"",
+        email:"j01prctopcolombia@cendoj.ramajudicial.gov.co"
+    },
+     {
+        nombre:"Juzgado 02 Promiscuo del Circuito de Puerto Colombia",
+        nit:"",
+        email:"j02prctopcolombia@cendoj.ramajudicial.gov.co"
+    },
+    {
+        nombre:"Juzgado 02 Promiscuo Municipal de Puerto Rico, Caquetá",
         nit:"",
         email:"j02prmpalprico@cendoj.ramajudicial.gov.co"
     },
-
+    // Juzgados de Antioquía
+    {
+        nombre:"Juzgado 02 Municipal de Pequeñas Causas Laborales de Medellín, Antioquía",
+        nit:"",
+        email:"j02mpclmed@cendoj.ramajudicial.gov.co"
+    },
 // Altas Cortes Judiciales de Colombia
 {
     nombre:"Corte Constitucional de Colombia",
@@ -5230,7 +5277,7 @@ direccion:"CR 68 A 24 B 10, Bogotá D.C.",
     nit:"899.999.115-8",
     email:"quejas_call_digitex@etb.com.co"
 },
-// Otro Tipo de Empresas.
+// Otro Tipo de Empresas / Entidad
 {
 nombre:"Su Personal Ya S.A.S.",
 nit:"901.203.439-1",
@@ -5255,6 +5302,16 @@ email: "contactenos@cerrejon.com"
     nombre:"GIDALTI INGENIEROS S.A.S",
     nit:"901.243.820-4",
     email:"gidaltiingenieros@gmail.com"
+},
+{
+    nombre:"Organización Terpel S.A.",
+    nit:"830.095.213-0",
+    email:"servicioalcliente@terpel.com"
+},
+{
+    nombre:"Sindicato Nacional de los Trabajadores de Industria del Carbón - SINTRACARBON",
+    nit:"890.113.158-1",
+    email:"sintracarbon@hotmail.com"
 },
 // Empresas Aseguradoras
 {

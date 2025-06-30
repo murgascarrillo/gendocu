@@ -269,9 +269,9 @@ document.getElementById("inputTextoHechosPeticion").addEventListener("input", es
 // Add event listener to add a new <li> element when the user clicks the "botonAddHechos" button
 document.getElementById("botonAddHechosPeticion").addEventListener("click", agregarHechos);
 
-const inputElement = document.getElementById('inputTextoHechosPeticion');
+const inputHechos = document.getElementById('inputTextoHechosPeticion');
 
-inputElement.addEventListener('input', function () {
+inputHechos.addEventListener('input', function () {
  // Set the minimum height
  this.style.height = '24px'; // Or your preferred minimum height
 
@@ -354,15 +354,30 @@ function imprimirFundamentos() {
 }
 
 
-
 // Sección - Pruebas.
+const inputPruebasPeticion = document.getElementById('inputTextoPruebasPeticion');
 
-function escribirPruebas()
+function escribirPruebasPeticion()
    {
-     let x = document.getElementById("textoInputPruebas");
+     let x = document.getElementById("inputTextoPruebasPeticion");
      let y = document.getElementById("pruebas");
      y.innerText = x.value;
 }
+inputPruebasPeticion.addEventListener('input',escribirPruebasPeticion);
+
+inputPruebasPeticion.addEventListener('input', function () {
+ // Set the minimum height
+ this.style.height = '24px'; // Or your preferred minimum height
+
+ // Adjust the height based on the scrollHeight
+ this.style.height = this.scrollHeight + 'px';
+
+ // Set the minimum width
+ if (this.scrollWidth > 90) { // Adjust the minimum width as needed
+   this.style.width = '90%'; // Or your preferred minimum width
+ } else {
+   this.style.width = this.scrollWidth + 'px';}
+});
 
 // Sección - Notificaciones.
 
@@ -377,6 +392,7 @@ function escribirNotificaciones2() {
  let y = document.getElementById("celular");
  y.innerHTML = x.value;
 }
+
 
 
 // Sección - Firmar documento.
