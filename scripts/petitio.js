@@ -345,6 +345,9 @@ function imprimirFundamentos() {
       case "peticion_Libertad_Expresion":
           contenido += "<br/>" + fundamentos_Libertad_Expresion;
           break;
+      case "peticion_Vivienda_Digna":
+          contenido += "<br/>" + fundamentos_Vivienda_Digna;
+          break;
       default:
           return; // Exit if no valid option is selected
   }

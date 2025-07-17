@@ -131,6 +131,11 @@ nit: "892.115.015-1",
 email: "contactenos@laguajira.gov.co",
 email_judicial:"notificacionesjudiciales@laguajira.gov.co"
 },
+{
+  nombre:"Dirección Operativa de Participación Ciudadana Gobernación de La Guajira",
+  nit:"",
+  email:"accioncomunal@laguajira.gov.co"  
+},
 
 // Entidades Nacionales
 {
@@ -143,6 +148,11 @@ nombre: "Administradora Colombiana de Pensiones - Colpensiones",
 nit: "900.336.004-7",
 email: "contacto@colpensiones.gov.co",
 email_judicial: "notificacionesjudiciales@colpensiones.gov.co"
+},
+{
+nombre:"Colfondos S.A. Pensiones y Cesantías - Colfondos",
+nit:"800.149.496-2",
+email:""
 },
 {nombre:"Unidad de Pensiones y Parafiscales - UGPP",
     nit:"",
@@ -170,6 +180,12 @@ nombre: "Ministerio de Vivienda, Ciudad y Territorio de Colombia",
 nit: "",
 email: "correspondencia@minvivienda.gov.co",
 email_judicial:"notificacionesjudici@minvivienda.gov.co"
+},
+{
+nombre: "Ministerio de Defensa Nacional de Colombia",
+nit: "",
+email: "contactenos@mindefensa.gov.co",
+email_judicial:""
 },
 {
     nombre:"Fondo Nacional de Vivienda - FONVIVIENDA",
@@ -201,9 +217,9 @@ email_judicial:"notificacionesjudiciales@mininterior.gov.co",
     email_judicial:"notificacionesjudiciales@mininterior.gov.co",
 },
 {
-nombre: "Ministerio de Relaciones Exteriores",
+nombre: "Ministerio de Relaciones Exteriores de Colombia",
 nit: "",
-email: ""
+email: "contactenos@cancilleria.gov.co"
 },
 {
     nombre:"Consulado de Colombia en Orlando",
@@ -222,9 +238,14 @@ email:""
     email_judicial:"notificacionesjudiciales@minsalud.gov.co"
 },
 {
-nombre:"Ministerio de Agricultura y Desarrollo Rural",
+nombre:"Ministerio de Agricultura y Desarrollo Rural de Colombia",
 nit:"899.999.028-5",
 email:"atencionalciudadano@minagricultura.gov.co"
+},
+{
+nombre:"Ministerio de las Culturas de Colombia",
+nit:"",
+email:"servicioalciudadano@mincultura.gov.co"
 },
 {
 nombre:"Ministerio del Trabajo",
@@ -232,9 +253,21 @@ nit:"",
 email:"notificacionesjudiciales@mintrabajo.gov.co"
 },
 {
+nombre:"Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia",
+nit:"",
+email:"minticresponde@mintic.gov.co",
+email_judicial:"notificacionesjudicialesmintic@mintic.gov.co"
+},
+{
 nombre:"Instituto de Crédito Educativo y Estudios Técnicos en el Exterior - ICETEX",
 nit:"899.999.035-7",
 email:"tutramite@icetex.gov.co"
+},
+{
+nombre:"Instituto Nacional de Vías - INVÍAS",
+nit:"",
+email:"atencionciudadano@invias.gov.co",
+email_judicial:"njudiciales@invias.gov.co"
 },
 {
 nombre:"Agencia Nacional Digital - AND",
@@ -244,7 +277,7 @@ email:"agencianacionaldigital@and.gov.co"
 {
 nombre: "Presidencia de la República de Colombia",
 nit: "",
-email: ""
+email: "contacto@presidencia.gov.co"
 },
 {
 nombre: "Departamento Nacional de Planeación - DNP",
@@ -307,7 +340,7 @@ email:"gravamenescajaagraria@parugp.com.co",
 email_judicial:"parcal@parugp.com.co"
 },
 {
-nombre:"Caja Promotora de Vivienda Militar y Policía - CAJAHONOR",
+nombre:"0aja Promotora de Vivienda Militar y Policía - CAJAHONOR",
 nit:"",
 email:"notificaciones.judiciales@cajahonor.gov.co"
 },
@@ -378,8 +411,8 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     email: "ot.fonseca@instrafon.gov.co."
     },
     {
-    nombre:"Instituto de Tránsito y Transporte de Riohacha",
-    nit:"",
+    nombre:"Instituto De Transito Y Transporte Y Movilidad Distrital  de Riohacha - INSTRAMD.",
+    nit:"825.003.566-3",
     email:"info@instram.gov.co"
     },
 
@@ -401,6 +434,11 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     nit: "",
     email: "ges.documentalpqrs@fiscalia.gov.co",
     email_judicial:"juridicanotificacionestutela@fiscalia.gov.co"
+    },
+    {
+        nombre:"Dirección Seccional La Guajira" + " Fiscalía General de la Nación",
+        nit:"",
+        email:"dirsec.guajira@fiscalia.gov.co"
     },
     {
         nombre:"Fiscalía 01 Seccional de Fonseca, La Guajira",
@@ -489,6 +527,11 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
     nombre:"Juzgado Décimo de Pequeñas Causas y Competencias Múltiples de Barranquilla",
     nit:"",
     email:"j10prpcbquilla@cendoj.ramajudicial.gov.co"
+},
+{
+    nombre:"Juzgado 13 de Pequeñas Causas y Competencias Múltiples de Barranquilla",
+    nit:"",
+    email:"j13prpcbquilla@cendoj.ramajudicial.gov.co"
 },
  {
         nombre:"Juzgado 01 Promiscuo Municipal de Puerto Colombia",
@@ -5082,6 +5125,11 @@ email: "unicacumaribo@supernotariado.gov.co"
     nit:"",
     email:"ofiregissanjuandelcesar@supernotariado.gov.co"
 },
+{
+    nombre:"Oficina de Registro de Instrumentos Públicos de Barranquilla, Atlántico",
+    nit:"",
+    email:"ofiregisbarranquilla@supernotariado.gov.co"
+},
 // Instituciones Educativas
 {
 nombre: "Institución Etnoeducativa Monte Alvernia",
@@ -5140,12 +5188,13 @@ email: "servicioalciudadano@experian.com"
 {
 nombre: "Banco Davivienda S.A.",
 nit: "",
-email: "clientes@pichincha.com.co"
+email: "",
+email_judicial:"notificacionesjudiciales@davivienda.com",
 },
 {
     nombre:"Banco Pichincha S.A.",
     nit:"",
-    email:""
+    email:"clientes@pichincha.com.co"
 },
 {
     nombre:"Deposito Centralizado De Valores De Colombia Deceval S.A.",
@@ -5278,6 +5327,11 @@ direccion:"CR 68 A 24 B 10, Bogotá D.C.",
     email:"quejas_call_digitex@etb.com.co"
 },
 // Otro Tipo de Empresas / Entidad
+{
+    nombre:"Bomberos Voluntarios de Barrancas, La Guajira",
+    nit:"",
+    email:"bomberosbarrancas-laguajira@hotmail.com"
+},
 {
 nombre:"Su Personal Ya S.A.S.",
 nit:"901.203.439-1",
