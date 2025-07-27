@@ -154,7 +154,7 @@ nombre:"Colfondos S.A. Pensiones y Cesantías - Colfondos",
 nit:"800.149.496-2",
 email:""
 },
-{nombre:"Unidad de Pensiones y Parafiscales - UGPP",
+{nombre:"Unidad de Gestión Pensional y Parafiscales - UGPP",
     nit:"",
     email:"contactenos@ugpp.gov.co"
 },
@@ -282,7 +282,8 @@ email: "contacto@presidencia.gov.co"
 {
 nombre: "Departamento Nacional de Planeación - DNP",
 nit: "",
-email: ""
+email: "",
+email:"notificacionesjudiciales@dnp.gov.co"
 },
 {
 nombre: "Departamento Administrativo para la Prosperidad Social - DPS",
@@ -5182,7 +5183,8 @@ email: ""
 {
 nombre: "Experian Colombia S.A. - Datacrédito",
 nit: "900.422.614-8",
-email: "servicioalciudadano@experian.com"
+email: "servicioalciudadano@experian.com",
+email_judicial:"notificacionesjudiciales@experian.com"
 },
 //Entidades Bancarias (Dinero & Títulos Valores)
 {
@@ -5195,6 +5197,66 @@ email_judicial:"notificacionesjudiciales@davivienda.com",
     nombre:"Banco Pichincha S.A.",
     nit:"",
     email:"clientes@pichincha.com.co"
+},
+{
+    nombre:"Banco Bancolombia",
+    nit:"",
+    email:"",
+    email_judicial:"notificacijudicial@bancolombia.com.co",
+},
+{
+    nombre:"Banco de Bogotá S.A.",
+    nit:"",
+    email:"",
+    email_judicial:"rjudicial@bancodebogota.com.co",
+},
+{
+    nombre:"Banco Popular",
+    nit:"",
+    email:"",
+    email_judicial:"notificacionesjudicialesvjuridica@bancopopular.com.co",
+},
+{
+    nombre:"Banco BBVA",
+    nit:"",
+    email:"",
+    email_judicial:"notifica.co@bbva.com"
+},
+{
+    nombre:"Banco AV Villas",
+    nit:"",
+    email:"",
+    email_judicial:"notificacionesjudiciales@bancoavvillas.com.co"
+},
+{
+    nombre:"Banco Agrario de Colombia",
+    nit:"",
+    email:"",
+    email_judicial:"notificacionesjudiciales@bancoagrario.gov.co"
+},
+{
+    nombre:"Banco Caja Social - BCSC",
+    nit:"",
+    email:"",
+    email_judicial:"notificacionesjudiciales@fundaciongruposocial.co"
+},
+{
+    nombre:"Banco Colpatria",
+    nit:"",
+    email:"",
+    email_judicial:"notificbancolpatria@scotiabankcolpatria.com"
+},
+{
+    nombre:"Banco Itaú",
+    nit:"",
+    email:"",
+    email_judicial:"notificaciones.juridico@itau.co"
+},
+{
+    nombre:"Banco Citibank",
+    nit:"",
+    email:"",
+    email_judicial:"legalnotificacionescitibank@citi.com.co"
 },
 {
     nombre:"Deposito Centralizado De Valores De Colombia Deceval S.A.",
@@ -5287,7 +5349,8 @@ email:"servicliente1@syd.com.co"
 {
 nombre: "Caribesol de la Costa S.A.S. E.S.P - AIR-E",
 nit: "901.380.930-2",
-email: "servicioalcliente@air-e.com"
+email: "servicioalcliente@air-e.com",
+email:"notificaciones.judiciales@air-e.com"
 },
 
 // Empresas Proveedoras de Acueducto y Alcantarillado.
