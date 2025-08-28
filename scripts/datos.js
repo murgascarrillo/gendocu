@@ -594,6 +594,11 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         email: "despachoregistrador@registraduria.gov.co",
         email_judicial:"notificacionjudicial@registraduria.gov.co"
     },
+    {
+        nombre:"Dirección Nacional de Registro Civil de la Registraduría Nacional del Estado Civil",
+        nit:"",
+        email:"DireccionRC@registraduria.gov.co"
+    },
 // Notarías
 {
 nombre: "Notaría Única de Barrancas, La Guajira",
@@ -5421,6 +5426,11 @@ email: "contactenos@cerrejon.com"
     email:"gidaltiingenieros@gmail.com"
 },
 {
+    nombre:"Bel-Star S.A.",
+    nit:"800.018.359-1",
+    email:"belcorp_respondeco@belcorp.biz"
+},
+{
     nombre:"Organización Terpel S.A.",
     nit:"830.095.213-0",
     email:"servicioalcliente@terpel.com"
@@ -5444,7 +5454,7 @@ email:"servicioalcliente@segurosbolivar.com"
 {
 nombre: "La Previsora S.A. Compañía de Seguros - PREVISORA SEGUROS",
 nit:"860.002.400-2",
-email:"contactenos@previsora.gov.co"
+email:"contactenos@previsora.gov.co, correspondenciacasamatriz@previsora.gov.co"
 }
 ];
 
