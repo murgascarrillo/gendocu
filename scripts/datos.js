@@ -139,9 +139,25 @@ email_judicial:"notificacionesjudiciales@laguajira.gov.co"
 
 // Entidades Nacionales
 {
+    nombre:"Agencia Nacional de Defensa Jurídica del Estado",
+    nit:"900.507.741-1",
+    email:"agencia@defensajuridica.gov.co",
+    email_judicial:"notificacionesjudiciales@defensajuridica.gov.co"
+},
+{
 nombre: "Agencia Nacional de Tierras - ANT",
 nit: "900.948.953-8",
 email: "atencionalciudadano@ant.gov.co"
+},
+{
+    nombre:"Subdirección de Administración de Tierras de la Nación de la Agencia Nacional de Tierras - ANT",
+    nit:"900.948.953-8",
+    email:"satn@ant.gov.co"
+},
+{
+    nombre:"Dirección de Ordenamiento Social de la Propieda de la Agencia Nacional de Tierras - ANT",
+    nit:"900.948.953-8",
+    email:""
 },
 {
 nombre: "Administradora Colombiana de Pensiones - Colpensiones",
@@ -180,6 +196,11 @@ nombre: "Ministerio de Vivienda, Ciudad y Territorio de Colombia",
 nit: "",
 email: "correspondencia@minvivienda.gov.co",
 email_judicial:"notificacionesjudici@minvivienda.gov.co"
+},
+{
+    nombre:"Ministerio de Justicia y Derecho de Colombia",
+    nit:"",
+    email:""
 },
 {
 nombre: "Ministerio de Defensa Nacional de Colombia",
@@ -357,7 +378,7 @@ email:"notificaciones.judiciales@cajahonor.gov.co"
 // Entidades de Control
 {
     nombre:"Procuraduría General de la Nación",
-    nit:"",
+    nit:"899.999.119-7",
     email:"procesosjudiciales@procuraduria.gov.co"
     },
     {
@@ -454,6 +475,21 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
 // Juzgados & Tribunales
 
 // Juzgados de La Guajira
+
+// Juzgados Administrativos de La Guajira
+
+{
+    nombre:"Tribunal Administrativo de La Guajira",
+    nit:"",
+    email:""
+},
+{
+    nombre:"Juzgado Primero Administrativo Mixto del Circuito Judicial de Riohacha, La Guajira",
+    nit:"",
+    email:"j01admctorioha@cendoj.ramajudicial.gov.co"
+},
+
+// Juzgados Civiles
 {
 nombre:"Secretaria Tribunal Superior del Distrito Judicial de Riohacha, Sala Civil Familia y Laboral",
 nit:"",
@@ -512,7 +548,13 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         nit:"",
         email:"j06pmpalrioha@cendoj.ramajudicial.gov.co"
     },
+    // Juzgados del Cesar
 
+    {
+        nombre:"Juzgado Primero de Familia de Valledupar, Cesar",
+        nit:"",
+        email:"j01fvpar@cendoj.ramajudicial.gov.co"
+    },
     //  Juzgados del Atlántico
     {
         nombre:"Juzgado Tercero Penal Municipal con Función de Control de Garantías de Barranquilla",
