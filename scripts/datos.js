@@ -535,6 +535,36 @@ email:"jprmpalbarrancas@cendoj.ramajudicial.gov.co"
     email:"jprmpalhatonuevo@cendoj.ramajudicial.gov.co"
     },
     {
+    nombre:"Juzgado Promiscuo Municipal de Uribia, La Guajira",
+    nit:"",
+    email:"jprmpaluribia@cendoj.ramajudicial.gov.co"
+    },
+     {
+    nombre:"Juzgado Promiscuo Municipal de Manaure, La Guajira",
+    nit:"",
+    email:"jprmpalmanaure@cendoj.ramajudicial.gov.co"
+    },
+     {
+    nombre:"Juzgado Promiscuo Municipal de El Molino, La Guajira",
+    nit:"",
+    email:"jprmpalelmolino@cendoj.ramajudicial.gov.co"
+    },
+    {
+    nombre:"Juzgado Promiscuo Municipal de Dibulla, La Guajira",
+    nit:"",
+    email:"jprmpaldibulla@cendoj.ramajudicial.gov.co"
+    },
+     {
+    nombre:"Juzgado Promiscuo Municipal de Distracción, La Guajira",
+    nit:"",
+    email:"jprmpaldistraccion@cendoj.ramajudicial.gov.co"
+    },
+    {
+    nombre:"Juzgado Promiscuo Municipal de La Jagua del Pilar, La Guajira",
+    nit:"",
+    email:"jprmpaljaguap@cendoj.ramajudicial.gov.co"
+    },
+    {
         nombre:"Juzgado Primero Promiscuo Municipal de San Juan del Cesar, La Guajira",
         nit:"",
         email:"j01prmpalsjuan@cendoj.ramajudicial.gov.co"
