@@ -147,7 +147,8 @@ email_judicial:"notificacionesjudiciales@laguajira.gov.co"
 {
 nombre: "Agencia Nacional de Tierras - ANT",
 nit: "900.948.953-8",
-email: "atencionalciudadano@ant.gov.co"
+email: "atencionalciudadano@ant.gov.co",
+email_judicial:" juridica.ant@ant.gov.co"
 },
 {
     nombre:"Subdirección de Administración de Tierras de la Nación de la Agencia Nacional de Tierras - ANT",
@@ -175,7 +176,7 @@ email:""
     email:"contactenos@ugpp.gov.co"
 },
 {
-nombre: "Unidad para la Atención y Reparación Integral a las Víctimas - UARIV",
+nombre: "Unidad Administrativa Especial de Atención y Reparación Integral a Víctimas - UARIV",
 nit: "900.490.473-6",
 email: "servicioalciudadano@unidadvictimas.gov.co",
 email_judicial:"notificaciones.juridicauariv@unidadvictimas.gov.co"
@@ -241,6 +242,11 @@ email_judicial:"notificacionesjudiciales@mininterior.gov.co",
 nombre: "Ministerio de Relaciones Exteriores de Colombia",
 nit: "",
 email: "contactenos@cancilleria.gov.co"
+},
+{
+nombre: "Dirección para el Desarrollo y la Integración Fronteriza - Ministerio de Relaciones Exteriores de Colombia",
+nit: "",
+email: "direcciondesarrolloeintegracion@cancilleria.gov.co"
 },
 {
     nombre:"Consulado de Colombia en Orlando",
@@ -314,7 +320,8 @@ email: ''
 {
 nombre: "Instituto Geográfico Agustín Codazzi - IGAC",
 nit: "899.999.004-9",
-email: "contactenos@igac.gov.co"
+email: "contactenos@igac.gov.co",
+email_judicial:"judiciales@igac.gov.co"
 },
 {
 nombre: "Servicio Nacional de Aprendizaje - SENA",
@@ -355,14 +362,18 @@ email: "licencias@anla.gov.co"
     nit:"",
     email:"snsnotificacionesjudiciales@supersalud.gov.co"
     },
-{
+    {nombre:"Superintendencia de Servicios públicos domiciliarios",
+    nit:"",
+    email:"sspd@superservicios.gov.co"
+    },
+    {
 nombre:"Patrimonio Autónomo de Remanentes de la Caja Agraria en Liquidación",
 nit:"",
 email:"gravamenescajaagraria@parugp.com.co",
 email_judicial:"parcal@parugp.com.co"
 },
 {
-nombre:"0aja Promotora de Vivienda Militar y Policía - CAJAHONOR",
+nombre:"Caja Promotora de Vivienda Militar y Policía - CAJAHONOR",
 nit:"",
 email:"notificaciones.judiciales@cajahonor.gov.co"
 },
@@ -568,6 +579,11 @@ email:"jprmpalbarrancas@cendoj.ramajudicial.gov.co"
         nombre:"Juzgado Primero Promiscuo Municipal de San Juan del Cesar, La Guajira",
         nit:"",
         email:"j01prmpalsjuan@cendoj.ramajudicial.gov.co"
+    },
+      {
+        nombre:"Juzgado Segundo Promiscuo Municipal de San Juan del Cesar, La Guajira",
+        nit:"",
+        email:"j02prmpalsjuan@cendoj.ramajudicial.gov.co"
     },
     {
 nombre:"Juzgado Cuarto Penal Municipal con Función de Control de Garantías de Riohacha",
