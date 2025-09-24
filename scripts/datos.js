@@ -132,7 +132,7 @@ email: "contactenos@laguajira.gov.co",
 email_judicial:"notificacionesjudiciales@laguajira.gov.co"
 },
 {
-  nombre:"Dirección Operativa de Participación Ciudadana Gobernación de La Guajira",
+  nombre:"Dirección Operativa de Participación Ciudadana de la Gobernación de La Guajira",
   nit:"",
   email:"accioncomunal@laguajira.gov.co"  
 },
@@ -485,6 +485,13 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     },
 // Juzgados & Tribunales
 
+// Juzgados de Bogotá D.C.
+{
+    nombre:"Juzgado 25 de Familia del Circuito de Bogotá D.C",
+    nit:"",
+    email:"flia25bt@cendoj.ramajudicial.gov.co",
+},
+
 // Juzgados de La Guajira
 
 // Juzgados Administrativos de La Guajira
@@ -500,7 +507,7 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     email:"j01admctorioha@cendoj.ramajudicial.gov.co"
 },
 
-// Juzgados Civiles
+// Juzgados Civiles de La Guajira
 {
 nombre:"Secretaria Tribunal Superior del Distrito Judicial de Riohacha, Sala Civil Familia y Laboral",
 nit:"",
@@ -602,11 +609,13 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         email:"j01fvpar@cendoj.ramajudicial.gov.co"
     },
     //  Juzgados del Atlántico
+    // Juzgados Penales de Barranquilla, Atlántico
     {
         nombre:"Juzgado Tercero Penal Municipal con Función de Control de Garantías de Barranquilla",
         nit:"",
         email:"j03pmgba@cendoj.ramajudicial.gov.co"
     },
+    // Juzgados Civiles de Barranquilla, Atlántico
 {
     nombre:"Juzgado Sexto Civil del Circuito de Barranquilla",
     nit:"",
@@ -622,6 +631,28 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
     nit:"",
     email:"j13prpcbquilla@cendoj.ramajudicial.gov.co"
 },
+// Juzgados Laborales de Barranquilla, Atlántico
+{
+    nombre:"Juzgado 02 Laboral del Circuito de Barranquilla, Atlántico",
+    nit:"",
+    email:"lcto02ba@cendoj.ramajudicial.gov.co",
+},
+{
+    nombre:"Juzgado 03 Laboral del Circuito de Barranquilla, Atlántico",
+    nit:"",
+    email:"lcto03ba@cendoj.ramajudicial.gov.co",
+},
+{
+    nombre:"Juzgado 04 Laboral del Circuito de Barranquilla, Atlántico",
+    nit:"",
+    email:"lcto04ba@cendoj.ramajudicial.gov.co",
+},
+{
+    nombre:"Juzgado 05 Laboral del Circuito de Barranquilla, Atlántico",
+    nit:"",
+    email:"lcto05ba@cendoj.ramajudicial.gov.co",
+},
+// Juzgados Civiles de Puerto Colombia, Atlántico
  {
         nombre:"Juzgado 01 Promiscuo Municipal de Puerto Colombia",
         nit:"",
@@ -647,16 +678,94 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         nit:"",
         email:"j02prctopcolombia@cendoj.ramajudicial.gov.co"
     },
+    // Juzgados de Caquetá
     {
         nombre:"Juzgado 02 Promiscuo Municipal de Puerto Rico, Caquetá",
         nit:"",
         email:"j02prmpalprico@cendoj.ramajudicial.gov.co"
+    },
+    // Juzgados de Magdalena
+    // Juzgados Penales de Fundación, Magdalena
+    {
+        nombre:"Juzgado Segundo Penal del Circuito con Funciones de Conocimiento de Fundación, Magdalena",
+        nit:"",
+        email:"j02pctoconfund@cendoj.ramajudicial.gov.co",
     },
     // Juzgados de Antioquía
     {
         nombre:"Juzgado 02 Municipal de Pequeñas Causas Laborales de Medellín, Antioquía",
         nit:"",
         email:"j02mpclmed@cendoj.ramajudicial.gov.co"
+    },
+    // Juzgados de Santander
+    {
+        nombre:"Juzgado 02 de Familia de Bucaramanga, Santander",
+        nit:"",
+        email:"j02fabuc@cendoj.ramajudicial.gov.co"
+    },
+    {
+        nombre:"Juzgado 03 de Familia de Bucaramanga, Santander",
+        nit:"",
+        email:"j03fabuc@cendoj.ramajudicial.gov.co"
+    },
+    // Juzgados Laborales de Bucaramanga, Santander
+    {
+    nombre:"Juzgado 02 Laboral del Circuito de Bucaramanga, Santander",
+    nit:"",
+    email:"j02lcbuc@cendoj.ramajudicial.gov.co",
+    },
+    {
+    nombre:"Juzgado 03 Laboral del Circuito de Bucaramanga, Santander",
+    nit:"",
+    email:"j03lcbuc@cendoj.ramajudicial.gov.co",
+    },
+    {
+    nombre:"Juzgado 04 Laboral del Circuito de Bucaramanga, Santander",
+    nit:"",
+    email:"j04lcbuc@cendoj.ramajudicial.gov.co",
+    },
+    {
+    nombre:"Juzgado 05 Laboral del Circuito de Bucaramanga, Santander",
+    nit:"",
+    email:"j05lcbuc@cendoj.ramajudicial.gov.co",
+    },
+    // Juzgados Penales de Bucaramanga, Santander
+    {
+        nombre:"Juzgado 11 Penal del Circuito con Funciones de Conocimiento de Bucaramanga, Santander",
+        nit:"",
+        email:"",
+    },
+    // Juzgados de Cauca
+    {
+        nombre:"Juzgado Promiscuo Municipal de Piendamo, Cauca",
+        nit:"",
+        email:"",
+    },
+    // Juzgados de Valle del Cauca
+    {
+        nombre:"Juzgado Segundo Promiscuo de Familia de Tuluá, Valle del Cauca",
+        nit:"",
+        email:"j02fctulua@cendoj.ramajudicial.gov.co",
+    },
+    // Juzgados de Tolima
+    {
+        nombre:"Juzgado Primero de Familia de Ibagué, Tolima",
+        nit:"",
+        email:"j01fctoiba@cendoj.ramajudicial.gov.co",
+    },
+    // Juzgados de Huila
+    // Juzgados Laborales de Neiva, Huila
+    {
+        nombre:"Juzgado 03 Laboral del Circuito de Neiva, Huila",
+        nit:"",
+        email:"lcto03nei@cendoj.ramajudicial.gov.co"
+    },
+
+    // Jurisdicción Especial de Restitución de Tierras
+    {
+        nombre:"Juzgado Primero Civil del Circuito Especializado en Restitución de Tierras de Santiago de Cali, Valle del Cauca",
+        nit:"",
+        email:"jcctoesr01cali@notificacionesrj.gov.co",
     },
 // Altas Cortes Judiciales de Colombia
 {
