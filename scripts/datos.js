@@ -324,6 +324,12 @@ email: "contactenos@igac.gov.co",
 email_judicial:"judiciales@igac.gov.co"
 },
 {
+    nombre:"Instituto Colombiano de Bienestar Familiar - ICBF",
+    nit:"899.999.239-2",
+    email:"atencionalciudadano@icbf.gov.co",
+    email_judicial:"notificaciones.judiciales@icbf.gov.co"
+},
+{
 nombre: "Servicio Nacional de Aprendizaje - SENA",
 nit: "899.999.034-1",
 email: "servicioalciudadano@sena.edu.co"
@@ -359,7 +365,7 @@ email: "licencias@anla.gov.co"
 },
 {
     nombre:"Superintendencia Nacional de Salud",
-    nit:"",
+    nit:"860.062.187-4",
     email:"snsnotificacionesjudiciales@supersalud.gov.co"
     },
     {nombre:"Superintendencia de Servicios públicos domiciliarios",
@@ -517,6 +523,11 @@ email:"stsscflrioha@cendoj.ramajudicial.gov.co"
     nombre:"Despacho 001 Sala Penal Tribunal Superior Distrito Judicial de Riohacha, La Guajira",
     nit:"",
     email:"des01sptsrioha@cendoj.ramajudicial.gov.co"
+},
+{
+    nombre:"Juzgado 003 Penal Especializado del Circuito de Riohacha, La Guajira",
+    nit:"",
+    email:"j03pctoesprch@cendoj.ramajudicial.gov.co"
 },
 {
     nombre:"Juzgado 05 Penal Municipal de Control de Garantías de Riohacha, La Guajira",
@@ -772,6 +783,11 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
     nombre:"Corte Constitucional de Colombia",
     nit:"",
     email:"secretaria4@corteconstitucional.gov.co"
+},
+{
+    nombre:"Corte Suprema de Justicia de Colombia",
+    nit:"",
+    email:"secretariag@cortesuprema.gov.co",
 },
 // Registradurías
 {
@@ -5401,8 +5417,8 @@ email_judicial:"notificacionesjudiciales@davivienda.com",
     email:"clientes@pichincha.com.co"
 },
 {
-    nombre:"Banco Bancolombia",
-    nit:"",
+    nombre:"Banco Bancolombia S.A.",
+    nit:"890.903.938-8",
     email:"",
     email_judicial:"notificacijudicial@bancolombia.com.co",
 },
@@ -5535,8 +5551,8 @@ nit: "892.300.979-9",
 email: "gerencia@clinicadelcesar.com"
 },
 {
-nombre:"SYD Colombia S.A",
-nit:"",
+nombre:"Suministros y Dotaciones Colombia S.A. – SYD Colombia S.A",
+nit:"802.000.608-7",
 email:"servicliente1@syd.com.co"
 },
 {
@@ -5549,7 +5565,7 @@ email:"servicliente1@syd.com.co"
 
 // Empresas Proveedoras de Energía Eléctrica.
 {
-nombre: "Caribesol de la Costa S.A.S. E.S.P - AIR-E",
+nombre: "AIR-E S.A.S. E.S.P. – Intervenida",
 nit: "901.380.930-2",
 email: "servicioalcliente@air-e.com",
 email:"notificaciones.judiciales@air-e.com"
