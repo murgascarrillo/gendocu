@@ -188,6 +188,12 @@ email_judicial:"notificaciones.juridicauariv@unidadvictimas.gov.co"
     email_judicial:"notificacionesjudiciales@urt.gov.co"
 },
 {
+nombre:"Unidad de Búsqueda de Personas dadas por Desaparecidas - UBPD",
+nit:"",
+email:"servicioalciudadano@unidadbusqueda.gov.co",
+email_judicial:"notificacionesjudiciales@unidadbusqueda.gov.co"
+},
+{
 nombre: "Migración Colombia",
 nit: "",
 email: ""
@@ -450,6 +456,12 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     email: "ot.fonseca@instrafon.gov.co."
     },
     {
+        nombre:"Instituto de Transito y Transporte de Fundación",
+        nit:"",
+        email:"atencionalciudadano@intrasfun.gov.co"
+    }
+    ,
+    {
     nombre:"Instituto De Transito Y Transporte Y Movilidad Distrital  de Riohacha - INSTRAMD.",
     nit:"825.003.566-3",
     email:"info@instram.gov.co"
@@ -492,6 +504,11 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
 // Juzgados & Tribunales
 
 // Juzgados de Bogotá D.C.
+{
+nombre:"Juzgado 15 Municipal de Pequeñas Causas Laborales de Bogotá D.C.",
+nit:"",
+email:"j15pclbta@cendoj.ramajudicial.gov.co"
+},
 {
     nombre:"Juzgado 25 de Familia del Circuito de Bogotá D.C",
     nit:"",
