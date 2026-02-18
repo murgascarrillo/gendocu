@@ -106,7 +106,8 @@ email_judicial:"notificacionjudicial@barrancas-laguajira.gov.co"
 {
     nombre:"Alcaldía Municipal de Hatonuevo, La Guajira",
     nit:"800.255.101-2",
-    email:"contactenos@hatonuevo-laguajira.gov.co"
+    email:"contactenos@hatonuevo-laguajira.gov.co",
+    email_judicial:"contactenos@hatonuevo-laguajira.gov.co"
 },
 {
 nombre:"Alcaldía Municipal de Uribia, La Guajira",
@@ -117,6 +118,28 @@ email:"contactenos@uribia-laguajira.gov.co"
     nombre:"Alcaldía Municipal de Manaure, La Guajira",
     nit:"892.115.024-8",
     email:"contactenos@manaure-laguajira.gov.co"
+},
+{
+    nombre:"Alcaldía Distrital de Riohacha, La Guajira",
+    nit:"892.115.007-2",
+    email:"contáctenos@riohacha-laguajira.gov.co"
+},
+{
+    nombre:"Alcaldía Municipal de Maicao, La Guajira",
+    nit:"892.120.020-9",
+    email:"alcaldia@maicao-laguajira.gov.co",
+    email_judicial:"notificacionesjudiciales@maicao-laguajira.gov.co"
+},
+{
+    nombre:"Alcaldía Municipal de Urumita, La Guajira",
+    nit:"800.059.405-6",
+    email:"alcaldia@urumita-laguajira.gov.co",
+    email_judicial:"notificacionesjudiciales@urumita-laguajira.gov.co"
+},
+{
+    nombre:"Alcaldía Municipal de Dibulla, La Guajira",
+    nit:"825.000.134-1",
+    email:"contactenos@dibulla-laguajira.gov.co"
 },
 // Alcaldías de Cáqueta
 {
@@ -241,7 +264,7 @@ email_judicial:"notificacionesjudiciales@mininterior.gov.co",
 {
     nombre:"Dirección de la Autoridad Nacional de Consulta Previa del Ministerio del Interior",
     nit:"830.114.475-6",
-    email:"",
+    email:"servicioalciudadano@mininterior.gov.co",
     email_judicial:"notificacionesjudiciales@mininterior.gov.co",
 },
 {
@@ -270,6 +293,10 @@ email:""
     email:"correo@minsalud.gov.co",
     email_judicial:"notificacionesjudiciales@minsalud.gov.co"
 },
+{nombre:"Administradora de los Recursos del Sistema General de Seguridad Social en Salud - ADRES",
+    nit:"",
+    email:"correspondencia1@adres.gov.co"
+},
 {
 nombre:"Ministerio de Agricultura y Desarrollo Rural de Colombia",
 nit:"899.999.028-5",
@@ -295,6 +322,11 @@ email_judicial:"notificacionesjudicialesmintic@mintic.gov.co"
 nombre:"Instituto de Crédito Educativo y Estudios Técnicos en el Exterior - ICETEX",
 nit:"899.999.035-7",
 email:"tutramite@icetex.gov.co"
+},
+{
+    nombre:"Instituto Nacional de Medicina Legal y Ciencias Forenses",
+    nit:"",
+    email:""
 },
 {
 nombre:"Instituto Nacional de Vías - INVÍAS",
@@ -372,7 +404,8 @@ email: "licencias@anla.gov.co"
 {
     nombre:"Superintendencia Nacional de Salud",
     nit:"860.062.187-4",
-    email:"snsnotificacionesjudiciales@supersalud.gov.co"
+    email:"correointernosns@supersalud.gov.co",
+    email_judicial:"snsnotificacionesjudiciales@supersalud.gov.co"
     },
     {nombre:"Superintendencia de Servicios públicos domiciliarios",
     nit:"",
@@ -423,12 +456,32 @@ email:"notificaciones.judiciales@cajahonor.gov.co"
     nit: "825.000.620-1",
     email: "gerencia@hospicarmenhatonuevo.gov.co"
     },
+    {nombre:"E.S.E. Hospital Nuestra Señora del Pilar de Barrancas",
+        nit:"",
+        email:""
+    },
+    {
+        nombre:"E.S.E. Hospital San Rafael Nivel II de San Juan del Cesar",
+        nit:"892.115.010-5",
+        email:"gerencia@hsrafaelsanjuan.gov.co",
+        email_judicial:"juridica@hsrafaelsanjuan.gov.co"
+    },
     {
 nombre:"Secretaria de Subcientífica de la ESE Hospital San Rafael Nivel II de San Juan del Cesar",
 nit:"",
 email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     },
-    
+    {
+        nombre:"Instituto Cardiovascular del Cesar",
+        nit:"",
+        email:"siau@icvc.co"
+    },
+    {
+        nombre:"Clínica Erasmo Limitada",
+        nit:"",
+        email:"consultaexterna@clinicaerasmo.com"
+    }
+    ,
     // Sector Tránsito
     {
     nombre: "Departamento Administrativo de Tránsito y Transporte Departamental de La Guajira",
@@ -441,6 +494,11 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     email: "atencionusuariotransitovpar@valledupar.gov.co"
     },
     {
+        nombre:"Secretaría de Tránsito de Agustin Codazzi",
+        nit:"",
+        email:"transito@agustincodazzi-cesar.gov.co"
+    },
+    {
     nombre: "Secretaría de Tránsito y Transporte de Curumaní",
     nit: "",
     email: "info@transitocurumani.com"
@@ -451,20 +509,31 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     email: "transitomaicao@gmail.com"
     },
       {
-    nombre: "Instituto de Tránsito y Transporte de Fonseca",
+    nombre: "Instituto de Tránsito y Transporte de Fonseca, La Guajira",
     nit: "900.581.405-6",
-    email: "ot.fonseca@instrafon.gov.co."
+    email: "ot.fonseca@instrafon.gov.co"
     },
     {
-        nombre:"Instituto de Transito y Transporte de Fundación",
-        nit:"",
-        email:"atencionalciudadano@intrasfun.gov.co"
+        nombre:"Instituto de Tránsito de Albania, La Guajira",
+        nit:"900.221.828-4",
+        email:"instrans@albania-laguajira.gov.co"
+    },
+    {
+        nombre:"Instituto de Transito y Transporte de Fundación, Magdalena",
+        nit:"819.005.703-3",
+        email:"atencionalciudadano@intrasfun.gov.co",
+        email_judicial:"notificacionesjudiciales@intrasfun.gov.co",
     }
     ,
     {
     nombre:"Instituto De Transito Y Transporte Y Movilidad Distrital  de Riohacha - INSTRAMD.",
     nit:"825.003.566-3",
     email:"info@instram.gov.co"
+    },
+    {
+    nombre:"Secretaría Distrital de Movilidad de Bogotá D.C.",
+    nit:"",
+    email:""
     },
 
     // Sector Policía
@@ -482,7 +551,7 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
 // Rama Judicial del Poder Público
 {
     nombre: "Fiscalía General de la Nación",
-    nit: "",
+    nit: "800.152.783-2",
     email: "ges.documentalpqrs@fiscalia.gov.co",
     email_judicial:"juridicanotificacionestutela@fiscalia.gov.co"
     },
@@ -497,22 +566,48 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
         email:"fis1secfonseca@fiscalia.gov.co"
     },
     {
+        nombre:"Fiscalía 07 Local de Riohacha, La Guajira",
+        nit:"",
+        email:"fis7locriohacha@fiscalia.gov.co"
+    },
+    {
     nombre:"Consejo Superior de la Judicatura",
     nit:"",
     email:"info@cendoj.ramajudicial.gov.co"
     },
+    {
+        nombre:"Comisión Nacional de Disciplina Judicial",
+        nit:"",
+        email:"presidencia@cndj.gov.co",
+        email_judicial:"correspondencia@cndj.gov.co"
+    },
+    {
+        nombre:"Comisión Seccional de Disciplina Judicial del Atlántico",
+        nit:"",
+        email:"prescsdjatl@cndj.gov.co"
+    },
 // Juzgados & Tribunales
 
 // Juzgados de Bogotá D.C.
+{
+    nombre:"Juzgado Segundo Penal del Circuito Especializado de Bogotá D.C.",
+    nit:"",
+    email:"pctoes02bt@cendoj.ramajudicial.gov.co"
+},
 {
 nombre:"Juzgado 15 Municipal de Pequeñas Causas Laborales de Bogotá D.C.",
 nit:"",
 email:"j15pclbta@cendoj.ramajudicial.gov.co"
 },
 {
-    nombre:"Juzgado 25 de Familia del Circuito de Bogotá D.C",
+    nombre:"Juzgado 25 de Familia del Circuito de Bogotá D.C.",
     nit:"",
     email:"flia25bt@cendoj.ramajudicial.gov.co",
+},
+{
+    nombre:"Juzgado 28 de Familia del Circuito de Bogotá D.C.",
+    nit:"",
+    email:"flia28bt@cendoj.ramajudicial.gov.co"
 },
 
 // Juzgados de La Guajira
@@ -555,6 +650,10 @@ email:"stsscflrioha@cendoj.ramajudicial.gov.co"
 nombre:"Juzgado Primero Civil Del Circuito San Juan Del Cesar, La Guajira",
 nit:"",
 email:"j01ctoclsjuan@cendoj.ramajudicial.gov.co"
+},
+{nombre:"Juzgado Primero Penal del Circuito de San Juan del Cesar, La Guajira",
+    nit:"",
+    email:"j01pctosjuan@cendoj.ramajudicial.gov.co"
 },
 {nombre:"Juzgado Segundo Penal del Circuito de San Juan del Cesar, La Guajira",
     nit:"",
@@ -611,6 +710,16 @@ email:"jprmpalbarrancas@cendoj.ramajudicial.gov.co"
     email:"jprmpaljaguap@cendoj.ramajudicial.gov.co"
     },
     {
+        nombre:"Oficina Reparto Juzgados Promiscuos Municipales de San Juan del Cesar, La Guajira",
+        nit:"",
+        email:"repartojprmpalsjuancesar@cendoj.ramajudicial.gov.co"
+    },
+    {
+        nombre:"Oficina Reparto Juzgados Promiscuos del Circuito de San Juan del Cesar, La Guajira",
+        nit:"",
+        email:"repartojprctosanjuandelcesar@cendoj.ramajudicial.gov.co"
+    },
+    {
         nombre:"Juzgado Primero Promiscuo Municipal de San Juan del Cesar, La Guajira",
         nit:"",
         email:"j01prmpalsjuan@cendoj.ramajudicial.gov.co"
@@ -621,6 +730,11 @@ email:"jprmpalbarrancas@cendoj.ramajudicial.gov.co"
         email:"j02prmpalsjuan@cendoj.ramajudicial.gov.co"
     },
     {
+        nombre:"Juzgado Tercero Promiscuo Municipal de San Juan del Cesar, La Guajira",
+        nit:"",
+        email:"j03prmpalsjuan@cendoj.ramajudicial.gov.co"
+    },
+    {
 nombre:"Juzgado Cuarto Penal Municipal con Función de Control de Garantías de Riohacha",
 nit:"",
 email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
@@ -629,6 +743,11 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         nit:"",
         email:"j06pmpalrioha@cendoj.ramajudicial.gov.co"
     },
+    {
+        nombre:"Juzgado del Circuito de Ejecución de Penas y Medidas de Seguridad 001 de Riohacha",
+        nit:"",
+        email:"jepmsrioha@cendoj.ramajudicial.gov.co"
+    },
     // Juzgados del Cesar
 
     {
@@ -636,6 +755,13 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         nit:"",
         email:"j01fvpar@cendoj.ramajudicial.gov.co"
     },
+
+ {
+        nombre:"Juzgado Segundo Promiscuo Municipal de Agustín Codazzi, Cesar",
+        nit:"",
+        email:"J02prmpalcodazzi@cendoj.ramajudicial.gov.co"
+    },
+
     //  Juzgados del Atlántico
     // Juzgados Penales de Barranquilla, Atlántico
     {
@@ -715,6 +841,20 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
     // Juzgados de Magdalena
     // Juzgados Penales de Fundación, Magdalena
     {
+        nombre:"Oficina de Reparto Juzgados Promiscuos Municipales de Fundación, Magdalena",
+        nit:"",
+        email:"demandasfundacion@cendoj.ramajudicial.gov.co",
+    },
+    {
+        nombre:"Juzgado 01 Promiscuo Municipal de Fundación, Magdalena",
+        nit:"",
+        email:"j01pmpalfund@cendoj.ramajudicial.gov.co",
+    },
+     {
+        nombre:"Juzgado 02 Promiscuo Municipal de Fundación, Magdalena",
+        email:"j02pmpalfund@cendoj.ramajudicial.gov.co",
+    },
+    {
         nombre:"Juzgado Segundo Penal del Circuito con Funciones de Conocimiento de Fundación, Magdalena",
         nit:"",
         email:"j02pctoconfund@cendoj.ramajudicial.gov.co",
@@ -724,6 +864,24 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         nombre:"Juzgado 02 Municipal de Pequeñas Causas Laborales de Medellín, Antioquía",
         nit:"",
         email:"j02mpclmed@cendoj.ramajudicial.gov.co"
+    },
+    // Juzgado de Norte de Santander
+
+    // Juzgado de Cucutá
+      {
+        nombre:"Juzgado Primero de Familia de Oralidad de Cucutá, Norte de Santander",
+        nit:"",
+        email:"jfamcu1@cendoj.ramajudicia.gov.co"
+    },
+      {
+        nombre:"Juzgado Segundo de Familia de Oralidad de Cucutá, Norte de Santander",
+        nit:"",
+        email:"jfamcu2@cendoj.ramajudicia.gov.co"
+    },
+    {
+        nombre:"Juzgado Tercero de Familia de Oralidad de Cucutá, Norte de Santander",
+        nit:"",
+        email:"jfamcu3@cendoj.ramajudicia.gov.co"
     },
     // Juzgados de Santander
     {
@@ -763,6 +921,12 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         nit:"",
         email:"",
     },
+    // Juzgados de Cimitarra, Santander
+    {
+        nombre:"Juzgado Penal del Circuito con Funciones de Conocimiento de Cimitarra, Santander",
+        nit:"",
+        email:"j01pctocimitarra@cendoj.ramajudicial.gov.co",
+    },
     // Juzgados de Cauca
     {
         nombre:"Juzgado Promiscuo Municipal de Piendamo, Cauca",
@@ -799,7 +963,7 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
 {
     nombre:"Corte Constitucional de Colombia",
     nit:"",
-    email:"secretaria4@corteconstitucional.gov.co"
+    email:"",
 },
 {
     nombre:"Corte Suprema de Justicia de Colombia",
@@ -5353,12 +5517,12 @@ email: "unicacumaribo@supernotariado.gov.co"
 // Oficinas de Registro de Instrumentos Públicos - ORIP
 {
     nombre:"Oficina de Registro de Instrumentos Públicos de Riohacha, La Guajira",
-    nit:"",
+    nit:"899.999.007-0",
     email:"ofiregisriohacha@supernotariado.gov.co"
 },
 {
     nombre:"Oficina de Registro de Instrumentos Públicos de San Juan del Cesar, La Guajira",
-    nit:"",
+    nit:"899.999.007-0",
     email:"ofiregissanjuandelcesar@supernotariado.gov.co"
 },
 {
@@ -5388,6 +5552,13 @@ nit:"",
 email:""
 },
 // Fuerzas Armadas y Seguridad Pública
+// Ejército
+{
+    nombre:"Ejército Nacional de Colombia",
+    nit:"899.999.003-1",
+    email:"ceoju@ejercito.mil.co",
+    email_judicial:"sac@ejercito.mil.co"
+},
 // Policía
 {
   nombre:"Comandante del Departamento de Policía de La Guajira",
@@ -5452,7 +5623,7 @@ email_judicial:"notificacionesjudiciales@davivienda.com",
     email_judicial:"notificacionesjudicialesvjuridica@bancopopular.com.co",
 },
 {
-    nombre:"Banco BBVA",
+    nombre:"Banco Bilbao Vizcaya Argentaria Colombia S.A. - BBVA COLOMBIA",
     nit:"",
     email:"",
     email_judicial:"notifica.co@bbva.com"
@@ -5515,6 +5686,11 @@ nit:"900.902.511-8",
 email:"contacto@prestagente.com"
 },
 {
+    nombre:"Credijamar S.A.",
+    nit:"",
+    email:"cdocumentacion@jamar.com"
+},
+{
 nombre:"Adelante Soluciones Financieras - ADDI",
 nit:"901216.768-4",
 email:"datos@addi.com"
@@ -5528,7 +5704,7 @@ email:""
 {
 nombre:"Aval Titulos S.A.S.",
 nit:"900.181.152-1",
-email:"pqrs@avaltitulos.com.co"
+email:"pqrs@avaltitulos.com"
 },
 {
 nombre:"Cooperativa Multiactiva por un mejor mañana para los niños Huérfanos de la fuerza publica -SURGIR PARA EL FUTURO- En Liquidación",
@@ -5547,7 +5723,7 @@ nit: "900.156.264-2",
 email: "secretaria.general@nuevaeps.com.co"
 },
 {
-nombre: "DUSAKAWI E.P.S.I",
+nombre: "DUSAKAWI EPS-I",
 nit: "824.002.362-1",
 email: "callcenter@dusakawiepsi.com"
 },
@@ -5555,6 +5731,12 @@ email: "callcenter@dusakawiepsi.com"
 nombre:"POSITIVA COMPAÑÍA DE SEGUROS S.A - ARL POSITIVA",
 nit:"860.011.153-6",
 email:"servicioalcliente@positiva.gov.co"
+},
+{
+nombre:"Anas Wayuu EPS-I",
+nit:"",
+email:"info@epsianaswayuu.com",
+email_judicial:"notificacionesjudiciales@epsianaswayuu.com"
 },
 {
 nombre: "SOCIEDAD ADMINISTRADORA DE FONDOS DE PENSIONES Y CESANTIAS PORVENIR S.A.",
@@ -5635,10 +5817,33 @@ nombre:"Su Personal Ya S.A.S.",
 nit:"901.203.439-1",
 email:"coordinadorgeneral@supersonalya.com.co"
 },
+// Minería transnacional
 {
 nombre: "Carbones del Cerrejón Limited",
 nit: "860.069.804-2",
 email: "contactenos@cerrejon.com"
+},
+{
+    nombre:"Drummond Ltd.",
+    nit:"800.021.308-5",
+    email:"correo@drummondltd.com"
+},
+{
+nombre:"Aseos Colombianos ASEOCOLBA S.A.",
+nit:"800.146.077-6",
+email:"analistamercadeo@grupocolba.com",
+email_judicial:"impuestos@grupocolba.com"
+},
+{
+    nombre:"Gaico Ingenieros Constructores S.A. - GAICO S.A.",
+    nit:"860.034.551-3",
+    email:"contactenos@gaico.com"
+},
+{
+    nombre:"Multiservicios de La Guajira & Cía. Ltda",
+    nit:"839.000.238-1",
+    email:"info@multisegua.com",
+    email_judicial:"notifiaciones@multisegua.com"
 },
 {
 nombre: "Sodexo S.A.S.",
@@ -5654,6 +5859,16 @@ email: "contactenos@cerrejon.com"
     nombre:"GIDALTI INGENIEROS S.A.S",
     nit:"901.243.820-4",
     email:"gidaltiingenieros@gmail.com"
+},
+{
+    nombre:"Magnex Group",
+    nit:"900.619.863-2",
+    email:"info.comercial@magnexgroup.com"
+},
+{
+nombre:"Mecanicos Asociados S.A.S. - MAGNEX GROUP",
+nit:"891.102.723-8",
+correo:"info.comercial@magnexgroup.com"
 },
 {
     nombre:"Bel-Star S.A.",
