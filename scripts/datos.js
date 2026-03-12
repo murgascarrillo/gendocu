@@ -294,8 +294,9 @@ email:""
     email_judicial:"notificacionesjudiciales@minsalud.gov.co"
 },
 {nombre:"Administradora de los Recursos del Sistema General de Seguridad Social en Salud - ADRES",
-    nit:"",
-    email:"correspondencia1@adres.gov.co"
+    nit:"901.037.916-1",
+    email:"correspondencia1@adres.gov.co",
+    email_judicial:"notificaciones.judiciales@adres.gov.co"
 },
 {
 nombre:"Ministerio de Agricultura y Desarrollo Rural de Colombia",
@@ -367,6 +368,8 @@ email_judicial:"judiciales@igac.gov.co"
     email:"atencionalciudadano@icbf.gov.co",
     email_judicial:"notificaciones.judiciales@icbf.gov.co"
 },
+
+// Establecimientos Públicos
 {
 nombre: "Servicio Nacional de Aprendizaje - SENA",
 nit: "899.999.034-1",
@@ -382,6 +385,14 @@ nombre: "Autoridad Nacional de Licencias Ambientales - ANLA",
 nit: "900.467.239-2",
 email: "licencias@anla.gov.co"
 },
+
+
+{
+nombre:"Registro Único Nacional de Tránsito - RUNT",
+nit:"",
+email:"",
+email_judicial:"correspondencia.judicial@runt.com.co"},
+
 // Superintendencias
 {
     nombre:"Superintendencia de Notariado y Registro",
@@ -635,6 +646,11 @@ email:"stsscflrioha@cendoj.ramajudicial.gov.co"
     nombre:"Despacho 001 Sala Penal Tribunal Superior Distrito Judicial de Riohacha, La Guajira",
     nit:"",
     email:"des01sptsrioha@cendoj.ramajudicial.gov.co"
+},
+{
+    nombre:"Juzgado Primero Penal del Circuito para Adolescentes con Función de Conocimiento de Riohacha, La Guajira",
+    nit:"",
+    email:"j01pctoadorioh@cendoj.ramajudicial.gov.co"
 },
 {
     nombre:"Juzgado 003 Penal Especializado del Circuito de Riohacha, La Guajira",
