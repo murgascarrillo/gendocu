@@ -274,7 +274,7 @@ p
         border-width: 4.5px;
         border-radius: 2ex;
         border-color: rgb(59, 105, 59);
-        background-color: #4c720b;
+        background-color: #cff7ff;
         color: rgb(0, 0, 0);
         font-size: 17px;
       }
@@ -348,11 +348,11 @@ select
 
 button
   {
-    color:black;
+    color:rgb(53, 51, 51);
   }
   #botonModoNocturno
   {
-    color: black;
+    color: rgb(255, 255, 255);
     background-color: black;
     border-radius:60%;
     height:30px;
@@ -379,7 +379,7 @@ button
     }
     .botonesSelector
     {
-      background-color: #588210;
+         background-color: #cff7ff;
       color: rgb(0, 0, 0);
       width: 160px;
       font-size:medium;
@@ -438,17 +438,17 @@ button
     padding: 0.3rem;
     margin: 0.3rem;
     font-size: 1rem;
-    
+    color:#000000;
     display: flex;
     justify-content: center;
   }
 
       #botonCopiar{
-        background-color: #0E46B5;
-        color: rgb(0, 0, 0);
+        background-color: #326bdb;
+        color: rgb(255, 255, 255);
         width: auto;
         border-radius: 2em;
-        border-color: green;
+          border-color: gold;
         font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
         font-weight: bold;
         font-size: medium;
@@ -467,11 +467,11 @@ button
 
       #botonExportar
       {
-        background-color: #B5282F;
-        color: rgb(0, 0, 0);
+        background-color: #cb565c;
+        color: rgb(255, 255, 255);
         width: auto;
         border-radius: 2em;
-        border-color: green;
+          border-color: gold;
         font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
         font-weight: bold;
         font-size: medium;
@@ -487,14 +487,37 @@ button
         transform: translateY(0); /* Cuando se presiona el botón, el desplazamiento vuelve a cero */
       }
 
+   
+      #botonEnviar
+      {
+        background-color: rgb(12, 155, 62);
+        padding: 4px;
+        color: rgb(255, 255, 255);
+        width: auto;
+        border-radius: 2em;
+            border-color: gold;
+        font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        font-size: medium;
+        cursor: pointer; /* Cambiamos el cursor para indicar que es interactivo */
+        transition: transform 0.3s ease; /* Agregamos una transición suave en la propiedad transform */
+      }
+      #botonEnviar:hover {
+        transform: translateY(4px); /* Al hacer hover, el botón se desplazará hacia abajo 5px */
+      }
+      
+      #botonEnviar:active {
+        transform: translateY(0); /* Cuando se presiona el botón, el desplazamiento vuelve a cero */
+      }
+
       #botonContribuir
       {
-        background-color: black;
+       background-color: rgb(222, 255, 92);
         color: rgb(0, 0, 0);
         width: auto;
         border-radius: 2em;
-        border-color: green;
-        font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
+        border-color: gold;
+        font-family: 'Open Ssans', system-ui, 'Helvetica Neue', sans-serif;
         font-weight: bold;
         font-size: medium;
         cursor: pointer; /* Cambiamos el cursor para indicar que es interactivo */

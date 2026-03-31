@@ -19,11 +19,13 @@ listaUsuarios.push(new Usuario("nombre,id"));
 // Entidades
 
 class Entidad {
-constructor(nombre, nit, email)
+constructor(nombre, nit, email, email_judicial,celular)
 {
 this.nombre = nombre;
 this.nit = nit;
 this.email = email;
+this.email_judicial = email_judicial;
+this.celular = celular;
 }
 }
 
@@ -638,6 +640,11 @@ email:"j15pclbta@cendoj.ramajudicial.gov.co"
 
 // Juzgados Civiles de La Guajira
 {
+nombre:"Oficina de Reparto Judicial de Riohacha, La Guajira",
+nit:"",
+email:"<ofijudrioh@cendoj.ramajudicial.gov.co>"
+},
+{
 nombre:"Secretaria Tribunal Superior del Distrito Judicial de Riohacha, Sala Civil Familia y Laboral",
 nit:"",
 email:"stsscflrioha@cendoj.ramajudicial.gov.co"
@@ -661,6 +668,16 @@ email:"stsscflrioha@cendoj.ramajudicial.gov.co"
     nombre:"Juzgado 05 Penal Municipal de Control de Garantías de Riohacha, La Guajira",
     nit:"",
     email:"j05pmpalrioha@cendoj.ramajudicial.gov.co"
+},
+{
+    nombre:"Juzgado 01 Civil Municipal de Riohacha, La Guajira",
+    nit:"",
+    email:"j01cmpalrioha@cendoj.ramajudicial.gov.co"
+},
+{
+    nombre:"Juzgado 02 Civil Municipal de Riohacha, La Guajira",
+    nit:"",
+    email:"j02cmpalrioha@cendoj.ramajudicial.gov.co"
 },
 {
 nombre:"Juzgado Primero Civil Del Circuito San Juan Del Cesar, La Guajira",
@@ -5608,7 +5625,7 @@ nit: "900.422.614-8",
 email: "servicioalciudadano@experian.com",
 email_judicial:"notificacionesjudiciales@experian.com"
 },
-//Entidades Bancarias (Dinero & Títulos Valores)
+//Entidades Bancarias (Dinero, Finanzas & Títulos Valores)
 {
 nombre: "Banco Davivienda S.A.",
 nit: "",
@@ -5653,7 +5670,7 @@ email_judicial:"notificacionesjudiciales@davivienda.com",
 {
     nombre:"Banco Agrario de Colombia",
     nit:"",
-    email:"",
+    email:"servicio.cliente@bancoagrario.gov.co",
     email_judicial:"notificacionesjudiciales@bancoagrario.gov.co"
 },
 {
@@ -5675,10 +5692,27 @@ email_judicial:"notificacionesjudiciales@davivienda.com",
     email_judicial:"notificaciones.juridico@itau.co"
 },
 {
+    nombre:"Nu Colombia Compañía de Financiamiento S.A.",
+    nit:"901.658.107-2",
+    email:"pqr@nucf.com.co",
+    email_judicial:""
+},
+{
     nombre:"Banco Citibank",
     nit:"",
     email:"",
     email_judicial:"legalnotificacionescitibank@citi.com.co"
+},
+{
+    nombre:"FUNDACION DELAMUJER COLOMBIA S.A.S - Banco Mundo Mujer",
+    nit:"",
+    email:"informacion@fundaciondelamujer.com",
+    email_judicial:"notificacionesjudiciales@fundaciondelamujer.com",
+},
+{
+    nombre:"COLTEFINANCIERA S.A.",
+    nit:"890.927.034-9",
+    email:"coltefinanciera@coltefinanciera.com.co",
 },
 {
     nombre:"Deposito Centralizado De Valores De Colombia Deceval S.A.",
@@ -5826,7 +5860,8 @@ direccion:"CR 68 A 24 B 10, Bogotá D.C.",
 {
     nombre:"Bomberos Voluntarios de Barrancas, La Guajira",
     nit:"",
-    email:"bomberosbarrancas-laguajira@hotmail.com"
+    email:"bomberosbarrancas-laguajira@hotmail.com",
+    celular:""
 },
 {
 nombre:"Su Personal Ya S.A.S.",
@@ -5951,4 +5986,4 @@ listaPaises.appendChild(option);
 const option = document.createElement("option");
 option.value = name;
 listaMunicipios.appendChild(option);
- })
+ });
