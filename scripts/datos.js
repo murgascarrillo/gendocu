@@ -467,7 +467,8 @@ email:"notificaciones.judiciales@cajahonor.gov.co"
 {
     nombre: "E.S.E Hospital Nuestra Señora del Carmen de Hatonuevo",
     nit: "825.000.620-1",
-    email: "gerencia@hospicarmenhatonuevo.gov.co"
+    email: "gerencia@hospicarmenhatonuevo.gov.co",
+    email_judicial:"notificacionesjudiciales@hospicarmenhatonuevo.gov.co"
     },
     {nombre:"E.S.E. Hospital Nuestra Señora del Pilar de Barrancas",
         nit:"",
