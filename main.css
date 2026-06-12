@@ -1,21 +1,21 @@
 /* Hoja de estilos - Style Sheet */
 
 html {
-  background: linear-gradient(90deg, rgb(41, 114, 136) 20%, rgba(13,124,0,1) 50%, rgb(241, 158, 15) 70%, rgb(192, 51, 170)100%);
+  background-image: linear-gradient(90deg, rgb(59, 84, 92) 20%, rgb(66, 132, 134) 50%, rgb(51, 197, 180) 70%, rgb(13, 179, 250)100%);
   background-size: 200% 200%; /* Ajusta el tamaño del fondo para crear el movimiento */
-  animation: moveGradient 8s both infinite; /* Controla la velocidad del movimiento */
+  animation: moveGradient 15s both infinite; /* Controla la velocidad del movimiento */
   display: flex;
   align-items: center;
   justify-content: center;
   color:black;
-  font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
+  font-family: 'serif', system-ui, 'Helvetica Neue', sans-serif;
   margin: 0.5px;
   overflow: auto;
 }
 
 @keyframes moveGradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 39%;
   }
   50% {
     background-position: 100% 50%;
@@ -48,7 +48,6 @@ h1 {
   padding: 20px 0;
   color: rgb(0, 0, 0);
   text-align: center;
-  font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   font-size: 50px;
   min-width: auto;
 }
@@ -58,24 +57,18 @@ h2 {
   padding: 0 0 0 0;
   color: rgb(0, 0, 0);
   text-align: center;
-  font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   font-size: 25px;
   min-width: 1px;
 }
   
 h3 {
   font-size: 1.2rem;
-  font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   text-align: center;
   margin:4px;
   min-width: auto;
   min-height: auto;
 }
 
-ol {
-  font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
-  
-}
 
 /* Contenedores - Containers */
      
@@ -93,7 +86,6 @@ ol {
   flex-wrap: wrap;
   flex-direction: row;
   place-content: center;
-  font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
 }
 
 .contenedorGen
@@ -240,7 +232,6 @@ ol {
 
   .textoIntroductorio
     {
-      font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
       font-size: 17px;
     }
 
@@ -251,13 +242,11 @@ link {
 
 p
  {
-  font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   min-width: 100px;
   min-height: auto;
   }
   .parrafosFormulario
     {
-      font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
       font-size: 0.9rem;
       margin:7px;
       color: black;
@@ -266,7 +255,6 @@ p
       {
         text-align: center;
         padding: 1ex;
-        font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
         width: auto;
         max-width: 500px;
         height: auto;
@@ -274,13 +262,12 @@ p
         border-width: 4.5px;
         border-radius: 2ex;
         border-color: rgb(59, 105, 59);
-        background-color: #cff7ff;
+        background-color: #fcfffd;
         color: rgb(0, 0, 0);
         font-size: 17px;
       }
       #parrafoSelector
       {
-        font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
         color:black;
         text-align: center;
         font-size: medium;
@@ -292,10 +279,6 @@ p
       #version-marca
       {
         color: black;
-      }
-      #contenidoFundamentos
-      {
-        font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
       }
 
   #parrafoAbogado,
@@ -320,7 +303,6 @@ select
   margin-top: auto;
   margin-left: auto;
   font-size: medium;
-  font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   margin-right:3px;
   display:block;
   text-align: center;
@@ -331,7 +313,6 @@ select
 
 #section {
   color: black;
-  font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   margin-bottom: auto;
 }
 
@@ -352,7 +333,7 @@ button
   }
   #botonModoNocturno
   {
-    color: rgb(255, 255, 255);
+    color: rgb(244, 255, 202);
     background-color: black;
     border-radius:60%;
     height:30px;
@@ -379,14 +360,13 @@ button
     }
     .botonesSelector
     {
-         background-color: #cff7ff;
+         background-color: #f8fcfd;
       color: rgb(0, 0, 0);
       width: 160px;
       font-size:medium;
       border-radius: 1.5em;
       padding: 0.3rem;
       border-color: rgb(50, 97, 50);
-      font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
       font-weight: bold;
       margin: 5px;
       cursor: pointer; /* Cambiamos el cursor para indicar que es interactivo */
@@ -443,12 +423,11 @@ button
   }
 
       #botonCopiar{
-        background-color: #326bdb;
-        color: rgb(0, 0, 0);
+        background-color: #f9ff4a;
+        color: rgb(46, 39, 39);
         width: auto;
         border-radius: 2em;
           border-color: gold;
-        font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
         font-weight: bold;
         font-size: medium;
         cursor: pointer; /* Cambiamos el cursor para indicar que es interactivo */
@@ -466,12 +445,12 @@ button
 
       #botonExportar
       {
-        background-color: #cb565c;
-        color: rgb(0, 0, 0);
+        background-color: rgb(41, 245, 194);
+        color: rgb(47, 47, 47);
         width: auto;
         border-radius: 2em;
           border-color: gold;
-        font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
+          
         font-weight: bold;
         font-size: medium;
         cursor: pointer; /* Cambiamos el cursor para indicar que es interactivo */
@@ -486,50 +465,6 @@ button
         transform: translateY(0); /* Cuando se presiona el botón, el desplazamiento vuelve a cero */
       }
 
-   
-      #botonEnviar
-      {
-        background-color: rgb(12, 155, 62);
-        padding: 4px;
-        color: rgb(0, 0, 0);
-        width: auto;
-        border-radius: 2em;
-            border-color: gold;
-        font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
-        font-weight: bold;
-        font-size: medium;
-        cursor: pointer; /* Cambiamos el cursor para indicar que es interactivo */
-        transition: transform 0.3s ease; /* Agregamos una transición suave en la propiedad transform */
-      }
-      #botonEnviar:hover {
-        transform: translateY(4px); /* Al hacer hover, el botón se desplazará hacia abajo 5px */
-      }
-      
-      #botonEnviar:active {
-        transform: translateY(0); /* Cuando se presiona el botón, el desplazamiento vuelve a cero */
-      }
-
-      #botonContribuir
-      {
-       background-color: rgb(222, 255, 92);
-        color: rgb(0, 0, 0);
-        width: auto;
-        border-radius: 2em;
-        border-color: gold;
-        font-family: 'Open Ssans', system-ui, 'Helvetica Neue', sans-serif;
-        font-weight: bold;
-        font-size: medium;
-        cursor: pointer; /* Cambiamos el cursor para indicar que es interactivo */
-        transition: transform 0.3s ease; /* Agregamos una transición suave en la propiedad transform */
-      }
-
-      #botonContribuir:hover {
-        transform: translateY(4px); /* Al hacer hover, el botón se desplazará hacia abajo 5px */
-      }
-      
-      #botonContribuir:active {
-        transform: translateY(0); /* Cuando se presiona el botón, el desplazamiento vuelve a cero */
-      }
 
 input
 	{
@@ -543,29 +478,24 @@ input
     width: 90%; /* You can adjust the initial width as needed */
     min-width: 50px; /* Set a minimum width */
     min-height: 24px; /* Set a minimum height */
-    resize:both; /* Optional: Disable manual resizing by the user */
-    font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;}
-
+    resize:both; /* Optional: Disable manual resizing by the user */}
     #inputTextoPruebasPeticion {
     width: 90%; /* You can adjust the initial width as needed */
     min-width: 50px; /* Set a minimum width */
     min-height: 24px; /* Set a minimum height */
     resize:both; /* Optional: Disable manual resizing by the user */
-    font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
     }
   #inputTextoEntidad {
     width: 90%; /* You can adjust the initial width as needed */
     min-width: 50px; /* Set a minimum width */
     min-height: 24px; /* Set a minimum height */
     resize:both; /* Optional: Disable manual resizing by the user */
-    font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   }
   #inputTextoPeticion{
     width: 90%; /* You can adjust the initial width as needed */
     min-width: 50px; /* Set a minimum width */
     min-height: 24px; /* Set a minimum height */
     resize:both; /* Optional: Disable manual resizing by the user */
-    font-family: 'Open Sans', system-ui, 'Helvetica Neue', sans-serif;
   }
 strong{
   min-width: auto;
@@ -590,57 +520,4 @@ strong{
   100% {
     background-position: 100% 0, 200% 0, 300% 0; /* Posiciones finales de las imágenes de fondo */
   }
-}
-
-
-
-
-
-
-/* EXPERIMENTAL*/
-
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.popup-content {
-  padding: 15px;
-  border-radius: 2ex;
-  max-width: 400px;
-  margin: 10% auto;
-  text-align: center;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-
-
-/*  Imagen QR al click */
-
-#imagenSuperpuesta {
-  position: fixed;
-  top: 120px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0); /* Fondo semi-transparente */
-  display: none; /* Oculta la imagen superpuesta inicialmente */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  z-index: 10; /* Asegura que esté sobre el resto del contenido */
-}
-#imagenSuperpuesta img {
-  max-width: 300px; /* Tamaño máximo de 300px */
-  max-height: 300px;
 }

@@ -6,6 +6,8 @@
 
 // Modo Nocturno 
 let botonModoNocturno = document.getElementById("botonModoNocturno");
+let imagenBotonNanswapPay = document.getElementById('imagenBotonNanswapPay');
+imagenBotonNanswapPay.src = 'https://images.nanswap.com/logo/pay-in-crypto-white.svg';
 let entorno = document.body;
 let footer = document.getElementById("footer");
 let modoNocturnoActivo = false;
@@ -15,10 +17,12 @@ function toggleModoNocturno() {
     // Desactivar el modo nocturno
     entorno.style.backgroundColor = '';
     footer.style.color = 'black';
-    botonModoNocturno.style.backgroundColor = 'rgb(18, 29, 36)';
+    botonModoNocturno.style.backgroundColor = 'rgb(12, 40, 57)';
     botonModoNocturno.innerHTML = '🌛';
     let pSelector = document.getElementById('parrafoSelector');
     pSelector.style.color = 'black';
+    let imagenBotonNanswapPay = document.getElementById('imagenBotonNanswapPay');
+    imagenBotonNanswapPay.src = 'https://images.nanswap.com/logo/pay-in-crypto-white.svg';
     let textopSelector = document.getElementById('call-to-action');
     textopSelector.style.color = 'black';
     let versionmarca = document.getElementById('version-marca');
@@ -32,10 +36,12 @@ function toggleModoNocturno() {
     // Activar el modo nocturno
     entorno.style.backgroundColor = 'rgb(18 29 36)';
     footer.style.color = 'white';
-    botonModoNocturno.style.backgroundColor = "#efefef";
+    botonModoNocturno.style.backgroundColor = "#edf790";
     botonModoNocturno.innerHTML = '🌞';
     let pSelector = document.getElementById('parrafoSelector');
     pSelector.style.color = 'white';
+    let imagenBotonNanswapPay = document.getElementById('imagenBotonNanswapPay');
+    imagenBotonNanswapPay.src = 'https://images.nanswap.com/logo/pay-in-crypto-black.svg';
     let textopSelector = document.getElementById('call-to-action');
     textopSelector.style.color = 'white';
     let versionmarca = document.getElementById('version-marca');

@@ -435,6 +435,12 @@ nombre:"Caja Promotora de Vivienda Militar y Policía - CAJAHONOR",
 nit:"",
 email:"notificaciones.judiciales@cajahonor.gov.co"
 },
+{
+    nombre:"Caja de Retiro de las Fuerzas Militares - CREMIL",
+    nit:"",
+    email:"atenusuario@cremil.gov.co",
+    email_judicial:"notificacionesjudiciales@cremil.gov.co",
+},
 // Fondos
 {
     nombre: "Fondo Nacional del Ahorro - FNA",
@@ -609,6 +615,11 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     email:"pctoes02bt@cendoj.ramajudicial.gov.co"
 },
 {
+    nombre:"Juzgado 20 Laboral del Circuito de Bogotá D.C.",
+    nit:"",
+    email:"jlato20@cendoj.ramajudicial.gov.co"
+},
+{
 nombre:"Juzgado 15 Municipal de Pequeñas Causas Laborales de Bogotá D.C.",
 nit:"",
 email:"j15pclbta@cendoj.ramajudicial.gov.co"
@@ -637,6 +648,11 @@ email:"j15pclbta@cendoj.ramajudicial.gov.co"
     nombre:"Juzgado Primero Administrativo Mixto del Circuito Judicial de Riohacha, La Guajira",
     nit:"",
     email:"j01admctorioha@cendoj.ramajudicial.gov.co"
+},
+{
+    nombre:"Juzgado Sexto Administrativo Oral del Circuito de Riohacha, La Guajira",
+    nit:"",
+    email:"j06admrchtorioha@cendoj.ramajudicial.gov.co"
 },
 
 // Juzgados Civiles de La Guajira
@@ -5564,6 +5580,13 @@ email: "unicacumaribo@supernotariado.gov.co"
     nit:"",
     email:"ofiregisbarranquilla@supernotariado.gov.co"
 },
+// Sector Seguridad Social
+
+{
+    nombre:"Junta Regional de Calificación de Invalidez del Cesar",
+    nit:"",
+    email:"juntaregionalcalificacioncesar@gmail.com"
+},
 // Instituciones Educativas
 {
 nombre: "Institución Etnoeducativa Monte Alvernia",
@@ -5573,13 +5596,25 @@ email: "montealvernia1968@yahoo.es"
 {
     nombre:"Universidad Nacional de Colombia",
     nit:"",
-    email:""
+    email:"sisqueresu_nal@unal.edu.co"
+},
+{
+nombre:"Universidad de La Guajira",
+nit:"",
+email:"atencionalciudadano@uniguajira.edu.co",
+email_judicial:"notificacionesjudiciales@uniguajira.edu.co",
+},
+{
+    nombre:"Universidad del Atlántico",
+    nit:"",
+    email:"notificaciones@mail.uniatlantico.edu.co",
+    email_judicial:"notificaciones@mail.uniatlantico.edu.co",
 },
 {
     nombre:"Universidad Libre de Colombia",
     nit:"",
     email:""
-}, 
+},
 {
 nombre:"Universidad del Norte",
 nit:"",
@@ -5857,6 +5892,18 @@ direccion:"CR 68 A 24 B 10, Bogotá D.C.",
     nit:"899.999.115-8",
     email:"quejas_call_digitex@etb.com.co"
 },
+
+// Organizaciones No Gubernamentales - ONG
+{
+    nombre:"Fundación Centro de Investigación y Educación Popular – Cinep/PPP",
+    nit:"",
+    email:"cinep@cinep.org.co"
+},
+{
+    nombre:"Colectivo de Abogados “José Alvear Restrepo” –CAJAR",
+    nit:"",
+    email:"cajar@cajar.org",
+},
 // Otro Tipo de Empresas / Entidad
 {
     nombre:"Bomberos Voluntarios de Barrancas, La Guajira",
@@ -5944,6 +5991,12 @@ nit: "860.037.013-6",
 email: "mundial@segurosmundial.com.co"
 },
 {
+    nombre:"SEGUROS GENERALES SURAMERICANA S.A.",
+    nit:"890.903.407-9",
+    email:"",
+    email_judicial:"notificacionesjudiciales@suramericana.com.co",
+},
+{
 nombre:"Compañía de Seguros Bolívar S.A.",
 nit:"860.002.503-2",
 email:"servicioalcliente@segurosbolivar.com"
@@ -5952,6 +6005,13 @@ email:"servicioalcliente@segurosbolivar.com"
 nombre: "La Previsora S.A. Compañía de Seguros - PREVISORA SEGUROS",
 nit:"860.002.400-2",
 email:"contactenos@previsora.gov.co, correspondenciacasamatriz@previsora.gov.co"
+},
+// Bebidas
+{
+    nombre:"BAVARIA & CIA S.C.A.",
+    nit:"860.005.224-6",
+    email:"notificaciones@ab-inbev.com",
+    email_judicial:"notificaciones@ab-inbev.com"
 }
 ];
 
