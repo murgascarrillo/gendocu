@@ -215,7 +215,6 @@ function eliminarEntidad() {
     previewEntidad = null;
   }
 }
-
 document.getElementById("botonResetEntidad").addEventListener("click", eliminarEntidad);
 // Sección - Peticiones.
 
@@ -225,27 +224,65 @@ let inputTextPeticion;
 let numPeticion = 1;
 
 function escribirPeticion() {
-   yPeticion.innerHTML = "";
- inputTextPeticion = xPeticion.value;
+  yPeticion.innerHTML = "";
+  inputTextPeticion = xPeticion.value;
 }
+
 let newPeticion;
 function agregarPeticion() {
-// Create a new <p> element with the input value
+  // Create a new <p> element with the input value
 
-newPeticion = document.createElement("p");
- newPeticion.id = "newPeticion";
- newPeticion.style.margin = "0px";
- newPeticion.textContent = numPeticion + ". " + inputTextPeticion + ".";
-numPeticion = numPeticion + 1;
+  newPeticion = document.createElement("p");
+  newPeticion.id = "newPeticion";
+  newPeticion.style.margin = "0px";
+  newPeticion.textContent = numPeticion + ". " + inputTextPeticion + ".";
+  numPeticion = numPeticion + 1;
 
-// Insert the newPeticion element above on the list
-yPeticion.parentNode.insertBefore(newPeticion, yPeticion);
+  // Insert the newPeticion element above on the list
+  yPeticion.parentNode.insertBefore(newPeticion, yPeticion);
 
-// Clear the input field
-xPeticion.value = '';
+  // Clear the input field
+  xPeticion.value = '';
+
+  // Limpiar también la vista previa en vivo
+  if (previewPeticion) {
+    previewPeticion.remove();
+    previewPeticion = null;
+  }
 }
 
-document.getElementById("inputTextoPeticion").addEventListener("input", escribirPeticion);
+// ---- NUEVO: vista previa en vivo mientras el usuario escribe ----
+let previewPeticion = null;
+
+function actualizarVistaPeticion() {
+  const valorInput = xPeticion.value.trim();
+
+  // Si el campo quedó vacío, quitamos la vista previa
+  if (!valorInput) {
+    if (previewPeticion) {
+      previewPeticion.remove();
+      previewPeticion = null;
+    }
+    return;
+  }
+
+  // Crear el elemento de vista previa una sola vez
+  if (!previewPeticion) {
+    previewPeticion = document.createElement("p");
+    previewPeticion.id = "previewPeticion";
+    previewPeticion.style.margin = "0px";
+    yPeticion.parentNode.insertBefore(previewPeticion, yPeticion);
+  }
+
+  // Actualizar su contenido en vivo, con la misma numeración que tendría al agregarse
+  previewPeticion.textContent = numPeticion + ". " + valorInput + ".";
+}
+// -------------------------------------------------------------------
+
+document.getElementById("inputTextoPeticion").addEventListener("input", function() {
+  escribirPeticion();
+  actualizarVistaPeticion(); // Actualiza el innerHTML en vivo
+});
 
 // Add event listener to add a new <li> element when the user clicks the "botonAddPeticion" button
 document.getElementById("botonAddPeticion").addEventListener("click", agregarPeticion);
@@ -253,32 +290,37 @@ document.getElementById("botonAddPeticion").addEventListener("click", agregarPet
 const inputPeticion = document.getElementById('inputTextoPeticion');
 
 inputPeticion.addEventListener('input', function () {
- // Set the minimum height
- this.style.height = '24px'; // Or your preferred minimum height
+  // Set the minimum height
+  this.style.height = '24px'; // Or your preferred minimum height
 
- // Adjust the height based on the scrollHeight
- this.style.height = this.scrollHeight + 'px';
+  // Adjust the height based on the scrollHeight
+  this.style.height = this.scrollHeight + 'px';
 
- // Set the minimum width
- if (this.scrollWidth > 90) { // Adjust the minimum width as needed
-   this.style.width = '90%'; // Or your preferred minimum width
- } else {
-   this.style.width = this.scrollWidth + 'px';
- }
+  // Set the minimum width
+  if (this.scrollWidth > 90) { // Adjust the minimum width as needed
+    this.style.width = '90%'; // Or your preferred minimum width
+  } else {
+    this.style.width = this.scrollWidth + 'px';
+  }
 });
 
- // Función para resetear Peticiones en caso de error.
- let newPeticiones;
- function eliminarPeticion() {
-   newPeticiones = document.querySelectorAll("#newPeticion");
-   newPeticiones.forEach((peticion) => {
-     peticion.remove();
-   });
-   numPeticion = 1;
- }
+// Función para resetear Peticiones en caso de error.
+let newPeticiones;
+function eliminarPeticion() {
+  newPeticiones = document.querySelectorAll("#newPeticion");
+  newPeticiones.forEach((peticion) => {
+    peticion.remove();
+  });
+  numPeticion = 1;
+
+  // También limpiar la vista previa en vivo si existe
+  if (previewPeticion) {
+    previewPeticion.remove();
+    previewPeticion = null;
+  }
+}
 
 document.getElementById("botonResetPeticiones").addEventListener("click", eliminarPeticion);
-
 // Sección - Hechos.
 
 let x = document.getElementById("inputTextoHechosPeticion");
@@ -287,28 +329,65 @@ let inputTextHechos;
 let numHechos = 1;
 
 function escribirHechos() {
-  yHechos.innerHTML = ""; 
- inputTextHechos = x.value;
+  yHechos.innerHTML = "";
+  inputTextHechos = x.value;
 }
+
 let newHecho;
 function agregarHechos() {
-// Create a new <p> element with the input value
+  // Create a new <p> element with the input value
 
-newHecho = document.createElement("p");
- newHecho.id = "newHecho";
-newHecho.style.margin = "1px";
-newHecho.textContent = numHechos + ". " + inputTextHechos + ".";
-numHechos = numHechos + 1;
+  newHecho = document.createElement("p");
+  newHecho.id = "newHecho";
+  newHecho.style.margin = "1px";
+  newHecho.textContent = numHechos + ". " + inputTextHechos + ".";
+  numHechos = numHechos + 1;
 
-// Insert the newHecho element above on the list
-yHechos.parentNode.insertBefore(newHecho, yHechos);
+  // Insert the newHecho element above on the list
+  yHechos.parentNode.insertBefore(newHecho, yHechos);
 
-// Clear the input field
-x.value = '';
+  // Clear the input field
+  x.value = '';
+
+  // Limpiar también la vista previa en vivo
+  if (previewHecho) {
+    previewHecho.remove();
+    previewHecho = null;
+  }
 }
 
+// ---- NUEVO: vista previa en vivo mientras el usuario escribe ----
+let previewHecho = null;
 
-document.getElementById("inputTextoHechosPeticion").addEventListener("input", escribirHechos);
+function actualizarVistaHecho() {
+  const valorInput = x.value.trim();
+
+  // Si el campo quedó vacío, quitamos la vista previa
+  if (!valorInput) {
+    if (previewHecho) {
+      previewHecho.remove();
+      previewHecho = null;
+    }
+    return;
+  }
+
+  // Crear el elemento de vista previa una sola vez
+  if (!previewHecho) {
+    previewHecho = document.createElement("p");
+    previewHecho.id = "previewHecho";
+    previewHecho.style.margin = "1px";
+    yHechos.parentNode.insertBefore(previewHecho, yHechos);
+  }
+
+  // Actualizar su contenido en vivo, con la misma numeración que tendría al agregarse
+  previewHecho.textContent = numHechos + ". " + valorInput + ".";
+}
+// -------------------------------------------------------------------
+
+document.getElementById("inputTextoHechosPeticion").addEventListener("input", function() {
+  escribirHechos();
+  actualizarVistaHecho(); // Actualiza el innerHTML en vivo
+});
 
 // Add event listener to add a new <li> element when the user clicks the "botonAddHechos" button
 document.getElementById("botonAddHechosPeticion").addEventListener("click", agregarHechos);
@@ -316,32 +395,37 @@ document.getElementById("botonAddHechosPeticion").addEventListener("click", agre
 const inputHechos = document.getElementById('inputTextoHechosPeticion');
 
 inputHechos.addEventListener('input', function () {
- // Set the minimum height
- this.style.height = '24px'; // Or your preferred minimum height
+  // Set the minimum height
+  this.style.height = '24px'; // Or your preferred minimum height
 
- // Adjust the height based on the scrollHeight
- this.style.height = this.scrollHeight + 'px';
+  // Adjust the height based on the scrollHeight
+  this.style.height = this.scrollHeight + 'px';
 
- // Set the minimum width
- if (this.scrollWidth > 90) { // Adjust the minimum width as needed
-   this.style.width = '90%'; // Or your preferred minimum width
- } else {
-   this.style.width = this.scrollWidth + 'px';
- }
+  // Set the minimum width
+  if (this.scrollWidth > 90) { // Adjust the minimum width as needed
+    this.style.width = '90%'; // Or your preferred minimum width
+  } else {
+    this.style.width = this.scrollWidth + 'px';
+  }
 });
 
- // Función para resetear Hechos en caso de error.
- let newHechos;
- function eliminarHechos() {
-   newHechos = document.querySelectorAll("#newHecho");
-   newHechos.forEach((hecho) => {
-     hecho.remove();
-   });
-   numHechos = 1;
- }
+// Función para resetear Hechos en caso de error.
+let newHechos;
+function eliminarHechos() {
+  newHechos = document.querySelectorAll("#newHecho");
+  newHechos.forEach((hecho) => {
+    hecho.remove();
+  });
+  numHechos = 1;
+
+  // También limpiar la vista previa en vivo si existe
+  if (previewHecho) {
+    previewHecho.remove();
+    previewHecho = null;
+  }
+}
 
 document.getElementById("botonResetHechosPeticion").addEventListener("click", eliminarHechos);
-
 // Sección - Fundamentos.
 
 let filtroFundamentosPeticion = document.getElementById("listaFundamentosPeticion");

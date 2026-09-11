@@ -5807,6 +5807,12 @@ email_judicial:"notificacionesjudiciales@davivienda.com",
     email_judicial:"legalnotificacionescitibank@citi.com.co"
 },
 {
+    nombre:"Banco de Occidente",
+    nit:"",
+    email:"",
+    email_judicial:""
+},
+{
     nombre:"FUNDACION DELAMUJER COLOMBIA S.A.S - Banco Mundo Mujer",
     nit:"",
     email:"informacion@fundaciondelamujer.com",
