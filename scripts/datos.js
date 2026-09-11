@@ -170,6 +170,12 @@ email_judicial:"notificacionesjudiciales@laguajira.gov.co"
     email_judicial:"notificacionesjudiciales@defensajuridica.gov.co"
 },
 {
+    nombre:"Dirección Nacional de Impuestos y Aduanas Nacionales - DIAN",
+    nit:"",
+    email:"direcciongeneral@dian.gov.co",
+    email_judicial:"notificacionesjudicialesdian@dian.gov.co"
+},
+{
 nombre: "Agencia Nacional de Tierras - ANT",
 nit: "900.948.953-8",
 email: "atencionalciudadano@ant.gov.co",
@@ -235,6 +241,12 @@ email_judicial:"notificacionesjudici@minvivienda.gov.co"
     email:""
 },
 {
+    nombre:"Ministerio de Minas y Energía de Colombia",
+    nit:"",
+    email:"menergia@minenergia.gov.co",
+    email_judicial:"notijudiciales@minenergia.gov.co"
+},
+{
 nombre: "Ministerio de Defensa Nacional de Colombia",
 nit: "",
 email: "contactenos@mindefensa.gov.co",
@@ -244,6 +256,10 @@ email_judicial:""
     nombre:"Fondo Nacional de Vivienda - FONVIVIENDA",
     nit:"",
     email:"notificacionesfonviv@minvivienda.gov.co"
+},
+{nombre:"Fondo de Energías no Convencionales y Gestión Eficiente de la Energía - FENOGE",
+    nit:"",
+    email:"info@fenoge.gov.co"
 },
 {
 nombre: "Ministerio del Interior",
@@ -370,6 +386,11 @@ email_judicial:"judiciales@igac.gov.co"
     email:"atencionalciudadano@icbf.gov.co",
     email_judicial:"notificaciones.judiciales@icbf.gov.co"
 },
+{
+    nombre:"Archivo General de la Nación",
+    nit:"",
+    email:"contacto@archivogeneral.gov.co"
+},
 
 // Establecimientos Públicos
 {
@@ -395,11 +416,12 @@ nit:"",
 email:"",
 email_judicial:"correspondencia.judicial@runt.com.co"},
 
+
 // Superintendencias
 {
     nombre:"Superintendencia de Notariado y Registro",
     nit:"",
-    email:"correspondencia@supernotariado.gov.co",
+    email:"correspondenciasnr@supernotariado.gov.co",
     email_judicial:"notificaciones.juridica@supernotariado.gov.co"
 }
 ,{
@@ -468,6 +490,16 @@ email:"notificaciones.judiciales@cajahonor.gov.co"
     },
 
 // Entidades con Presencia Territorial
+
+
+
+// Corporaciones Autónomas Regionales - CAR
+
+{
+    nombre:"Corporación Autónoma Regional de La Guajira - CORPOGUAJIRA - Secretaría Fonseca",
+    nit:"",
+    email:"secretaria.fonseca@corpoguajira.gov.co, servicioalcliente@corpoguajira.gov.co",
+},
 
 // Sector Salud
 {
@@ -625,6 +657,11 @@ nit:"",
 email:"j15pclbta@cendoj.ramajudicial.gov.co"
 },
 {
+    nombre:"Juzgado 20 Municipal de Pequeñas Causas Laborales de Bogotá D.C.",
+    nit:"",
+    email:"j20pclbta@cendoj.ramajudicial.gov.co"
+},
+{
     nombre:"Juzgado 25 de Familia del Circuito de Bogotá D.C.",
     nit:"",
     email:"flia25bt@cendoj.ramajudicial.gov.co",
@@ -650,12 +687,18 @@ email:"j15pclbta@cendoj.ramajudicial.gov.co"
     email:"j01admctorioha@cendoj.ramajudicial.gov.co"
 },
 {
+    nombre:"Juzgado Tercero Administrativo Oral del Circuito de Riohacha",
+    nit:"",
+    email:"j03admctorioha@cendoj.ramajudicial.gov.co"
+},
+{
     nombre:"Juzgado Sexto Administrativo Oral del Circuito de Riohacha, La Guajira",
     nit:"",
     email:"j06admrchtorioha@cendoj.ramajudicial.gov.co"
 },
 
 // Juzgados Civiles de La Guajira
+// Juzgados de Riohacha, La Guajira
 {
 nombre:"Oficina de Reparto Judicial de Riohacha, La Guajira",
 nit:"",
@@ -696,6 +739,22 @@ email:"stsscflrioha@cendoj.ramajudicial.gov.co"
     nit:"",
     email:"j02cmpalrioha@cendoj.ramajudicial.gov.co"
 },
+
+    {
+nombre:"Juzgado Cuarto Penal Municipal con Función de Control de Garantías de Riohacha",
+nit:"",
+email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
+    },
+    {nombre:"Juzgado Sexto Penal Municipal con Funciones de Conocimiento de Riohacha",
+        nit:"",
+        email:"j06pmpalrioha@cendoj.ramajudicial.gov.co"
+    },
+    {
+        nombre:"Juzgado del Circuito de Ejecución de Penas y Medidas de Seguridad 001 de Riohacha",
+        nit:"",
+        email:"jepmsrioha@cendoj.ramajudicial.gov.co"
+    },
+// Juzgados de San Juan del Cesar, La Guajira
 {
 nombre:"Juzgado Primero Civil Del Circuito San Juan Del Cesar, La Guajira",
 nit:"",
@@ -719,6 +778,32 @@ email:"j01ctoclsjuan@cendoj.ramajudicial.gov.co"
     nit:"",
     email:"jlctosjuan@cendoj.ramajudicial.gov.co",
 },
+   {
+        nombre:"Oficina Reparto Juzgados Promiscuos Municipales de San Juan del Cesar, La Guajira",
+        nit:"",
+        email:"repartojprmpalsjuancesar@cendoj.ramajudicial.gov.co"
+    },
+    {
+        nombre:"Oficina Reparto Juzgados Promiscuos del Circuito de San Juan del Cesar, La Guajira",
+        nit:"",
+        email:"repartojprctosanjuandelcesar@cendoj.ramajudicial.gov.co"
+    },
+    {
+        nombre:"Juzgado Primero Promiscuo Municipal de San Juan del Cesar, La Guajira",
+        nit:"",
+        email:"j01prmpalsjuan@cendoj.ramajudicial.gov.co"
+    },
+      {
+        nombre:"Juzgado Segundo Promiscuo Municipal de San Juan del Cesar, La Guajira",
+        nit:"",
+        email:"j02prmpalsjuan@cendoj.ramajudicial.gov.co"
+    },
+    {
+        nombre:"Juzgado Tercero Promiscuo Municipal de San Juan del Cesar, La Guajira",
+        nit:"",
+        email:"j03prmpalsjuan@cendoj.ramajudicial.gov.co"
+    },
+// Juzgados de Barrancas, La Guajira
 {
 nombre:"Juzgado Promiscuo Municipal de Barrancas, La Guajira",
 nit:"",
@@ -759,45 +844,7 @@ email:"jprmpalbarrancas@cendoj.ramajudicial.gov.co"
     nit:"",
     email:"jprmpaljaguap@cendoj.ramajudicial.gov.co"
     },
-    {
-        nombre:"Oficina Reparto Juzgados Promiscuos Municipales de San Juan del Cesar, La Guajira",
-        nit:"",
-        email:"repartojprmpalsjuancesar@cendoj.ramajudicial.gov.co"
-    },
-    {
-        nombre:"Oficina Reparto Juzgados Promiscuos del Circuito de San Juan del Cesar, La Guajira",
-        nit:"",
-        email:"repartojprctosanjuandelcesar@cendoj.ramajudicial.gov.co"
-    },
-    {
-        nombre:"Juzgado Primero Promiscuo Municipal de San Juan del Cesar, La Guajira",
-        nit:"",
-        email:"j01prmpalsjuan@cendoj.ramajudicial.gov.co"
-    },
-      {
-        nombre:"Juzgado Segundo Promiscuo Municipal de San Juan del Cesar, La Guajira",
-        nit:"",
-        email:"j02prmpalsjuan@cendoj.ramajudicial.gov.co"
-    },
-    {
-        nombre:"Juzgado Tercero Promiscuo Municipal de San Juan del Cesar, La Guajira",
-        nit:"",
-        email:"j03prmpalsjuan@cendoj.ramajudicial.gov.co"
-    },
-    {
-nombre:"Juzgado Cuarto Penal Municipal con Función de Control de Garantías de Riohacha",
-nit:"",
-email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
-    },
-    {nombre:"Juzgado Sexto Penal Municipal con Funciones de Conocimiento de Riohacha",
-        nit:"",
-        email:"j06pmpalrioha@cendoj.ramajudicial.gov.co"
-    },
-    {
-        nombre:"Juzgado del Circuito de Ejecución de Penas y Medidas de Seguridad 001 de Riohacha",
-        nit:"",
-        email:"jepmsrioha@cendoj.ramajudicial.gov.co"
-    },
+ 
     // Juzgados del Cesar
 
     {
@@ -811,7 +858,16 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         nit:"",
         email:"J02prmpalcodazzi@cendoj.ramajudicial.gov.co"
     },
-
+    {
+        nombre:"Juzgado Promiscuo Municipal de Bosconia, Cesar",
+        nit:"",
+        email:"j01prmpalbosconia@cendoj.ramajudicial.gov.co"
+    },
+{
+        nombre:"Juzgado Promiscuo Municipal de San Diego, Cesar",
+        nit:"",
+        email:"j01prmpalsandiego@cendoj.ramajudicial.gov.co"
+    },
     //  Juzgados del Atlántico
     // Juzgados Penales de Barranquilla, Atlántico
     {
@@ -820,6 +876,11 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         email:"j03pmgba@cendoj.ramajudicial.gov.co"
     },
     // Juzgados Civiles de Barranquilla, Atlántico
+    {
+        nombre:"Juzgado Primero Civil Municipal de Oralidad de Barranquilla",
+        nit:"",
+        email:"cmun01ba@cendoj.ramajudicial.gov.co"
+    },
 {
     nombre:"Juzgado Sexto Civil del Circuito de Barranquilla",
     nit:"",
@@ -889,6 +950,12 @@ email:"j04pmpalcgrch@cendoj.ramajudicial.gov.co"
         email:"j02prmpalprico@cendoj.ramajudicial.gov.co"
     },
     // Juzgados de Magdalena
+    // Juzgados de Santa Marta
+    {
+        nombre:"Juzgado 001 de Competencias Múltiples de Santa Marta, Magdalena",
+        nit:"",
+        email:"j01pccmsmta@cendoj.ramajudicial.gov.co"
+    },
     // Juzgados Penales de Fundación, Magdalena
     {
         nombre:"Oficina de Reparto Juzgados Promiscuos Municipales de Fundación, Magdalena",
@@ -5653,7 +5720,7 @@ email:"admisiones@usanjose.edu.co"
 {
 nombre: "CIFIN S.A.S.",
 nit: "900.572.445-1",
-email: ""
+email: "notificaciones@transunion.com"
 },
 {
 nombre: "Experian Colombia S.A. - Datacrédito",
@@ -6012,7 +6079,14 @@ email:"contactenos@previsora.gov.co, correspondenciacasamatriz@previsora.gov.co"
     nit:"860.005.224-6",
     email:"notificaciones@ab-inbev.com",
     email_judicial:"notificaciones@ab-inbev.com"
-}
+},
+
+// Tech
+{
+    nombre:"Google Colombia Limitada",
+    nit:"900.214.217-5",
+    email:"",
+},
 ];
 
 

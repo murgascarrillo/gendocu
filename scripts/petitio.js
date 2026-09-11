@@ -72,7 +72,6 @@ function escribirIdUsuario()
   let y = document.getElementById("idUsuario");
   y.innerHTML = x.value; 
 }
-
 // Sección - Entidad destinataria.
 
 let xEntidad = document.getElementById("inputTextoEntidad");
@@ -81,35 +80,40 @@ let inputTextEntidad;
 let numEntidad = 0;
 
 function escribirEntidad() {
-   
- inputTextEntidad = xEntidad.value;
+  inputTextEntidad = xEntidad.value;
 }
+
 let newEntidad;
 function agregarEntidad() {
-// Create a new <p> element with the input value
+  // Create a new <p> element with the input value
+  newEntidad = document.createElement("p");
+  newEntidad.id = "newEntidad";
+  newEntidad.style.margin = "0px";
+  newEntidad.textContent = inputTextEntidad;
+  numEntidad = numEntidad + 1;
 
-newEntidad = document.createElement("p");
- newEntidad.id = "newEntidad";
- newEntidad.style.margin = "0px";
- newEntidad.textContent = inputTextEntidad;
-numEntidad = numEntidad + 1;
+  // Insert the newEntidad element above on the list
+  yEntidad.parentNode.insertBefore(newEntidad, yEntidad);
 
-// Insert the newEntidad element above on the list
-yEntidad.parentNode.insertBefore(newEntidad, yEntidad);
+  // Clear the input field
+  xEntidad.value = '';
 
-// Clear the input field
-xEntidad.value = '';
+  // Limpiar también la vista previa en vivo
+  if (previewEntidad) {
+    previewEntidad.remove();
+    previewEntidad = null;
+  }
 }
 
 // Function to update datalist based on input
 function actualizarDatalist() {
   const valorInput = xEntidad.value.toLowerCase();
-  yEntidad.innerHTML = ''+"<br/>"; // Clear previous options
+  yEntidad.innerHTML = '' + "<br/>"; // Clear previous options
 
   datosEntidades.forEach(entidad => {
     if (entidad.nombre.toLowerCase().includes(valorInput.toLowerCase()) && valorInput) {
       const option = document.createElement('option');
-  
+
       // Caso cuando el NIT está vacío pero el email tiene valor
       if (entidad.nit === "" && entidad.email !== "") {
         option.innerHTML = entidad.nombre + " (Email: " + entidad.email + ")";
@@ -126,20 +130,55 @@ function actualizarDatalist() {
       else {
         option.innerHTML = entidad.nombre + " (Nit: " + entidad.nit + ", Email: " + entidad.email + ")";
       }
-  
+
       // Agregar la opción generada a yEntidad
       yEntidad.appendChild(option);
     }
   });
 }
 
+// ---- NUEVO: vista previa en vivo mientras el usuario escribe ----
+let previewEntidad = null;
+
+function actualizarVistaEntidad() {
+  const valorInput = xEntidad.value.trim();
+
+  // Si el campo quedó vacío, quitamos la vista previa
+  if (!valorInput) {
+    if (previewEntidad) {
+      previewEntidad.remove();
+      previewEntidad = null;
+    }
+    return;
+  }
+
+  // Buscar si el texto escrito coincide con una entidad conocida
+  const coincidencia = datosEntidades.find(
+    entidad => entidad.nombre.toLowerCase() === valorInput.toLowerCase()
+  );
+
+  const textoAMostrar = coincidencia ? coincidencia.nombre : valorInput;
+
+  // Crear el elemento de vista previa una sola vez
+  if (!previewEntidad) {
+    previewEntidad = document.createElement("p");
+    previewEntidad.id = "previewEntidad";
+    previewEntidad.style.margin = "0px";
+    yEntidad.parentNode.insertBefore(previewEntidad, yEntidad);
+  }
+
+  // Actualizar su contenido en vivo, sin pasar por agregarEntidad
+  previewEntidad.innerHTML = textoAMostrar;
+}
+// -------------------------------------------------------------------
+
 document.getElementById("inputTextoEntidad").addEventListener("input", function() {
   escribirEntidad();
-  actualizarDatalist(); // Update the datalist on input
+  actualizarDatalist();     // Update the datalist on input
+  actualizarVistaEntidad(); // Actualiza el innerHTML en vivo
 });
 
 document.getElementById("inputTextoEntidad").addEventListener("input", escribirEntidad);
-
 
 // Add event listener to add a new <li> element when the user clicks the "botonAddEntidad" button
 document.getElementById("botonAddEntidad").addEventListener("click", agregarEntidad);
@@ -147,32 +186,37 @@ document.getElementById("botonAddEntidad").addEventListener("click", agregarEnti
 let inputEntidad = document.getElementById('inputTextoEntidad');
 
 inputEntidad.addEventListener('input', function () {
- // Set the minimum height
- this.style.height = '24px'; // Or your preferred minimum height
+  // Set the minimum height
+  this.style.height = '24px';
 
- // Adjust the height based on the scrollHeight
- this.style.height = this.scrollHeight + 'px';
+  // Adjust the height based on the scrollHeight
+  this.style.height = this.scrollHeight + 'px';
 
- // Set the minimum width
- if (this.scrollWidth > 90) { // Adjust the minimum width as needed
-   this.style.width = '90%'; // Or your preferred minimum width
- } else {
-   this.style.width = this.scrollWidth + 'px';
- }
+  // Set the minimum width
+  if (this.scrollWidth > 90) {
+    this.style.width = '90%';
+  } else {
+    this.style.width = this.scrollWidth + 'px';
+  }
 });
 
- // Función para resetear Entidades en caso de error.
- let newEntidades;
- function eliminarEntidad() {
-   newEntidades = document.querySelectorAll("#newEntidad");
-   newEntidades.forEach((entidad) => {
-     entidad.remove();
-   });
-   numEntidad = 0;
- }
+// Función para resetear Entidades en caso de error.
+let newEntidades;
+function eliminarEntidad() {
+  newEntidades = document.querySelectorAll("#newEntidad");
+  newEntidades.forEach((entidad) => {
+    entidad.remove();
+  });
+  numEntidad = 0;
+
+  // También limpiar la vista previa en vivo si existe
+  if (previewEntidad) {
+    previewEntidad.remove();
+    previewEntidad = null;
+  }
+}
 
 document.getElementById("botonResetEntidad").addEventListener("click", eliminarEntidad);
-
 // Sección - Peticiones.
 
 let xPeticion = document.getElementById("inputTextoPeticion");
