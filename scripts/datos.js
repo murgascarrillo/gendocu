@@ -471,6 +471,18 @@ email:"notificaciones.judiciales@cajahonor.gov.co"
     email_judicial:"notificacionesjudiciales@fna.gov.co"
 },
 
+// Ministerio Público
+{
+    nombre:"Defensoría del Pueblo",
+    nit:"",
+    email:""
+},
+{
+    nombre:"Defensoría del Pueblo - Seccional Atlántico",
+    nit:"",
+    email:"atlantico@defensoria.gov.co"
+}
+,
 
 // Entidades de Control
 {
@@ -628,6 +640,11 @@ email:"secretariasubcientifica@hsrafaelsanjuan.gov.co"
     email:"info@cendoj.ramajudicial.gov.co"
     },
     {
+        nombre:"Consejo Seccional de la Judicatura del Atlántico",
+        nit:"",
+        email:"psacsjbqlla@cendoj.ramajudicial.gov.co"
+    },
+    {
         nombre:"Comisión Nacional de Disciplina Judicial",
         nit:"",
         email:"presidencia@cndj.gov.co",
@@ -685,6 +702,11 @@ email:"j15pclbta@cendoj.ramajudicial.gov.co"
     nombre:"Juzgado Primero Administrativo Mixto del Circuito Judicial de Riohacha, La Guajira",
     nit:"",
     email:"j01admctorioha@cendoj.ramajudicial.gov.co"
+},
+{
+    nombre:"Juzgado Primero Administrativo de Riohacha, La Guajira",
+    nit:"",
+    email:"jadmin01rch@notificacionesrj.gov.co"
 },
 {
     nombre:"Juzgado Tercero Administrativo Oral del Circuito de Riohacha",
@@ -869,6 +891,13 @@ email:"jprmpalbarrancas@cendoj.ramajudicial.gov.co"
         email:"j01prmpalsandiego@cendoj.ramajudicial.gov.co"
     },
     //  Juzgados del Atlántico
+
+    // Justicia y Paz Atlántico
+    {
+        nombre:"Sala de Justicia y Paz - Tribunal Superior del Distrito Judicial de Barranquilla, Atlántico",
+        nit:"",
+        email:"secsjusypazbqlla@cendoj.ramajudicial.gov.co"
+    },
     // Juzgados Penales de Barranquilla, Atlántico
     {
         nombre:"Juzgado Tercero Penal Municipal con Función de Control de Garantías de Barranquilla",
@@ -5656,6 +5685,11 @@ email: "unicacumaribo@supernotariado.gov.co"
 },
 // Instituciones Educativas
 {
+    nombre:"Institución Educativa Rural Eloy Hernandez Diaz",
+    nit:"825.000.800-9",
+    email:"iereloyhernandezdpapayal201123@gmail.com"
+},
+{
 nombre: "Institución Etnoeducativa Monte Alvernia",
 nit: "",
 email: "montealvernia1968@yahoo.es"
@@ -5928,6 +5962,11 @@ nit: "901.380.930-2",
 email: "servicioalcliente@air-e.com",
 email:"notificaciones.judiciales@air-e.com"
 },
+{
+    nombre:"Eléctricas de Medellín Ingeniería y Servicios S.A.S. - EDEMSA",
+    nit:"890.906.413-7",
+    email:"notificaciones@edemsa.com.co"
+},
 
 // Empresas Proveedoras de Acueducto y Alcantarillado.
 
@@ -5940,6 +5979,12 @@ email:"co.servicioalcliente.guajira@veolia.com"
   nombre:"Acueductos y Alcantarillados Sostenibles S.A. E.S.P.",
   nit:"811.008.426-2,",
   email:"aassa@aassa.com.co",  
+},
+// Empresas Proveedoras de Aseo y Saneamiento Básico.
+{
+  nombre:"SESPA UNIVERSAL S.A. E.S.P.",
+  nit:"",
+  email:"recepcionypqrsespa@outlook.com"  
 },
 // Empresas Proveedoras de Internet.
 {
